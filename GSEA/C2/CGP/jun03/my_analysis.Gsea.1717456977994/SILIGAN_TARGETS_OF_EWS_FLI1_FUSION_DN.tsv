@@ -1,0 +1,18 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	TBL1X	transducin beta like 1 X-linked [Source:HGNC Symbol;Acc:HGNC:11585]	546	0.655364990234375	0.12520102	No	
+row_1	CDC14B	cell division cycle 14B [Source:HGNC Symbol;Acc:HGNC:1719]	8628	0.12699750065803528	-0.1315817	No	
+row_2	IDH3B	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta [Source:HGNC Symbol;Acc:HGNC:5385]	10833	0.05138510465621948	-0.19792499	No	
+row_3	SSR3	signal sequence receptor subunit 3 [Source:HGNC Symbol;Acc:HGNC:11325]	10956	0.04761083424091339	-0.19173086	No	
+row_4	STYXL1	serine/threonine/tyrosine interacting like 1 [Source:HGNC Symbol;Acc:HGNC:18165]	12280	0.00809177290648222	-0.2365697	No	
+row_5	DLG2	discs large MAGUK scaffold protein 2 [Source:HGNC Symbol;Acc:HGNC:2901]	13288	-0.019182341173291206	-0.2678284	No	
+row_6	NOP56	NOP56 ribonucleoprotein [Source:HGNC Symbol;Acc:HGNC:15911]	13608	-0.028969841077923775	-0.272685	No	
+row_7	LRBA	LPS responsive beige-like anchor protein [Source:HGNC Symbol;Acc:HGNC:1742]	14448	-0.0519007071852684	-0.29081228	No	
+row_8	PCCA	propionyl-CoA carboxylase subunit alpha [Source:HGNC Symbol;Acc:HGNC:8653]	20812	-0.21244795620441437	-0.46821982	Yes	
+row_9	SLC2A5	solute carrier family 2 member 5 [Source:HGNC Symbol;Acc:HGNC:11010]	21106	-0.22123177349567413	-0.42978576	Yes	
+row_10	GTF2E2	general transcription factor IIE subunit 2 [Source:HGNC Symbol;Acc:HGNC:4651]	23348	-0.2801319658756256	-0.44701728	Yes	
+row_11	ASNS	asparagine synthetase (glutamine-hydrolyzing) [Source:HGNC Symbol;Acc:HGNC:753]	24398	-0.32076966762542725	-0.41328645	Yes	
+row_12	CDK14	cyclin dependent kinase 14 [Source:HGNC Symbol;Acc:HGNC:8883]	25279	-0.3556845486164093	-0.36590487	Yes	
+row_13	POT1	protection of telomeres 1 [Source:HGNC Symbol;Acc:HGNC:17284]	25361	-0.35968199372291565	-0.28948563	Yes	
+row_14	CLASP2	cytoplasmic linker associated protein 2 [Source:HGNC Symbol;Acc:HGNC:17078]	26324	-0.41453638672828674	-0.23202282	Yes	
+row_15	RFC1	replication factor C subunit 1 [Source:HGNC Symbol;Acc:HGNC:9969]	27029	-0.47123706340789795	-0.15297136	Yes	
+row_16	CNTNAP2	contactin associated protein 2 [Source:HGNC Symbol;Acc:HGNC:13830]	28347	-0.9119961857795715	0.0016211089	Yes	

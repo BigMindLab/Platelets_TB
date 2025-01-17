@@ -1,0 +1,52 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	RFC2	replication factor C subunit 2 [Source:HGNC Symbol;Acc:HGNC:9970]	1842	0.4239417314529419	-0.023533795	No	
+row_1	RFC5	replication factor C subunit 5 [Source:HGNC Symbol;Acc:HGNC:9973]	3082	0.3267953097820282	-0.03529211	No	
+row_2	OGG1	8-oxoguanine DNA glycosylase [Source:HGNC Symbol;Acc:HGNC:8125]	3385	0.31299132108688354	-0.015340961	No	
+row_3	RAD51	RAD51 recombinase [Source:HGNC Symbol;Acc:HGNC:9817]	4284	0.2686149477958679	-0.020757344	No	
+row_4	RFC3	replication factor C subunit 3 [Source:HGNC Symbol;Acc:HGNC:9971]	6020	0.20346492528915405	-0.06207562	No	
+row_5	HUS1	HUS1 checkpoint clamp component [Source:HGNC Symbol;Acc:HGNC:5309]	8336	0.13770060241222382	-0.13028836	No	
+row_6	RMI1	RecQ mediated genome instability 1 [Source:HGNC Symbol;Acc:HGNC:25764]	9812	0.08591087907552719	-0.1739285	No	
+row_7	RFC4	replication factor C subunit 4 [Source:HGNC Symbol;Acc:HGNC:9972]	10056	0.0773475170135498	-0.1749385	No	
+row_8	RHNO1	RAD9-HUS1-RAD1 interacting nuclear orphan 1 [Source:HGNC Symbol;Acc:HGNC:28206]	10072	0.07686936110258102	-0.16795094	No	
+row_9	TOP3A	DNA topoisomerase III alpha [Source:HGNC Symbol;Acc:HGNC:11992]	11015	0.04615826532244682	-0.196673	No	
+row_10	BRIP1	BRCA1 interacting helicase 1 [Source:HGNC Symbol;Acc:HGNC:20473]	11055	0.04463591426610947	-0.19368422	No	
+row_11	RPA2	replication protein A2 [Source:HGNC Symbol;Acc:HGNC:10290]	11537	0.030473334714770317	-0.20767501	No	
+row_12	NEIL1	nei like DNA glycosylase 1 [Source:HGNC Symbol;Acc:HGNC:18448]	11833	0.021493399515748024	-0.21598147	No	
+row_13	PALB2	partner and localizer of BRCA2 [Source:HGNC Symbol;Acc:HGNC:26144]	11937	0.01866813562810421	-0.21779002	No	
+row_14	BLM	BLM RecQ like helicase [Source:HGNC Symbol;Acc:HGNC:1058]	12029	0.01599782705307007	-0.21943632	No	
+row_15	XRCC2	X-ray repair cross complementing 2 [Source:HGNC Symbol;Acc:HGNC:12829]	12146	0.012691125273704529	-0.22228803	No	
+row_16	MSH2	mutS homolog 2 [Source:HGNC Symbol;Acc:HGNC:7325]	12244	0.009376998990774155	-0.22479343	No	
+row_17	RAD51C	RAD51 paralog C [Source:HGNC Symbol;Acc:HGNC:9820]	12964	-0.010539514012634754	-0.24913064	No	
+row_18	RBBP8	RB binding protein 8, endonuclease [Source:HGNC Symbol;Acc:HGNC:9891]	13178	-0.016424324363470078	-0.25503963	No	
+row_19	RAD1	RAD1 checkpoint DNA exonuclease [Source:HGNC Symbol;Acc:HGNC:9806]	13292	-0.019312845543026924	-0.25713798	No	
+row_20	BARD1	BRCA1 associated RING domain 1 [Source:HGNC Symbol;Acc:HGNC:952]	13873	-0.03610628843307495	-0.27407086	No	
+row_21	RAD51AP1	RAD51 associated protein 1 [Source:HGNC Symbol;Acc:HGNC:16956]	15122	-0.07067476958036423	-0.31119186	No	
+row_22	KAT5	lysine acetyltransferase 5 [Source:HGNC Symbol;Acc:HGNC:5275]	15465	-0.08114215731620789	-0.31532374	No	
+row_23	ATRIP	ATR interacting protein [Source:HGNC Symbol;Acc:HGNC:33499]	16056	-0.09698984771966934	-0.32665586	No	
+row_24	RAD51B	RAD51 paralog B [Source:HGNC Symbol;Acc:HGNC:9822]	16571	-0.1107591837644577	-0.3339601	No	
+row_25	NBN	nibrin [Source:HGNC Symbol;Acc:HGNC:7652]	17067	-0.12432944029569626	-0.33926696	Yes	
+row_26	MUTYH	mutY DNA glycosylase [Source:HGNC Symbol;Acc:HGNC:7527]	17225	-0.12893076241016388	-0.33219856	Yes	
+row_27	MLH1	mutL homolog 1 [Source:HGNC Symbol;Acc:HGNC:7127]	17287	-0.13076996803283691	-0.3215632	Yes	
+row_28	EXO1	exonuclease 1 [Source:HGNC Symbol;Acc:HGNC:3511]	17472	-0.13548706471920013	-0.3148063	Yes	
+row_29	NTHL1	nth like DNA glycosylase 1 [Source:HGNC Symbol;Acc:HGNC:8028]	17689	-0.14169307053089142	-0.30857158	Yes	
+row_30	RAD9A	RAD9 checkpoint clamp component A [Source:HGNC Symbol;Acc:HGNC:9827]	17910	-0.14793838560581207	-0.30186725	Yes	
+row_31	DNA2	DNA replication helicase/nuclease 2 [Source:HGNC Symbol;Acc:HGNC:2939]	18469	-0.16406431794166565	-0.30551136	Yes	
+row_32	SEM1	SEM1 26S proteasome subunit [Source:HGNC Symbol;Acc:HGNC:10845]	18966	-0.1793002486228943	-0.30547813	Yes	
+row_33	RAD9B	RAD9 checkpoint clamp component B [Source:HGNC Symbol;Acc:HGNC:21700]	18967	-0.17933331429958344	-0.28794175	Yes	
+row_34	ATR	ATR serine/threonine kinase [Source:HGNC Symbol;Acc:HGNC:882]	20252	-0.19746068120002747	-0.31393492	Yes	
+row_35	RAD17	RAD17 checkpoint clamp loader component [Source:HGNC Symbol;Acc:HGNC:9807]	20322	-0.19976501166820526	-0.29683506	Yes	
+row_36	MSH6	mutS homolog 6 [Source:HGNC Symbol;Acc:HGNC:7329]	20721	-0.21231086552143097	-0.2901162	Yes	
+row_37	MSH3	mutS homolog 3 [Source:HGNC Symbol;Acc:HGNC:7326]	20831	-0.2130271941423416	-0.27313074	Yes	
+row_38	BRCA2	BRCA2 DNA repair associated [Source:HGNC Symbol;Acc:HGNC:1101]	22004	-0.2410077005624771	-0.29091403	Yes	
+row_39	NEIL3	nei like DNA glycosylase 3 [Source:HGNC Symbol;Acc:HGNC:24573]	22125	-0.24556651711463928	-0.2711348	Yes	
+row_40	ATM	ATM serine/threonine kinase [Source:HGNC Symbol;Acc:HGNC:795]	24446	-0.3229692280292511	-0.32140717	Yes	
+row_41	BRCA1	BRCA1 DNA repair associated [Source:HGNC Symbol;Acc:HGNC:1100]	24938	-0.3425329029560089	-0.30523556	Yes	
+row_42	PMS2	PMS1 homolog 2, mismatch repair system component [Source:HGNC Symbol;Acc:HGNC:9122]	25239	-0.354105681180954	-0.2811934	Yes	
+row_43	MRE11	MRE11 homolog, double strand break repair nuclease [Source:HGNC Symbol;Acc:HGNC:7230]	26379	-0.41900232434272766	-0.28040692	Yes	
+row_44	RAD50	RAD50 double strand break repair protein [Source:HGNC Symbol;Acc:HGNC:9816]	26392	-0.4200751483440399	-0.2397526	Yes	
+row_45	RPA3	replication protein A3 [Source:HGNC Symbol;Acc:HGNC:10291]	26813	-0.4528713524341583	-0.21028635	Yes	
+row_46	RPA1	replication protein A1 [Source:HGNC Symbol;Acc:HGNC:10289]	27006	-0.4695485234260559	-0.17114499	Yes	
+row_47	RAD51D	RAD51 paralog D [Source:HGNC Symbol;Acc:HGNC:9823]	27320	-0.5006368160247803	-0.13323274	Yes	
+row_48	TOPBP1	DNA topoisomerase II binding protein 1 [Source:HGNC Symbol;Acc:HGNC:17008]	27399	-0.5102137923240662	-0.086092696	Yes	
+row_49	RMI2	RecQ mediated genome instability 2 [Source:HGNC Symbol;Acc:HGNC:28349]	27514	-0.5291042923927307	-0.03837558	Yes	
+row_50	WRN	WRN RecQ like helicase [Source:HGNC Symbol;Acc:HGNC:12791]	28181	-0.7092322707176208	0.007479928	Yes	

@@ -1,0 +1,38 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	ELK1	ETS transcription factor ELK1 [Source:HGNC Symbol;Acc:HGNC:3321]	8	1.4068164825439453	0.097423404	Yes	
+row_1	TRIB1	tribbles pseudokinase 1 [Source:HGNC Symbol;Acc:HGNC:16891]	12	1.3427228927612305	0.19057173	Yes	
+row_2	JUNB	JunB proto-oncogene, AP-1 transcription factor subunit [Source:HGNC Symbol;Acc:HGNC:6205]	65	1.025398850440979	0.25995347	Yes	
+row_3	FOS	Fos proto-oncogene, AP-1 transcription factor subunit [Source:HGNC Symbol;Acc:HGNC:3796]	73	1.0053092241287231	0.32952684	Yes	
+row_4	EGR1	early growth response 1 [Source:HGNC Symbol;Acc:HGNC:3238]	144	0.8861271739006042	0.38860118	Yes	
+row_5	SH3GL3	SH3 domain containing GRB2 like 3, endophilin A3 [Source:HGNC Symbol;Acc:HGNC:10832]	202	0.8334909677505493	0.44447827	Yes	
+row_6	EGR3	early growth response 3 [Source:HGNC Symbol;Acc:HGNC:3240]	240	0.8002263307571411	0.49875042	Yes	
+row_7	FOSB	FosB proto-oncogene, AP-1 transcription factor subunit [Source:HGNC Symbol;Acc:HGNC:3797]	474	0.6797211170196533	0.5377414	Yes	
+row_8	EGR2	early growth response 2 [Source:HGNC Symbol;Acc:HGNC:3239]	1116	0.5179456472396851	0.55110884	Yes	
+row_9	SGK1	serum/glucocorticoid regulated kinase 1 [Source:HGNC Symbol;Acc:HGNC:10810]	1282	0.4910338222980499	0.5793932	Yes	
+row_10	SRF	serum response factor [Source:HGNC Symbol;Acc:HGNC:11291]	3631	0.29952725768089294	0.5173944	No	
+row_11	LYL1	LYL1 basic helix-loop-helix family member [Source:HGNC Symbol;Acc:HGNC:6734]	4321	0.267099529504776	0.5116475	No	
+row_12	TCF12	transcription factor 12 [Source:HGNC Symbol;Acc:HGNC:11623]	5030	0.23812314867973328	0.5032182	No	
+row_13	NAB1	NGFI-A binding protein 1 [Source:HGNC Symbol;Acc:HGNC:7626]	5399	0.22614073753356934	0.5059466	No	
+row_14	RRAD	RRAD, Ras related glycolysis inhibitor and calcium channel regulator [Source:HGNC Symbol;Acc:HGNC:10446]	6370	0.19213679432868958	0.48508406	No	
+row_15	FOSL1	FOS like 1, AP-1 transcription factor subunit [Source:HGNC Symbol;Acc:HGNC:13718]	6576	0.18707850575447083	0.49084768	No	
+row_16	ATF1	activating transcription factor 1 [Source:HGNC Symbol;Acc:HGNC:783]	7004	0.17772461473941803	0.48813292	No	
+row_17	EP300	E1A binding protein p300 [Source:HGNC Symbol;Acc:HGNC:3373]	8096	0.14741486310958862	0.45989734	No	
+row_18	CHD4	chromodomain helicase DNA binding protein 4 [Source:HGNC Symbol;Acc:HGNC:1919]	8986	0.11283290386199951	0.4363835	No	
+row_19	ID4	inhibitor of DNA binding 4 [Source:HGNC Symbol;Acc:HGNC:5363]	9061	0.11065258830785751	0.44145888	No	
+row_20	ARC	activity regulated cytoskeleton associated protein [Source:HGNC Symbol;Acc:HGNC:648]	9800	0.08619464188814163	0.42141992	No	
+row_21	JUND	JunD proto-oncogene, AP-1 transcription factor subunit [Source:HGNC Symbol;Acc:HGNC:6206]	10298	0.069074347615242	0.4086907	No	
+row_22	MEF2D	myocyte enhancer factor 2D [Source:HGNC Symbol;Acc:HGNC:6997]	11140	0.04195680841803551	0.38194707	No	
+row_23	NAB2	NGFI-A binding protein 2 [Source:HGNC Symbol;Acc:HGNC:7627]	12485	0.0028407771605998278	0.3347487	No	
+row_24	ID1	inhibitor of DNA binding 1 [Source:HGNC Symbol;Acc:HGNC:5360]	12830	-0.006708716042339802	0.32308355	No	
+row_25	ID2	inhibitor of DNA binding 2 [Source:HGNC Symbol;Acc:HGNC:5361]	13123	-0.014911855570971966	0.31382194	No	
+row_26	DNM2	dynamin 2 [Source:HGNC Symbol;Acc:HGNC:2974]	14068	-0.04134488105773926	0.28340355	No	
+row_27	CDK5	cyclin dependent kinase 5 [Source:HGNC Symbol;Acc:HGNC:1774]	16193	-0.10060381144285202	0.21548851	No	
+row_28	CDK5R1	cyclin dependent kinase 5 regulatory subunit 1 [Source:HGNC Symbol;Acc:HGNC:1775]	18807	-0.1752082258462906	0.13551041	No	
+row_29	EGR4	early growth response 4 [Source:HGNC Symbol;Acc:HGNC:3241]	20664	-0.21078279614448547	0.084698394	No	
+row_30	CREB1	cAMP responsive element binding protein 1 [Source:HGNC Symbol;Acc:HGNC:2345]	22123	-0.2455499768257141	0.05033633	No	
+row_31	ID3	inhibitor of DNA binding 3 [Source:HGNC Symbol;Acc:HGNC:5362]	24008	-0.3057282865047455	0.005131001	No	
+row_32	F3	coagulation factor III, tissue factor [Source:HGNC Symbol;Acc:HGNC:3541]	24387	-0.3203575313091278	0.014050271	No	
+row_33	ATF2	activating transcription factor 2 [Source:HGNC Symbol;Acc:HGNC:784]	24840	-0.3386898338794708	0.021633163	No	
+row_34	VGF	VGF nerve growth factor inducible [Source:HGNC Symbol;Acc:HGNC:12684]	24896	-0.3408958613872528	0.043369338	No	
+row_35	TPH1	tryptophan hydroxylase 1 [Source:HGNC Symbol;Acc:HGNC:12008]	27405	-0.5112321972846985	-0.009568588	No	
+row_36	REST	RE1 silencing transcription factor [Source:HGNC Symbol;Acc:HGNC:9966]	28021	-0.6389327645301819	0.013118484	No	

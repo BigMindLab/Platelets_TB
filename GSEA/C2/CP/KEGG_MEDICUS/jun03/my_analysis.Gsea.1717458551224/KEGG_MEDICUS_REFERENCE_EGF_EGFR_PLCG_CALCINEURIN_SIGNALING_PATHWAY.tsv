@@ -1,0 +1,16 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	PPP3R1	protein phosphatase 3 regulatory subunit B, alpha [Source:HGNC Symbol;Acc:HGNC:9317]	9749	0.08772221207618713	-0.30919236	No	
+row_1	PPP3CC	protein phosphatase 3 catalytic subunit gamma [Source:HGNC Symbol;Acc:HGNC:9316]	10529	0.06196954473853111	-0.31238607	No	
+row_2	CALM1	calmodulin 1 [Source:HGNC Symbol;Acc:HGNC:1442]	10582	0.060202185064554214	-0.29065403	No	
+row_3	EGF	epidermal growth factor [Source:HGNC Symbol;Acc:HGNC:3229]	12034	0.015836723148822784	-0.33558455	No	
+row_4	CALM3	calmodulin 3 [Source:HGNC Symbol;Acc:HGNC:1449]	12319	0.007046626880764961	-0.34283376	No	
+row_5	NFATC1	nuclear factor of activated T cells 1 [Source:HGNC Symbol;Acc:HGNC:7775]	17423	-0.1343647688627243	-0.47005665	Yes	
+row_6	PLCG2	phospholipase C gamma 2 [Source:HGNC Symbol;Acc:HGNC:9066]	17987	-0.15020869672298431	-0.43110046	Yes	
+row_7	PLCG1	phospholipase C gamma 1 [Source:HGNC Symbol;Acc:HGNC:9065]	18031	-0.15158502757549286	-0.37328213	Yes	
+row_8	NFATC2	nuclear factor of activated T cells 2 [Source:HGNC Symbol;Acc:HGNC:7776]	20493	-0.2048807144165039	-0.3798066	Yes	
+row_9	NFATC3	nuclear factor of activated T cells 3 [Source:HGNC Symbol;Acc:HGNC:7777]	21019	-0.2183452695608139	-0.31284133	Yes	
+row_10	EGFR	epidermal growth factor receptor [Source:HGNC Symbol;Acc:HGNC:3236]	21902	-0.2389931082725525	-0.25037375	Yes	
+row_11	PPP3CA	protein phosphatase 3 catalytic subunit alpha [Source:HGNC Symbol;Acc:HGNC:9314]	22263	-0.24748671054840088	-0.16618773	Yes	
+row_12	PPP3CB	protein phosphatase 3 catalytic subunit beta [Source:HGNC Symbol;Acc:HGNC:9315]	22918	-0.2676730155944824	-0.08446015	Yes	
+row_13	CALM2	calmodulin 2 [Source:HGNC Symbol;Acc:HGNC:1445]	24007	-0.30567148327827454	-0.003152169	Yes	
+row_14	NFATC4	nuclear factor of activated T cells 4 [Source:HGNC Symbol;Acc:HGNC:7778]	26148	-0.40280890464782715	0.079107754	Yes	

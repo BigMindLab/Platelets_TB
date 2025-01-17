@@ -1,0 +1,50 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	GPAT3	glycerol-3-phosphate acyltransferase 3 [Source:HGNC Symbol;Acc:HGNC:28157]	245	0.7977842688560486	0.05089303	Yes	
+row_1	NID1	nidogen 1 [Source:HGNC Symbol;Acc:HGNC:7821]	292	0.7629464864730835	0.10620685	Yes	
+row_2	IL1RN	interleukin 1 receptor antagonist [Source:HGNC Symbol;Acc:HGNC:6000]	313	0.7532545328140259	0.16171464	Yes	
+row_3	KLHL18	kelch like family member 18 [Source:HGNC Symbol;Acc:HGNC:29120]	525	0.6607199311256409	0.20357844	Yes	
+row_4	TP53INP2	tumor protein p53 inducible nuclear protein 2 [Source:HGNC Symbol;Acc:HGNC:16104]	614	0.632676362991333	0.2476888	Yes	
+row_5	ABHD4	abhydrolase domain containing 4, N-acyl phospholipase B [Source:HGNC Symbol;Acc:HGNC:20154]	640	0.6236587166786194	0.29334882	Yes	
+row_6	ARHGAP1	Rho GTPase activating protein 1 [Source:HGNC Symbol;Acc:HGNC:673]	997	0.540677011013031	0.32113856	Yes	
+row_7	ZNF219	zinc finger protein 219 [Source:HGNC Symbol;Acc:HGNC:13011]	1358	0.48024874925613403	0.34427762	Yes	
+row_8	GAS7	growth arrest specific 7 [Source:HGNC Symbol;Acc:HGNC:4169]	1769	0.42991796135902405	0.36189663	Yes	
+row_9	XRCC4	X-ray repair cross complementing 4 [Source:HGNC Symbol;Acc:HGNC:12831]	2789	0.3448696732521057	0.35168344	Yes	
+row_10	ST3GAL1	ST3 beta-galactoside alpha-2,3-sialyltransferase 1 [Source:HGNC Symbol;Acc:HGNC:10862]	2982	0.33245015144348145	0.36971962	Yes	
+row_11	CMBL	carboxymethylenebutenolidase homolog [Source:HGNC Symbol;Acc:HGNC:25090]	3414	0.31154191493988037	0.3777637	Yes	
+row_12	HSD17B12	hydroxysteroid 17-beta dehydrogenase 12 [Source:HGNC Symbol;Acc:HGNC:18646]	3563	0.3038070797920227	0.39521462	Yes	
+row_13	PRKCA	protein kinase C alpha [Source:HGNC Symbol;Acc:HGNC:9393]	4651	0.25433140993118286	0.3758458	No	
+row_14	NONO	non-POU domain containing octamer binding [Source:HGNC Symbol;Acc:HGNC:7871]	5598	0.21878685057163239	0.35879877	No	
+row_15	TRIM55	tripartite motif containing 55 [Source:HGNC Symbol;Acc:HGNC:14215]	5897	0.20594312250614166	0.36365443	No	
+row_16	SMG7	SMG7 nonsense mediated mRNA decay factor [Source:HGNC Symbol;Acc:HGNC:16792]	6361	0.19251026213169098	0.36168653	No	
+row_17	CARD6	caspase recruitment domain family member 6 [Source:HGNC Symbol;Acc:HGNC:16394]	8620	0.127356618642807	0.2915295	No	
+row_18	RNGTT	RNA guanylyltransferase and 5'-phosphatase [Source:HGNC Symbol;Acc:HGNC:10073]	8911	0.11608029156923294	0.2899612	No	
+row_19	LRCH4	leucine rich repeats and calponin homology domain containing 4 [Source:HGNC Symbol;Acc:HGNC:6691]	9639	0.09136206656694412	0.27113104	No	
+row_20	FAM53C	family with sequence similarity 53 member C [Source:HGNC Symbol;Acc:HGNC:1336]	9683	0.08986171334981918	0.27632016	No	
+row_21	UBE3A	ubiquitin protein ligase E3A [Source:HGNC Symbol;Acc:HGNC:12496]	10174	0.07314378768205643	0.26449168	No	
+row_22	NKAPL	NFKB activating protein like [Source:HGNC Symbol;Acc:HGNC:21584]	10270	0.06980494409799576	0.26634946	No	
+row_23	TPM3	tropomyosin 3 [Source:HGNC Symbol;Acc:HGNC:12012]	11010	0.046398863196372986	0.24374048	No	
+row_24	FBXL16	F-box and leucine rich repeat protein 16 [Source:HGNC Symbol;Acc:HGNC:14150]	11146	0.04179077595472336	0.24209647	No	
+row_25	FAM120A	family with sequence similarity 120A [Source:HGNC Symbol;Acc:HGNC:13247]	11321	0.03619168698787689	0.23865871	No	
+row_26	TAL1	TAL bHLH transcription factor 1, erythroid differentiation factor [Source:HGNC Symbol;Acc:HGNC:11556]	12400	0.005118923727422953	0.20100933	No	
+row_27	ACO2	aconitase 2 [Source:HGNC Symbol;Acc:HGNC:118]	12732	-0.004330664873123169	0.18965498	No	
+row_28	ZMYND11	zinc finger MYND-type containing 11 [Source:HGNC Symbol;Acc:HGNC:16966]	12790	-0.005846123211085796	0.18808031	No	
+row_29	PRPS2	phosphoribosyl pyrophosphate synthetase 2 [Source:HGNC Symbol;Acc:HGNC:9465]	12871	-0.007849452085793018	0.18584374	No	
+row_30	FBXO4	F-box protein 4 [Source:HGNC Symbol;Acc:HGNC:13583]	14796	-0.061810433864593506	0.12257855	No	
+row_31	VSIG10	V-set and immunoglobulin domain containing 10 [Source:HGNC Symbol;Acc:HGNC:26078]	15844	-0.09132780879735947	0.09245637	No	
+row_32	ADGRG2	adhesion G protein-coupled receptor G2 [Source:HGNC Symbol;Acc:HGNC:4516]	16783	-0.11643751710653305	0.068053536	No	
+row_33	REXO1	RNA exonuclease 1 homolog [Source:HGNC Symbol;Acc:HGNC:24616]	17381	-0.13341841101646423	0.056948286	No	
+row_34	DAB2	DAB adaptor protein 2 [Source:HGNC Symbol;Acc:HGNC:2662]	17651	-0.1404210925102234	0.05793733	No	
+row_35	DNPH1	2'-deoxynucleoside 5'-phosphate N-hydrolase 1 [Source:HGNC Symbol;Acc:HGNC:21218]	17656	-0.14057129621505737	0.06828668	No	
+row_36	TRERF1	transcriptional regulating factor 1 [Source:HGNC Symbol;Acc:HGNC:18273]	18066	-0.15236815810203552	0.06522816	No	
+row_37	FAM168A	family with sequence similarity 168 member A [Source:HGNC Symbol;Acc:HGNC:28999]	19431	-0.1873411238193512	0.031087568	No	
+row_38	PNOC	prepronociceptin [Source:HGNC Symbol;Acc:HGNC:9163]	20531	-0.20601972937583923	0.0076900064	No	
+row_39	EMX2	empty spiracles homeobox 2 [Source:HGNC Symbol;Acc:HGNC:3341]	20765	-0.21234279870986938	0.015316444	No	
+row_40	SLC9A5	solute carrier family 9 member A5 [Source:HGNC Symbol;Acc:HGNC:11078]	21916	-0.23937593400478363	-0.0073910924	No	
+row_41	KNOP1	lysine rich nucleolar protein 1 [Source:HGNC Symbol;Acc:HGNC:34404]	22639	-0.2595435380935669	-0.013493908	No	
+row_42	DFFA	DNA fragmentation factor subunit alpha [Source:HGNC Symbol;Acc:HGNC:2772]	22719	-0.26154670119285583	0.0032375439	No	
+row_43	FGF13	fibroblast growth factor 13 [Source:HGNC Symbol;Acc:HGNC:3670]	23947	-0.302820086479187	-0.01745185	No	
+row_44	ASIC4	acid sensing ion channel subunit family member 4 [Source:HGNC Symbol;Acc:HGNC:21263]	24552	-0.32694900035858154	-0.014361382	No	
+row_45	EBAG9	estrogen receptor binding site associated antigen 9 [Source:HGNC Symbol;Acc:HGNC:3123]	24755	-0.33561062812805176	0.0035578737	No	
+row_46	BOK	BCL2 family apoptosis regulator BOK [Source:HGNC Symbol;Acc:HGNC:1087]	27056	-0.47343993186950684	-0.042253613	No	
+row_47	BET1	Bet1 golgi vesicular membrane trafficking protein [Source:HGNC Symbol;Acc:HGNC:14562]	27136	-0.4822947084903717	-0.009048322	No	
+row_48	ERCC6L2	ERCC excision repair 6 like 2 [Source:HGNC Symbol;Acc:HGNC:26922]	28193	-0.7150110602378845	0.007055816	No	

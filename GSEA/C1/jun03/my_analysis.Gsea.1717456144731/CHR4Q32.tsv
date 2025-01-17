@@ -1,0 +1,58 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	GASK1B	golgi associated kinase 1B [Source:HGNC Symbol;Acc:HGNC:25312]	115	0.919570803642273	0.06352755	Yes	
+row_1	TMEM192	transmembrane protein 192 [Source:HGNC Symbol;Acc:HGNC:26775]	627	0.6287800669670105	0.09170814	Yes	
+row_2	GASK1B-AS1	GASK1B antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:53132]	683	0.6101561188697815	0.13461196	Yes	
+row_3	NUDT19P5	NUDT19 pseudogene 5 [Source:HGNC Symbol;Acc:HGNC:43589]	947	0.5502908229827881	0.16577563	Yes	
+row_4	TMEM144	transmembrane protein 144 [Source:HGNC Symbol;Acc:HGNC:25633]	1117	0.517795741558075	0.19786821	Yes	
+row_5	RNU4-87P	RNA, U4 small nuclear 87, pseudogene [Source:HGNC Symbol;Acc:HGNC:47023]	1770	0.4299145042896271	0.20645693	Yes	
+row_6	FTH1P21	ferritin heavy chain 1 pseudogene 21 [Source:HGNC Symbol;Acc:HGNC:3997]	1907	0.41612184047698975	0.23224132	Yes	
+row_7	GK3	glycerol kinase 3 [Source:HGNC Symbol;Acc:HGNC:4292]	2626	0.3572620749473572	0.23316117	Yes	
+row_8	GUCY1A1	guanylate cyclase 1 soluble subunit alpha 1 [Source:HGNC Symbol;Acc:HGNC:4685]	3084	0.32674795389175415	0.2410489	Yes	
+row_9	TKTL2	transketolase like 2 [Source:HGNC Symbol;Acc:HGNC:25313]	3275	0.31745046377182007	0.2576756	Yes	
+row_10	RPL21P51	ribosomal protein L21 pseudogene 51 [Source:HGNC Symbol;Acc:HGNC:36081]	3704	0.2959628701210022	0.2643241	Yes	
+row_11	TLL1	tolloid like 1 [Source:HGNC Symbol;Acc:HGNC:11843]	4375	0.2651830315589905	0.2601703	Yes	
+row_12	FSTL5	follistatin like 5 [Source:HGNC Symbol;Acc:HGNC:21386]	4477	0.2606092393398285	0.27576008	Yes	
+row_13	LRAT	lecithin retinol acyltransferase [Source:HGNC Symbol;Acc:HGNC:6685]	4722	0.2511986494064331	0.28561184	Yes	
+row_14	CPE	carboxypeptidase E [Source:HGNC Symbol;Acc:HGNC:2303]	4889	0.24383825063705444	0.2976752	Yes	
+row_15	PDGFC	platelet derived growth factor C [Source:HGNC Symbol;Acc:HGNC:8801]	5254	0.22983181476593018	0.30172178	Yes	
+row_16	YWHAEP4	tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein epsilon pseudogene 4 [Source:HGNC Symbol;Acc:HGNC:49440]	5488	0.2220819741487503	0.3098217	Yes	
+row_17	AIDAP2	AIDA pseudogene 2 [Source:HGNC Symbol;Acc:HGNC:54664]	5673	0.21488595008850098	0.31912193	Yes	
+row_18	DDX60L	DExD/H-box 60 like [Source:HGNC Symbol;Acc:HGNC:26429]	5714	0.21424895524978638	0.33345705	Yes	
+row_19	PALLD	palladin, cytoskeletal associated protein [Source:HGNC Symbol;Acc:HGNC:17068]	6018	0.20358332991600037	0.3377271	Yes	
+row_20	CBR4-DT	CBR4 divergent transcript [Source:HGNC Symbol;Acc:HGNC:55540]	6493	0.1886768639087677	0.3348671	Yes	
+row_21	YWHAQP4	YWHAQ pseudogene 4 [Source:HGNC Symbol;Acc:HGNC:37683]	6892	0.179652601480484	0.3340258	Yes	
+row_22	TRIM60P14	tripartite motif containing 60 pseudogene 14 [Source:HGNC Symbol;Acc:HGNC:38486]	6967	0.17912130057811737	0.34457928	Yes	
+row_23	RXFP1	relaxin family peptide receptor 1 [Source:HGNC Symbol;Acc:HGNC:19718]	8057	0.14918774366378784	0.31711385	No	
+row_24	PSME2P3	proteasome activator subunit 2 pseudogene 3 [Source:HGNC Symbol;Acc:HGNC:30156]	8941	0.11461338400840759	0.2943769	No	
+row_25	GUCY1B1	guanylate cyclase 1 soluble subunit beta 1 [Source:HGNC Symbol;Acc:HGNC:4687]	9763	0.0872955322265625	0.27182016	No	
+row_26	MARCHF1	membrane associated ring-CH-type finger 1 [Source:HGNC Symbol;Acc:HGNC:26077]	10363	0.06703542172908783	0.25560865	No	
+row_27	RAPGEF2	Rap guanine nucleotide exchange factor 2 [Source:HGNC Symbol;Acc:HGNC:16854]	11401	0.03403277322649956	0.22151469	No	
+row_28	SPOCK3	SPARC (osteonectin), cwcv and kazal like domains proteoglycan 3 [Source:HGNC Symbol;Acc:HGNC:13565]	11519	0.030787961557507515	0.21964864	No	
+row_29	TMA16	translation machinery associated 16 homolog [Source:HGNC Symbol;Acc:HGNC:25638]	12636	-0.0015387157909572124	0.1803786	No	
+row_30	FAM218A	family with sequence similarity 218 member A [Source:HGNC Symbol;Acc:HGNC:26466]	12672	-0.0026407050900161266	0.17933755	No	
+row_31	MAP9-AS1	MAP9 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:56110]	13287	-0.019180864095687866	0.15907949	No	
+row_32	PPID	peptidylprolyl isomerase D [Source:HGNC Symbol;Acc:HGNC:9257]	13508	-0.026178766041994095	0.15323986	No	
+row_33	CTSO	cathepsin O [Source:HGNC Symbol;Acc:HGNC:2542]	13761	-0.03313598409295082	0.1467823	No	
+row_34	ANP32C	acidic nuclear phosphoprotein 32 family member C [Source:HGNC Symbol;Acc:HGNC:16675]	14154	-0.04336925595998764	0.13613631	No	
+row_35	C4orf45	chromosome 4 open reading frame 45 [Source:HGNC Symbol;Acc:HGNC:26342]	15128	-0.070729099214077	0.10699797	No	
+row_36	DDX60	DExD/H-box helicase 60 [Source:HGNC Symbol;Acc:HGNC:25942]	15153	-0.07168282568454742	0.1114195	No	
+row_37	KLHL2	kelch like family member 2 [Source:HGNC Symbol;Acc:HGNC:6353]	15577	-0.08447444438934326	0.10270065	No	
+row_38	NACA3P	NACA family member 3, pseudogene [Source:HGNC Symbol;Acc:HGNC:33442]	16239	-0.10165033489465714	0.08684527	No	
+row_39	MSMO1	methylsterol monooxygenase 1 [Source:HGNC Symbol;Acc:HGNC:10545]	17485	-0.13574159145355225	0.0528864	No	
+row_40	TRIM61	tripartite motif containing 61 [Source:HGNC Symbol;Acc:HGNC:24339]	18012	-0.1508549451828003	0.04541151	No	
+row_41	SMIM31	small integral membrane protein 31 [Source:HGNC Symbol;Acc:HGNC:49638]	18294	-0.15876497328281403	0.047163922	No	
+row_42	MAP9	microtubule associated protein 9 [Source:HGNC Symbol;Acc:HGNC:26118]	18571	-0.1678323596715927	0.04975921	No	
+row_43	FNIP2	folliculin interacting protein 2 [Source:HGNC Symbol;Acc:HGNC:29280]	18924	-0.1782994121313095	0.050441787	No	
+row_44	APELA	apelin receptor early endogenous ligand [Source:HGNC Symbol;Acc:HGNC:48925]	19144	-0.1824808269739151	0.0561252	No	
+row_45	RN7SKP188	RN7SK pseudogene 188 [Source:HGNC Symbol;Acc:HGNC:45912]	19485	-0.18817706406116486	0.057957232	No	
+row_46	TDO2	tryptophan 2,3-dioxygenase [Source:HGNC Symbol;Acc:HGNC:11708]	21238	-0.22479645907878876	0.012651842	No	
+row_47	LINC01179	long intergenic non-protein coding RNA 1179 [Source:HGNC Symbol;Acc:HGNC:49556]	21349	-0.2253998965024948	0.025336245	No	
+row_48	CBR4	carbonyl reductase 4 [Source:HGNC Symbol;Acc:HGNC:25891]	21448	-0.22822536528110504	0.038651787	No	
+row_49	NAF1	nuclear assembly factor 1 ribonucleoprotein [Source:HGNC Symbol;Acc:HGNC:25126]	21770	-0.2364855706691742	0.044704862	No	
+row_50	RBM46	RNA binding motif protein 46 [Source:HGNC Symbol;Acc:HGNC:28401]	21805	-0.2366492599248886	0.06089807	No	
+row_51	RNU6-853P	RNA, U6 small nuclear 853, pseudogene [Source:HGNC Symbol;Acc:HGNC:47816]	23030	-0.26983222365379333	0.03753556	No	
+row_52	RPL9P16	ribosomal protein L9 pseudogene 16 [Source:HGNC Symbol;Acc:HGNC:36851]	23614	-0.2898837924003601	0.03826739	No	
+row_53	NPY1R	neuropeptide Y receptor Y1 [Source:HGNC Symbol;Acc:HGNC:7956]	26001	-0.39413946866989136	-0.016965345	No	
+row_54	GLRB	glycine receptor beta [Source:HGNC Symbol;Acc:HGNC:4329]	26172	-0.4046962261199951	0.006779457	No	
+row_55	ETFDH	electron transfer flavoprotein dehydrogenase [Source:HGNC Symbol;Acc:HGNC:3483]	26516	-0.4288463592529297	0.026194133	No	
+row_56	C4orf46	chromosome 4 open reading frame 46 [Source:HGNC Symbol;Acc:HGNC:27320]	27606	-0.5443609356880188	0.0277728	No	

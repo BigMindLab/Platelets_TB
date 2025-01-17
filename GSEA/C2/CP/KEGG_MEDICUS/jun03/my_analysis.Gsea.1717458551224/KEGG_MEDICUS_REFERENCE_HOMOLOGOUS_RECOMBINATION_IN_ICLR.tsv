@@ -1,0 +1,17 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	FANCI	FA complementation group I [Source:HGNC Symbol;Acc:HGNC:25568]	2211	0.39007440209388733	0.031517092	No	
+row_1	UBB	ubiquitin B [Source:HGNC Symbol;Acc:HGNC:12463]	2261	0.3863016963005066	0.13816158	No	
+row_2	MCM9	minichromosome maintenance 9 homologous recombination repair factor [Source:HGNC Symbol;Acc:HGNC:21484]	9640	0.0913146436214447	-0.09621158	No	
+row_3	BRIP1	BRCA1 interacting helicase 1 [Source:HGNC Symbol;Acc:HGNC:20473]	11055	0.04463591426610947	-0.13351697	No	
+row_4	RPA2	replication protein A2 [Source:HGNC Symbol;Acc:HGNC:10290]	11537	0.030473334714770317	-0.14191788	No	
+row_5	PALB2	partner and localizer of BRCA2 [Source:HGNC Symbol;Acc:HGNC:26144]	11937	0.01866813562810421	-0.15074101	No	
+row_6	BARD1	BRCA1 associated RING domain 1 [Source:HGNC Symbol;Acc:HGNC:952]	13873	-0.03610628843307495	-0.20879854	No	
+row_7	RPA4	replication protein A4 [Source:HGNC Symbol;Acc:HGNC:30305]	15136	-0.07103405147790909	-0.23334207	No	
+row_8	MCM8	minichromosome maintenance 8 homologous recombination repair factor [Source:HGNC Symbol;Acc:HGNC:16147]	18531	-0.1664903461933136	-0.30623537	No	
+row_9	SEM1	SEM1 26S proteasome subunit [Source:HGNC Symbol;Acc:HGNC:10845]	18966	-0.1793002486228943	-0.2712289	No	
+row_10	BRCA2	BRCA2 DNA repair associated [Source:HGNC Symbol;Acc:HGNC:1101]	22004	-0.2410077005624771	-0.3106373	Yes	
+row_11	HROB	homologous recombination factor with OB-fold [Source:HGNC Symbol;Acc:HGNC:28460]	22113	-0.24501624703407288	-0.24570741	Yes	
+row_12	BRCA1	BRCA1 DNA repair associated [Source:HGNC Symbol;Acc:HGNC:1100]	24938	-0.3425329029560089	-0.24912862	Yes	
+row_13	FANCD2	FA complementation group D2 [Source:HGNC Symbol;Acc:HGNC:3585]	26095	-0.3992406725883484	-0.17786339	Yes	
+row_14	RPA3	replication protein A3 [Source:HGNC Symbol;Acc:HGNC:10291]	26813	-0.4528713524341583	-0.07608314	Yes	
+row_15	RPA1	replication protein A1 [Source:HGNC Symbol;Acc:HGNC:10289]	27006	-0.4695485234260559	0.048875894	Yes	

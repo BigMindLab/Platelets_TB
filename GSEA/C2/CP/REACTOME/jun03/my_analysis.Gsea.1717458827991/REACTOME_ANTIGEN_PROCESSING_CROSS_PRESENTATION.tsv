@@ -1,0 +1,103 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	FCGR1A	Fc gamma receptor Ia [Source:HGNC Symbol;Acc:HGNC:3613]	1	1.9109654426574707	0.05019618	Yes	
+row_1	FCGR1BP	Fc gamma receptor Ib, pseudogene [Source:HGNC Symbol;Acc:HGNC:3614]	2	1.9097435474395752	0.10039558	Yes	
+row_2	TLR4	toll like receptor 4 [Source:HGNC Symbol;Acc:HGNC:11850]	38	1.105352520942688	0.12821372	Yes	
+row_3	CD14	CD14 molecule [Source:HGNC Symbol;Acc:HGNC:1628]	66	1.021483063697815	0.15411003	Yes	
+row_4	TAPBP	TAP binding protein [Source:HGNC Symbol;Acc:HGNC:11566]	107	0.9280051589012146	0.17708968	Yes	
+row_5	TLR2	toll like receptor 2 [Source:HGNC Symbol;Acc:HGNC:11848]	139	0.8958185911178589	0.1995414	Yes	
+row_6	S100A8	S100 calcium binding protein A8 [Source:HGNC Symbol;Acc:HGNC:10498]	159	0.8730252981185913	0.22181812	Yes	
+row_7	NCF2	neutrophil cytosolic factor 2 [Source:HGNC Symbol;Acc:HGNC:7661]	187	0.8464646935462952	0.2431139	Yes	
+row_8	MRC1	mannose receptor C-type 1 [Source:HGNC Symbol;Acc:HGNC:7228]	212	0.826304018497467	0.26398578	Yes	
+row_9	S100A9	S100 calcium binding protein A9 [Source:HGNC Symbol;Acc:HGNC:10499]	225	0.8120447993278503	0.284907	Yes	
+row_10	CYBB	cytochrome b-245 beta chain [Source:HGNC Symbol;Acc:HGNC:2578]	262	0.7858151793479919	0.30429044	Yes	
+row_11	PSMA3	proteasome 20S subunit alpha 3 [Source:HGNC Symbol;Acc:HGNC:9532]	341	0.7384522557258606	0.3209444	Yes	
+row_12	HLA-F	major histocompatibility complex, class I, F [Source:HGNC Symbol;Acc:HGNC:4963]	365	0.7252557277679443	0.3391955	Yes	
+row_13	NCF4	neutrophil cytosolic factor 4 [Source:HGNC Symbol;Acc:HGNC:7662]	380	0.7152554988861084	0.3575018	Yes	
+row_14	PSME1	proteasome activator subunit 1 [Source:HGNC Symbol;Acc:HGNC:9568]	403	0.7078345417976379	0.3753303	Yes	
+row_15	TAP1	transporter 1, ATP binding cassette subfamily B member [Source:HGNC Symbol;Acc:HGNC:43]	605	0.6360108852386475	0.38494396	Yes	
+row_16	TAP2	transporter 2, ATP binding cassette subfamily B member [Source:HGNC Symbol;Acc:HGNC:44]	634	0.6260246634483337	0.4004099	Yes	
+row_17	PSMD13	proteasome 26S subunit, non-ATPase 13 [Source:HGNC Symbol;Acc:HGNC:9558]	743	0.5965582728385925	0.41227368	Yes	
+row_18	NCF1	neutrophil cytosolic factor 1 [Source:HGNC Symbol;Acc:HGNC:7660]	763	0.5908563733100891	0.42713332	Yes	
+row_19	CALR	calreticulin [Source:HGNC Symbol;Acc:HGNC:1455]	812	0.5790117383003235	0.4406566	Yes	
+row_20	CTSS	cathepsin S [Source:HGNC Symbol;Acc:HGNC:2545]	828	0.5753816962242126	0.45525086	Yes	
+row_21	TLR1	toll like receptor 1 [Source:HGNC Symbol;Acc:HGNC:11847]	885	0.564328670501709	0.4681054	Yes	
+row_22	PSMA7	proteasome 20S subunit alpha 7 [Source:HGNC Symbol;Acc:HGNC:9536]	953	0.5496916174888611	0.48018643	Yes	
+row_23	PSMB5	proteasome 20S subunit beta 5 [Source:HGNC Symbol;Acc:HGNC:9542]	1006	0.5394399166107178	0.49252814	Yes	
+row_24	HLA-C	major histocompatibility complex, class I, C [Source:HGNC Symbol;Acc:HGNC:4933]	1064	0.5269314646720886	0.5043643	Yes	
+row_25	PSMD10	proteasome 26S subunit, non-ATPase 10 [Source:HGNC Symbol;Acc:HGNC:9555]	1065	0.5268697142601013	0.51821357	Yes	
+row_26	SEC61G	SEC61 translocon subunit gamma [Source:HGNC Symbol;Acc:HGNC:18277]	1097	0.5218467712402344	0.5308351	Yes	
+row_27	HLA-B	major histocompatibility complex, class I, B [Source:HGNC Symbol;Acc:HGNC:4932]	1206	0.5017149448394775	0.54020584	Yes	
+row_28	TIRAP	TIR domain containing adaptor protein [Source:HGNC Symbol;Acc:HGNC:17192]	1216	0.4997979700565338	0.55302536	Yes	
+row_29	LY96	lymphocyte antigen 96 [Source:HGNC Symbol;Acc:HGNC:17156]	1227	0.49834465980529785	0.56577134	Yes	
+row_30	PSME2	proteasome activator subunit 2 [Source:HGNC Symbol;Acc:HGNC:9569]	1382	0.47737744450569153	0.57287645	Yes	
+row_31	PSMD11	proteasome 26S subunit, non-ATPase 11 [Source:HGNC Symbol;Acc:HGNC:9556]	1416	0.4713696837425232	0.5841004	Yes	
+row_32	SEC61A1	SEC61 translocon subunit alpha 1 [Source:HGNC Symbol;Acc:HGNC:18276]	1474	0.46289992332458496	0.5942535	Yes	
+row_33	HLA-A	major histocompatibility complex, class I, A [Source:HGNC Symbol;Acc:HGNC:4931]	1644	0.4426889419555664	0.5999166	Yes	
+row_34	HLA-G	major histocompatibility complex, class I, G [Source:HGNC Symbol;Acc:HGNC:4964]	1725	0.43438220024108887	0.60850704	Yes	
+row_35	MYD88	MYD88 innate immune signal transduction adaptor [Source:HGNC Symbol;Acc:HGNC:7562]	2064	0.4034796953201294	0.60716605	Yes	
+row_36	UBB	ubiquitin B [Source:HGNC Symbol;Acc:HGNC:12463]	2261	0.3863016963005066	0.61039263	Yes	
+row_37	PSMB3	proteasome 20S subunit beta 3 [Source:HGNC Symbol;Acc:HGNC:9540]	2342	0.37883633375167847	0.617523	Yes	
+row_38	MRC2	mannose receptor C type 2 [Source:HGNC Symbol;Acc:HGNC:16875]	2465	0.36911311745643616	0.6229133	Yes	
+row_39	PSMC1	proteasome 26S subunit, ATPase 1 [Source:HGNC Symbol;Acc:HGNC:9547]	2635	0.3565060496330261	0.626311	Yes	
+row_40	HLA-E	major histocompatibility complex, class I, E [Source:HGNC Symbol;Acc:HGNC:4962]	2648	0.3558235764503479	0.63524	Yes	
+row_41	PSMD4	proteasome 26S subunit ubiquitin receptor, non-ATPase 4 [Source:HGNC Symbol;Acc:HGNC:9561]	2787	0.34496137499809265	0.6394299	Yes	
+row_42	PSME3	proteasome activator subunit 3 [Source:HGNC Symbol;Acc:HGNC:9570]	2852	0.33997786045074463	0.64610445	Yes	
+row_43	PSMD6	proteasome 26S subunit, non-ATPase 6 [Source:HGNC Symbol;Acc:HGNC:9564]	2879	0.3387477993965149	0.65408975	Yes	
+row_44	IKBKG	inhibitor of nuclear factor kappa B kinase regulatory subunit gamma [Source:HGNC Symbol;Acc:HGNC:5961]	2927	0.3358449339866638	0.66125655	Yes	
+row_45	CTSL	cathepsin L [Source:HGNC Symbol;Acc:HGNC:2537]	3616	0.30043941736221313	0.644836	No	
+row_46	PSMD8	proteasome 26S subunit, non-ATPase 8 [Source:HGNC Symbol;Acc:HGNC:9566]	4204	0.27248504757881165	0.6312506	No	
+row_47	PSMB8	proteasome 20S subunit beta 8 [Source:HGNC Symbol;Acc:HGNC:9545]	4440	0.26212191581726074	0.62983453	No	
+row_48	PSME4	proteasome activator subunit 4 [Source:HGNC Symbol;Acc:HGNC:20635]	4576	0.2569926679134369	0.6318182	No	
+row_49	PSMA4	proteasome 20S subunit alpha 4 [Source:HGNC Symbol;Acc:HGNC:9533]	4663	0.2536998391151428	0.63544714	No	
+row_50	PSMB10	proteasome 20S subunit beta 10 [Source:HGNC Symbol;Acc:HGNC:9538]	4852	0.2453550100326538	0.6352516	No	
+row_51	STX4	syntaxin 4 [Source:HGNC Symbol;Acc:HGNC:11439]	5443	0.22374489903450012	0.62027895	No	
+row_52	PSMD2	proteasome 26S subunit ubiquitin receptor, non-ATPase 2 [Source:HGNC Symbol;Acc:HGNC:9559]	5723	0.2139442414045334	0.61604124	No	
+row_53	PSMB2	proteasome 20S subunit beta 2 [Source:HGNC Symbol;Acc:HGNC:9539]	5726	0.21386566758155823	0.6215922	No	
+row_54	CTSV	cathepsin V [Source:HGNC Symbol;Acc:HGNC:2538]	6042	0.20270779728889465	0.6157867	No	
+row_55	CYBA	cytochrome b-245 alpha chain [Source:HGNC Symbol;Acc:HGNC:2577]	6557	0.18786217272281647	0.6025571	No	
+row_56	PSMB4	proteasome 20S subunit beta 4 [Source:HGNC Symbol;Acc:HGNC:9541]	6578	0.18700067698955536	0.6067657	No	
+row_57	PSMC4	proteasome 26S subunit, ATPase 4 [Source:HGNC Symbol;Acc:HGNC:9551]	8082	0.1479804515838623	0.55753094	No	
+row_58	PSMB1	proteasome 20S subunit beta 1 [Source:HGNC Symbol;Acc:HGNC:9537]	8398	0.13555626571178436	0.5499603	No	
+row_59	PSMA2	proteasome 20S subunit alpha 2 [Source:HGNC Symbol;Acc:HGNC:9531]	8488	0.1319463700056076	0.55028284	No	
+row_60	VAMP8	vesicle associated membrane protein 8 [Source:HGNC Symbol;Acc:HGNC:12647]	8716	0.12328200042247772	0.5455	No	
+row_61	B2M	beta-2-microglobulin [Source:HGNC Symbol;Acc:HGNC:914]	9280	0.10436559468507767	0.5283437	No	
+row_62	BTK	Bruton tyrosine kinase [Source:HGNC Symbol;Acc:HGNC:1133]	9313	0.10300347954034805	0.52992016	No	
+row_63	PSMA1	proteasome 20S subunit alpha 1 [Source:HGNC Symbol;Acc:HGNC:9530]	9566	0.09369955956935883	0.52347606	No	
+row_64	PSMC6	proteasome 26S subunit, ATPase 6 [Source:HGNC Symbol;Acc:HGNC:9553]	9798	0.08623191714286804	0.5175779	No	
+row_65	PSMD3	proteasome 26S subunit, non-ATPase 3 [Source:HGNC Symbol;Acc:HGNC:9560]	9848	0.08481350541114807	0.51807535	No	
+row_66	SEC61B	SEC61 translocon subunit beta [Source:HGNC Symbol;Acc:HGNC:16993]	10114	0.07538404315710068	0.5106903	No	
+row_67	ITGB5	integrin subunit beta 5 [Source:HGNC Symbol;Acc:HGNC:6160]	10217	0.07177706062793732	0.50897175	No	
+row_68	S100A1	S100 calcium binding protein A1 [Source:HGNC Symbol;Acc:HGNC:10486]	10266	0.06985800713300705	0.50911146	No	
+row_69	PSMC3	proteasome 26S subunit, ATPase 3 [Source:HGNC Symbol;Acc:HGNC:9549]	10361	0.06714533269405365	0.50755394	No	
+row_70	PSMB7	proteasome 20S subunit beta 7 [Source:HGNC Symbol;Acc:HGNC:9544]	10378	0.06647387892007828	0.5087357	No	
+row_71	PSMD14	proteasome 26S subunit, non-ATPase 14 [Source:HGNC Symbol;Acc:HGNC:16889]	11278	0.03758572041988373	0.47794792	No	
+row_72	PSMB6	proteasome 20S subunit beta 6 [Source:HGNC Symbol;Acc:HGNC:9543]	11387	0.03424970060586929	0.47503087	No	
+row_73	PSMD1	proteasome 26S subunit, non-ATPase 1 [Source:HGNC Symbol;Acc:HGNC:9554]	11740	0.02421923354268074	0.46322584	No	
+row_74	PDIA3	protein disulfide isomerase family A member 3 [Source:HGNC Symbol;Acc:HGNC:4606]	11898	0.01966678909957409	0.4581935	No	
+row_75	PSMD9	proteasome 26S subunit, non-ATPase 9 [Source:HGNC Symbol;Acc:HGNC:9567]	12127	0.01316095795482397	0.45048064	No	
+row_76	PSMF1	proteasome inhibitor subunit 1 [Source:HGNC Symbol;Acc:HGNC:9571]	12447	0.003980882000178099	0.43931	No	
+row_77	PSMB11	proteasome subunit beta 11 [Source:HGNC Symbol;Acc:HGNC:31963]	12731	-0.004293535370379686	0.42942005	No	
+row_78	PSMD7	proteasome 26S subunit, non-ATPase 7 [Source:HGNC Symbol;Acc:HGNC:9565]	12797	-0.006006547249853611	0.42728046	No	
+row_79	PSMA5	proteasome 20S subunit alpha 5 [Source:HGNC Symbol;Acc:HGNC:9534]	13279	-0.01894913613796234	0.4107773	No	
+row_80	PSMC5	proteasome 26S subunit, ATPase 5 [Source:HGNC Symbol;Acc:HGNC:9552]	13378	-0.021890856325626373	0.40788883	No	
+row_81	PSMA6	proteasome 20S subunit alpha 6 [Source:HGNC Symbol;Acc:HGNC:9535]	15243	-0.07497506588697433	0.34397528	No	
+row_82	PSMD5	proteasome 26S subunit, non-ATPase 5 [Source:HGNC Symbol;Acc:HGNC:9563]	15315	-0.07721883803606033	0.3434955	No	
+row_83	CD36	CD36 molecule [Source:HGNC Symbol;Acc:HGNC:1663]	15443	-0.08036986738443375	0.3411192	No	
+row_84	HMGB1	high mobility group box 1 [Source:HGNC Symbol;Acc:HGNC:4983]	15710	-0.0879250094294548	0.33402842	No	
+row_85	PSMD12	proteasome 26S subunit, non-ATPase 12 [Source:HGNC Symbol;Acc:HGNC:9557]	15724	-0.08833771198987961	0.33589098	No	
+row_86	SNAP23	synaptosome associated protein 23 [Source:HGNC Symbol;Acc:HGNC:11131]	17617	-0.13921435177326202	0.27267632	No	
+row_87	VAMP3	vesicle associated membrane protein 3 [Source:HGNC Symbol;Acc:HGNC:12644]	17623	-0.13941828906536102	0.27616435	No	
+row_88	UBC	ubiquitin C [Source:HGNC Symbol;Acc:HGNC:12468]	18009	-0.1507737934589386	0.2665195	No	
+row_89	SEC61A2	SEC61 translocon subunit alpha 2 [Source:HGNC Symbol;Acc:HGNC:17702]	18825	-0.17550338804721832	0.24232604	No	
+row_90	SEM1	SEM1 26S proteasome subunit [Source:HGNC Symbol;Acc:HGNC:10845]	18966	-0.1793002486228943	0.24209072	No	
+row_91	SEC22B	SEC22 homolog B, vesicle trafficking protein [Source:HGNC Symbol;Acc:HGNC:10700]	19314	-0.1839972287416458	0.2346623	No	
+row_92	PSMB9	proteasome 20S subunit beta 9 [Source:HGNC Symbol;Acc:HGNC:9546]	20476	-0.2044200599193573	0.19899933	No	
+row_93	PSMA8	proteasome 20S subunit alpha 8 [Source:HGNC Symbol;Acc:HGNC:22985]	21845	-0.23699596524238586	0.1568761	No	
+row_94	TLR6	toll like receptor 6 [Source:HGNC Symbol;Acc:HGNC:16711]	22008	-0.24105818569660187	0.15748654	No	
+row_95	PSMC2	proteasome 26S subunit, ATPase 2 [Source:HGNC Symbol;Acc:HGNC:9548]	23756	-0.29510462284088135	0.10349474	No	
+row_96	ITGAV	integrin subunit alpha V [Source:HGNC Symbol;Acc:HGNC:6150]	24299	-0.31767913699150085	0.092687875	No	
+row_97	CD207	CD207 molecule [Source:HGNC Symbol;Acc:HGNC:17935]	24441	-0.32278722524642944	0.0961889	No	
+row_98	FGB	fibrinogen beta chain [Source:HGNC Symbol;Acc:HGNC:3662]	25198	-0.35258814692497253	0.07873568	No	
+row_99	LNPEP	leucyl and cystinyl aminopeptidase [Source:HGNC Symbol;Acc:HGNC:6656]	25386	-0.36097797751426697	0.08161468	No	
+row_100	IKBKB	inhibitor of nuclear factor kappa B kinase subunit beta [Source:HGNC Symbol;Acc:HGNC:5960]	26010	-0.3945258557796478	0.069964804	No	
+row_101	CHUK	component of inhibitor of nuclear factor kappa B kinase complex [Source:HGNC Symbol;Acc:HGNC:1974]	27587	-0.5413040518760681	0.028488694	No	

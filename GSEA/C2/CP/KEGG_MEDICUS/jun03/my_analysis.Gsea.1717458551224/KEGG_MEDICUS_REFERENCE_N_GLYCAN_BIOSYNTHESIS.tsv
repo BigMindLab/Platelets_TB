@@ -1,0 +1,17 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	B4GALT2	beta-1,4-galactosyltransferase 2 [Source:HGNC Symbol;Acc:HGNC:925]	766	0.5902705788612366	0.112167984	Yes	
+row_1	MAN1A1	mannosidase alpha class 1A member 1 [Source:HGNC Symbol;Acc:HGNC:6821]	924	0.5545670390129089	0.23737888	Yes	
+row_2	FUT8	fucosyltransferase 8 [Source:HGNC Symbol;Acc:HGNC:4019]	1048	0.5307571887969971	0.35817453	Yes	
+row_3	MAN2A2	mannosidase alpha class 2A member 2 [Source:HGNC Symbol;Acc:HGNC:6825]	1375	0.47823697328567505	0.45943472	Yes	
+row_4	GANAB	glucosidase II alpha subunit [Source:HGNC Symbol;Acc:HGNC:4138]	3440	0.30985525250434875	0.45975304	Yes	
+row_5	MAN1A2	mannosidase alpha class 1A member 2 [Source:HGNC Symbol;Acc:HGNC:6822]	4843	0.2458350509405136	0.46830603	Yes	
+row_6	MGAT1	alpha-1,3-mannosyl-glycoprotein 2-beta-N-acetylglucosaminyltransferase [Source:HGNC Symbol;Acc:HGNC:7044]	5616	0.2174225002527237	0.49236083	Yes	
+row_7	ST6GAL1	ST6 beta-galactoside alpha-2,6-sialyltransferase 1 [Source:HGNC Symbol;Acc:HGNC:10860]	7095	0.17366446554660797	0.48122096	Yes	
+row_8	MAN2A1	mannosidase alpha class 2A member 1 [Source:HGNC Symbol;Acc:HGNC:6824]	7483	0.16749398410320282	0.5070716	Yes	
+row_9	MGAT2	alpha-1,6-mannosyl-glycoprotein 2-beta-N-acetylglucosaminyltransferase [Source:HGNC Symbol;Acc:HGNC:7045]	11087	0.04376830905675888	0.39042574	No	
+row_10	MOGS	mannosyl-oligosaccharide glucosidase [Source:HGNC Symbol;Acc:HGNC:24862]	12359	0.006072931457310915	0.34706926	No	
+row_11	B4GALT1	beta-1,4-galactosyltransferase 1 [Source:HGNC Symbol;Acc:HGNC:924]	12596	-3.706404531840235E-4	0.33884034	No	
+row_12	MAN1C1	mannosidase alpha class 1C member 1 [Source:HGNC Symbol;Acc:HGNC:19080]	14670	-0.05805766582489014	0.27947834	No	
+row_13	MAN1B1	mannosidase alpha class 1B member 1 [Source:HGNC Symbol;Acc:HGNC:6823]	18180	-0.1552615761756897	0.19243029	No	
+row_14	B4GALT3	beta-1,4-galactosyltransferase 3 [Source:HGNC Symbol;Acc:HGNC:926]	20679	-0.21107031404972076	0.15416577	No	
+row_15	ST6GAL2	ST6 beta-galactoside alpha-2,6-sialyltransferase 2 [Source:HGNC Symbol;Acc:HGNC:10861]	27306	-0.4989413917064667	0.03830423	No	

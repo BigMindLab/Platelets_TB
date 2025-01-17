@@ -1,0 +1,35 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	CD69	CD69 molecule [Source:HGNC Symbol;Acc:HGNC:1694]	3166	0.32231804728507996	-0.06481642	No	
+row_1	FXYD5	FXYD domain containing ion transport regulator 5 [Source:HGNC Symbol;Acc:HGNC:4029]	3706	0.2959132492542267	-0.040837917	No	
+row_2	TPT1	tumor protein, translationally-controlled 1 [Source:HGNC Symbol;Acc:HGNC:12022]	4713	0.2516358196735382	-0.039757974	No	
+row_3	EMP1	epithelial membrane protein 1 [Source:HGNC Symbol;Acc:HGNC:3333]	8076	0.14850370585918427	-0.13673368	No	
+row_4	CTDSPL	CTD small phosphatase like [Source:HGNC Symbol;Acc:HGNC:16890]	8308	0.13865095376968384	-0.12473862	No	
+row_5	OLFML2A	olfactomedin like 2A [Source:HGNC Symbol;Acc:HGNC:27270]	8600	0.12800563871860504	-0.11640555	No	
+row_6	AKAP13	A-kinase anchoring protein 13 [Source:HGNC Symbol;Acc:HGNC:371]	10338	0.0678919106721878	-0.16779184	No	
+row_7	EEF1G	eukaryotic translation elongation factor 1 gamma [Source:HGNC Symbol;Acc:HGNC:3213]	10455	0.06410761922597885	-0.1625699	No	
+row_8	EIF4B	eukaryotic translation initiation factor 4B [Source:HGNC Symbol;Acc:HGNC:3285]	10975	0.047265734523534775	-0.17400452	No	
+row_9	RAB14	RAB14, member RAS oncogene family [Source:HGNC Symbol;Acc:HGNC:16524]	11617	0.028167450800538063	-0.19251521	No	
+row_10	EEF2	eukaryotic translation elongation factor 2 [Source:HGNC Symbol;Acc:HGNC:3214]	12346	0.006358677055686712	-0.21726151	No	
+row_11	EIF3L	eukaryotic translation initiation factor 3 subunit L [Source:HGNC Symbol;Acc:HGNC:18138]	12406	0.005010693334043026	-0.21861404	No	
+row_12	EIF3D	eukaryotic translation initiation factor 3 subunit D [Source:HGNC Symbol;Acc:HGNC:3278]	13257	-0.018355505540966988	-0.24591953	No	
+row_13	CLEC2B	C-type lectin domain family 2 member B [Source:HGNC Symbol;Acc:HGNC:2053]	13673	-0.03076399676501751	-0.25608405	No	
+row_14	STAM	signal transducing adaptor molecule [Source:HGNC Symbol;Acc:HGNC:11357]	13910	-0.03713647276163101	-0.25901124	No	
+row_15	RSL24D1	ribosomal L24 domain containing 1 [Source:HGNC Symbol;Acc:HGNC:18479]	14250	-0.04571213945746422	-0.26432458	No	
+row_16	MACO1	macoilin 1 [Source:HGNC Symbol;Acc:HGNC:25572]	14498	-0.053153958171606064	-0.2653129	No	
+row_17	IL12RB1	interleukin 12 receptor subunit beta 1 [Source:HGNC Symbol;Acc:HGNC:5971]	14992	-0.06732870638370514	-0.27291644	No	
+row_18	NDRG1	N-myc downstream regulated 1 [Source:HGNC Symbol;Acc:HGNC:7679]	15929	-0.09369422495365143	-0.2923107	No	
+row_19	TMEM87A	transmembrane protein 87A [Source:HGNC Symbol;Acc:HGNC:24522]	16095	-0.09795953333377838	-0.28389922	No	
+row_20	SYPL1	synaptophysin like 1 [Source:HGNC Symbol;Acc:HGNC:11507]	16277	-0.1024232804775238	-0.27540353	No	
+row_21	RNF139	ring finger protein 139 [Source:HGNC Symbol;Acc:HGNC:17023]	16455	-0.10754268616437912	-0.26602313	No	
+row_22	TBC1D15	TBC1 domain family member 15 [Source:HGNC Symbol;Acc:HGNC:25694]	17535	-0.13700976967811584	-0.28416774	No	
+row_23	VAMP3	vesicle associated membrane protein 3 [Source:HGNC Symbol;Acc:HGNC:12644]	17623	-0.13941828906536102	-0.26698363	No	
+row_24	TMED2	transmembrane p24 trafficking protein 2 [Source:HGNC Symbol;Acc:HGNC:16996]	23667	-0.29180988669395447	-0.43767735	Yes	
+row_25	KLF10	KLF transcription factor 10 [Source:HGNC Symbol;Acc:HGNC:11810]	24042	-0.3072398006916046	-0.40623552	Yes	
+row_26	RAB1A	RAB1A, member RAS oncogene family [Source:HGNC Symbol;Acc:HGNC:9758]	24052	-0.307587593793869	-0.3618729	Yes	
+row_27	CD34	CD34 molecule [Source:HGNC Symbol;Acc:HGNC:1662]	25027	-0.34573331475257874	-0.34599608	Yes	
+row_28	MXRA7	matrix remodeling associated 7 [Source:HGNC Symbol;Acc:HGNC:7541]	26423	-0.42216211557388306	-0.3338621	Yes	
+row_29	ITGA6	integrin subunit alpha 6 [Source:HGNC Symbol;Acc:HGNC:6142]	27129	-0.48177194595336914	-0.2887392	Yes	
+row_30	ZDHHC11	zinc finger DHHC-type containing 11 [Source:HGNC Symbol;Acc:HGNC:19158]	27601	-0.5439780950546265	-0.22632924	Yes	
+row_31	TOMM20	translocase of outer mitochondrial membrane 20 [Source:HGNC Symbol;Acc:HGNC:20947]	27696	-0.5608015060424805	-0.14818215	Yes	
+row_32	CDC42EP3	CDC42 effector protein 3 [Source:HGNC Symbol;Acc:HGNC:16943]	27748	-0.5700674653053284	-0.06717286	Yes	
+row_33	SLC38A2	solute carrier family 38 member 2 [Source:HGNC Symbol;Acc:HGNC:13448]	27953	-0.6187616586685181	0.015514784	Yes	

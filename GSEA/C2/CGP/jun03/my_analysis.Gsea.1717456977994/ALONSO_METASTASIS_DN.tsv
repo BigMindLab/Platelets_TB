@@ -1,0 +1,26 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	LRRC2	leucine rich repeat containing 2 [Source:HGNC Symbol;Acc:HGNC:14676]	3527	0.30547112226486206	-0.07299085	No	
+row_1	EDN2	endothelin 2 [Source:HGNC Symbol;Acc:HGNC:3177]	4128	0.2766309976577759	-0.047652334	No	
+row_2	CDH10	cadherin 10 [Source:HGNC Symbol;Acc:HGNC:1749]	9797	0.08629472553730011	-0.23294589	No	
+row_3	AKAP13	A-kinase anchoring protein 13 [Source:HGNC Symbol;Acc:HGNC:371]	10338	0.0678919106721878	-0.2405714	No	
+row_4	OLIG2	oligodendrocyte transcription factor 2 [Source:HGNC Symbol;Acc:HGNC:9398]	11306	0.03650595247745514	-0.268523	No	
+row_5	EPS15	epidermal growth factor receptor pathway substrate 15 [Source:HGNC Symbol;Acc:HGNC:3419]	11353	0.03526982665061951	-0.26421732	No	
+row_6	IFI44L	interferon induced protein 44 like [Source:HGNC Symbol;Acc:HGNC:17817]	12271	0.008560500107705593	-0.29510275	No	
+row_7	LINC00906	long intergenic non-protein coding RNA 906 [Source:HGNC Symbol;Acc:HGNC:27121]	12291	0.007871843874454498	-0.2944496	No	
+row_8	GIMAP6	GTPase, IMAP family member 6 [Source:HGNC Symbol;Acc:HGNC:21918]	13988	-0.03963439166545868	-0.34757254	No	
+row_9	CYP7B1	cytochrome P450 family 7 subfamily B member 1 [Source:HGNC Symbol;Acc:HGNC:2652]	14742	-0.060272254049777985	-0.36398673	No	
+row_10	PAXX	PAXX non-homologous end joining factor [Source:HGNC Symbol;Acc:HGNC:27849]	14930	-0.06540931761264801	-0.35958627	No	
+row_11	IDS	iduronate 2-sulfatase [Source:HGNC Symbol;Acc:HGNC:5389]	16178	-0.10017023980617523	-0.3867089	No	
+row_12	LFNG	LFNG O-fucosylpeptide 3-beta-N-acetylglucosaminyltransferase [Source:HGNC Symbol;Acc:HGNC:6560]	17506	-0.13629655539989471	-0.41058043	No	
+row_13	TCOF1	treacle ribosome biogenesis factor 1 [Source:HGNC Symbol;Acc:HGNC:11654]	19332	-0.18441861867904663	-0.4439193	No	
+row_14	RGPD1	RANBP2 like and GRIP domain containing 1 [Source:HGNC Symbol;Acc:HGNC:32414]	21392	-0.2267775982618332	-0.47838813	Yes	
+row_15	TOB2	transducer of ERBB2, 2 [Source:HGNC Symbol;Acc:HGNC:11980]	22336	-0.24982307851314545	-0.46964538	Yes	
+row_16	PAPPA	pappalysin 1 [Source:HGNC Symbol;Acc:HGNC:8602]	23735	-0.2943543791770935	-0.46945772	Yes	
+row_17	CYP19A1	cytochrome P450 family 19 subfamily A member 1 [Source:HGNC Symbol;Acc:HGNC:2594]	24432	-0.3223772644996643	-0.43981543	Yes	
+row_18	NTF4	neurotrophin 4 [Source:HGNC Symbol;Acc:HGNC:8024]	24881	-0.3401385545730591	-0.39844638	Yes	
+row_19	BCL2L10	BCL2 like 10 [Source:HGNC Symbol;Acc:HGNC:993]	25029	-0.34584325551986694	-0.3455085	Yes	
+row_20	FOXO1	forkhead box O1 [Source:HGNC Symbol;Acc:HGNC:3819]	26238	-0.40847864747047424	-0.31944457	Yes	
+row_21	SECISBP2	SECIS binding protein 2 [Source:HGNC Symbol;Acc:HGNC:30972]	27229	-0.49132904410362244	-0.27177304	Yes	
+row_22	PCDH9	protocadherin 9 [Source:HGNC Symbol;Acc:HGNC:8661]	27312	-0.49983543157577515	-0.19066523	Yes	
+row_23	REST	RE1 silencing transcription factor [Source:HGNC Symbol;Acc:HGNC:9966]	28021	-0.6389327645301819	-0.10824819	Yes	
+row_24	ACKR2	atypical chemokine receptor 2 [Source:HGNC Symbol;Acc:HGNC:1565]	28208	-0.7219542264938354	0.0065211346	Yes	

@@ -1,0 +1,26 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	CNOT3	CCR4-NOT transcription complex subunit 3 [Source:HGNC Symbol;Acc:HGNC:7879]	4081	0.2782765328884125	-0.09685885	No	
+row_1	EIF4G1	eukaryotic translation initiation factor 4 gamma 1 [Source:HGNC Symbol;Acc:HGNC:3296]	4555	0.258018434047699	-0.06995782	No	
+row_2	PAIP1	poly(A) binding protein interacting protein 1 [Source:HGNC Symbol;Acc:HGNC:16945]	4812	0.24767795205116272	-0.037153896	No	
+row_3	PABPC1	poly(A) binding protein cytoplasmic 1 [Source:HGNC Symbol;Acc:HGNC:8554]	5759	0.2123427838087082	-0.034639698	No	
+row_4	EIF4A1	eukaryotic translation initiation factor 4A1 [Source:HGNC Symbol;Acc:HGNC:3282]	6153	0.19795654714107513	-0.015061939	No	
+row_5	TUT7	terminal uridylyl transferase 7 [Source:HGNC Symbol;Acc:HGNC:25817]	6177	0.19716954231262207	0.017425317	No	
+row_6	EIF4A3	eukaryotic translation initiation factor 4A3 [Source:HGNC Symbol;Acc:HGNC:18683]	6800	0.1827421635389328	0.02636148	No	
+row_7	CNOT8	CCR4-NOT transcription complex subunit 8 [Source:HGNC Symbol;Acc:HGNC:9207]	8908	0.11616154760122299	-0.028292364	No	
+row_8	TNKS1BP1	tankyrase 1 binding protein 1 [Source:HGNC Symbol;Acc:HGNC:19081]	10039	0.07786630839109421	-0.054974508	No	
+row_9	EIF4B	eukaryotic translation initiation factor 4B [Source:HGNC Symbol;Acc:HGNC:3285]	10975	0.047265734523534775	-0.07995078	No	
+row_10	CNOT6	CCR4-NOT transcription complex subunit 6 [Source:HGNC Symbol;Acc:HGNC:14099]	12673	-0.0026569038163870573	-0.1393209	No	
+row_11	CNOT7	CCR4-NOT transcription complex subunit 7 [Source:HGNC Symbol;Acc:HGNC:14101]	13631	-0.029561733826994896	-0.16806252	No	
+row_12	CNOT2	CCR4-NOT transcription complex subunit 2 [Source:HGNC Symbol;Acc:HGNC:7878]	14352	-0.04913222789764404	-0.18514489	No	
+row_13	CNOT6L	CCR4-NOT transcription complex subunit 6 like [Source:HGNC Symbol;Acc:HGNC:18042]	16466	-0.10768811404705048	-0.24144122	No	
+row_14	EIF4A2	eukaryotic translation initiation factor 4A2 [Source:HGNC Symbol;Acc:HGNC:3284]	17347	-0.13244281709194183	-0.25009406	No	
+row_15	PAN2	poly(A) specific ribonuclease subunit PAN2 [Source:HGNC Symbol;Acc:HGNC:20074]	17671	-0.14096681773662567	-0.23767322	No	
+row_16	CNOT1	CCR4-NOT transcription complex subunit 1 [Source:HGNC Symbol;Acc:HGNC:7877]	18723	-0.17255458235740662	-0.24557969	No	
+row_17	PAN3	poly(A) specific ribonuclease subunit PAN3 [Source:HGNC Symbol;Acc:HGNC:29991]	18753	-0.17359870672225952	-0.21728458	No	
+row_18	CNOT10	CCR4-NOT transcription complex subunit 10 [Source:HGNC Symbol;Acc:HGNC:23817]	21548	-0.23095810413360596	-0.27676815	No	
+row_19	EIF4E	eukaryotic translation initiation factor 4E [Source:HGNC Symbol;Acc:HGNC:3287]	24046	-0.3074226975440979	-0.3128692	Yes	
+row_20	PARN	poly(A)-specific ribonuclease [Source:HGNC Symbol;Acc:HGNC:8609]	25400	-0.36138805747032166	-0.29953086	Yes	
+row_21	CNOT11	CCR4-NOT transcription complex subunit 11 [Source:HGNC Symbol;Acc:HGNC:25217]	25787	-0.38067588210105896	-0.24884872	Yes	
+row_22	CNOT4	CCR4-NOT transcription complex subunit 4 [Source:HGNC Symbol;Acc:HGNC:7880]	26984	-0.46794477105140686	-0.21198088	Yes	
+row_23	CNOT9	CCR4-NOT transcription complex subunit 9 [Source:HGNC Symbol;Acc:HGNC:10445]	28184	-0.7106955647468567	-0.13422303	Yes	
+row_24	TUT4	terminal uridylyl transferase 4 [Source:HGNC Symbol;Acc:HGNC:28981]	28308	-0.838198184967041	0.002996193	Yes	

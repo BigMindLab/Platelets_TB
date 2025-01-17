@@ -1,0 +1,34 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	CYBB	cytochrome b-245 beta chain [Source:HGNC Symbol;Acc:HGNC:2578]	262	0.7858151793479919	0.08318101	Yes	
+row_1	XK	X-linked Kx blood group antigen, Kell and VPS13A binding protein [Source:HGNC Symbol;Acc:HGNC:12811]	1010	0.5389662384986877	0.12022938	Yes	
+row_2	FAM47DP	family with sequence similarity 47 member D, pseudogene [Source:HGNC Symbol;Acc:HGNC:34342]	1606	0.4470626413822174	0.15182851	Yes	
+row_3	GK-IT1	GK intronic transcript 1 [Source:HGNC Symbol;Acc:HGNC:41339]	1909	0.4159213602542877	0.19009623	Yes	
+row_4	LANCL3	LanC like family member 3 [Source:HGNC Symbol;Acc:HGNC:24767]	2097	0.40065330266952515	0.23062317	Yes	
+row_5	H3P43	H3 histone pseudogene 43 [Source:HGNC Symbol;Acc:HGNC:54472]	2884	0.3380987346172333	0.24267255	Yes	
+row_6	TFDP1P2	TFDP1 pseudogene 2 [Source:HGNC Symbol;Acc:HGNC:54930]	3390	0.3127632737159729	0.26165023	Yes	
+row_7	TASL	TLR adaptor interacting with endolysosomal SLC15A4 [Source:HGNC Symbol;Acc:HGNC:25667]	3717	0.2954476773738861	0.2849029	Yes	
+row_8	VKORC1P1	VKORC1 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:33182]	3840	0.2895588278770447	0.314656	Yes	
+row_9	FTLP2	ferritin light chain pseudogene 2 [Source:HGNC Symbol;Acc:HGNC:4001]	4717	0.25157034397125244	0.31335548	Yes	
+row_10	ARX	aristaless related homeobox [Source:HGNC Symbol;Acc:HGNC:18060]	5097	0.23634111881256104	0.32778794	Yes	
+row_11	NR0B1	nuclear receptor subfamily 0 group B member 1 [Source:HGNC Symbol;Acc:HGNC:7960]	5579	0.2198173850774765	0.33668056	Yes	
+row_12	GK	glycerol kinase [Source:HGNC Symbol;Acc:HGNC:4289]	5644	0.21625930070877075	0.359858	Yes	
+row_13	RANBP1P1	RANBP1 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:54908]	6736	0.18431447446346283	0.34306675	Yes	
+row_14	FTH1P28	ferritin, heavy polypeptide-like 17 (FTHL17) pseudogene	6886	0.179652601480484	0.35894185	Yes	
+row_15	FMN2P1	FMN2 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:54909]	6948	0.179652601480484	0.3779198	Yes	
+row_16	TAB3-AS2	TAB3 antisense RNA 2 [Source:HGNC Symbol;Acc:HGNC:40013]	7123	0.1724967211484909	0.39207178	Yes	
+row_17	MAGEB2	MAGE family member B2 [Source:HGNC Symbol;Acc:HGNC:6809]	9357	0.10107923299074173	0.32522476	No	
+row_18	TAB3	TGF-beta activated kinase 1 (MAP3K7) binding protein 3 [Source:HGNC Symbol;Acc:HGNC:30681]	11234	0.03895746171474457	0.26365933	No	
+row_19	CFAP47	cilia and flagella associated protein 47 [Source:HGNC Symbol;Acc:HGNC:26708]	11324	0.0360640324652195	0.2647627	No	
+row_20	HMGA1P1	high mobility group AT-hook 1 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:13321]	12901	-0.008592907339334488	0.21020402	No	
+row_21	RPS15AP40	ribosomal protein S15a pseudogene 40 [Source:HGNC Symbol;Acc:HGNC:36041]	13199	-0.017010370269417763	0.20173247	No	
+row_22	RDXP3	RDX pseudogene 3 [Source:HGNC Symbol;Acc:HGNC:54912]	13629	-0.029489565640687943	0.19007431	No	
+row_23	RN7SL91P	RNA, 7SL, cytoplasmic 91, pseudogene [Source:HGNC Symbol;Acc:HGNC:46107]	15023	-0.06802094727754593	0.14895745	No	
+row_24	DMD	dystrophin [Source:HGNC Symbol;Acc:HGNC:2928]	15419	-0.07961535453796387	0.14439337	No	
+row_25	FTH1P19	ferritin heavy chain 1 pseudogene 19 [Source:HGNC Symbol;Acc:HGNC:33525]	18401	-0.16185544431209564	0.058319915	No	
+row_26	TAB3-AS1	TAB3 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:20176]	19515	-0.18817706406116486	0.041207228	No	
+row_27	DCAF8L2	DDB1 and CUL4 associated factor 8 like 2 [Source:HGNC Symbol;Acc:HGNC:31811]	19572	-0.18817706406116486	0.061364025	No	
+row_28	TMEM47	transmembrane protein 47 [Source:HGNC Symbol;Acc:HGNC:18515]	21495	-0.2299392819404602	0.020637868	No	
+row_29	PRRG1	proline rich and Gla domain 1 [Source:HGNC Symbol;Acc:HGNC:9469]	24367	-0.31944698095321655	-0.043022808	No	
+row_30	NPM1P8	nucleophosmin 1 pseudogene 8 [Source:HGNC Symbol;Acc:HGNC:7928]	25619	-0.3724542558193207	-0.043328654	No	
+row_31	IL1RAPL1	interleukin 1 receptor accessory protein like 1 [Source:HGNC Symbol;Acc:HGNC:5996]	27731	-0.5673079490661621	-0.051041257	No	
+row_32	MAGEB10	MAGE family member B10 [Source:HGNC Symbol;Acc:HGNC:25377]	27999	-0.6321612000465393	0.013892342	No	

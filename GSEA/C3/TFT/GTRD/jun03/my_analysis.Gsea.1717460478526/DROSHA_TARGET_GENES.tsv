@@ -1,0 +1,66 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	EGR1	early growth response 1 [Source:HGNC Symbol;Acc:HGNC:3238]	144	0.8861271739006042	0.03351862	No	
+row_1	POLDIP3	DNA polymerase delta interacting protein 3 [Source:HGNC Symbol;Acc:HGNC:23782]	442	0.6928579211235046	0.053217154	No	
+row_2	TMEM250	transmembrane protein 250 [Source:HGNC Symbol;Acc:HGNC:31009]	1146	0.5131886005401611	0.050757278	No	
+row_3	LRRC37A5P	leucine rich repeat containing 37 member A5, pseudogene [Source:HGNC Symbol;Acc:HGNC:23369]	2418	0.37189555168151855	0.022092221	No	
+row_4	NCKAP1	NCK associated protein 1 [Source:HGNC Symbol;Acc:HGNC:7666]	2746	0.34834229946136475	0.025723875	No	
+row_5	ALDH1L2	aldehyde dehydrogenase 1 family member L2 [Source:HGNC Symbol;Acc:HGNC:26777]	3998	0.282243937253952	-0.006140621	No	
+row_6	ROR2	receptor tyrosine kinase like orphan receptor 2 [Source:HGNC Symbol;Acc:HGNC:10257]	4617	0.25571584701538086	-0.016816149	No	
+row_7	ZC3H12A-DT	ZC3H12A divergent transcript [Source:HGNC Symbol;Acc:HGNC:49453]	5250	0.2300371527671814	-0.029104492	No	
+row_8	PIERCE1	piercer of microtubule wall 1 [Source:HGNC Symbol;Acc:HGNC:28435]	5425	0.22483691573143005	-0.025452193	No	
+row_9	KCNT1	potassium sodium-activated channel subfamily T member 1 [Source:HGNC Symbol;Acc:HGNC:18865]	6089	0.20053566992282867	-0.040119972	No	
+row_10	TAF4	TATA-box binding protein associated factor 4 [Source:HGNC Symbol;Acc:HGNC:11537]	7088	0.1738799512386322	-0.06777428	No	
+row_11	ADARB1	adenosine deaminase RNA specific B1 [Source:HGNC Symbol;Acc:HGNC:226]	7973	0.15235939621925354	-0.09234192	No	
+row_12	UBALD1	UBA like domain containing 1 [Source:HGNC Symbol;Acc:HGNC:29576]	8068	0.14871415495872498	-0.08918174	No	
+row_13	ABHD5	abhydrolase domain containing 5, lysophosphatidic acid acyltransferase [Source:HGNC Symbol;Acc:HGNC:21396]	8769	0.12135292589664459	-0.10860499	No	
+row_14	ARHGAP22	Rho GTPase activating protein 22 [Source:HGNC Symbol;Acc:HGNC:30320]	8861	0.11745340377092361	-0.1067007	No	
+row_15	WDR41	WD repeat domain 41 [Source:HGNC Symbol;Acc:HGNC:25601]	9099	0.10939810425043106	-0.110301055	No	
+row_16	NSMAF	neutral sphingomyelinase activation associated factor [Source:HGNC Symbol;Acc:HGNC:8017]	9150	0.10804928839206696	-0.107359156	No	
+row_17	KDM3B	lysine demethylase 3B [Source:HGNC Symbol;Acc:HGNC:1337]	9439	0.09839292615652084	-0.11323919	No	
+row_18	PTGES2	prostaglandin E synthase 2 [Source:HGNC Symbol;Acc:HGNC:17822]	9627	0.09163498878479004	-0.11584837	No	
+row_19	THAP4	THAP domain containing 4 [Source:HGNC Symbol;Acc:HGNC:23187]	10351	0.06743089109659195	-0.13843247	No	
+row_20	MTCO3P12	MT-CO3 pseudogene 12 [Source:HGNC Symbol;Acc:HGNC:52042]	11756	0.023632250726222992	-0.18696353	No	
+row_21	RNU5A-1	RNA, U5A small nuclear 1 [Source:HGNC Symbol;Acc:HGNC:10211]	11847	0.020972400903701782	-0.18922687	No	
+row_22	ANO10	anoctamin 10 [Source:HGNC Symbol;Acc:HGNC:25519]	12633	-0.001325017772614956	-0.21687926	No	
+row_23	RNVU1-19	RNA, variant U1 small nuclear 19 [Source:HGNC Symbol;Acc:HGNC:48324]	14598	-0.05612528324127197	-0.28376257	No	
+row_24	CXXC1	CXXC finger protein 1 [Source:HGNC Symbol;Acc:HGNC:24343]	14607	-0.05634760856628418	-0.28159034	No	
+row_25	KNSTRN	kinetochore localized astrin (SPAG5) binding protein [Source:HGNC Symbol;Acc:HGNC:30767]	15142	-0.07134510576725006	-0.29733232	No	
+row_26	INTS15	integrator complex subunit 15 [Source:HGNC Symbol;Acc:HGNC:21702]	15894	-0.09274307638406754	-0.31980217	No	
+row_27	LSM11	LSM11, U7 small nuclear RNA associated [Source:HGNC Symbol;Acc:HGNC:30860]	16544	-0.11002091318368912	-0.3379188	No	
+row_28	DNAJB4	DnaJ heat shock protein family (Hsp40) member B4 [Source:HGNC Symbol;Acc:HGNC:14886]	16590	-0.11130600422620773	-0.3346585	No	
+row_29	RNVU1-15	RNA, variant U1 small nuclear 15 [Source:HGNC Symbol;Acc:HGNC:48320]	16892	-0.11905699223279953	-0.34009725	No	
+row_30	SLC38A9	solute carrier family 38 member 9 [Source:HGNC Symbol;Acc:HGNC:26907]	17133	-0.12633772194385529	-0.3430656	No	
+row_31	PMPCB	peptidase, mitochondrial processing subunit beta [Source:HGNC Symbol;Acc:HGNC:9119]	18056	-0.15219493210315704	-0.36898178	No	
+row_32	MALAT1	metastasis associated lung adenocarcinoma transcript 1 [Source:HGNC Symbol;Acc:HGNC:29665]	18851	-0.1763145923614502	-0.38932893	No	
+row_33	RNU11	RNA, U11 small nuclear [Source:HGNC Symbol;Acc:HGNC:10108]	19022	-0.18130184710025787	-0.38743192	No	
+row_34	MIR3190	microRNA 3190 [Source:HGNC Symbol;Acc:HGNC:38190]	19151	-0.1824808269739151	-0.38400096	No	
+row_35	PTGES2-AS1	PTGES2 antisense RNA 1 (head to head) [Source:NCBI gene (formerly Entrezgene);Acc:389791]	19387	-0.1863231062889099	-0.38417968	No	
+row_36	ARHGAP4	Rho GTPase activating protein 4 [Source:HGNC Symbol;Acc:HGNC:674]	20879	-0.21493634581565857	-0.42744812	No	
+row_37	AMD1	adenosylmethionine decarboxylase 1 [Source:HGNC Symbol;Acc:HGNC:457]	21761	-0.2360687553882599	-0.44826332	No	
+row_38	MT-TK	mitochondrially encoded tRNA-Lys (AAA/G) [Source:HGNC Symbol;Acc:HGNC:7489]	21991	-0.24065490067005157	-0.44586343	No	
+row_39	ZC3H12A	zinc finger CCCH-type containing 12A [Source:HGNC Symbol;Acc:HGNC:26259]	22440	-0.2534424364566803	-0.45063707	No	
+row_40	ZNF175	zinc finger protein 175 [Source:HGNC Symbol;Acc:HGNC:12964]	22572	-0.2573983371257782	-0.44404843	No	
+row_41	CLASP1	cytoplasmic linker associated protein 1 [Source:HGNC Symbol;Acc:HGNC:17088]	22809	-0.2641303241252899	-0.440873	No	
+row_42	LINC01719	long intergenic non-protein coding RNA 1719 [Source:HGNC Symbol;Acc:HGNC:52506]	23255	-0.27733248472213745	-0.44450003	No	
+row_43	BTG3	BTG anti-proliferation factor 3 [Source:HGNC Symbol;Acc:HGNC:1132]	24319	-0.31844833493232727	-0.46815106	No	
+row_44	TTC1	tetratricopeptide repeat domain 1 [Source:HGNC Symbol;Acc:HGNC:12391]	25341	-0.3588033616542816	-0.48856157	No	
+row_45	MT-TV	mitochondrially encoded tRNA-Val (GUN) [Source:HGNC Symbol;Acc:HGNC:7500]	25671	-0.3749719262123108	-0.48384047	No	
+row_46	PLEKHF2	pleckstrin homology and FYVE domain containing 2 [Source:HGNC Symbol;Acc:HGNC:20757]	26854	-0.45637112855911255	-0.5056839	Yes	
+row_47	ATG4B	autophagy related 4B cysteine peptidase [Source:HGNC Symbol;Acc:HGNC:20790]	26935	-0.46251562237739563	-0.48835963	Yes	
+row_48	MT-TG	mitochondrially encoded tRNA-Gly (GGN) [Source:HGNC Symbol;Acc:HGNC:7486]	26960	-0.4650268852710724	-0.46894917	Yes	
+row_49	DNAJC25-GNG10	DNAJC25-GNG10 readthrough [Source:HGNC Symbol;Acc:HGNC:37501]	27478	-0.5228071212768555	-0.46442434	Yes	
+row_50	MTND5P11	MT-ND5 pseudogene 11 [Source:HGNC Symbol;Acc:HGNC:42273]	27518	-0.529787003993988	-0.44272226	Yes	
+row_51	MT-TS1	mitochondrially encoded tRNA-Ser (UCN) 1 [Source:HGNC Symbol;Acc:HGNC:7497]	27689	-0.5585821866989136	-0.42439005	Yes	
+row_52	ENSG00000283674	novel transcript	27821	-0.5848777294158936	-0.40353566	Yes	
+row_53	BCAS4	breast carcinoma amplified sequence 4 [Source:HGNC Symbol;Acc:HGNC:14367]	27851	-0.5940420627593994	-0.3786815	Yes	
+row_54	DNAJC25	DnaJ heat shock protein family (Hsp40) member C25 [Source:HGNC Symbol;Acc:HGNC:34187]	27893	-0.603924036026001	-0.35382047	Yes	
+row_55	MT-TI	mitochondrially encoded tRNA-Ile (AUU/C) [Source:HGNC Symbol;Acc:HGNC:7488]	27927	-0.611110270023346	-0.32836398	Yes	
+row_56	MT-ATP8	mitochondrially encoded ATP synthase membrane subunit 8 [Source:HGNC Symbol;Acc:HGNC:7415]	28135	-0.6821903586387634	-0.30595317	Yes	
+row_57	MT-TM	mitochondrially encoded tRNA-Met (AUA/G) [Source:HGNC Symbol;Acc:HGNC:7492]	28160	-0.6962225437164307	-0.27647132	Yes	
+row_58	MT-CO3	mitochondrially encoded cytochrome c oxidase III [Source:HGNC Symbol;Acc:HGNC:7422]	28249	-0.7556643486022949	-0.24665919	Yes	
+row_59	MT-TL1	mitochondrially encoded tRNA-Leu (UUA/G) 1 [Source:HGNC Symbol;Acc:HGNC:7490]	28301	-0.8186860084533691	-0.2127956	Yes	
+row_60	MT-TQ	mitochondrially encoded tRNA-Gln (CAA/G) [Source:HGNC Symbol;Acc:HGNC:7495]	28362	-0.9599287509918213	-0.17309687	Yes	
+row_61	MT-ATP6	mitochondrially encoded ATP synthase membrane subunit 6 [Source:HGNC Symbol;Acc:HGNC:7414]	28363	-0.9600445032119751	-0.1312751	Yes	
+row_62	MT-ND2	mitochondrially encoded NADH:ubiquinone oxidoreductase core subunit 2 [Source:HGNC Symbol;Acc:HGNC:7456]	28364	-0.9606944918632507	-0.089425035	Yes	
+row_63	MT-ND3	mitochondrially encoded NADH:ubiquinone oxidoreductase core subunit 3 [Source:HGNC Symbol;Acc:HGNC:7458]	28370	-0.9913983941078186	-0.04641393	Yes	
+row_64	MT-ND1	mitochondrially encoded NADH:ubiquinone oxidoreductase core subunit 1 [Source:HGNC Symbol;Acc:HGNC:7455]	28385	-1.0832886695861816	2.824361E-4	Yes	

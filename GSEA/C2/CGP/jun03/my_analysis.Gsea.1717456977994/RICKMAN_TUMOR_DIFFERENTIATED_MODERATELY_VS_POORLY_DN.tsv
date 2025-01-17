@@ -1,0 +1,17 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	CD8B	CD8 subunit beta [Source:HGNC Symbol;Acc:HGNC:1707]	8392	0.13576139509677887	-0.2676047	No	
+row_1	UCK2	uridine-cytidine kinase 2 [Source:HGNC Symbol;Acc:HGNC:12562]	9624	0.09170379489660263	-0.2919908	No	
+row_2	TGIF2	TGFB induced factor homeobox 2 [Source:HGNC Symbol;Acc:HGNC:15764]	15383	-0.07879985123872757	-0.47857434	No	
+row_3	SRSF1	serine and arginine rich splicing factor 1 [Source:HGNC Symbol;Acc:HGNC:10780]	15787	-0.08980712294578552	-0.47417566	No	
+row_4	MCM3	minichromosome maintenance complex component 3 [Source:HGNC Symbol;Acc:HGNC:6945]	15969	-0.09472762793302536	-0.46093497	No	
+row_5	SRSF3	serine and arginine rich splicing factor 3 [Source:HGNC Symbol;Acc:HGNC:10785]	18095	-0.15315280854701996	-0.5040977	No	
+row_6	IPO9	importin 9 [Source:HGNC Symbol;Acc:HGNC:19425]	18915	-0.17805734276771545	-0.4960809	No	
+row_7	CCT3	chaperonin containing TCP1 subunit 3 [Source:HGNC Symbol;Acc:HGNC:1616]	20624	-0.20942014455795288	-0.5128957	No	
+row_8	CSPP1	centrosome and spindle pole associated protein 1 [Source:HGNC Symbol;Acc:HGNC:26193]	22310	-0.2491294890642166	-0.5206759	Yes	
+row_9	SRRT	serrate, RNA effector molecule [Source:HGNC Symbol;Acc:HGNC:24101]	23188	-0.2757510840892792	-0.49446976	Yes	
+row_10	JRK	Jrk helix-turn-helix protein [Source:HGNC Symbol;Acc:HGNC:6199]	23250	-0.277087539434433	-0.43923217	Yes	
+row_11	CENPF	centromere protein F [Source:HGNC Symbol;Acc:HGNC:1857]	26272	-0.4112177789211273	-0.46052125	Yes	
+row_12	ANP32A	acidic nuclear phosphoprotein 32 family member A [Source:HGNC Symbol;Acc:HGNC:13233]	26821	-0.4533042311668396	-0.3859489	Yes	
+row_13	H4C3	H4 clustered histone 3 [Source:HGNC Symbol;Acc:HGNC:4787]	27154	-0.4841671884059906	-0.29737303	Yes	
+row_14	LUC7L3	LUC7 like 3 pre-mRNA splicing factor [Source:HGNC Symbol;Acc:HGNC:24309]	28049	-0.6468424201011658	-0.19490984	Yes	
+row_15	TMEM70	transmembrane protein 70 [Source:HGNC Symbol;Acc:HGNC:26050]	28373	-0.9994606971740723	7.047504E-4	Yes	

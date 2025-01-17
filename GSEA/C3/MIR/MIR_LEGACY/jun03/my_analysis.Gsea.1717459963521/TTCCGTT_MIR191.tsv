@@ -1,0 +1,29 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	CEBPB	CCAAT enhancer binding protein beta [Source:HGNC Symbol;Acc:HGNC:1834]	79	0.9968228340148926	0.109222956	Yes	
+row_1	EGR1	early growth response 1 [Source:HGNC Symbol;Acc:HGNC:3238]	144	0.8861271739006042	0.20653641	Yes	
+row_2	SOX4	SRY-box transcription factor 4 [Source:HGNC Symbol;Acc:HGNC:11200]	510	0.6648942828178406	0.26837972	Yes	
+row_3	PHC2	polyhomeotic homolog 2 [Source:HGNC Symbol;Acc:HGNC:3183]	524	0.6610284447669983	0.3421979	Yes	
+row_4	MAPRE3	microtubule associated protein RP/EB family member 3 [Source:HGNC Symbol;Acc:HGNC:6892]	1889	0.4175736904144287	0.3410328	Yes	
+row_5	FZD5	frizzled class receptor 5 [Source:HGNC Symbol;Acc:HGNC:4043]	1944	0.413748562335968	0.38561997	Yes	
+row_6	TJP1	tight junction protein 1 [Source:HGNC Symbol;Acc:HGNC:11827]	2087	0.401181697845459	0.42569277	Yes	
+row_7	AP1G1	adaptor related protein complex 1 subunit gamma 1 [Source:HGNC Symbol;Acc:HGNC:555]	7052	0.1757635772228241	0.27044418	No	
+row_8	NDST1	N-deacetylase and N-sulfotransferase 1 [Source:HGNC Symbol;Acc:HGNC:7680]	8123	0.14593960344791412	0.24912147	No	
+row_9	AMMECR1	AMMECR nuclear protein 1 [Source:HGNC Symbol;Acc:HGNC:467]	12648	-0.0019011830445379019	0.089848384	No	
+row_10	ZCCHC24	zinc finger CCHC-type containing 24 [Source:HGNC Symbol;Acc:HGNC:26911]	13236	-0.018041986972093582	0.071181886	No	
+row_11	OXSR1	oxidative stress responsive kinase 1 [Source:HGNC Symbol;Acc:HGNC:8508]	13691	-0.031116537749767303	0.058673214	No	
+row_12	MAP3K12	mitogen-activated protein kinase kinase kinase 12 [Source:HGNC Symbol;Acc:HGNC:6851]	13824	-0.03484169766306877	0.057934742	No	
+row_13	PLCD1	phospholipase C delta 1 [Source:HGNC Symbol;Acc:HGNC:9060]	15293	-0.07625029236078262	0.014750507	No	
+row_14	NEURL4	neuralized E3 ubiquitin protein ligase 4 [Source:HGNC Symbol;Acc:HGNC:34410]	15410	-0.0794162005186081	0.019584704	No	
+row_15	TMOD2	tropomodulin 2 [Source:HGNC Symbol;Acc:HGNC:11872]	15501	-0.08208243548870087	0.025635084	No	
+row_16	WWP1	WW domain containing E3 ubiquitin protein ligase 1 [Source:HGNC Symbol;Acc:HGNC:17004]	16229	-0.10134068876504898	0.011392954	No	
+row_17	RNF139	ring finger protein 139 [Source:HGNC Symbol;Acc:HGNC:17023]	16455	-0.10754268616437912	0.015544955	No	
+row_18	BRMS1L	BRMS1 like transcriptional repressor [Source:HGNC Symbol;Acc:HGNC:20512]	18100	-0.15341414511203766	-0.025173377	No	
+row_19	TAF5	TATA-box binding protein associated factor 5 [Source:HGNC Symbol;Acc:HGNC:11539]	18745	-0.17341656982898712	-0.028390663	No	
+row_20	GAP43	growth associated protein 43 [Source:HGNC Symbol;Acc:HGNC:4140]	22139	-0.24586090445518494	-0.120379545	No	
+row_21	CCND2	cyclin D2 [Source:HGNC Symbol;Acc:HGNC:1583]	22255	-0.24730370938777924	-0.096645415	No	
+row_22	LIN54	lin-54 DREAM MuvB core complex component [Source:HGNC Symbol;Acc:HGNC:25397]	25540	-0.36786267161369324	-0.17108294	No	
+row_23	AMMECR1L	AMMECR1 like [Source:HGNC Symbol;Acc:HGNC:28658]	25654	-0.37445512413978577	-0.13299094	No	
+row_24	FOXP1	forkhead box P1 [Source:HGNC Symbol;Acc:HGNC:3823]	26361	-0.4176779091358185	-0.11094751	No	
+row_25	BDNF	brain derived neurotrophic factor [Source:HGNC Symbol;Acc:HGNC:1033]	27214	-0.4896286725997925	-0.085966356	No	
+row_26	NRCAM	neuronal cell adhesion molecule [Source:HGNC Symbol;Acc:HGNC:7994]	27535	-0.532281756401062	-0.037437636	No	
+row_27	ATP2B2	ATPase plasma membrane Ca2+ transporting 2 [Source:HGNC Symbol;Acc:HGNC:815]	27884	-0.6020559668540955	0.017944166	No	

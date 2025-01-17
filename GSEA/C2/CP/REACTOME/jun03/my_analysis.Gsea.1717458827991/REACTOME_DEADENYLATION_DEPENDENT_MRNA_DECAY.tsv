@@ -1,0 +1,57 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	DCP2	decapping mRNA 2 [Source:HGNC Symbol;Acc:HGNC:24452]	3061	0.32806915044784546	-0.08050977	No	
+row_1	CNOT3	CCR4-NOT transcription complex subunit 3 [Source:HGNC Symbol;Acc:HGNC:7879]	4081	0.2782765328884125	-0.09313578	No	
+row_2	EDC3	enhancer of mRNA decapping 3 [Source:HGNC Symbol;Acc:HGNC:26114]	4526	0.2582223415374756	-0.08715252	No	
+row_3	EIF4G1	eukaryotic translation initiation factor 4 gamma 1 [Source:HGNC Symbol;Acc:HGNC:3296]	4555	0.258018434047699	-0.06650642	No	
+row_4	PAIP1	poly(A) binding protein interacting protein 1 [Source:HGNC Symbol;Acc:HGNC:16945]	4812	0.24767795205116272	-0.054773077	No	
+row_5	EXOSC3	exosome component 3 [Source:HGNC Symbol;Acc:HGNC:17944]	5666	0.21515832841396332	-0.06683353	No	
+row_6	PABPC1	poly(A) binding protein cytoplasmic 1 [Source:HGNC Symbol;Acc:HGNC:8554]	5759	0.2123427838087082	-0.052275673	No	
+row_7	EIF4A1	eukaryotic translation initiation factor 4A1 [Source:HGNC Symbol;Acc:HGNC:3282]	6153	0.19795654714107513	-0.049545836	No	
+row_8	TUT7	terminal uridylyl transferase 7 [Source:HGNC Symbol;Acc:HGNC:25817]	6177	0.19716954231262207	-0.03382531	No	
+row_9	EIF4A3	eukaryotic translation initiation factor 4A3 [Source:HGNC Symbol;Acc:HGNC:18683]	6800	0.1827421635389328	-0.040452186	No	
+row_10	EXOSC5	exosome component 5 [Source:HGNC Symbol;Acc:HGNC:24662]	8753	0.12195510417222977	-0.099109344	No	
+row_11	CNOT8	CCR4-NOT transcription complex subunit 8 [Source:HGNC Symbol;Acc:HGNC:9207]	8908	0.11616154760122299	-0.0948039	No	
+row_12	DCPS	decapping enzyme, scavenger [Source:HGNC Symbol;Acc:HGNC:29812]	9942	0.08109291642904282	-0.12445729	No	
+row_13	LSM4	LSM4 homolog, U6 small nuclear RNA and mRNA degradation associated [Source:HGNC Symbol;Acc:HGNC:17259]	10023	0.0783698633313179	-0.12070925	No	
+row_14	TNKS1BP1	tankyrase 1 binding protein 1 [Source:HGNC Symbol;Acc:HGNC:19081]	10039	0.07786630839109421	-0.11470968	No	
+row_15	EIF4B	eukaryotic translation initiation factor 4B [Source:HGNC Symbol;Acc:HGNC:3285]	10975	0.047265734523534775	-0.14374115	No	
+row_16	EXOSC8	exosome component 8 [Source:HGNC Symbol;Acc:HGNC:17035]	11916	0.01914871111512184	-0.17530657	No	
+row_17	CNOT6	CCR4-NOT transcription complex subunit 6 [Source:HGNC Symbol;Acc:HGNC:14099]	12673	-0.0026569038163870573	-0.20176177	No	
+row_18	LSM1	LSM1 homolog, mRNA degradation associated [Source:HGNC Symbol;Acc:HGNC:20472]	12779	-0.005531598348170519	-0.20500323	No	
+row_19	CNOT7	CCR4-NOT transcription complex subunit 7 [Source:HGNC Symbol;Acc:HGNC:14101]	13631	-0.029561733826994896	-0.2325549	No	
+row_20	LSM2	LSM2 homolog, U6 small nuclear RNA and mRNA degradation associated [Source:HGNC Symbol;Acc:HGNC:13940]	13746	-0.032734185457229614	-0.23383309	No	
+row_21	CNOT2	CCR4-NOT transcription complex subunit 2 [Source:HGNC Symbol;Acc:HGNC:7878]	14352	-0.04913222789764404	-0.2510629	No	
+row_22	EXOSC4	exosome component 4 [Source:HGNC Symbol;Acc:HGNC:18189]	14573	-0.055434759706258774	-0.2541783	No	
+row_23	HBS1L	HBS1 like translational GTPase [Source:HGNC Symbol;Acc:HGNC:4834]	14875	-0.06399323791265488	-0.2594344	No	
+row_24	EDC4	enhancer of mRNA decapping 4 [Source:HGNC Symbol;Acc:HGNC:17157]	15772	-0.08932945877313614	-0.28356266	No	
+row_25	LSM7	LSM7 homolog, U6 small nuclear RNA and mRNA degradation associated [Source:HGNC Symbol;Acc:HGNC:20470]	15786	-0.08977291733026505	-0.2764942	No	
+row_26	SKIC8	SKI8 subunit of superkiller complex [Source:HGNC Symbol;Acc:HGNC:30300]	15921	-0.09342492371797562	-0.2733894	No	
+row_27	CNOT6L	CCR4-NOT transcription complex subunit 6 like [Source:HGNC Symbol;Acc:HGNC:18042]	16466	-0.10768811404705048	-0.28355685	No	
+row_28	EXOSC1	exosome component 1 [Source:HGNC Symbol;Acc:HGNC:17286]	17264	-0.13018061220645905	-0.30076635	No	
+row_29	EIF4A2	eukaryotic translation initiation factor 4A2 [Source:HGNC Symbol;Acc:HGNC:3284]	17347	-0.13244281709194183	-0.292555	No	
+row_30	PAN2	poly(A) specific ribonuclease subunit PAN2 [Source:HGNC Symbol;Acc:HGNC:20074]	17671	-0.14096681773662567	-0.29213342	No	
+row_31	EXOSC7	exosome component 7 [Source:HGNC Symbol;Acc:HGNC:28112]	18518	-0.16584108769893646	-0.30808198	No	
+row_32	NT5C3B	5'-nucleotidase, cytosolic IIIB [Source:HGNC Symbol;Acc:HGNC:28300]	18570	-0.1678195595741272	-0.29581046	No	
+row_33	DCP1A	decapping mRNA 1A [Source:HGNC Symbol;Acc:HGNC:18714]	18622	-0.16964073479175568	-0.28338623	No	
+row_34	CNOT1	CCR4-NOT transcription complex subunit 1 [Source:HGNC Symbol;Acc:HGNC:7877]	18723	-0.17255458235740662	-0.2724468	No	
+row_35	PAN3	poly(A) specific ribonuclease subunit PAN3 [Source:HGNC Symbol;Acc:HGNC:29991]	18753	-0.17359870672225952	-0.25891435	No	
+row_36	DCP1B	decapping mRNA 1B [Source:HGNC Symbol;Acc:HGNC:24451]	20693	-0.21143190562725067	-0.30961037	Yes	
+row_37	SKIC2	SKI2 subunit of superkiller complex [Source:HGNC Symbol;Acc:HGNC:10898]	20722	-0.2123401165008545	-0.2927943	Yes	
+row_38	DIS3	DIS3 homolog, exosome endoribonuclease and 3'-5' exoribonuclease [Source:HGNC Symbol;Acc:HGNC:20604]	21135	-0.2220112681388855	-0.288718	Yes	
+row_39	EXOSC2	exosome component 2 [Source:HGNC Symbol;Acc:HGNC:17097]	21210	-0.2247140258550644	-0.27248764	Yes	
+row_40	CNOT10	CCR4-NOT transcription complex subunit 10 [Source:HGNC Symbol;Acc:HGNC:23817]	21548	-0.23095810413360596	-0.26501456	Yes	
+row_41	SKIC3	SKI3 subunit of superkiller complex [Source:HGNC Symbol;Acc:HGNC:23639]	21867	-0.23765988647937775	-0.2563091	Yes	
+row_42	LSM6	LSM6 homolog, U6 small nuclear RNA and mRNA degradation associated [Source:HGNC Symbol;Acc:HGNC:17017]	22038	-0.24192684888839722	-0.24202317	Yes	
+row_43	LSM5	LSM5 homolog, U6 small nuclear RNA and mRNA degradation associated [Source:HGNC Symbol;Acc:HGNC:17162]	22086	-0.244065061211586	-0.2232175	Yes	
+row_44	XRN1	5'-3' exoribonuclease 1 [Source:HGNC Symbol;Acc:HGNC:30654]	23210	-0.2763770520687103	-0.23967277	Yes	
+row_45	LSM3	LSM3 homolog, U6 small nuclear RNA and mRNA degradation associated [Source:HGNC Symbol;Acc:HGNC:17874]	23223	-0.2765699028968811	-0.21690656	Yes	
+row_46	EIF4E	eukaryotic translation initiation factor 4E [Source:HGNC Symbol;Acc:HGNC:3287]	24046	-0.3074226975440979	-0.22013696	Yes	
+row_47	DDX6	DEAD-box helicase 6 [Source:HGNC Symbol;Acc:HGNC:2747]	24712	-0.3341050148010254	-0.21558985	Yes	
+row_48	PARN	poly(A)-specific ribonuclease [Source:HGNC Symbol;Acc:HGNC:8609]	25400	-0.36138805747032166	-0.20953147	Yes	
+row_49	EXOSC6	exosome component 6 [Source:HGNC Symbol;Acc:HGNC:19055]	25505	-0.36648982763290405	-0.18247223	Yes	
+row_50	CNOT11	CCR4-NOT transcription complex subunit 11 [Source:HGNC Symbol;Acc:HGNC:25217]	25787	-0.38067588210105896	-0.16046956	Yes	
+row_51	PATL1	PAT1 homolog 1, processing body mRNA decay factor [Source:HGNC Symbol;Acc:HGNC:26721]	26735	-0.44691991806030273	-0.15641452	Yes	
+row_52	CNOT4	CCR4-NOT transcription complex subunit 4 [Source:HGNC Symbol;Acc:HGNC:7880]	26984	-0.46794477105140686	-0.12593007	Yes	
+row_53	EXOSC9	exosome component 9 [Source:HGNC Symbol;Acc:HGNC:9137]	27610	-0.5447338223457336	-0.10231075	Yes	
+row_54	CNOT9	CCR4-NOT transcription complex subunit 9 [Source:HGNC Symbol;Acc:HGNC:10445]	28184	-0.7106955647468567	-0.06294098	Yes	
+row_55	TUT4	terminal uridylyl transferase 4 [Source:HGNC Symbol;Acc:HGNC:28981]	28308	-0.838198184967041	0.0029992985	Yes	

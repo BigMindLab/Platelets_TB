@@ -1,0 +1,19 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	ARL5B	ADP ribosylation factor like GTPase 5B [Source:HGNC Symbol;Acc:HGNC:23052]	1761	0.4309796988964081	0.009239609	No	
+row_1	CSNK1A1	casein kinase 1 alpha 1 [Source:HGNC Symbol;Acc:HGNC:2451]	1828	0.42502710223197937	0.07722803	No	
+row_2	ATP1B1	ATPase Na+/K+ transporting subunit beta 1 [Source:HGNC Symbol;Acc:HGNC:804]	2908	0.3369033634662628	0.094938524	No	
+row_3	SLC49A4	solute carrier family 49 member 4 [Source:HGNC Symbol;Acc:HGNC:16628]	6101	0.19989322125911713	0.015518418	No	
+row_4	PACC1	proton activated chloride channel 1 [Source:HGNC Symbol;Acc:HGNC:25593]	6963	0.17922867834568024	0.0148265585	No	
+row_5	TMCC1	transmembrane and coiled-coil domain family 1 [Source:HGNC Symbol;Acc:HGNC:29116]	12864	-0.007734429556876421	-0.19181609	No	
+row_6	BAAT	bile acid-CoA:amino acid N-acyltransferase [Source:HGNC Symbol;Acc:HGNC:932]	13222	-0.017574116587638855	-0.20148978	No	
+row_7	ZNF654	zinc finger protein 654 [Source:HGNC Symbol;Acc:HGNC:25612]	17065	-0.12430369108915329	-0.3163217	No	
+row_8	NEXN	nexilin F-actin binding protein [Source:HGNC Symbol;Acc:HGNC:29557]	17691	-0.14171196520328522	-0.31490326	No	
+row_9	ABRAXAS2	abraxas 2, BRISC complex subunit [Source:HGNC Symbol;Acc:HGNC:28975]	21187	-0.22393473982810974	-0.4010241	Yes	
+row_10	RIMBP2	RIMS binding protein 2 [Source:HGNC Symbol;Acc:HGNC:30339]	21348	-0.22536738216876984	-0.36937904	Yes	
+row_11	ARRDC3	arrestin domain containing 3 [Source:HGNC Symbol;Acc:HGNC:29263]	22043	-0.2421579509973526	-0.35377494	Yes	
+row_12	TAFA1	TAFA chemokine like family member 1 [Source:HGNC Symbol;Acc:HGNC:21587]	23979	-0.30438289046287537	-0.3716108	Yes	
+row_13	CELF1	CUGBP Elav-like family member 1 [Source:HGNC Symbol;Acc:HGNC:2549]	24073	-0.3082057237625122	-0.32390022	Yes	
+row_14	ANKRD28	ankyrin repeat domain 28 [Source:HGNC Symbol;Acc:HGNC:29024]	25854	-0.38514694571495056	-0.32291254	Yes	
+row_15	CRK	CRK proto-oncogene, adaptor protein [Source:HGNC Symbol;Acc:HGNC:2362]	28055	-0.6501007676124573	-0.29289347	Yes	
+row_16	HNRNPH3	heterogeneous nuclear ribonucleoprotein H3 [Source:HGNC Symbol;Acc:HGNC:5043]	28321	-0.8514884114265442	-0.1613664	Yes	
+row_17	GLRA2	glycine receptor alpha 2 [Source:HGNC Symbol;Acc:HGNC:4327]	28369	-0.9905311465263367	8.4572204E-4	Yes	

@@ -1,0 +1,21 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	VDAC2	voltage dependent anion channel 2 [Source:HGNC Symbol;Acc:HGNC:12672]	2310	0.3817867040634155	0.019269992	No	
+row_1	PLCB3	phospholipase C beta 3 [Source:HGNC Symbol;Acc:HGNC:9056]	5059	0.2365792691707611	-0.015189938	No	
+row_2	APP	amyloid beta precursor protein [Source:HGNC Symbol;Acc:HGNC:620]	6107	0.1997414380311966	5.847251E-4	No	
+row_3	SLC25A31	solute carrier family 25 member 31 [Source:HGNC Symbol;Acc:HGNC:25319]	6617	0.18685382604599	0.031921763	No	
+row_4	MCU	mitochondrial calcium uniporter [Source:HGNC Symbol;Acc:HGNC:23526]	8803	0.12008234113454819	-0.013417947	No	
+row_5	SLC25A6	solute carrier family 25 member 6 [Source:HGNC Symbol;Acc:HGNC:10992]	8816	0.11946175247430801	0.017662887	No	
+row_6	CHRM3	cholinergic receptor muscarinic 3 [Source:HGNC Symbol;Acc:HGNC:1952]	11403	0.03399668261408806	-0.064511485	No	
+row_7	SLC25A5	solute carrier family 25 member 5 [Source:HGNC Symbol;Acc:HGNC:10991]	12136	0.012912334874272346	-0.08690459	No	
+row_8	PLCB2	phospholipase C beta 2 [Source:HGNC Symbol;Acc:HGNC:9055]	12459	0.0037230721209198236	-0.09727118	No	
+row_9	GNAQ	G protein subunit alpha q [Source:HGNC Symbol;Acc:HGNC:4390]	12674	-0.0026761656627058983	-0.10410755	No	
+row_10	VDAC1	voltage dependent anion channel 1 [Source:HGNC Symbol;Acc:HGNC:12669]	14174	-0.04384622350335121	-0.14537475	No	
+row_11	SLC25A4	solute carrier family 25 member 4 [Source:HGNC Symbol;Acc:HGNC:10990]	15146	-0.07141729444265366	-0.16076246	No	
+row_12	ITPR2	inositol 1,4,5-trisphosphate receptor type 2 [Source:HGNC Symbol;Acc:HGNC:6181]	16934	-0.1204538568854332	-0.19197728	No	
+row_13	PLCB4	phospholipase C beta 4 [Source:HGNC Symbol;Acc:HGNC:9059]	17707	-0.14207912981510162	-0.18171701	No	
+row_14	CHRM5	cholinergic receptor muscarinic 5 [Source:HGNC Symbol;Acc:HGNC:1954]	20020	-0.1953880339860916	-0.21167347	No	
+row_15	ITPR3	inositol 1,4,5-trisphosphate receptor type 3 [Source:HGNC Symbol;Acc:HGNC:6182]	23355	-0.28029435873031616	-0.25525782	Yes	
+row_16	VDAC3	voltage dependent anion channel 3 [Source:HGNC Symbol;Acc:HGNC:12674]	24025	-0.30632245540618896	-0.19805418	Yes	
+row_17	PLCB1	phospholipase C beta 1 [Source:HGNC Symbol;Acc:HGNC:15917]	25957	-0.3914547860622406	-0.16287728	Yes	
+row_18	CYCS	cytochrome c, somatic [Source:HGNC Symbol;Acc:HGNC:19986]	26369	-0.41844063997268677	-0.06701365	Yes	
+row_19	ITPR1	inositol 1,4,5-trisphosphate receptor type 1 [Source:HGNC Symbol;Acc:HGNC:6180]	27491	-0.5244742631912231	0.031789623	Yes	

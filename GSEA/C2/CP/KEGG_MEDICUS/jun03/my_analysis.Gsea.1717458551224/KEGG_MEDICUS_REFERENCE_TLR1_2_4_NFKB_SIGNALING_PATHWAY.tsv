@@ -1,0 +1,21 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	TLR4	toll like receptor 4 [Source:HGNC Symbol;Acc:HGNC:11850]	38	1.105352520942688	0.14298505	Yes	
+row_1	TLR2	toll like receptor 2 [Source:HGNC Symbol;Acc:HGNC:11848]	139	0.8958185911178589	0.25642645	Yes	
+row_2	IRAK1	interleukin 1 receptor associated kinase 1 [Source:HGNC Symbol;Acc:HGNC:6112]	459	0.6871137022972107	0.33489922	Yes	
+row_3	TLR1	toll like receptor 1 [Source:HGNC Symbol;Acc:HGNC:11847]	885	0.564328670501709	0.3936043	Yes	
+row_4	TIRAP	TIR domain containing adaptor protein [Source:HGNC Symbol;Acc:HGNC:17192]	1216	0.4997979700565338	0.44723183	Yes	
+row_5	MYD88	MYD88 innate immune signal transduction adaptor [Source:HGNC Symbol;Acc:HGNC:7562]	2064	0.4034796953201294	0.47006232	Yes	
+row_6	NFKBIA	NFKB inhibitor alpha [Source:HGNC Symbol;Acc:HGNC:7797]	2680	0.35354283452033997	0.49454913	Yes	
+row_7	IKBKG	inhibitor of nuclear factor kappa B kinase regulatory subunit gamma [Source:HGNC Symbol;Acc:HGNC:5961]	2927	0.3358449339866638	0.52973	Yes	
+row_8	RELA	RELA proto-oncogene, NF-kB subunit [Source:HGNC Symbol;Acc:HGNC:9955]	6769	0.18383173644542694	0.41836226	No	
+row_9	IL6	interleukin 6 [Source:HGNC Symbol;Acc:HGNC:6018]	9832	0.08523844182491302	0.321576	No	
+row_10	NFKB1	nuclear factor kappa B subunit 1 [Source:HGNC Symbol;Acc:HGNC:7794]	11137	0.042079437524080276	0.2811127	No	
+row_11	TNF	tumor necrosis factor [Source:HGNC Symbol;Acc:HGNC:11892]	13158	-0.015979956835508347	0.21200722	No	
+row_12	TRAF6	TNF receptor associated factor 6 [Source:HGNC Symbol;Acc:HGNC:12036]	14505	-0.053417012095451355	0.17154402	No	
+row_13	IRAK4	interleukin 1 receptor associated kinase 4 [Source:HGNC Symbol;Acc:HGNC:17967]	18309	-0.15925700962543488	0.058306813	No	
+row_14	TAB2	TGF-beta activated kinase 1 (MAP3K7) binding protein 2 [Source:HGNC Symbol;Acc:HGNC:17075]	21351	-0.22544553875923157	-0.019432675	No	
+row_15	IL12A	interleukin 12A [Source:HGNC Symbol;Acc:HGNC:5969]	24047	-0.3074610233306885	-0.07426926	No	
+row_16	IKBKB	inhibitor of nuclear factor kappa B kinase subunit beta [Source:HGNC Symbol;Acc:HGNC:5960]	26010	-0.3945258557796478	-0.091904394	No	
+row_17	IL12B	interleukin 12B [Source:HGNC Symbol;Acc:HGNC:5970]	26116	-0.4002539813518524	-0.043344375	No	
+row_18	MAP3K7	mitogen-activated protein kinase kinase kinase 7 [Source:HGNC Symbol;Acc:HGNC:6859]	26173	-0.4047378599643707	0.007528032	No	
+row_19	CHUK	component of inhibitor of nuclear factor kappa B kinase complex [Source:HGNC Symbol;Acc:HGNC:1974]	27587	-0.5413040518760681	0.028406214	No	

@@ -1,0 +1,38 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	RFC2	replication factor C subunit 2 [Source:HGNC Symbol;Acc:HGNC:9970]	1842	0.4239417314529419	-0.014104315	No	
+row_1	ERCC1	ERCC excision repair 1, endonuclease non-catalytic subunit [Source:HGNC Symbol;Acc:HGNC:3433]	1964	0.41237378120422363	0.031094234	No	
+row_2	RFC5	replication factor C subunit 5 [Source:HGNC Symbol;Acc:HGNC:9973]	3082	0.3267953097820282	0.03090377	No	
+row_3	RAD51	RAD51 recombinase [Source:HGNC Symbol;Acc:HGNC:9817]	4284	0.2686149477958679	0.020772148	No	
+row_4	RFC3	replication factor C subunit 3 [Source:HGNC Symbol;Acc:HGNC:9971]	6020	0.20346492528915405	-0.016005758	No	
+row_5	HUS1	HUS1 checkpoint clamp component [Source:HGNC Symbol;Acc:HGNC:5309]	8336	0.13770060241222382	-0.08112581	No	
+row_6	RMI1	RecQ mediated genome instability 1 [Source:HGNC Symbol;Acc:HGNC:25764]	9812	0.08591087907552719	-0.1228359	No	
+row_7	RFC4	replication factor C subunit 4 [Source:HGNC Symbol;Acc:HGNC:9972]	10056	0.0773475170135498	-0.12212712	No	
+row_8	RHNO1	RAD9-HUS1-RAD1 interacting nuclear orphan 1 [Source:HGNC Symbol;Acc:HGNC:28206]	10072	0.07686936110258102	-0.113435365	No	
+row_9	TOP3A	DNA topoisomerase III alpha [Source:HGNC Symbol;Acc:HGNC:11992]	11015	0.04615826532244682	-0.14111784	No	
+row_10	BRIP1	BRCA1 interacting helicase 1 [Source:HGNC Symbol;Acc:HGNC:20473]	11055	0.04463591426610947	-0.13713893	No	
+row_11	RPA2	replication protein A2 [Source:HGNC Symbol;Acc:HGNC:10290]	11537	0.030473334714770317	-0.15044586	No	
+row_12	BLM	BLM RecQ like helicase [Source:HGNC Symbol;Acc:HGNC:1058]	12029	0.01599782705307007	-0.16584182	No	
+row_13	RBBP8	RB binding protein 8, endonuclease [Source:HGNC Symbol;Acc:HGNC:9891]	13178	-0.016424324363470078	-0.2043555	No	
+row_14	RAD1	RAD1 checkpoint DNA exonuclease [Source:HGNC Symbol;Acc:HGNC:9806]	13292	-0.019312845543026924	-0.20602377	No	
+row_15	BARD1	BRCA1 associated RING domain 1 [Source:HGNC Symbol;Acc:HGNC:952]	13873	-0.03610628843307495	-0.2221462	No	
+row_16	KAT5	lysine acetyltransferase 5 [Source:HGNC Symbol;Acc:HGNC:5275]	15465	-0.08114215731620789	-0.268519	No	
+row_17	ATRIP	ATR interacting protein [Source:HGNC Symbol;Acc:HGNC:33499]	16056	-0.09698984771966934	-0.27769092	No	
+row_18	ABL1	ABL proto-oncogene 1, non-receptor tyrosine kinase [Source:HGNC Symbol;Acc:HGNC:76]	16333	-0.10414043813943863	-0.27493197	No	
+row_19	NBN	nibrin [Source:HGNC Symbol;Acc:HGNC:7652]	17067	-0.12432944029569626	-0.28586724	No	
+row_20	EXO1	exonuclease 1 [Source:HGNC Symbol;Acc:HGNC:3511]	17472	-0.13548706471920013	-0.28386205	No	
+row_21	RAD9A	RAD9 checkpoint clamp component A [Source:HGNC Symbol;Acc:HGNC:9827]	17910	-0.14793838560581207	-0.28152704	No	
+row_22	RAD52	RAD52 homolog, DNA repair protein [Source:HGNC Symbol;Acc:HGNC:9824]	18088	-0.15294955670833588	-0.26942208	No	
+row_23	DNA2	DNA replication helicase/nuclease 2 [Source:HGNC Symbol;Acc:HGNC:2939]	18469	-0.16406431794166565	-0.26314262	No	
+row_24	RAD9B	RAD9 checkpoint clamp component B [Source:HGNC Symbol;Acc:HGNC:21700]	18967	-0.17933331429958344	-0.2591575	No	
+row_25	ATR	ATR serine/threonine kinase [Source:HGNC Symbol;Acc:HGNC:882]	20252	-0.19746068120002747	-0.2807513	No	
+row_26	RAD17	RAD17 checkpoint clamp loader component [Source:HGNC Symbol;Acc:HGNC:9807]	20322	-0.19976501166820526	-0.2592221	No	
+row_27	ATM	ATM serine/threonine kinase [Source:HGNC Symbol;Acc:HGNC:795]	24446	-0.3229692280292511	-0.3658771	Yes	
+row_28	BRCA1	BRCA1 DNA repair associated [Source:HGNC Symbol;Acc:HGNC:1100]	24938	-0.3425329029560089	-0.3421041	Yes	
+row_29	ERCC4	ERCC excision repair 4, endonuclease catalytic subunit [Source:HGNC Symbol;Acc:HGNC:3436]	25269	-0.355304092168808	-0.31112155	Yes	
+row_30	MRE11	MRE11 homolog, double strand break repair nuclease [Source:HGNC Symbol;Acc:HGNC:7230]	26379	-0.41900232434272766	-0.29996938	Yes	
+row_31	RAD50	RAD50 double strand break repair protein [Source:HGNC Symbol;Acc:HGNC:9816]	26392	-0.4200751483440399	-0.25000316	Yes	
+row_32	RPA3	replication protein A3 [Source:HGNC Symbol;Acc:HGNC:10291]	26813	-0.4528713524341583	-0.21049094	Yes	
+row_33	RPA1	replication protein A1 [Source:HGNC Symbol;Acc:HGNC:10289]	27006	-0.4695485234260559	-0.16093788	Yes	
+row_34	TOPBP1	DNA topoisomerase II binding protein 1 [Source:HGNC Symbol;Acc:HGNC:17008]	27399	-0.5102137923240662	-0.11355983	Yes	
+row_35	RMI2	RecQ mediated genome instability 2 [Source:HGNC Symbol;Acc:HGNC:28349]	27514	-0.5291042923927307	-0.05411222	Yes	
+row_36	WRN	WRN RecQ like helicase [Source:HGNC Symbol;Acc:HGNC:12791]	28181	-0.7092322707176208	0.0074762334	Yes	

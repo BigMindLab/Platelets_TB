@@ -1,0 +1,31 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	DOC2A	double C2 domain alpha [Source:HGNC Symbol;Acc:HGNC:2985]	502	0.6674859523773193	0.06558647	No	
+row_1	ABHD16A	abhydrolase domain containing 16A, phospholipase [Source:HGNC Symbol;Acc:HGNC:13921]	2370	0.3757505416870117	0.04664753	No	
+row_2	FAM168B	family with sequence similarity 168 member B [Source:HGNC Symbol;Acc:HGNC:27016]	4319	0.26714661717414856	0.011301906	No	
+row_3	MORF4L1	mortality factor 4 like 1 [Source:HGNC Symbol;Acc:HGNC:16989]	5947	0.20388628542423248	-0.02061981	No	
+row_4	RAP2C	RAP2C, member of RAS oncogene family [Source:HGNC Symbol;Acc:HGNC:21165]	7094	0.17379742860794067	-0.03933772	No	
+row_5	DACH1	dachshund family transcription factor 1 [Source:HGNC Symbol;Acc:HGNC:2663]	8106	0.1468357890844345	-0.05666019	No	
+row_6	PTPN9	protein tyrosine phosphatase non-receptor type 9 [Source:HGNC Symbol;Acc:HGNC:9661]	8777	0.12119746208190918	-0.06515938	No	
+row_7	PARL	presenilin associated rhomboid like [Source:HGNC Symbol;Acc:HGNC:18253]	9453	0.09790629893541336	-0.07674098	No	
+row_8	CUL2	cullin 2 [Source:HGNC Symbol;Acc:HGNC:2552]	12432	0.004371757619082928	-0.18118773	No	
+row_9	LRRC8A	leucine rich repeat containing 8 VRAC subunit A [Source:HGNC Symbol;Acc:HGNC:19027]	13460	-0.024692170321941376	-0.21431467	No	
+row_10	CNNM3	cyclin and CBS domain divalent metal cation transport mediator 3 [Source:HGNC Symbol;Acc:HGNC:104]	14571	-0.055416446179151535	-0.24653424	No	
+row_11	SRSF10	serine and arginine rich splicing factor 10 [Source:HGNC Symbol;Acc:HGNC:16713]	14640	-0.057532597333192825	-0.24175307	No	
+row_12	EYA2	EYA transcriptional coactivator and phosphatase 2 [Source:HGNC Symbol;Acc:HGNC:3520]	16259	-0.10205164551734924	-0.28606382	No	
+row_13	PUM1	pumilio RNA binding family member 1 [Source:HGNC Symbol;Acc:HGNC:14957]	16757	-0.11569957435131073	-0.2891497	No	
+row_14	IGF2BP1	insulin like growth factor 2 mRNA binding protein 1 [Source:HGNC Symbol;Acc:HGNC:28866]	17546	-0.1372472047805786	-0.2998065	No	
+row_15	TAF5	TATA-box binding protein associated factor 5 [Source:HGNC Symbol;Acc:HGNC:11539]	18745	-0.17341656982898712	-0.32040524	No	
+row_16	CPNE4	copine 4 [Source:HGNC Symbol;Acc:HGNC:2317]	19858	-0.19405174255371094	-0.33539724	Yes	
+row_17	PRPF4B	pre-mRNA processing factor 4B [Source:HGNC Symbol;Acc:HGNC:17346]	19996	-0.19524940848350525	-0.31586525	Yes	
+row_18	DPYSL5	dihydropyrimidinase like 5 [Source:HGNC Symbol;Acc:HGNC:20637]	20917	-0.2162117063999176	-0.3213231	Yes	
+row_19	ARRDC3	arrestin domain containing 3 [Source:HGNC Symbol;Acc:HGNC:29263]	22043	-0.2421579509973526	-0.330771	Yes	
+row_20	GSK3B	glycogen synthase kinase 3 beta [Source:HGNC Symbol;Acc:HGNC:4617]	22445	-0.2537282407283783	-0.31324992	Yes	
+row_21	NREP	neuronal regeneration related protein [Source:HGNC Symbol;Acc:HGNC:16834]	23047	-0.270755410194397	-0.30065548	Yes	
+row_22	SOBP	sine oculis binding protein homolog [Source:HGNC Symbol;Acc:HGNC:29256]	23252	-0.27718740701675415	-0.2732619	Yes	
+row_23	SSBP2	single stranded DNA binding protein 2 [Source:HGNC Symbol;Acc:HGNC:15831]	23314	-0.27932387590408325	-0.24056013	Yes	
+row_24	LEMD3	LEM domain containing 3 [Source:HGNC Symbol;Acc:HGNC:28887]	24076	-0.30828621983528137	-0.22892378	Yes	
+row_25	NBEA	neurobeachin [Source:HGNC Symbol;Acc:HGNC:7648]	24993	-0.34462690353393555	-0.21821772	Yes	
+row_26	PURA	purine rich element binding protein A [Source:HGNC Symbol;Acc:HGNC:9701]	27624	-0.5474939942359924	-0.24262783	Yes	
+row_27	FAM131B	family with sequence similarity 131 member B [Source:HGNC Symbol;Acc:HGNC:22202]	27969	-0.6237460970878601	-0.1769285	Yes	
+row_28	UCHL5	ubiquitin C-terminal hydrolase L5 [Source:HGNC Symbol;Acc:HGNC:19678]	28163	-0.6990315318107605	-0.09651187	Yes	
+row_29	TUT4	terminal uridylyl transferase 4 [Source:HGNC Symbol;Acc:HGNC:28981]	28308	-0.838198184967041	0.0029967	Yes	

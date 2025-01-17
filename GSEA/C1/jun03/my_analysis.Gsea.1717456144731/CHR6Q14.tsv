@@ -1,0 +1,57 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	BCKDHB	branched chain keto acid dehydrogenase E1 subunit beta [Source:HGNC Symbol;Acc:HGNC:987]	933	0.5526463985443115	0.008978536	No	
+row_1	MRAP2	melanocortin 2 receptor accessory protein 2 [Source:HGNC Symbol;Acc:HGNC:21232]	1187	0.5066232681274414	0.038463574	No	
+row_2	RN7SL643P	RNA, 7SL, cytoplasmic 643, pseudogene [Source:HGNC Symbol;Acc:HGNC:46659]	1718	0.43557825684547424	0.052787006	No	
+row_3	COX7A2	cytochrome c oxidase subunit 7A2 [Source:HGNC Symbol;Acc:HGNC:2288]	2437	0.3707321882247925	0.055559505	No	
+row_4	PGM3	phosphoglucomutase 3 [Source:HGNC Symbol;Acc:HGNC:8907]	2471	0.36809951066970825	0.08230488	No	
+row_5	LINC02857	long intergenic non-protein coding RNA 2857 [Source:HGNC Symbol;Acc:HGNC:54394]	4111	0.2770749032497406	0.045475602	No	
+row_6	TMEM30A	transmembrane protein 30A [Source:HGNC Symbol;Acc:HGNC:16667]	5352	0.22828568518161774	0.019027084	No	
+row_7	LINC02535	long intergenic non-protein coding RNA 2535 [Source:HGNC Symbol;Acc:HGNC:53569]	7181	0.17009200155735016	-0.032583296	No	
+row_8	LCAL1	lung cancer associated lncRNA 1 [Source:HGNC Symbol;Acc:HGNC:25837]	7309	0.16913241147994995	-0.024241023	No	
+row_9	MEI4	meiotic double-stranded break formation protein 4 [Source:HGNC Symbol;Acc:HGNC:43638]	7507	0.16640329360961914	-0.018575856	No	
+row_10	HSPD1P10	heat shock protein family D (Hsp60) member 1 pseudogene 10 [Source:HGNC Symbol;Acc:HGNC:35131]	8434	0.13413161039352417	-0.04108276	No	
+row_11	LAP3P1	leucine aminopeptidase 3 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:42364]	8781	0.12112653255462646	-0.044108506	No	
+row_12	PHIP	pleckstrin homology domain interacting protein [Source:HGNC Symbol;Acc:HGNC:15673]	9503	0.09591729938983917	-0.062278774	No	
+row_13	SNORA70	small nucleolar RNA, H/ACA box 70 [Source:HGNC Symbol;Acc:HGNC:10231]	9549	0.09447628259658813	-0.056703407	No	
+row_14	ME1	malic enzyme 1 [Source:HGNC Symbol;Acc:HGNC:6983]	10515	0.06253329664468765	-0.08601525	No	
+row_15	SH3BGRL2	SH3 domain binding glutamate rich protein like 2 [Source:HGNC Symbol;Acc:HGNC:15567]	10662	0.05757695436477661	-0.08680177	No	
+row_16	CYB5R4	cytochrome b5 reductase 4 [Source:HGNC Symbol;Acc:HGNC:20147]	11563	0.029983431100845337	-0.11628785	No	
+row_17	IBTK	inhibitor of Bruton tyrosine kinase [Source:HGNC Symbol;Acc:HGNC:17853]	11583	0.029211772605776787	-0.11474345	No	
+row_18	TTK	TTK protein kinase [Source:HGNC Symbol;Acc:HGNC:12401]	12401	0.005115456413477659	-0.14318614	No	
+row_19	SNHG5	small nucleolar RNA host gene 5 [Source:HGNC Symbol;Acc:HGNC:21026]	12441	0.004152238834649324	-0.14424755	No	
+row_20	HMGN3-AS1	HMGN3 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:48984]	13223	-0.017640361562371254	-0.1704702	No	
+row_21	RN7SKP163	RN7SK pseudogene 163 [Source:HGNC Symbol;Acc:HGNC:45887]	13679	-0.030853526666760445	-0.18418701	No	
+row_22	DOP1A	DOP1 leucine zipper like protein A [Source:HGNC Symbol;Acc:HGNC:21194]	14507	-0.05355360358953476	-0.20930992	No	
+row_23	ZNF292	zinc finger protein 292 [Source:HGNC Symbol;Acc:HGNC:18410]	14956	-0.06621018797159195	-0.22009891	No	
+row_24	RWDD2A	RWD domain containing 2A [Source:HGNC Symbol;Acc:HGNC:21385]	15359	-0.07823052257299423	-0.22835326	No	
+row_25	RNU6-1016P	RNA, U6 small nuclear 1016, pseudogene [Source:HGNC Symbol;Acc:HGNC:47979]	16244	-0.10175081342458725	-0.2518332	No	
+row_26	NT5E	5'-nucleotidase ecto [Source:HGNC Symbol;Acc:HGNC:8021]	16294	-0.10286155343055725	-0.24576321	No	
+row_27	UBE3D	ubiquitin protein ligase E3D [Source:HGNC Symbol;Acc:HGNC:21381]	16413	-0.1064290851354599	-0.24185762	No	
+row_28	ELOVL4	ELOVL fatty acid elongase 4 [Source:HGNC Symbol;Acc:HGNC:14415]	16800	-0.11681269109249115	-0.24662198	No	
+row_29	SNX14	sorting nexin 14 [Source:HGNC Symbol;Acc:HGNC:14977]	17035	-0.12353217601776123	-0.24551304	No	
+row_30	TENT5A	terminal nucleotidyltransferase 5A [Source:HGNC Symbol;Acc:HGNC:18345]	17142	-0.12644121050834656	-0.23966663	No	
+row_31	COL12A1	collagen type XII alpha 1 chain [Source:HGNC Symbol;Acc:HGNC:2188]	18488	-0.16460970044136047	-0.27464843	No	
+row_32	ENSG00000271945	novel transcript	19139	-0.1824808269739151	-0.28374985	No	
+row_33	GAPDHP63	glyceraldehyde 3 phosphate dehydrogenase pseudogene 63 [Source:HGNC Symbol;Acc:HGNC:4157]	19266	-0.18256960809230804	-0.27435344	No	
+row_34	RNU1-34P	RNA, U1 small nuclear 34, pseudogene [Source:HGNC Symbol;Acc:HGNC:48376]	20180	-0.1953880339860916	-0.29175705	No	
+row_35	H3P27	H3 histone pseudogene 27 [Source:HGNC Symbol;Acc:HGNC:54460]	20806	-0.21234279870986938	-0.29771206	No	
+row_36	FILIP1	filamin A interacting protein 1 [Source:HGNC Symbol;Acc:HGNC:21015]	21355	-0.22558702528476715	-0.29994568	No	
+row_37	CEP162	centrosomal protein 162 [Source:HGNC Symbol;Acc:HGNC:21107]	21875	-0.2378254234790802	-0.30022803	No	
+row_38	ENSG00000272008	novel transcript, antisense to ZNF292	22855	-0.26536378264427185	-0.31465498	Yes	
+row_39	LINC01526	long intergenic non-protein coding RNA 1526 [Source:HGNC Symbol;Acc:HGNC:51265]	22949	-0.268511563539505	-0.2975778	Yes	
+row_40	RNU6-130P	RNA, U6 small nuclear 130, pseudogene [Source:HGNC Symbol;Acc:HGNC:47093]	23144	-0.2739124894142151	-0.28365526	Yes	
+row_41	PRSS35	serine protease 35 [Source:HGNC Symbol;Acc:HGNC:21387]	23155	-0.27432090044021606	-0.2632087	Yes	
+row_42	SYNCRIP	synaptotagmin binding cytoplasmic RNA interacting protein [Source:HGNC Symbol;Acc:HGNC:16918]	23218	-0.2764933705329895	-0.2444324	Yes	
+row_43	SENP6	SUMO specific peptidase 6 [Source:HGNC Symbol;Acc:HGNC:20944]	23272	-0.27783259749412537	-0.22523698	Yes	
+row_44	HMGN3	high mobility group nucleosomal binding domain 3 [Source:HGNC Symbol;Acc:HGNC:12312]	24033	-0.30680927634239197	-0.22879332	Yes	
+row_45	MYO6	myosin VI [Source:HGNC Symbol;Acc:HGNC:7605]	25251	-0.35456186532974243	-0.24485575	Yes	
+row_46	TMEM30A-DT	TMEM30A divergent transcript [Source:HGNC Symbol;Acc:HGNC:48985]	25805	-0.382254421710968	-0.23538706	Yes	
+row_47	TPT1P6	TPT1 pseudogene 6 [Source:HGNC Symbol;Acc:HGNC:49297]	25869	-0.3859502375125885	-0.20834686	Yes	
+row_48	RNU4-72P	RNA, U4 small nuclear 72, pseudogene [Source:HGNC Symbol;Acc:HGNC:47008]	26072	-0.39786455035209656	-0.18530837	Yes	
+row_49	LINC02540	long intergenic non-protein coding RNA 2540 [Source:HGNC Symbol;Acc:HGNC:53573]	26077	-0.3980306088924408	-0.15527022	Yes	
+row_50	HMGB1P39	high mobility group box 1 pseudogene 39 [Source:HGNC Symbol;Acc:HGNC:39186]	26202	-0.4063032865524292	-0.1288394	Yes	
+row_51	LINC02542	long intergenic non-protein coding RNA 2542 [Source:HGNC Symbol;Acc:HGNC:53576]	27146	-0.48334914445877075	-0.12546797	Yes	
+row_52	TPBG	trophoblast glycoprotein [Source:HGNC Symbol;Acc:HGNC:12004]	27204	-0.4885709583759308	-0.090435185	Yes	
+row_53	IRAK1BP1	interleukin 1 receptor associated kinase 1 binding protein 1 [Source:HGNC Symbol;Acc:HGNC:17368]	27613	-0.5454243421554565	-0.063477874	Yes	
+row_54	PKMP3	pyruvate kinase M1/2 pseudogene 3 [Source:HGNC Symbol;Acc:HGNC:44245]	27856	-0.5949364900588989	-0.026908614	Yes	
+row_55	LCA5	lebercilin LCA5 [Source:HGNC Symbol;Acc:HGNC:31923]	27897	-0.6043539643287659	0.017502928	Yes	

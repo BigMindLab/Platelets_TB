@@ -1,0 +1,35 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	FCGR1BP	Fc gamma receptor Ib, pseudogene [Source:HGNC Symbol;Acc:HGNC:3614]	2	1.9097435474395752	0.17119989	Yes	
+row_1	ETF1	eukaryotic translation termination factor 1 [Source:HGNC Symbol;Acc:HGNC:3477]	83	0.9850785732269287	0.25672325	Yes	
+row_2	CLEC4D	C-type lectin domain family 4 member D [Source:HGNC Symbol;Acc:HGNC:14554]	679	0.6128979921340942	0.29070917	Yes	
+row_3	FBN2	fibrillin 2 [Source:HGNC Symbol;Acc:HGNC:3604]	795	0.5828014612197876	0.3389212	Yes	
+row_4	CPNE8	copine 8 [Source:HGNC Symbol;Acc:HGNC:23498]	859	0.5702210664749146	0.38783854	Yes	
+row_5	EGR2	early growth response 2 [Source:HGNC Symbol;Acc:HGNC:3239]	1116	0.5179456472396851	0.42526236	Yes	
+row_6	LMLN	leishmanolysin like peptidase [Source:HGNC Symbol;Acc:HGNC:15991]	1518	0.4570121765136719	0.45210868	Yes	
+row_7	LRGUK	leucine rich repeats and guanylate kinase domain containing [Source:HGNC Symbol;Acc:HGNC:21964]	1878	0.419131338596344	0.4770387	Yes	
+row_8	SMIM10	small integral membrane protein 10 [Source:HGNC Symbol;Acc:HGNC:41913]	2179	0.3937651515007019	0.50177425	Yes	
+row_9	GHITM	growth hormone inducible transmembrane protein [Source:HGNC Symbol;Acc:HGNC:17281]	2227	0.38910210132598877	0.5350126	Yes	
+row_10	RNF10	ring finger protein 10 [Source:HGNC Symbol;Acc:HGNC:10055]	2237	0.3885182738304138	0.56953853	Yes	
+row_11	TEAD4	TEA domain transcription factor 4 [Source:HGNC Symbol;Acc:HGNC:11717]	3228	0.3195313513278961	0.56328654	No	
+row_12	NUTF2	nuclear transport factor 2 [Source:HGNC Symbol;Acc:HGNC:13722]	6082	0.20080052316188812	0.48069537	No	
+row_13	HCN1	hyperpolarization activated cyclic nucleotide gated potassium channel 1 [Source:HGNC Symbol;Acc:HGNC:4845]	7384	0.16913241147994995	0.4499891	No	
+row_14	ATXN1	ataxin 1 [Source:HGNC Symbol;Acc:HGNC:10548]	7938	0.15410810708999634	0.44431058	No	
+row_15	PSEN1	presenilin 1 [Source:HGNC Symbol;Acc:HGNC:9508]	8476	0.13264599442481995	0.43727148	No	
+row_16	ZNRF3	zinc and ring finger 3 [Source:HGNC Symbol;Acc:HGNC:18126]	9679	0.08998508751392365	0.40295792	No	
+row_17	PTPRJ	protein tyrosine phosphatase receptor type J [Source:HGNC Symbol;Acc:HGNC:9673]	9779	0.08694637566804886	0.40726465	No	
+row_18	MANBAL	mannosidase beta like [Source:HGNC Symbol;Acc:HGNC:15799]	10483	0.063430055975914	0.3881648	No	
+row_19	ZBTB1	zinc finger and BTB domain containing 1 [Source:HGNC Symbol;Acc:HGNC:20259]	13180	-0.016510875895619392	0.29458204	No	
+row_20	COL1A1	collagen type I alpha 1 chain [Source:HGNC Symbol;Acc:HGNC:2197]	14049	-0.04102889820933342	0.26765513	No	
+row_21	CHST11	carbohydrate sulfotransferase 11 [Source:HGNC Symbol;Acc:HGNC:17422]	14782	-0.06126205995678902	0.24733825	No	
+row_22	STK39	serine/threonine kinase 39 [Source:HGNC Symbol;Acc:HGNC:17717]	14911	-0.06498370319604874	0.24865274	No	
+row_23	CCDC3	coiled-coil domain containing 3 [Source:HGNC Symbol;Acc:HGNC:23813]	14986	-0.06721296906471252	0.25207126	No	
+row_24	THBS4	thrombospondin 4 [Source:HGNC Symbol;Acc:HGNC:11788]	15275	-0.07577342540025711	0.24871166	No	
+row_25	TEAD1	TEA domain transcription factor 1 [Source:HGNC Symbol;Acc:HGNC:11714]	16188	-0.10046467185020447	0.2255636	No	
+row_26	ASB8	ankyrin repeat and SOCS box containing 8 [Source:HGNC Symbol;Acc:HGNC:17183]	17075	-0.1246076300740242	0.20549753	No	
+row_27	ZNF568	zinc finger protein 568 [Source:HGNC Symbol;Acc:HGNC:25392]	18965	-0.179294615983963	0.1549692	No	
+row_28	TENM3	teneurin transmembrane protein 3 [Source:HGNC Symbol;Acc:HGNC:29944]	19113	-0.1824808269739151	0.16615117	No	
+row_29	ECHDC1	ethylmalonyl-CoA decarboxylase 1 [Source:HGNC Symbol;Acc:HGNC:21489]	20929	-0.21673555672168732	0.121589944	No	
+row_30	RNF165	ring finger protein 165 [Source:HGNC Symbol;Acc:HGNC:31696]	21872	-0.23774440586566925	0.109695636	No	
+row_31	CHERP	calcium homeostasis endoplasmic reticulum protein [Source:HGNC Symbol;Acc:HGNC:16930]	22636	-0.2594645917415619	0.10606096	No	
+row_32	TRIM10	tripartite motif containing 10 [Source:HGNC Symbol;Acc:HGNC:10072]	25721	-0.37772226333618164	0.03119129	No	
+row_33	HOXA1	homeobox A1 [Source:HGNC Symbol;Acc:HGNC:5099]	28174	-0.702375054359436	0.007722174	No	

@@ -1,0 +1,35 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	NFIL3	nuclear factor, interleukin 3 regulated [Source:HGNC Symbol;Acc:HGNC:7787]	491	0.672667920589447	0.051221464	No	
+row_1	FZD2	frizzled class receptor 2 [Source:HGNC Symbol;Acc:HGNC:4040]	756	0.5923060774803162	0.10225952	No	
+row_2	IFNGR2	interferon gamma receptor 2 [Source:HGNC Symbol;Acc:HGNC:5440]	1088	0.5239503383636475	0.14397068	No	
+row_3	TLE4	TLE family member 4, transcriptional corepressor [Source:HGNC Symbol;Acc:HGNC:11840]	2355	0.3772292137145996	0.13776423	No	
+row_4	NCK1	NCK adaptor protein 1 [Source:HGNC Symbol;Acc:HGNC:7664]	6190	0.19657433032989502	0.022601739	No	
+row_5	MEIS2	Meis homeobox 2 [Source:HGNC Symbol;Acc:HGNC:7001]	8749	0.12205910682678223	-0.055159766	No	
+row_6	UGCG	UDP-glucose ceramide glucosyltransferase [Source:HGNC Symbol;Acc:HGNC:12524]	8994	0.1126905232667923	-0.05228199	No	
+row_7	PUM2	pumilio RNA binding family member 2 [Source:HGNC Symbol;Acc:HGNC:14958]	9562	0.09375838935375214	-0.06272239	No	
+row_8	CXCL12	C-X-C motif chemokine ligand 12 [Source:HGNC Symbol;Acc:HGNC:10672]	9819	0.08571088314056396	-0.06301656	No	
+row_9	PTK2	protein tyrosine kinase 2 [Source:HGNC Symbol;Acc:HGNC:9611]	9984	0.079522505402565	-0.060697228	No	
+row_10	QKI	QKI, KH domain containing RNA binding [Source:HGNC Symbol;Acc:HGNC:21100]	10418	0.06528690457344055	-0.069313474	No	
+row_11	MACIR	macrophage immunometabolism regulator [Source:HGNC Symbol;Acc:HGNC:25052]	10944	0.04804038256406784	-0.08293088	No	
+row_12	CDK7	cyclin dependent kinase 7 [Source:HGNC Symbol;Acc:HGNC:1778]	11443	0.03292027488350868	-0.09713675	No	
+row_13	RAB14	RAB14, member RAS oncogene family [Source:HGNC Symbol;Acc:HGNC:16524]	11617	0.028167450800538063	-0.10036706	No	
+row_14	ZMYND8	zinc finger MYND-type containing 8 [Source:HGNC Symbol;Acc:HGNC:9397]	12402	0.005051579792052507	-0.12749696	No	
+row_15	PDGFRA	platelet derived growth factor receptor alpha [Source:HGNC Symbol;Acc:HGNC:8803]	14496	-0.05314460024237633	-0.19588345	No	
+row_16	HMGXB4	HMG-box containing 4 [Source:HGNC Symbol;Acc:HGNC:5003]	17570	-0.13792277872562408	-0.29018807	No	
+row_17	CHTOP	chromatin target of PRMT1 [Source:HGNC Symbol;Acc:HGNC:24511]	18327	-0.1599772721529007	-0.3005461	No	
+row_18	ARL4C	ADP ribosylation factor like GTPase 4C [Source:HGNC Symbol;Acc:HGNC:698]	18893	-0.17735758423805237	-0.3023985	No	
+row_19	USP32P2	ubiquitin specific peptidase 32 pseudogene 2 [Source:HGNC Symbol;Acc:HGNC:30751]	21661	-0.2346571981906891	-0.3760575	No	
+row_20	NFYA	nuclear transcription factor Y subunit alpha [Source:HGNC Symbol;Acc:HGNC:7804]	23874	-0.30006346106529236	-0.4234828	Yes	
+row_21	SMAD3	SMAD family member 3 [Source:HGNC Symbol;Acc:HGNC:6769]	23960	-0.3035472333431244	-0.39555317	Yes	
+row_22	BCAR3	BCAR3 adaptor protein, NSP family member [Source:HGNC Symbol;Acc:HGNC:973]	24294	-0.3174957036972046	-0.3749471	Yes	
+row_23	CSTF3	cleavage stimulation factor subunit 3 [Source:HGNC Symbol;Acc:HGNC:2485]	25623	-0.37256112694740295	-0.38381535	Yes	
+row_24	AHDC1	AT-hook DNA binding motif containing 1 [Source:HGNC Symbol;Acc:HGNC:25230]	25692	-0.3759647607803345	-0.34790802	Yes	
+row_25	EPS8	epidermal growth factor receptor pathway substrate 8 [Source:HGNC Symbol;Acc:HGNC:3420]	25785	-0.3806513845920563	-0.31236947	Yes	
+row_26	LPAR1	lysophosphatidic acid receptor 1 [Source:HGNC Symbol;Acc:HGNC:3166]	26065	-0.3974851071834564	-0.2817096	Yes	
+row_27	IGF2BP3	insulin like growth factor 2 mRNA binding protein 3 [Source:HGNC Symbol;Acc:HGNC:28868]	26084	-0.39860808849334717	-0.24173224	Yes	
+row_28	TRIB2	tribbles pseudokinase 2 [Source:HGNC Symbol;Acc:HGNC:30809]	26439	-0.4230286180973053	-0.21111445	Yes	
+row_29	STRN3	striatin 3 [Source:HGNC Symbol;Acc:HGNC:15720]	26693	-0.4439201056957245	-0.17480679	Yes	
+row_30	PAFAH1B1	platelet activating factor acetylhydrolase 1b regulatory subunit 1 [Source:HGNC Symbol;Acc:HGNC:8574]	26998	-0.46885883808135986	-0.13775656	Yes	
+row_31	ZNF146	zinc finger protein 146 [Source:HGNC Symbol;Acc:HGNC:12931]	27298	-0.4974549412727356	-0.09761652	Yes	
+row_32	MFAP1	microfibril associated protein 1 [Source:HGNC Symbol;Acc:HGNC:7032]	27656	-0.5529289245605469	-0.053869672	Yes	
+row_33	NFYB	nuclear transcription factor Y subunit beta [Source:HGNC Symbol;Acc:HGNC:7805]	28272	-0.7834511399269104	0.004266552	Yes	

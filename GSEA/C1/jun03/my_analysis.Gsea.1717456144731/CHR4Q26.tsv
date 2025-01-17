@@ -1,0 +1,33 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	SEC24D	SEC24 homolog D, COPII coat complex component [Source:HGNC Symbol;Acc:HGNC:10706]	630	0.6273566484451294	0.06083093	No	
+row_1	SNORA24	small nucleolar RNA, H/ACA box 24 [Source:HGNC Symbol;Acc:HGNC:32614]	3807	0.29133445024490356	-0.012585693	No	
+row_2	SNHG8	small nucleolar RNA host gene 8 [Source:HGNC Symbol;Acc:HGNC:33098]	5620	0.21702450513839722	-0.047746267	No	
+row_3	RNU6-1054P	RNA, U6 small nuclear 1054, pseudogene [Source:HGNC Symbol;Acc:HGNC:48017]	5888	0.20641210675239563	-0.029837323	No	
+row_4	TTC39CP1	tetratricopeptide repeat domain 39C pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:44019]	6506	0.1886768639087677	-0.026616462	No	
+row_5	CEP170P1	centrosomal protein 170 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:28364]	7958	0.15295490622520447	-0.057529688	No	
+row_6	SYNPO2	synaptopodin 2 [Source:HGNC Symbol;Acc:HGNC:17732]	9801	0.08616562932729721	-0.111069925	No	
+row_7	CAMK2D	calcium/calmodulin dependent protein kinase II delta [Source:HGNC Symbol;Acc:HGNC:1462]	11497	0.031387727707624435	-0.16667816	No	
+row_8	RNU4-33P	RNA, U4 small nuclear 33, pseudogene [Source:HGNC Symbol;Acc:HGNC:46969]	11615	0.028208471834659576	-0.16706942	No	
+row_9	TRAM1L1	translocation associated membrane protein 1 like 1 [Source:HGNC Symbol;Acc:HGNC:28371]	11978	0.017693936824798584	-0.17749082	No	
+row_10	TRMT112P1	tRNA methyltransferase subunit 11-2 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:44020]	12149	0.0126060601323843	-0.18181607	No	
+row_11	SEPTIN14P4	septin 14 pseudogene 4 [Source:HGNC Symbol;Acc:HGNC:51688]	12685	-0.0030423025600612164	-0.20027663	No	
+row_12	GTF2IP12	general transcription factor IIi pseudogene 12 [Source:HGNC Symbol;Acc:HGNC:51723]	12966	-0.010668161325156689	-0.20873684	No	
+row_13	ENSG00000221245		15972	-0.09478504210710526	-0.30214167	No	
+row_14	FABP2	fatty acid binding protein 2 [Source:HGNC Symbol;Acc:HGNC:3556]	16379	-0.10536812990903854	-0.30250895	No	
+row_15	PDE5A	phosphodiesterase 5A [Source:HGNC Symbol;Acc:HGNC:8784]	17950	-0.14889134466648102	-0.3381558	No	
+row_16	CICP16	capicua transcriptional repressor pseudogene 16 [Source:HGNC Symbol;Acc:HGNC:38550]	19166	-0.1824808269739151	-0.3568397	Yes	
+row_17	MRPL42P1	mitochondrial ribosomal protein L42 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:29710]	19445	-0.18775299191474915	-0.3417885	Yes	
+row_18	RN7SL184P	RNA, 7SL, cytoplasmic 184, pseudogene [Source:HGNC Symbol;Acc:HGNC:46200]	19531	-0.18817706406116486	-0.3198763	Yes	
+row_19	UGT8	UDP glycosyltransferase 8 [Source:HGNC Symbol;Acc:HGNC:12555]	20202	-0.19560374319553375	-0.31760722	Yes	
+row_20	KLHL2P1	kelch like family member 2 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:44046]	21520	-0.2300662249326706	-0.3335885	Yes	
+row_21	NDST4	N-deacetylase and N-sulfotransferase 4 [Source:HGNC Symbol;Acc:HGNC:20779]	21789	-0.2366492599248886	-0.31171232	Yes	
+row_22	ACTN4P1	actinin alpha 4 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:44028]	22303	-0.2488478720188141	-0.29685968	Yes	
+row_23	ARSJ	arylsulfatase family member J [Source:HGNC Symbol;Acc:HGNC:26286]	23118	-0.2729974389076233	-0.28942314	Yes	
+row_24	LINC01365	long intergenic non-protein coding RNA 1365 [Source:HGNC Symbol;Acc:HGNC:50603]	23826	-0.2979933023452759	-0.27490523	Yes	
+row_25	C4orf3	chromosome 4 open reading frame 3 [Source:HGNC Symbol;Acc:HGNC:19225]	24909	-0.34134194254875183	-0.26787114	Yes	
+row_26	LINC02263	long intergenic non-protein coding RNA 2263 [Source:HGNC Symbol;Acc:HGNC:53175]	25179	-0.3520807921886444	-0.23075043	Yes	
+row_27	LINC01378	long intergenic non-protein coding RNA 1378 [Source:HGNC Symbol;Acc:HGNC:50645]	25434	-0.36292651295661926	-0.19166516	Yes	
+row_28	METTL14	methyltransferase 14, N6-adenosine-methyltransferase subunit [Source:HGNC Symbol;Acc:HGNC:29330]	25919	-0.3894158899784088	-0.15718293	Yes	
+row_29	NDST3	N-deacetylase and N-sulfotransferase 3 [Source:HGNC Symbol;Acc:HGNC:7682]	27564	-0.5378345251083374	-0.14395419	Yes	
+row_30	USP53	ubiquitin specific peptidase 53 [Source:HGNC Symbol;Acc:HGNC:29255]	27704	-0.5616819262504578	-0.07450478	Yes	
+row_31	METTL14-DT	METTL14 divergent transcript [Source:HGNC Symbol;Acc:HGNC:53367]	28237	-0.7461056113243103	0.005500385	Yes	

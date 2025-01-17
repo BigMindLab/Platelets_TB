@@ -1,0 +1,38 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	OR2A42	olfactory receptor family 2 subfamily A member 42 [Source:HGNC Symbol;Acc:HGNC:31230]	2377	0.37515076994895935	-0.045887757	No	
+row_1	TCAF2P1	TRPM8 channel associated factor 2 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:33603]	4154	0.2751508951187134	-0.08069373	No	
+row_2	DPY19L4P2	DPY19L4 pseudogene 2 [Source:HGNC Symbol;Acc:HGNC:53908]	5995	0.20374125242233276	-0.1249778	No	
+row_3	RN7SKP174	RN7SK pseudogene 174 [Source:HGNC Symbol;Acc:HGNC:45898]	6384	0.1917496621608734	-0.1192702	No	
+row_4	LOC154761	family with sequence similarity 115, member C (FAM115C) pseudogene	9806	0.08599640429019928	-0.23121439	No	
+row_5	RPL7P59	ribosomal protein L7 pseudogene 59 [Source:HGNC Symbol;Acc:HGNC:49215]	10209	0.07199849933385849	-0.2381101	No	
+row_6	EPHA1	EPH receptor A1 [Source:HGNC Symbol;Acc:HGNC:3385]	10584	0.060166601091623306	-0.24521485	No	
+row_7	OR2A1-AS1	OR2A1 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:49168]	11624	0.02793227694928646	-0.27903023	No	
+row_8	PPIAP83	peptidylprolyl isomerase A pseudogene 83 [Source:HGNC Symbol;Acc:HGNC:53707]	12835	-0.00682816794142127	-0.32101	No	
+row_9	OR2A7	olfactory receptor family 2 subfamily A member 7 [Source:HGNC Symbol;Acc:HGNC:8234]	14555	-0.05485048517584801	-0.3760833	No	
+row_10	CTAGE4	CTAGE family member 4 [Source:HGNC Symbol;Acc:HGNC:24772]	14709	-0.05931489169597626	-0.3754807	No	
+row_11	CTAGE15	CTAGE family member 15 [Source:HGNC Symbol;Acc:HGNC:37295]	14839	-0.06313490122556686	-0.37364545	No	
+row_12	CTAGE6	CTAGE family member 6 [Source:HGNC Symbol;Acc:HGNC:28644]	14985	-0.06710001081228256	-0.37197348	No	
+row_13	TCAF2	TRPM8 channel associated factor 2 [Source:HGNC Symbol;Acc:HGNC:26878]	15566	-0.08432823419570923	-0.38389948	No	
+row_14	TCAF2C	TRPM8 channel associated factor 2C [Source:HGNC Symbol;Acc:HGNC:53641]	16684	-0.11376171559095383	-0.41178617	No	
+row_15	OR2A12	olfactory receptor family 2 subfamily A member 12 [Source:HGNC Symbol;Acc:HGNC:15082]	16750	-0.11554639786481857	-0.402394	No	
+row_16	TCAF1P1	TRPM8 channel associated factor 1 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:33604]	17848	-0.14607329666614532	-0.42630798	No	
+row_17	TAS2R60	taste 2 receptor member 60 [Source:HGNC Symbol;Acc:HGNC:20639]	18132	-0.15430240333080292	-0.42068437	No	
+row_18	OR2A1	olfactory receptor family 2 subfamily A member 1 [Source:HGNC Symbol;Acc:HGNC:8229]	18557	-0.16731593012809753	-0.4187171	No	
+row_19	CNTNAP2-AS1	CNTNAP2 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:40657]	19950	-0.19475407898426056	-0.44811141	No	
+row_20	OR2A5	olfactory receptor family 2 subfamily A member 5 [Source:HGNC Symbol;Acc:HGNC:8232]	22085	-0.24405746161937714	-0.49868637	No	
+row_21	ARHGEF34P	Rho guanine nucleotide exchange factor 34, pseudogene [Source:HGNC Symbol;Acc:HGNC:38086]	22132	-0.24574463069438934	-0.47545815	No	
+row_22	EEF1A1P10	eukaryotic translation elongation factor 1 alpha 1 pseudogene 10 [Source:HGNC Symbol;Acc:HGNC:3205]	23674	-0.29203709959983826	-0.50026935	Yes	
+row_23	TPK1	thiamin pyrophosphokinase 1 [Source:HGNC Symbol;Acc:HGNC:17358]	24210	-0.3139289915561676	-0.48739052	Yes	
+row_24	CTAGE8	CTAGE family member 8 [Source:HGNC Symbol;Acc:HGNC:37294]	24572	-0.3277156949043274	-0.4669815	Yes	
+row_25	TCAF1	TRPM8 channel associated factor 1 [Source:HGNC Symbol;Acc:HGNC:22201]	25050	-0.34631040692329407	-0.44878283	Yes	
+row_26	OR2A25	olfactory receptor family 2 subfamily A member 25 [Source:HGNC Symbol;Acc:HGNC:19562]	25265	-0.35525423288345337	-0.42040512	Yes	
+row_27	TAS2R62P	taste 2 receptor member 62 pseudogene [Source:HGNC Symbol;Acc:HGNC:20640]	25485	-0.36527687311172485	-0.3911902	Yes	
+row_28	ARHGEF35	Rho guanine nucleotide exchange factor 35 [Source:HGNC Symbol;Acc:HGNC:33846]	26018	-0.3948310315608978	-0.37002453	Yes	
+row_29	OR2A20P	olfactory receptor family 2 subfamily A member 20 pseudogene [Source:HGNC Symbol;Acc:HGNC:15413]	26791	-0.45080122351646423	-0.35166252	Yes	
+row_30	ARHGEF5	Rho guanine nucleotide exchange factor 5 [Source:HGNC Symbol;Acc:HGNC:13209]	26857	-0.4565337002277374	-0.3077887	Yes	
+row_31	OR10AC1	olfactory receptor family 10 subfamily AC member 1 (gene/pseudogene) [Source:HGNC Symbol;Acc:HGNC:14758]	27084	-0.4772771894931793	-0.26749486	Yes	
+row_32	EPHA1-AS1	EPHA1 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:27799]	27294	-0.49717170000076294	-0.22458972	Yes	
+row_33	TAS2R41	taste 2 receptor member 41 [Source:HGNC Symbol;Acc:HGNC:18883]	27465	-0.5203458070755005	-0.17796582	Yes	
+row_34	ARHGEF35-AS1	ARHGEF35 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:41292]	27516	-0.5297111868858337	-0.12616311	Yes	
+row_35	OR2R1P	olfactory receptor family 2 subfamily R member 1, pseudogene [Source:HGNC Symbol;Acc:HGNC:8274]	28027	-0.6407628655433655	-0.079352275	Yes	
+row_36	CNTNAP2	contactin associated protein 2 [Source:HGNC Symbol;Acc:HGNC:13830]	28347	-0.9119961857795715	0.0016220153	Yes	

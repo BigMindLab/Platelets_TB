@@ -1,0 +1,16 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	BRWD3	bromodomain and WD repeat domain containing 3 [Source:HGNC Symbol;Acc:HGNC:17342]	8561	0.12945717573165894	-0.25371787	No	
+row_1	PITPNM3	PITPNM family member 3 [Source:HGNC Symbol;Acc:HGNC:21043]	9684	0.08985283225774765	-0.25997406	No	
+row_2	CRYBB2	crystallin beta B2 [Source:HGNC Symbol;Acc:HGNC:2398]	12177	0.011575601063668728	-0.34349808	No	
+row_3	PAXBP1	PAX3 and PAX7 binding protein 1 [Source:HGNC Symbol;Acc:HGNC:13579]	12382	0.005597666371613741	-0.3486132	No	
+row_4	GOLM2	golgi membrane protein 2 [Source:HGNC Symbol;Acc:HGNC:24892]	13281	-0.01899522915482521	-0.37322077	No	
+row_5	ATF3	activating transcription factor 3 [Source:HGNC Symbol;Acc:HGNC:785]	14260	-0.04615652933716774	-0.39058724	No	
+row_6	NR2F1-AS1	NR2F1 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:48622]	16449	-0.10746780037879944	-0.42788213	No	
+row_7	ZMYM3	zinc finger MYM-type containing 3 [Source:HGNC Symbol;Acc:HGNC:13054]	17269	-0.130295991897583	-0.40848196	No	
+row_8	HAR1A	highly accelerated region 1A [Source:HGNC Symbol;Acc:HGNC:33117]	20204	-0.1957695186138153	-0.43935835	Yes	
+row_9	MED15P9	mediator complex subunit 15 pseudogene 9 [Source:HGNC Symbol;Acc:HGNC:44130]	21624	-0.23345337808132172	-0.40289268	Yes	
+row_10	GPR85	G protein-coupled receptor 85 [Source:HGNC Symbol;Acc:HGNC:4536]	22794	-0.2637488543987274	-0.34639674	Yes	
+row_11	C21orf62-AS1	C21orf62 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:1290]	23570	-0.28809651732444763	-0.2669993	Yes	
+row_12	ANAPC7	anaphase promoting complex subunit 7 [Source:HGNC Symbol;Acc:HGNC:17380]	25651	-0.37406349182128906	-0.20174576	Yes	
+row_13	LINC00114	long intergenic non-protein coding RNA 114 [Source:HGNC Symbol;Acc:HGNC:1265]	26060	-0.397417813539505	-0.06892534	Yes	
+row_14	KMT2A	lysine methyltransferase 2A [Source:HGNC Symbol;Acc:HGNC:7132]	26232	-0.40795159339904785	0.07614786	Yes	

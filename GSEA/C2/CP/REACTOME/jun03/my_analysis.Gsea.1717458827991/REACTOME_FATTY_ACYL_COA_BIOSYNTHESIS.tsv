@@ -1,0 +1,37 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	ACSL1	acyl-CoA synthetase long chain family member 1 [Source:HGNC Symbol;Acc:HGNC:3569]	7	1.4155610799789429	0.14392911	Yes	
+row_1	TECR	trans-2,3-enoyl-CoA reductase [Source:HGNC Symbol;Acc:HGNC:4551]	177	0.8564972877502441	0.22520447	Yes	
+row_2	SLC25A1	solute carrier family 25 member 1 [Source:HGNC Symbol;Acc:HGNC:10979]	234	0.802857518196106	0.30500135	Yes	
+row_3	ACACA	acetyl-CoA carboxylase alpha [Source:HGNC Symbol;Acc:HGNC:84]	302	0.755825400352478	0.37962008	Yes	
+row_4	PPT1	palmitoyl-protein thioesterase 1 [Source:HGNC Symbol;Acc:HGNC:9325]	548	0.6546094417572021	0.437653	Yes	
+row_5	ELOVL6	ELOVL fatty acid elongase 6 [Source:HGNC Symbol;Acc:HGNC:15829]	1869	0.4199744164943695	0.43388	Yes	
+row_6	SLC27A2	solute carrier family 27 member 2 [Source:HGNC Symbol;Acc:HGNC:10996]	1973	0.41152170300483704	0.47216168	Yes	
+row_7	ELOVL1	ELOVL fatty acid elongase 1 [Source:HGNC Symbol;Acc:HGNC:14418]	2975	0.33275607228279114	0.47075444	Yes	
+row_8	OLAH	oleoyl-ACP hydrolase [Source:HGNC Symbol;Acc:HGNC:25625]	3479	0.30821195244789124	0.48440856	Yes	
+row_9	HSD17B12	hydroxysteroid 17-beta dehydrogenase 12 [Source:HGNC Symbol;Acc:HGNC:18646]	3563	0.3038070797920227	0.51242465	Yes	
+row_10	HTD2	hydroxyacyl-thioester dehydratase type 2 [Source:HGNC Symbol;Acc:HGNC:53111]	3786	0.29232922196388245	0.5343701	Yes	
+row_11	SLC27A3	solute carrier family 27 member 3 [Source:HGNC Symbol;Acc:HGNC:10997]	7872	0.1568087339401245	0.40629017	No	
+row_12	HACD3	3-hydroxyacyl-CoA dehydratase 3 [Source:HGNC Symbol;Acc:HGNC:24175]	8071	0.1486050933599472	0.41444355	No	
+row_13	SCD	stearoyl-CoA desaturase [Source:HGNC Symbol;Acc:HGNC:10571]	8107	0.1467914879322052	0.42816016	No	
+row_14	ELOVL3	ELOVL fatty acid elongase 3 [Source:HGNC Symbol;Acc:HGNC:18047]	9805	0.08606861531734467	0.37708429	No	
+row_15	HACD4	3-hydroxyacyl-CoA dehydratase 4 [Source:HGNC Symbol;Acc:HGNC:20920]	10287	0.06943105906248093	0.3671942	No	
+row_16	ACSL5	acyl-CoA synthetase long chain family member 5 [Source:HGNC Symbol;Acc:HGNC:16526]	10605	0.05923451855778694	0.36204877	No	
+row_17	ELOVL5	ELOVL fatty acid elongase 5 [Source:HGNC Symbol;Acc:HGNC:21308]	11313	0.03635876625776291	0.3408207	No	
+row_18	HACD1	3-hydroxyacyl-CoA dehydratase 1 [Source:HGNC Symbol;Acc:HGNC:9639]	11541	0.030403217300772667	0.3359125	No	
+row_19	FASN	fatty acid synthase [Source:HGNC Symbol;Acc:HGNC:3594]	12290	0.007880698889493942	0.3103381	No	
+row_20	ACLY	ATP citrate lyase [Source:HGNC Symbol;Acc:HGNC:115]	12754	-0.0049509406089782715	0.2945154	No	
+row_21	HSD17B8	hydroxysteroid 17-beta dehydrogenase 8 [Source:HGNC Symbol;Acc:HGNC:3554]	13941	-0.03804538771510124	0.25656796	No	
+row_22	MORC2	MORC family CW-type zinc finger 2 [Source:HGNC Symbol;Acc:HGNC:23573]	14017	-0.04012817144393921	0.25801027	No	
+row_23	ACSBG1	acyl-CoA synthetase bubblegum family member 1 [Source:HGNC Symbol;Acc:HGNC:29567]	15645	-0.08639165759086609	0.20943576	No	
+row_24	PPT2	palmitoyl-protein thioesterase 2 [Source:HGNC Symbol;Acc:HGNC:9326]	15654	-0.0865437462925911	0.2179682	No	
+row_25	ELOVL7	ELOVL fatty acid elongase 7 [Source:HGNC Symbol;Acc:HGNC:26292]	15964	-0.0946580171585083	0.21671279	No	
+row_26	HACD2	3-hydroxyacyl-CoA dehydratase 2 [Source:HGNC Symbol;Acc:HGNC:9640]	16190	-0.10051967948675156	0.21901652	No	
+row_27	ACSF3	acyl-CoA synthetase family member 3 [Source:HGNC Symbol;Acc:HGNC:27288]	16542	-0.10997676849365234	0.21784028	No	
+row_28	ELOVL4	ELOVL fatty acid elongase 4 [Source:HGNC Symbol;Acc:HGNC:14415]	16800	-0.11681269109249115	0.22067504	No	
+row_29	ACSL6	acyl-CoA synthetase long chain family member 6 [Source:HGNC Symbol;Acc:HGNC:16496]	19327	-0.1842755377292633	0.15036826	No	
+row_30	SCD5	stearoyl-CoA desaturase 5 [Source:HGNC Symbol;Acc:HGNC:21088]	19441	-0.1876676380634308	0.16549757	No	
+row_31	ACSL4	acyl-CoA synthetase long chain family member 4 [Source:HGNC Symbol;Acc:HGNC:3571]	20685	-0.21129436790943146	0.14318565	No	
+row_32	CBR4	carbonyl reductase 4 [Source:HGNC Symbol;Acc:HGNC:25891]	21448	-0.22822536528110504	0.13955984	No	
+row_33	ACSBG2	acyl-CoA synthetase bubblegum family member 2 [Source:HGNC Symbol;Acc:HGNC:24174]	21656	-0.2343389093875885	0.1561279	No	
+row_34	ACSL3	acyl-CoA synthetase long chain family member 3 [Source:HGNC Symbol;Acc:HGNC:3570]	22483	-0.2551341652870178	0.15298593	No	
+row_35	HSD17B3	hydroxysteroid 17-beta dehydrogenase 3 [Source:HGNC Symbol;Acc:HGNC:5212]	27599	-0.5437926650047302	0.027999239	No	

@@ -1,0 +1,20 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	POLD3	DNA polymerase delta 3, accessory subunit [Source:HGNC Symbol;Acc:HGNC:20932]	3460	0.3090347349643707	-0.046200134	No	
+row_1	TERF2IP	TERF2 interacting protein [Source:HGNC Symbol;Acc:HGNC:19246]	5025	0.23828725516796112	-0.04291967	No	
+row_2	PCNA	proliferating cell nuclear antigen [Source:HGNC Symbol;Acc:HGNC:8729]	8665	0.12546275556087494	-0.14041798	No	
+row_3	POLD4	DNA polymerase delta 4, accessory subunit [Source:HGNC Symbol;Acc:HGNC:14106]	9114	0.10909655690193176	-0.12946916	No	
+row_4	TINF2	TERF1 interacting nuclear factor 2 [Source:HGNC Symbol;Acc:HGNC:11824]	9152	0.10801700502634048	-0.10430032	No	
+row_5	RPA2	replication protein A2 [Source:HGNC Symbol;Acc:HGNC:10290]	11537	0.030473334714770317	-0.18084954	No	
+row_6	POLD2	DNA polymerase delta 2, accessory subunit [Source:HGNC Symbol;Acc:HGNC:9176]	11568	0.02983148954808712	-0.17459571	No	
+row_7	BLM	BLM RecQ like helicase [Source:HGNC Symbol;Acc:HGNC:1058]	12029	0.01599782705307007	-0.18688641	No	
+row_8	ACD	ACD shelterin complex subunit and telomerase recruitment factor [Source:HGNC Symbol;Acc:HGNC:25070]	12508	0.002240491798147559	-0.20318313	No	
+row_9	POLD1	DNA polymerase delta 1, catalytic subunit [Source:HGNC Symbol;Acc:HGNC:9175]	13695	-0.031244026497006416	-0.23732321	No	
+row_10	FEN1	flap structure-specific endonuclease 1 [Source:HGNC Symbol;Acc:HGNC:3650]	17488	-0.13580986857414246	-0.33767772	No	
+row_11	DNA2	DNA replication helicase/nuclease 2 [Source:HGNC Symbol;Acc:HGNC:2939]	18469	-0.16406431794166565	-0.3320063	No	
+row_12	TERF2	telomeric repeat binding factor 2 [Source:HGNC Symbol;Acc:HGNC:11729]	19062	-0.18238945305347443	-0.30816975	No	
+row_13	TERF1	telomeric repeat binding factor 1 [Source:HGNC Symbol;Acc:HGNC:11728]	21924	-0.23969967663288116	-0.3502524	No	
+row_14	POT1	protection of telomeres 1 [Source:HGNC Symbol;Acc:HGNC:17284]	25361	-0.35968199372291565	-0.3831941	Yes	
+row_15	LIG1	DNA ligase 1 [Source:HGNC Symbol;Acc:HGNC:6598]	25526	-0.36732035875320435	-0.298951	Yes	
+row_16	RPA3	replication protein A3 [Source:HGNC Symbol;Acc:HGNC:10291]	26813	-0.4528713524341583	-0.23328294	Yes	
+row_17	RPA1	replication protein A1 [Source:HGNC Symbol;Acc:HGNC:10289]	27006	-0.4695485234260559	-0.124972574	Yes	
+row_18	WRN	WRN RecQ like helicase [Source:HGNC Symbol;Acc:HGNC:12791]	28181	-0.7092322707176208	0.0074715205	Yes	

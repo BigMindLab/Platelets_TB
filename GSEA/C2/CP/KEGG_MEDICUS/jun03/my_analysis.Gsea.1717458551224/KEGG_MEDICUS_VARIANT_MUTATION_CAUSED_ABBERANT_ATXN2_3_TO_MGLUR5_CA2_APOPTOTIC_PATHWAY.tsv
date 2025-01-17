@@ -1,0 +1,19 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	VDAC2	voltage dependent anion channel 2 [Source:HGNC Symbol;Acc:HGNC:12672]	2310	0.3817867040634155	0.022171885	No	
+row_1	PLCB3	phospholipase C beta 3 [Source:HGNC Symbol;Acc:HGNC:9056]	5059	0.2365792691707611	-0.010486578	No	
+row_2	SLC25A31	solute carrier family 25 member 31 [Source:HGNC Symbol;Acc:HGNC:25319]	6617	0.18685382604599	-0.0146634625	No	
+row_3	MCU	mitochondrial calcium uniporter [Source:HGNC Symbol;Acc:HGNC:23526]	8803	0.12008234113454819	-0.059086826	No	
+row_4	SLC25A6	solute carrier family 25 member 6 [Source:HGNC Symbol;Acc:HGNC:10992]	8816	0.11946175247430801	-0.027099753	No	
+row_5	SLC25A5	solute carrier family 25 member 5 [Source:HGNC Symbol;Acc:HGNC:10991]	12136	0.012912334874272346	-0.14056168	No	
+row_6	PLCB2	phospholipase C beta 2 [Source:HGNC Symbol;Acc:HGNC:9055]	12459	0.0037230721209198236	-0.15089923	No	
+row_7	GNAQ	G protein subunit alpha q [Source:HGNC Symbol;Acc:HGNC:4390]	12674	-0.0026761656627058983	-0.15771477	No	
+row_8	VDAC1	voltage dependent anion channel 1 [Source:HGNC Symbol;Acc:HGNC:12669]	14174	-0.04384622350335121	-0.19864562	No	
+row_9	SLC25A4	solute carrier family 25 member 4 [Source:HGNC Symbol;Acc:HGNC:10990]	15146	-0.07141729444265366	-0.21348917	No	
+row_10	ATXN3	ataxin 3 [Source:HGNC Symbol;Acc:HGNC:7106]	15978	-0.09494204074144363	-0.21701673	No	
+row_11	PLCB4	phospholipase C beta 4 [Source:HGNC Symbol;Acc:HGNC:9059]	17707	-0.14207912981510162	-0.2393672	No	
+row_12	ATXN2	ataxin 2 [Source:HGNC Symbol;Acc:HGNC:10555]	22591	-0.25800150632858276	-0.34145346	Yes	
+row_13	VDAC3	voltage dependent anion channel 3 [Source:HGNC Symbol;Acc:HGNC:12674]	24025	-0.30632245540618896	-0.30884862	Yes	
+row_14	GRM1	glutamate metabotropic receptor 1 [Source:HGNC Symbol;Acc:HGNC:4593]	25589	-0.3709033727645874	-0.26330432	Yes	
+row_15	PLCB1	phospholipase C beta 1 [Source:HGNC Symbol;Acc:HGNC:15917]	25957	-0.3914547860622406	-0.17003612	Yes	
+row_16	CYCS	cytochrome c, somatic [Source:HGNC Symbol;Acc:HGNC:19986]	26369	-0.41844063997268677	-0.07099728	Yes	
+row_17	ITPR1	inositol 1,4,5-trisphosphate receptor type 1 [Source:HGNC Symbol;Acc:HGNC:6180]	27491	-0.5244742631912231	0.031787332	Yes	

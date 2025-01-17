@@ -1,0 +1,47 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	SLC39A8	solute carrier family 39 member 8 [Source:HGNC Symbol;Acc:HGNC:20862]	1041	0.5324915051460266	0.0075244904	No	
+row_1	CISD2	CDGSH iron sulfur domain 2 [Source:HGNC Symbol;Acc:HGNC:24212]	1514	0.45752695202827454	0.028891863	No	
+row_2	LRRC37A15P	leucine rich repeat containing 37 member A15, pseudogene [Source:HGNC Symbol;Acc:HGNC:43819]	2440	0.37064772844314575	0.027060164	No	
+row_3	DDIT4L	DNA damage inducible transcript 4 like [Source:HGNC Symbol;Acc:HGNC:30555]	3983	0.2826603949069977	-0.0038479278	No	
+row_4	KRT8P46	keratin 8 pseudogene 46 [Source:HGNC Symbol;Acc:HGNC:39880]	4508	0.2596031725406647	-7.611056E-4	No	
+row_5	LINC02173	long intergenic non-protein coding RNA 2173 [Source:HGNC Symbol;Acc:HGNC:53035]	5320	0.22832702100276947	-0.010397303	No	
+row_6	UBE2D3-AS1	UBE2D3 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:54095]	5831	0.20919790863990784	-0.011004976	No	
+row_7	RPL6P14	ribosomal protein L6 pseudogene 14 [Source:HGNC Symbol;Acc:HGNC:35661]	6079	0.20099571347236633	-0.0030166472	No	
+row_8	RN7SL728P	RNA, 7SL, cytoplasmic 728, pseudogene [Source:HGNC Symbol;Acc:HGNC:46744]	6753	0.18431447446346283	-0.0114419395	No	
+row_9	ENSG00000249635	novel transcript	6956	0.17945115268230438	-0.0036564132	No	
+row_10	EEF1A1P9	eukaryotic translation elongation factor 1 alpha 1 pseudogene 9 [Source:HGNC Symbol;Acc:HGNC:3204]	6976	0.17890317738056183	0.010539061	No	
+row_11	MIR1255A	microRNA 1255a [Source:HGNC Symbol;Acc:HGNC:35320]	7247	0.16913241147994995	0.015068407	No	
+row_12	CENPE	centromere protein E [Source:HGNC Symbol;Acc:HGNC:1856]	7831	0.15840619802474976	0.0076651294	No	
+row_13	TET2-AS1	TET2 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:41125]	8113	0.1463841050863266	0.009916201	No	
+row_14	ARHGEF38	Rho guanine nucleotide exchange factor 38 [Source:HGNC Symbol;Acc:HGNC:25968]	9070	0.11030562222003937	-0.014641823	No	
+row_15	UBE2D3	ubiquitin conjugating enzyme E2 D3 [Source:HGNC Symbol;Acc:HGNC:12476]	9264	0.10480605810880661	-0.012741347	No	
+row_16	GSTCD	glutathione S-transferase C-terminal domain containing [Source:HGNC Symbol;Acc:HGNC:25806]	9394	0.10010094940662384	-0.0089741815	No	
+row_17	SLC9B2	solute carrier family 9 member B2 [Source:HGNC Symbol;Acc:HGNC:25143]	9570	0.0934377983212471	-0.00738337	No	
+row_18	NPNT	nephronectin [Source:HGNC Symbol;Acc:HGNC:27405]	10128	0.07484858483076096	-0.02081258	No	
+row_19	PPA2	inorganic pyrophosphatase 2 [Source:HGNC Symbol;Acc:HGNC:28883]	10283	0.06957627832889557	-0.020463716	No	
+row_20	FLJ20021	uncharacterized LOC90024 [Source:NCBI gene (formerly Entrezgene);Acc:90024]	10549	0.061202555894851685	-0.024726275	No	
+row_21	NFKB1	nuclear factor kappa B subunit 1 [Source:HGNC Symbol;Acc:HGNC:7794]	11137	0.042079437524080276	-0.04193667	No	
+row_22	CXXC4-AS1	CXXC4 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:41054]	14011	-0.040065113455057144	-0.13995506	No	
+row_23	MANBA	mannosidase beta [Source:HGNC Symbol;Acc:HGNC:6831]	15166	-0.07216481864452362	-0.17466696	No	
+row_24	AIMP1	aminoacyl tRNA synthetase complex interacting multifunctional protein 1 [Source:HGNC Symbol;Acc:HGNC:10648]	15332	-0.07758286595344543	-0.17404082	No	
+row_25	BDH2	3-hydroxybutyrate dehydrogenase 2 [Source:HGNC Symbol;Acc:HGNC:32389]	15831	-0.09100170433521271	-0.18404655	No	
+row_26	MIR8066	microRNA 8066 [Source:HGNC Symbol;Acc:HGNC:50043]	16227	-0.10131174325942993	-0.18956214	No	
+row_27	RN7SL89P	RNA, 7SL, cytoplasmic 89, pseudogene [Source:HGNC Symbol;Acc:HGNC:46105]	17033	-0.12348896265029907	-0.20769806	No	
+row_28	TET2	tet methylcytosine dioxygenase 2 [Source:HGNC Symbol;Acc:HGNC:25941]	17865	-0.14652660489082336	-0.22483687	No	
+row_29	TACR3	tachykinin receptor 3 [Source:HGNC Symbol;Acc:HGNC:11528]	20054	-0.1953880339860916	-0.28578496	No	
+row_30	RNU7-151P	RNA, U7 small nuclear 151 pseudogene [Source:HGNC Symbol;Acc:HGNC:45685]	20781	-0.21234279870986938	-0.29375088	No	
+row_31	INTS12	integrator complex subunit 12 [Source:HGNC Symbol;Acc:HGNC:25067]	21140	-0.2221967875957489	-0.2879165	No	
+row_32	ACTR3BP4	ACTR3B pseudogene 4 [Source:HGNC Symbol;Acc:HGNC:38681]	22201	-0.2463654726743698	-0.30483752	No	
+row_33	PPP3CA	protein phosphatase 3 catalytic subunit alpha [Source:HGNC Symbol;Acc:HGNC:9314]	22263	-0.24748671054840088	-0.28642476	No	
+row_34	PABPC1P7	poly(A) binding protein cytoplasmic 1 pseudogene 7 [Source:HGNC Symbol;Acc:HGNC:37987]	24015	-0.30591893196105957	-0.3227729	Yes	
+row_35	LINC02428	long intergenic non-protein coding RNA 2428 [Source:HGNC Symbol;Acc:HGNC:53359]	24405	-0.32123127579689026	-0.30980292	Yes	
+row_36	LINC02503	long intergenic non-protein coding RNA 2503 [Source:HGNC Symbol;Acc:HGNC:53492]	24565	-0.3274786174297333	-0.28820038	Yes	
+row_37	SLC9B1	solute carrier family 9 member B1 [Source:HGNC Symbol;Acc:HGNC:24244]	25381	-0.36041852831840515	-0.28700173	Yes	
+row_38	LINC01216	long intergenic non-protein coding RNA 1216 [Source:HGNC Symbol;Acc:HGNC:41418]	25435	-0.3630506098270416	-0.25870416	Yes	
+row_39	TBCK	TBC1 domain containing kinase [Source:HGNC Symbol;Acc:HGNC:28261]	26356	-0.41726699471473694	-0.2564857	Yes	
+row_40	LINC01217	long intergenic non-protein coding RNA 1217 [Source:HGNC Symbol;Acc:HGNC:41419]	27629	-0.5482739210128784	-0.25579852	Yes	
+row_41	MTND5P5	MT-ND5 pseudogene 5 [Source:HGNC Symbol;Acc:HGNC:42307]	27743	-0.5694059133529663	-0.21247068	Yes	
+row_42	BANK1	B cell scaffold protein with ankyrin repeats 1 [Source:HGNC Symbol;Acc:HGNC:18233]	27974	-0.6255248785018921	-0.16860698	Yes	
+row_43	CXXC4	CXXC finger protein 4 [Source:HGNC Symbol;Acc:HGNC:24593]	28024	-0.6399109959602356	-0.117162965	Yes	
+row_44	EMCN	endomucin [Source:HGNC Symbol;Acc:HGNC:16041]	28267	-0.7795025706291199	-0.06092802	Yes	
+row_45	LINC01218	long intergenic non-protein coding RNA 1218 [Source:HGNC Symbol;Acc:HGNC:41420]	28274	-0.786312460899353	0.0041978857	Yes	

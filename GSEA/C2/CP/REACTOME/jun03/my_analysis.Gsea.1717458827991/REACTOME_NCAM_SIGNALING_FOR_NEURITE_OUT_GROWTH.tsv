@@ -1,0 +1,60 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	CACNA1S	calcium voltage-gated channel subunit alpha1 S [Source:HGNC Symbol;Acc:HGNC:1397]	1025	0.5357308387756348	0.0022743247	No	
+row_1	GFRA2	GDNF family receptor alpha 2 [Source:HGNC Symbol;Acc:HGNC:4244]	2232	0.3886984586715698	-0.012391523	No	
+row_2	PSPN	persephin [Source:HGNC Symbol;Acc:HGNC:9579]	2501	0.3662738502025604	0.004437181	No	
+row_3	CACNA1C	calcium voltage-gated channel subunit alpha1 C [Source:HGNC Symbol;Acc:HGNC:1390]	2692	0.3528391718864441	0.023054477	No	
+row_4	COL6A3	collagen type VI alpha 3 chain [Source:HGNC Symbol;Acc:HGNC:2213]	3373	0.3135736882686615	0.021560641	No	
+row_5	COL2A1	collagen type II alpha 1 chain [Source:HGNC Symbol;Acc:HGNC:2200]	4531	0.2580729126930237	-7.507126E-4	No	
+row_6	PRNP	prion protein [Source:HGNC Symbol;Acc:HGNC:9449]	4744	0.2500157654285431	0.009710663	No	
+row_7	FYN	FYN proto-oncogene, Src family tyrosine kinase [Source:HGNC Symbol;Acc:HGNC:4037]	4977	0.23956803977489471	0.01871638	No	
+row_8	MAPK1	mitogen-activated protein kinase 1 [Source:HGNC Symbol;Acc:HGNC:6871]	5735	0.21335278451442719	0.00731234	No	
+row_9	GRB2	growth factor receptor bound protein 2 [Source:HGNC Symbol;Acc:HGNC:4566]	5854	0.20803804695606232	0.018078486	No	
+row_10	CACNB3	calcium voltage-gated channel auxiliary subunit beta 3 [Source:HGNC Symbol;Acc:HGNC:1403]	6970	0.17907443642616272	-0.008420216	No	
+row_11	COL6A5	collagen type VI alpha 5 chain [Source:HGNC Symbol;Acc:HGNC:26674]	7458	0.16835637390613556	-0.013524734	No	
+row_12	SPTB	spectrin beta, erythrocytic [Source:HGNC Symbol;Acc:HGNC:11274]	8203	0.14276012778282166	-0.029536316	No	
+row_13	COL4A5	collagen type IV alpha 5 chain [Source:HGNC Symbol;Acc:HGNC:2207]	8635	0.12647174298763275	-0.035670485	No	
+row_14	CACNB1	calcium voltage-gated channel auxiliary subunit beta 1 [Source:HGNC Symbol;Acc:HGNC:1401]	9611	0.09206201136112213	-0.06347306	No	
+row_15	PTK2	protein tyrosine kinase 2 [Source:HGNC Symbol;Acc:HGNC:9611]	9984	0.079522505402565	-0.07089448	No	
+row_16	COL5A2	collagen type V alpha 2 chain [Source:HGNC Symbol;Acc:HGNC:2210]	10127	0.07494530081748962	-0.070527226	No	
+row_17	SRC	SRC proto-oncogene, non-receptor tyrosine kinase [Source:HGNC Symbol;Acc:HGNC:11283]	10238	0.07086820900440216	-0.06932324	No	
+row_18	CACNA1H	calcium voltage-gated channel subunit alpha1 H [Source:HGNC Symbol;Acc:HGNC:1395]	10369	0.06688710302114487	-0.06911081	No	
+row_19	COL6A1	collagen type VI alpha 1 chain [Source:HGNC Symbol;Acc:HGNC:2211]	10698	0.05643557012081146	-0.0766363	No	
+row_20	SOS1	SOS Ras/Rac guanine nucleotide exchange factor 1 [Source:HGNC Symbol;Acc:HGNC:11187]	11159	0.041387178003787994	-0.08990034	No	
+row_21	AGRN	agrin [Source:HGNC Symbol;Acc:HGNC:329]	11426	0.033401016145944595	-0.096890874	No	
+row_22	COL4A1	collagen type IV alpha 1 chain [Source:HGNC Symbol;Acc:HGNC:2202]	12492	0.002712540328502655	-0.13428223	No	
+row_23	MAPK3	mitogen-activated protein kinase 3 [Source:HGNC Symbol;Acc:HGNC:6877]	12497	0.002510704332962632	-0.1342432	No	
+row_24	ST8SIA4	ST8 alpha-N-acetyl-neuraminide alpha-2,8-sialyltransferase 4 [Source:HGNC Symbol;Acc:HGNC:10871]	13670	-0.03059612214565277	-0.17340964	No	
+row_25	ARTN	artemin [Source:HGNC Symbol;Acc:HGNC:727]	14325	-0.04822465032339096	-0.19302961	No	
+row_26	NRAS	NRAS proto-oncogene, GTPase [Source:HGNC Symbol;Acc:HGNC:7989]	15663	-0.08679035305976868	-0.23398626	No	
+row_27	FGFR1	fibroblast growth factor receptor 1 [Source:HGNC Symbol;Acc:HGNC:3688]	16404	-0.10610990226268768	-0.252487	No	
+row_28	CACNA1I	calcium voltage-gated channel subunit alpha1 I [Source:HGNC Symbol;Acc:HGNC:1396]	16700	-0.11440331488847733	-0.25468758	No	
+row_29	SPTA1	spectrin alpha, erythrocytic 1 [Source:HGNC Symbol;Acc:HGNC:11272]	17730	-0.14282958209514618	-0.28075242	No	
+row_30	COL9A3	collagen type IX alpha 3 chain [Source:HGNC Symbol;Acc:HGNC:2219]	18780	-0.1744067221879959	-0.30525684	No	
+row_31	HRAS	HRas proto-oncogene, GTPase [Source:HGNC Symbol;Acc:HGNC:5173]	18900	-0.17762069404125214	-0.296709	No	
+row_32	SPTBN4	spectrin beta, non-erythrocytic 4 [Source:HGNC Symbol;Acc:HGNC:14896]	19012	-0.18060536682605743	-0.28766462	No	
+row_33	CACNB2	calcium voltage-gated channel auxiliary subunit beta 2 [Source:HGNC Symbol;Acc:HGNC:1402]	20232	-0.19671256840229034	-0.3165678	Yes	
+row_34	NRTN	neurturin [Source:HGNC Symbol;Acc:HGNC:8007]	20258	-0.19763146340847015	-0.30326638	Yes	
+row_35	COL6A6	collagen type VI alpha 6 chain [Source:HGNC Symbol;Acc:HGNC:27023]	20338	-0.20019572973251343	-0.29168668	Yes	
+row_36	COL9A2	collagen type IX alpha 2 chain [Source:HGNC Symbol;Acc:HGNC:2218]	21117	-0.22144103050231934	-0.3032514	Yes	
+row_37	COL9A1	collagen type IX alpha 1 chain [Source:HGNC Symbol;Acc:HGNC:2217]	21580	-0.23205411434173584	-0.3029021	Yes	
+row_38	SPTBN1	spectrin beta, non-erythrocytic 1 [Source:HGNC Symbol;Acc:HGNC:11275]	22013	-0.24125225841999054	-0.3008339	Yes	
+row_39	CREB1	cAMP responsive element binding protein 1 [Source:HGNC Symbol;Acc:HGNC:2345]	22123	-0.2455499768257141	-0.28705797	Yes	
+row_40	NCAM1	neural cell adhesion molecule 1 [Source:HGNC Symbol;Acc:HGNC:7656]	22388	-0.2515201270580292	-0.2783238	Yes	
+row_41	COL6A2	collagen type VI alpha 2 chain [Source:HGNC Symbol;Acc:HGNC:2212]	22400	-0.2519276440143585	-0.2606315	Yes	
+row_42	COL5A1	collagen type V alpha 1 chain [Source:HGNC Symbol;Acc:HGNC:2209]	22752	-0.2625885307788849	-0.2541734	Yes	
+row_43	SPTAN1	spectrin alpha, non-erythrocytic 1 [Source:HGNC Symbol;Acc:HGNC:11273]	22771	-0.2633521556854248	-0.23590823	Yes	
+row_44	KRAS	KRAS proto-oncogene, GTPase [Source:HGNC Symbol;Acc:HGNC:6407]	22856	-0.2654016613960266	-0.21982525	Yes	
+row_45	COL3A1	collagen type III alpha 1 chain [Source:HGNC Symbol;Acc:HGNC:2201]	23235	-0.27679121494293213	-0.21330072	Yes	
+row_46	SPTBN5	spectrin beta, non-erythrocytic 5 [Source:HGNC Symbol;Acc:HGNC:15680]	23599	-0.28930574655532837	-0.20534864	Yes	
+row_47	COL4A3	collagen type IV alpha 3 chain [Source:HGNC Symbol;Acc:HGNC:2204]	25173	-0.35190683603286743	-0.23560716	Yes	
+row_48	CACNA1D	calcium voltage-gated channel subunit alpha1 D [Source:HGNC Symbol;Acc:HGNC:1391]	25509	-0.3668261468410492	-0.22110339	Yes	
+row_49	CNTN2	contactin 2 [Source:HGNC Symbol;Acc:HGNC:2172]	25631	-0.3730548918247223	-0.19860008	Yes	
+row_50	PTPRA	protein tyrosine phosphatase receptor type A [Source:HGNC Symbol;Acc:HGNC:9664]	25911	-0.38888686895370483	-0.18053669	Yes	
+row_51	CACNB4	calcium voltage-gated channel auxiliary subunit beta 4 [Source:HGNC Symbol;Acc:HGNC:1404]	25956	-0.3914267122745514	-0.15399738	Yes	
+row_52	ST8SIA2	ST8 alpha-N-acetyl-neuraminide alpha-2,8-sialyltransferase 2 [Source:HGNC Symbol;Acc:HGNC:10870]	26026	-0.39531391859054565	-0.12806138	Yes	
+row_53	SPTBN2	spectrin beta, non-erythrocytic 2 [Source:HGNC Symbol;Acc:HGNC:11276]	26665	-0.44173571467399597	-0.118874945	Yes	
+row_54	RPS6KA5	ribosomal protein S6 kinase A5 [Source:HGNC Symbol;Acc:HGNC:10434]	26709	-0.44460299611091614	-0.08848395	Yes	
+row_55	COL5A3	collagen type V alpha 3 chain [Source:HGNC Symbol;Acc:HGNC:14864]	26761	-0.4490406811237335	-0.05805681	Yes	
+row_56	COL4A2	collagen type IV alpha 2 chain [Source:HGNC Symbol;Acc:HGNC:2203]	26946	-0.46358418464660645	-0.031279743	Yes	
+row_57	GFRA1	GDNF family receptor alpha 1 [Source:HGNC Symbol;Acc:HGNC:4243]	27092	-0.47791391611099243	-0.0020978616	Yes	
+row_58	COL4A4	collagen type IV alpha 4 chain [Source:HGNC Symbol;Acc:HGNC:2206]	28104	-0.6684996485710144	0.0101991845	Yes	

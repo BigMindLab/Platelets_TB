@@ -1,0 +1,30 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	MTTP	microsomal triglyceride transfer protein [Source:HGNC Symbol;Acc:HGNC:7467]	1949	0.41354483366012573	-0.015606526	No	
+row_1	ADH1B	alcohol dehydrogenase 1B (class I), beta polypeptide [Source:HGNC Symbol;Acc:HGNC:250]	3051	0.3285377323627472	-0.012233151	No	
+row_2	ADH6	alcohol dehydrogenase 6 (class V) [Source:HGNC Symbol;Acc:HGNC:255]	5276	0.22913244366645813	-0.06121584	No	
+row_3	FAM177A1P1	family with sequence similarity 177 member A1 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:34441]	5348	0.22832702100276947	-0.03439856	No	
+row_4	RAP1GDS1	Rap1 GTPase-GDP dissociation stimulator 1 [Source:HGNC Symbol;Acc:HGNC:9859]	6115	0.19936729967594147	-0.035802137	No	
+row_5	RPL7L1P14	ribosomal protein L7-like 1 (RPL7L1) pseudogene	6589	0.18685382604599	-0.028482985	No	
+row_6	CRYZP2	crystallin zeta pseudogene 2 [Source:HGNC Symbol;Acc:HGNC:49203]	7327	0.16913241147994995	-0.032746755	No	
+row_7	TSPAN5-DT	TSPAN5 divergent transcript [Source:HGNC Symbol;Acc:HGNC:55389]	10484	0.06342606991529465	-0.13586584	No	
+row_8	RPL21P48	ribosomal protein L21 pseudogene 48 [Source:HGNC Symbol;Acc:HGNC:35891]	11149	0.04174869507551193	-0.15391386	No	
+row_9	ADH1C	alcohol dehydrogenase 1C (class I), gamma polypeptide [Source:HGNC Symbol;Acc:HGNC:251]	11527	0.030646443367004395	-0.16326946	No	
+row_10	TSPAN5	tetraspanin 5 [Source:HGNC Symbol;Acc:HGNC:17753]	13256	-0.018353372812271118	-0.22183278	No	
+row_11	ADH5	alcohol dehydrogenase 5 (class III), chi polypeptide [Source:HGNC Symbol;Acc:HGNC:253]	13551	-0.027555057778954506	-0.22865921	No	
+row_12	RPL5P12	ribosomal protein L5 pseudogene 12 [Source:HGNC Symbol;Acc:HGNC:36221]	19182	-0.1824808269739151	-0.4037102	Yes	
+row_13	STPG2	sperm tail PG-rich repeat containing 2 [Source:HGNC Symbol;Acc:HGNC:28712]	19276	-0.1830248385667801	-0.3834859	Yes	
+row_14	H2AZ1	H2A.Z variant histone 1 [Source:HGNC Symbol;Acc:HGNC:4741]	19385	-0.18626587092876434	-0.3633743	Yes	
+row_15	H2AZ1-DT	H2AZ1 divergent transcript [Source:HGNC Symbol;Acc:HGNC:40271]	21057	-0.2195952981710434	-0.39408585	Yes	
+row_16	ABT1P1	activator of basal transcription 1 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:39557]	21260	-0.22479645907878876	-0.3723403	Yes	
+row_17	ADH1A	alcohol dehydrogenase 1A (class I), alpha polypeptide [Source:HGNC Symbol;Acc:HGNC:249]	21984	-0.24055393040180206	-0.36693898	Yes	
+row_18	METAP1	methionyl aminopeptidase 1 [Source:HGNC Symbol;Acc:HGNC:15789]	22168	-0.2460799664258957	-0.3417905	Yes	
+row_19	ADH4	alcohol dehydrogenase 4 (class II), pi polypeptide [Source:HGNC Symbol;Acc:HGNC:252]	22206	-0.2463654726743698	-0.31145817	Yes	
+row_20	LAMTOR3	late endosomal/lysosomal adaptor, MAPK and MTOR activator 3 [Source:HGNC Symbol;Acc:HGNC:15606]	22380	-0.2512515187263489	-0.28529304	Yes	
+row_21	EIF4E	eukaryotic translation initiation factor 4E [Source:HGNC Symbol;Acc:HGNC:3287]	24046	-0.3074226975440979	-0.3045148	Yes	
+row_22	BTF3P13	basic transcription factor 3 pseudogene 13 [Source:HGNC Symbol;Acc:HGNC:1128]	24351	-0.31910595297813416	-0.2742546	Yes	
+row_23	DAPP1	dual adaptor of phosphotyrosine and 3-phosphoinositides 1 [Source:HGNC Symbol;Acc:HGNC:16500]	25197	-0.3525393307209015	-0.25877386	Yes	
+row_24	TRMT10A	tRNA methyltransferase 10A [Source:HGNC Symbol;Acc:HGNC:28403]	26453	-0.4243919849395752	-0.2485207	Yes	
+row_25	C4orf54	chromosome 4 open reading frame 54 [Source:HGNC Symbol;Acc:HGNC:27741]	26521	-0.42917636036872864	-0.19577055	Yes	
+row_26	TBCAP3	tubulin folding cofactor A pseudogene 3 [Source:HGNC Symbol;Acc:HGNC:42632]	27003	-0.4693400263786316	-0.15245828	Yes	
+row_27	DNAJB14	DnaJ heat shock protein family (Hsp40) member B14 [Source:HGNC Symbol;Acc:HGNC:25881]	27791	-0.5780559182167053	-0.10597331	Yes	
+row_28	ENSG00000246090	novel transcript, antisense to ADH4, ADH6 & ADH1A	28368	-0.990246593952179	8.814195E-4	Yes	

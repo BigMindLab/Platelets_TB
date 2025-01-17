@@ -1,0 +1,16 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	YKT6	YKT6 v-SNARE homolog [Source:HGNC Symbol;Acc:HGNC:16959]	2767	0.3467442989349365	-0.0146927945	No	
+row_1	HMGCS2	3-hydroxy-3-methylglutaryl-CoA synthase 2 [Source:HGNC Symbol;Acc:HGNC:5008]	3148	0.3230862021446228	0.049075913	No	
+row_2	IFITM1	interferon induced transmembrane protein 1 [Source:HGNC Symbol;Acc:HGNC:5412]	3201	0.32061767578125	0.123812936	No	
+row_3	TENM2-AS1	TENM2 antisense RNA 2 [Source:HGNC Symbol;Acc:HGNC:56066]	4584	0.25692999362945557	0.13647453	No	
+row_4	CXCL3	C-X-C motif chemokine ligand 3 [Source:HGNC Symbol;Acc:HGNC:4604]	10747	0.054506298154592514	-0.06764076	No	
+row_5	KPNA4	karyopherin subunit alpha 4 [Source:HGNC Symbol;Acc:HGNC:6397]	12242	0.009402756579220295	-0.11803977	No	
+row_6	DLX4	distal-less homeobox 4 [Source:HGNC Symbol;Acc:HGNC:2917]	13854	-0.035668861120939255	-0.16628872	No	
+row_7	STKLD1	serine/threonine kinase like domain containing 1 [Source:HGNC Symbol;Acc:HGNC:28669]	15022	-0.06801173090934753	-0.19116823	No	
+row_8	HNRNPD	heterogeneous nuclear ribonucleoprotein D [Source:HGNC Symbol;Acc:HGNC:5036]	16897	-0.11927452683448792	-0.22871804	No	
+row_9	TMEM108	transmembrane protein 108 [Source:HGNC Symbol;Acc:HGNC:28451]	17189	-0.12790653109550476	-0.20842569	No	
+row_10	IPCEF1	interaction protein for cytohesin exchange factors 1 [Source:HGNC Symbol;Acc:HGNC:21204]	25445	-0.3634171485900879	-0.41251916	Yes	
+row_11	IGF2	insulin like growth factor 2 [Source:HGNC Symbol;Acc:HGNC:5466]	26729	-0.44608426094055176	-0.35119554	Yes	
+row_12	ZNF532	zinc finger protein 532 [Source:HGNC Symbol;Acc:HGNC:30940]	27054	-0.47312667965888977	-0.24962114	Yes	
+row_13	RIMS2	regulating synaptic membrane exocytosis 2 [Source:HGNC Symbol;Acc:HGNC:17283]	27580	-0.540131688117981	-0.1391274	Yes	
+row_14	HOXA1	homeobox A1 [Source:HGNC Symbol;Acc:HGNC:5099]	28174	-0.702375054359436	0.007716866	Yes	

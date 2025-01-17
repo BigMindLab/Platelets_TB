@@ -1,0 +1,26 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	SLC16A3	solute carrier family 16 member 3 [Source:HGNC Symbol;Acc:HGNC:10924]	17	1.2411563396453857	0.15722166	Yes	
+row_1	SLC3A2	solute carrier family 3 member 2 [Source:HGNC Symbol;Acc:HGNC:11026]	89	0.9709486961364746	0.27818123	Yes	
+row_2	SLC16A1	solute carrier family 16 member 1 [Source:HGNC Symbol;Acc:HGNC:10922]	355	0.7322933077812195	0.3619558	Yes	
+row_3	ATP1B3	ATPase Na+/K+ transporting subunit beta 3 [Source:HGNC Symbol;Acc:HGNC:806]	832	0.5751471519470215	0.41831052	Yes	
+row_4	ATP1B2	ATPase Na+/K+ transporting subunit beta 2 [Source:HGNC Symbol;Acc:HGNC:805]	1267	0.49306267499923706	0.4657082	Yes	
+row_5	CAV1	caveolin 1 [Source:HGNC Symbol;Acc:HGNC:1527]	1334	0.4830877184867859	0.5248094	Yes	
+row_6	SLC7A7	solute carrier family 7 member 7 [Source:HGNC Symbol;Acc:HGNC:11065]	1529	0.4555297791957855	0.5758945	Yes	
+row_7	BSG	basigin (Ok blood group) [Source:HGNC Symbol;Acc:HGNC:1116]	1531	0.45550331473350525	0.63377935	Yes	
+row_8	ATP1B1	ATPase Na+/K+ transporting subunit beta 1 [Source:HGNC Symbol;Acc:HGNC:804]	2908	0.3369033634662628	0.6281151	No	
+row_9	ITGB1	integrin subunit beta 1 [Source:HGNC Symbol;Acc:HGNC:6153]	8586	0.1284467577934265	0.44433513	No	
+row_10	SLC7A5	solute carrier family 7 member 5 [Source:HGNC Symbol;Acc:HGNC:11063]	9253	0.10522401332855225	0.4342387	No	
+row_11	PPIA	peptidylprolyl isomerase A [Source:HGNC Symbol;Acc:HGNC:9253]	9733	0.08825770020484924	0.4285766	No	
+row_12	L1CAM	L1 cell adhesion molecule [Source:HGNC Symbol;Acc:HGNC:6470]	12734	-0.00436691427603364	0.32338265	No	
+row_13	ITGA3	integrin subunit alpha 3 [Source:HGNC Symbol;Acc:HGNC:6139]	14292	-0.04696471616625786	0.27447066	No	
+row_14	SPN	sialophorin [Source:HGNC Symbol;Acc:HGNC:11249]	14491	-0.05299988389015198	0.27423048	No	
+row_15	SLC7A6	solute carrier family 7 member 6 [Source:HGNC Symbol;Acc:HGNC:11064]	15010	-0.06763170659542084	0.2645709	No	
+row_16	MMP1	matrix metallopeptidase 1 [Source:HGNC Symbol;Acc:HGNC:7155]	15515	-0.08262938261032104	0.25731188	No	
+row_17	SLC7A8	solute carrier family 7 member 8 [Source:HGNC Symbol;Acc:HGNC:11066]	15686	-0.08742688596248627	0.2624363	No	
+row_18	SLC7A11	solute carrier family 7 member 11 [Source:HGNC Symbol;Acc:HGNC:11059]	16078	-0.09755530953407288	0.26105845	No	
+row_19	MAG	myelin associated glycoprotein [Source:HGNC Symbol;Acc:HGNC:6783]	17460	-0.13514074683189392	0.22956255	No	
+row_20	SLC7A9	solute carrier family 7 member 9 [Source:HGNC Symbol;Acc:HGNC:11067]	17776	-0.14424334466457367	0.23680033	No	
+row_21	SLC7A10	solute carrier family 7 member 10 [Source:HGNC Symbol;Acc:HGNC:11058]	19469	-0.18817706406116486	0.20108567	No	
+row_22	SLC16A8	solute carrier family 16 member 8 [Source:HGNC Symbol;Acc:HGNC:16270]	20080	-0.1953880339860916	0.20442817	No	
+row_23	PPIL2	peptidylprolyl isomerase like 2 [Source:HGNC Symbol;Acc:HGNC:9261]	20867	-0.21447722613811493	0.203994	No	
+row_24	ITGA6	integrin subunit alpha 6 [Source:HGNC Symbol;Acc:HGNC:6142]	27129	-0.48177194595336914	0.04455572	No	

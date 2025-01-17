@@ -1,0 +1,29 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	SIRPA	signal regulatory protein alpha [Source:HGNC Symbol;Acc:HGNC:9662]	14	1.3044480085372925	0.12716644	Yes	
+row_1	STAT1	signal transducer and activator of transcription 1 [Source:HGNC Symbol;Acc:HGNC:11362]	108	0.9266418814659119	0.21457379	Yes	
+row_2	TGM2	transglutaminase 2 [Source:HGNC Symbol;Acc:HGNC:11778]	172	0.8605770468711853	0.2965733	Yes	
+row_3	THEMIS2	thymocyte selection associated family member 2 [Source:HGNC Symbol;Acc:HGNC:16839]	456	0.6888117790222168	0.3540072	Yes	
+row_4	LAPTM5	lysosomal protein transmembrane 5 [Source:HGNC Symbol;Acc:HGNC:29612]	463	0.6839165687561035	0.42072728	Yes	
+row_5	BCL3	BCL3 transcription coactivator [Source:HGNC Symbol;Acc:HGNC:998]	520	0.6618376970291138	0.4835239	Yes	
+row_6	ICAM1	intercellular adhesion molecule 1 [Source:HGNC Symbol;Acc:HGNC:5344]	734	0.5978249311447144	0.53452116	Yes	
+row_7	PELI1	pellino E3 ubiquitin protein ligase 1 [Source:HGNC Symbol;Acc:HGNC:8827]	793	0.5832319855690002	0.5895545	Yes	
+row_8	SIRPAP1	signal regulatory protein alpha pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:9663]	816	0.577821671962738	0.6453275	Yes	
+row_9	S100A11	S100 calcium binding protein A11 [Source:HGNC Symbol;Acc:HGNC:10488]	975	0.5446587204933167	0.6930606	Yes	
+row_10	EMP3	epithelial membrane protein 3 [Source:HGNC Symbol;Acc:HGNC:3335]	1799	0.4278724789619446	0.70592076	Yes	
+row_11	ARHGDIB	Rho GDP dissociation inhibitor beta [Source:HGNC Symbol;Acc:HGNC:679]	2283	0.38379141688346863	0.7264531	Yes	
+row_12	IFI44	interferon induced protein 44 [Source:HGNC Symbol;Acc:HGNC:16938]	2798	0.34420058131217957	0.7420181	Yes	
+row_13	CYBA	cytochrome b-245 alpha chain [Source:HGNC Symbol;Acc:HGNC:2577]	6557	0.18786217272281647	0.6279207	No	
+row_14	RAB31	RAB31, member RAS oncogene family [Source:HGNC Symbol;Acc:HGNC:9771]	8556	0.12956635653972626	0.57016426	No	
+row_15	CELF2	CUGBP Elav-like family member 2 [Source:HGNC Symbol;Acc:HGNC:2550]	10683	0.057181816548109055	0.50081146	No	
+row_16	WIPF1	WAS/WASL interacting protein family member 1 [Source:HGNC Symbol;Acc:HGNC:12736]	11404	0.0339825302362442	0.4787547	No	
+row_17	PTGER4	prostaglandin E receptor 4 [Source:HGNC Symbol;Acc:HGNC:9596]	11995	0.01727582886815071	0.45964584	No	
+row_18	HLA-DPA1	major histocompatibility complex, class II, DP alpha 1 [Source:HGNC Symbol;Acc:HGNC:4938]	12875	-0.008011924102902412	0.42944214	No	
+row_19	IL10RA	interleukin 10 receptor subunit alpha [Source:HGNC Symbol;Acc:HGNC:5964]	13098	-0.014009223319590092	0.42298687	No	
+row_20	CLEC2B	C-type lectin domain family 2 member B [Source:HGNC Symbol;Acc:HGNC:2053]	13673	-0.03076399676501751	0.4057621	No	
+row_21	IFI16	interferon gamma inducible protein 16 [Source:HGNC Symbol;Acc:HGNC:5395]	13678	-0.03084971196949482	0.4086402	No	
+row_22	SEL1L3	SEL1L family member 3 [Source:HGNC Symbol;Acc:HGNC:29108]	17080	-0.12484844774007797	0.30096143	No	
+row_23	HLA-DPB1	major histocompatibility complex, class II, DP beta 1 [Source:HGNC Symbol;Acc:HGNC:4940]	17433	-0.13452564179897308	0.30171758	No	
+row_24	DAB2	DAB adaptor protein 2 [Source:HGNC Symbol;Acc:HGNC:2662]	17651	-0.1404210925102234	0.30780992	No	
+row_25	ARL4C	ADP ribosylation factor like GTPase 4C [Source:HGNC Symbol;Acc:HGNC:698]	18893	-0.17735758423805237	0.2814175	No	
+row_26	EZR	ezrin [Source:HGNC Symbol;Acc:HGNC:12691]	21905	-0.23904553055763245	0.19866349	No	
+row_27	HMGN3	high mobility group nucleosomal binding domain 3 [Source:HGNC Symbol;Acc:HGNC:12312]	24033	-0.30680927634239197	0.15370528	No	

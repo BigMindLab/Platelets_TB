@@ -1,0 +1,47 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	JUNB	JunB proto-oncogene, AP-1 transcription factor subunit [Source:HGNC Symbol;Acc:HGNC:6205]	65	1.025398850440979	0.06996396	Yes	
+row_1	FOS	Fos proto-oncogene, AP-1 transcription factor subunit [Source:HGNC Symbol;Acc:HGNC:3796]	73	1.0053092241287231	0.14055827	Yes	
+row_2	EGR1	early growth response 1 [Source:HGNC Symbol;Acc:HGNC:3238]	144	0.8861271739006042	0.20053178	Yes	
+row_3	EGR3	early growth response 3 [Source:HGNC Symbol;Acc:HGNC:3240]	240	0.8002263307571411	0.25357023	Yes	
+row_4	FOSB	FosB proto-oncogene, AP-1 transcription factor subunit [Source:HGNC Symbol;Acc:HGNC:3797]	474	0.6797211170196533	0.29324892	Yes	
+row_5	EGR2	early growth response 2 [Source:HGNC Symbol;Acc:HGNC:3239]	1116	0.5179456472396851	0.30713522	Yes	
+row_6	IL17B	interleukin 17B [Source:HGNC Symbol;Acc:HGNC:5982]	1286	0.4907780885696411	0.33575732	Yes	
+row_7	KCNMB1	potassium calcium-activated channel subfamily M regulatory beta subunit 1 [Source:HGNC Symbol;Acc:HGNC:6285]	1329	0.4847562909126282	0.3684351	Yes	
+row_8	STX10	syntaxin 10 [Source:HGNC Symbol;Acc:HGNC:11428]	1475	0.46259477734565735	0.39591783	Yes	
+row_9	CNN2	calponin 2 [Source:HGNC Symbol;Acc:HGNC:2156]	1628	0.44453924894332886	0.4218813	Yes	
+row_10	CAP1	cyclase associated actin cytoskeleton regulatory protein 1 [Source:HGNC Symbol;Acc:HGNC:20040]	2025	0.4067007303237915	0.4365711	Yes	
+row_11	IER2	immediate early response 2 [Source:HGNC Symbol;Acc:HGNC:28871]	2077	0.4023717939853668	0.463126	Yes	
+row_12	PRUNE2	prune homolog 2 with BCH domain [Source:HGNC Symbol;Acc:HGNC:25209]	2146	0.39645904302597046	0.48866457	Yes	
+row_13	CFL1	cofilin 1 [Source:HGNC Symbol;Acc:HGNC:1874]	2443	0.3703639507293701	0.5043214	Yes	
+row_14	FLNA	filamin A [Source:HGNC Symbol;Acc:HGNC:3754]	2490	0.36686164140701294	0.5285504	Yes	
+row_15	MYL6	myosin light chain 6 [Source:HGNC Symbol;Acc:HGNC:7587]	2736	0.3491217792034149	0.5445094	Yes	
+row_16	TGFB1I1	transforming growth factor beta 1 induced transcript 1 [Source:HGNC Symbol;Acc:HGNC:11767]	2833	0.34186747670173645	0.5652133	Yes	
+row_17	IRAG1	inositol 1,4,5-triphosphate receptor associated 1 [Source:HGNC Symbol;Acc:HGNC:7237]	3598	0.3015527129173279	0.55951214	Yes	
+row_18	VCL	vinculin [Source:HGNC Symbol;Acc:HGNC:12665]	3679	0.2974679470062256	0.57765174	Yes	
+row_19	PFN1	profilin 1 [Source:HGNC Symbol;Acc:HGNC:8881]	4102	0.2774544656276703	0.58231676	Yes	
+row_20	WDR1	WD repeat domain 1 [Source:HGNC Symbol;Acc:HGNC:12754]	4770	0.24865169823169708	0.5763095	Yes	
+row_21	PLCB3	phospholipase C beta 3 [Source:HGNC Symbol;Acc:HGNC:9056]	5059	0.2365792691707611	0.58282113	Yes	
+row_22	CD248	CD248 molecule [Source:HGNC Symbol;Acc:HGNC:18219]	6138	0.19859172403812408	0.55878794	No	
+row_23	FOSL1	FOS like 1, AP-1 transcription factor subunit [Source:HGNC Symbol;Acc:HGNC:13718]	6576	0.18707850575447083	0.5565553	No	
+row_24	CALD1	caldesmon 1 [Source:HGNC Symbol;Acc:HGNC:1441]	6788	0.1832849383354187	0.56202763	No	
+row_25	MUS81	MUS81 structure-specific endonuclease subunit [Source:HGNC Symbol;Acc:HGNC:29814]	7140	0.17195042967796326	0.56176263	No	
+row_26	SETD2	SET domain containing 2, histone lysine methyltransferase [Source:HGNC Symbol;Acc:HGNC:18420]	8169	0.14401772618293762	0.5356476	No	
+row_27	GPR20	G protein-coupled receptor 20 [Source:HGNC Symbol;Acc:HGNC:4475]	10170	0.07321027666330338	0.47025478	No	
+row_28	ACTG2	actin gamma 2, smooth muscle [Source:HGNC Symbol;Acc:HGNC:145]	10608	0.05914505198597908	0.45900702	No	
+row_29	DIXDC1	DIX domain containing 1 [Source:HGNC Symbol;Acc:HGNC:23695]	11962	0.018035901710391045	0.41254973	No	
+row_30	TPM1	tropomyosin 1 [Source:HGNC Symbol;Acc:HGNC:12010]	12410	0.00489987013861537	0.3971267	No	
+row_31	TNNC1	troponin C1, slow skeletal and cardiac type [Source:HGNC Symbol;Acc:HGNC:11943]	13001	-0.011498594656586647	0.37712422	No	
+row_32	SUSD1	sushi domain containing 1 [Source:HGNC Symbol;Acc:HGNC:25413]	13235	-0.01797119900584221	0.3701713	No	
+row_33	MYH11	myosin heavy chain 11 [Source:HGNC Symbol;Acc:HGNC:7569]	13914	-0.03730543702840805	0.3488831	No	
+row_34	ACTR3	actin related protein 3 [Source:HGNC Symbol;Acc:HGNC:170]	14203	-0.04459870606660843	0.34186637	No	
+row_35	SLC25A4	solute carrier family 25 member 4 [Source:HGNC Symbol;Acc:HGNC:10990]	15146	-0.07141729444265366	0.3136691	No	
+row_36	TAFAZZIN	tafazzin, phospholipid-lysophospholipid transacylase [Source:HGNC Symbol;Acc:HGNC:11577]	15194	-0.07288572937250137	0.3171472	No	
+row_37	SCOC	short coiled-coil protein [Source:HGNC Symbol;Acc:HGNC:20335]	16863	-0.11843375861644745	0.26665273	No	
+row_38	THBS1	thrombospondin 1 [Source:HGNC Symbol;Acc:HGNC:11785]	17042	-0.12365569174289703	0.26908728	No	
+row_39	ANXA6	annexin A6 [Source:HGNC Symbol;Acc:HGNC:544]	19700	-0.1894647628068924	0.18871038	No	
+row_40	ACTN1	actinin alpha 1 [Source:HGNC Symbol;Acc:HGNC:163]	19768	-0.19144897162914276	0.19983774	No	
+row_41	EGR4	early growth response 4 [Source:HGNC Symbol;Acc:HGNC:3241]	20664	-0.21078279614448547	0.1831191	No	
+row_42	ITGB1BP2	integrin subunit beta 1 binding protein 2 [Source:HGNC Symbol;Acc:HGNC:6154]	23338	-0.28002920746803284	0.108559586	No	
+row_43	HOXB4	homeobox B4 [Source:HGNC Symbol;Acc:HGNC:5115]	23493	-0.28512662649154663	0.123219155	No	
+row_44	ASB2	ankyrin repeat and SOCS box containing 2 [Source:HGNC Symbol;Acc:HGNC:16012]	23742	-0.29455843567848206	0.13522743	No	
+row_45	CA3	carbonic anhydrase 3 [Source:HGNC Symbol;Acc:HGNC:1374]	26241	-0.40877556800842285	0.07591356	No	

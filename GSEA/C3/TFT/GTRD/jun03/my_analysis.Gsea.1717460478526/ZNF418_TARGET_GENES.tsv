@@ -1,0 +1,39 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	ACP3	acid phosphatase 3 [Source:HGNC Symbol;Acc:HGNC:125]	473	0.6804907321929932	0.05592938	No	
+row_1	ANXA2	annexin A2 [Source:HGNC Symbol;Acc:HGNC:537]	3010	0.33099526166915894	0.0018131174	No	
+row_2	RCAN1	regulator of calcineurin 1 [Source:HGNC Symbol;Acc:HGNC:3040]	3321	0.31580978631973267	0.024578422	No	
+row_3	ANKRD6	ankyrin repeat domain 6 [Source:HGNC Symbol;Acc:HGNC:17280]	4171	0.2740743160247803	0.023882123	No	
+row_4	TMEM131L	transmembrane 131 like [Source:HGNC Symbol;Acc:HGNC:29146]	4177	0.27389028668403625	0.05293061	No	
+row_5	FAM170A	family with sequence similarity 170 member A [Source:HGNC Symbol;Acc:HGNC:27963]	6906	0.179652601480484	-0.02410537	No	
+row_6	CNEP1R1	CTD nuclear envelope phosphatase 1 regulatory subunit 1 [Source:HGNC Symbol;Acc:HGNC:26759]	8376	0.1363111287355423	-0.061366227	No	
+row_7	SCTR	secretin receptor [Source:HGNC Symbol;Acc:HGNC:10608]	9540	0.09470093250274658	-0.092275634	No	
+row_8	MTCO3P12	MT-CO3 pseudogene 12 [Source:HGNC Symbol;Acc:HGNC:52042]	11756	0.023632250726222992	-0.16786799	No	
+row_9	NCOA7	nuclear receptor coactivator 7 [Source:HGNC Symbol;Acc:HGNC:21081]	12626	-0.0011439096415415406	-0.198392	No	
+row_10	CARS1	cysteinyl-tRNA synthetase 1 [Source:HGNC Symbol;Acc:HGNC:1493]	12842	-0.007078771945089102	-0.20521885	No	
+row_11	GALNT7	polypeptide N-acetylgalactosaminyltransferase 7 [Source:HGNC Symbol;Acc:HGNC:4129]	13233	-0.017912859097123146	-0.2170612	No	
+row_12	LINC02961	long intergenic non-protein coding RNA 2961 [Source:HGNC Symbol;Acc:HGNC:55986]	13560	-0.027765989303588867	-0.22559518	No	
+row_13	ZFP64	ZFP64 zinc finger protein [Source:HGNC Symbol;Acc:HGNC:15940]	13888	-0.03646334633231163	-0.2332364	No	
+row_14	AGGF1	angiogenic factor with G-patch and FHA domains 1 [Source:HGNC Symbol;Acc:HGNC:24684]	13980	-0.03929227218031883	-0.232253	No	
+row_15	BAIAP2	BAR/IMD domain containing adaptor protein 2 [Source:HGNC Symbol;Acc:HGNC:947]	14754	-0.06060125306248665	-0.25304723	No	
+row_16	THUMPD3	THUMP domain containing 3 [Source:HGNC Symbol;Acc:HGNC:24493]	15678	-0.08716553449630737	-0.27629688	No	
+row_17	CDK17	cyclin dependent kinase 17 [Source:HGNC Symbol;Acc:HGNC:8750]	15888	-0.09268280118703842	-0.27377796	No	
+row_18	KATNIP	katanin interacting protein [Source:HGNC Symbol;Acc:HGNC:29068]	16266	-0.1021772250533104	-0.2761706	No	
+row_19	RFPL2	ret finger protein like 2 [Source:HGNC Symbol;Acc:HGNC:9979]	16416	-0.10649823397397995	-0.27006158	No	
+row_20	MIR548S	microRNA 548s [Source:HGNC Symbol;Acc:HGNC:38354]	17703	-0.1418837606906891	-0.30027416	No	
+row_21	LERFS	lncRNA negative regulator of fibroblast-like synoviocyte migration, SYNCRIP interacting [Source:HGNC Symbol;Acc:HGNC:51182]	18398	-0.16176751255989075	-0.3074877	No	
+row_22	LIPF	lipase F, gastric type [Source:HGNC Symbol;Acc:HGNC:6622]	18810	-0.17525330185890198	-0.303282	No	
+row_23	LINC02598	long intergenic non-protein coding RNA 2598 [Source:HGNC Symbol;Acc:HGNC:53954]	18824	-0.17540818452835083	-0.28502393	No	
+row_24	ZNF225-AS1	ZNF225 and ZNF224 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:55916]	19867	-0.19431345164775848	-0.30103725	No	
+row_25	HLA-DQB1	major histocompatibility complex, class II, DQ beta 1 [Source:HGNC Symbol;Acc:HGNC:4944]	20405	-0.2022600919008255	-0.29839334	No	
+row_26	UTS2	urotensin 2 [Source:HGNC Symbol;Acc:HGNC:12636]	24315	-0.31840693950653076	-0.4022729	Yes	
+row_27	PPP1R12A	protein phosphatase 1 regulatory subunit 12A [Source:HGNC Symbol;Acc:HGNC:7618]	24614	-0.3294060230255127	-0.37763366	Yes	
+row_28	ZNF608	zinc finger protein 608 [Source:HGNC Symbol;Acc:HGNC:29238]	25059	-0.34685981273651123	-0.35628086	Yes	
+row_29	ZNF546	zinc finger protein 546 [Source:HGNC Symbol;Acc:HGNC:28671]	25583	-0.3706631362438202	-0.3351742	Yes	
+row_30	ICE1	interactor of little elongation complex ELL subunit 1 [Source:HGNC Symbol;Acc:HGNC:29154]	25650	-0.374042272567749	-0.29759046	Yes	
+row_31	ZNF225	zinc finger protein 225 [Source:HGNC Symbol;Acc:HGNC:13018]	25880	-0.38698476552963257	-0.26437405	Yes	
+row_32	TMEM132A	transmembrane protein 132A [Source:HGNC Symbol;Acc:HGNC:31092]	26216	-0.4068014621734619	-0.23278134	Yes	
+row_33	NBPF1	NBPF member 1 [Source:HGNC Symbol;Acc:HGNC:26088]	26973	-0.4667966067790985	-0.20963393	Yes	
+row_34	LINC00667	long intergenic non-protein coding RNA 667 [Source:HGNC Symbol;Acc:HGNC:27906]	27099	-0.4785834550857544	-0.16297606	Yes	
+row_35	MTND5P11	MT-ND5 pseudogene 11 [Source:HGNC Symbol;Acc:HGNC:42273]	27518	-0.529787003993988	-0.12118754	Yes	
+row_36	CD22	CD22 molecule [Source:HGNC Symbol;Acc:HGNC:1643]	27691	-0.559097945690155	-0.06759604	Yes	
+row_37	MT-CYB	mitochondrially encoded cytochrome b [Source:HGNC Symbol;Acc:HGNC:7427]	28334	-0.8651849031448364	0.0020807602	Yes	

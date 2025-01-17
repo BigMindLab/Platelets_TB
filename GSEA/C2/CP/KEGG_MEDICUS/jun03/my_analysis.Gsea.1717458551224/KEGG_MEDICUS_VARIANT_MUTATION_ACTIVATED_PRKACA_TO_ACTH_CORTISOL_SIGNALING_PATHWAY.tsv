@@ -1,0 +1,17 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	CREB5	cAMP responsive element binding protein 5 [Source:HGNC Symbol;Acc:HGNC:16844]	418	0.702613890171051	0.13606513	Yes	
+row_1	CREB3	cAMP responsive element binding protein 3 [Source:HGNC Symbol;Acc:HGNC:2347]	476	0.6795247197151184	0.279896	Yes	
+row_2	CREB3L1	cAMP responsive element binding protein 3 like 1 [Source:HGNC Symbol;Acc:HGNC:18856]	551	0.6541159152984619	0.41767454	Yes	
+row_3	CREB3L3	cAMP responsive element binding protein 3 like 3 [Source:HGNC Symbol;Acc:HGNC:18855]	2536	0.3644462823867798	0.42597863	Yes	
+row_4	NR5A1	nuclear receptor subfamily 5 group A member 1 [Source:HGNC Symbol;Acc:HGNC:7983]	2691	0.3528502583503723	0.49628055	Yes	
+row_5	NR4A1	nuclear receptor subfamily 4 group A member 1 [Source:HGNC Symbol;Acc:HGNC:7980]	3673	0.29760104417800903	0.5255826	Yes	
+row_6	ATF4	activating transcription factor 4 [Source:HGNC Symbol;Acc:HGNC:786]	3761	0.2934187054634094	0.5854903	Yes	
+row_7	PRKACA	protein kinase cAMP-activated catalytic subunit alpha [Source:HGNC Symbol;Acc:HGNC:9380]	9143	0.10817286372184753	0.41908762	No	
+row_8	ATF6B	activating transcription factor 6 beta [Source:HGNC Symbol;Acc:HGNC:2349]	10555	0.061062041670084	0.3824711	No	
+row_9	CREB3L4	cAMP responsive element binding protein 3 like 4 [Source:HGNC Symbol;Acc:HGNC:18854]	12105	0.01380055770277977	0.33084846	No	
+row_10	SP1	Sp1 transcription factor [Source:HGNC Symbol;Acc:HGNC:11205]	14704	-0.05912081524729729	0.25198716	No	
+row_11	CREB3L2	cAMP responsive element binding protein 3 like 2 [Source:HGNC Symbol;Acc:HGNC:23720]	14871	-0.0639364942908287	0.2598596	No	
+row_12	PBX1	PBX homeobox 1 [Source:HGNC Symbol;Acc:HGNC:8632]	16465	-0.10768664628267288	0.22683625	No	
+row_13	CREB1	cAMP responsive element binding protein 1 [Source:HGNC Symbol;Acc:HGNC:2345]	22123	-0.2455499768257141	0.080191575	No	
+row_14	STAR	steroidogenic acute regulatory protein [Source:HGNC Symbol;Acc:HGNC:11359]	24277	-0.3168126046657562	0.072317205	No	
+row_15	ATF2	activating transcription factor 2 [Source:HGNC Symbol;Acc:HGNC:784]	24840	-0.3386898338794708	0.12520267	No	

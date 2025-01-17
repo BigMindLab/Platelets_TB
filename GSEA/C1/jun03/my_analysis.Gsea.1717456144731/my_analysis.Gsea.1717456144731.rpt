@@ -1,0 +1,34 @@
+producer_class	xtools.gsea.Gsea
+producer_timestamp	1717456144731
+param	zip_report	false
+param	num	100
+param	scoring_scheme	weighted
+param	norm	meandiv
+param	out	/home/dano/Documents/Articles/Platelets/GSEA/C1/jun03
+param	mode	Max_probe
+param	include_only_symbols	true
+param	set_max	500
+param	gmx	ftp.broadinstitute.org://pub/gsea/msigdb/human/gene_sets/c1.all.v2023.2.Hs.symbols.gmt
+param	plot_top_x	20
+param	nperm	1000
+param	order	descending
+param	rnd_seed	timestamp
+param	rpt_label	my_analysis
+param	set_min	15
+param	res	/home/dano/Documents/Articles/Platelets/expression_data.txt
+param	chip	ftp.broadinstitute.org://pub/gsea/msigdb/human/annotations/Human_Ensembl_Gene_ID_MSigDB.v2023.2.Hs.chip
+param	create_svgs	false
+param	cls	/home/dano/Documents/Articles/Platelets/phenotype.cls#TB_versus_Control
+param	sort	real
+param	create_gcts	false
+param	help	false
+param	save_rnd_lists	false
+param	median	false
+param	metric	Signal2Noise
+param	make_sets	true
+param	rnd_type	no_balance
+param	gui	false
+param	permute	phenotype
+param	collapse	Collapse
+
+file	/home/dano/Documents/Articles/Platelets/GSEA/C1/jun03/my_analysis.Gsea.1717456144731/index.html

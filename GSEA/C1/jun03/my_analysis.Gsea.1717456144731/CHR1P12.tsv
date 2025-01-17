@@ -1,0 +1,34 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	ZNF697	zinc finger protein 697 [Source:HGNC Symbol;Acc:HGNC:32034]	865	0.567563533782959	0.046886355	Yes	
+row_1	LINC00622	long intergenic non-protein coding RNA 622 [Source:HGNC Symbol;Acc:HGNC:44251]	2359	0.37708234786987305	0.04565795	Yes	
+row_2	RBMX2P3	RBMX2 pseudogene 3 [Source:HGNC Symbol;Acc:HGNC:39925]	2577	0.3612653315067291	0.0872643	Yes	
+row_3	TENT5C-DT	TENT5C divergent transcript [Source:HGNC Symbol;Acc:HGNC:55656]	2978	0.3327147960662842	0.118525326	Yes	
+row_4	HMGCS2	3-hydroxy-3-methylglutaryl-CoA synthase 2 [Source:HGNC Symbol;Acc:HGNC:5008]	3148	0.3230862021446228	0.15661849	Yes	
+row_5	GAPDHP58	glyceraldehyde 3 phosphate dehydrogenase pseudogene 58 [Source:HGNC Symbol;Acc:HGNC:4142]	3759	0.2934696078300476	0.17512399	Yes	
+row_6	LINC01780	long intergenic non-protein coding RNA 1780 [Source:HGNC Symbol;Acc:HGNC:52570]	4532	0.2580729126930237	0.18309116	Yes	
+row_7	GAPDHP33	glyceraldehyde 3 phosphate dehydrogenase pseudogene 33 [Source:HGNC Symbol;Acc:HGNC:37785]	4540	0.2580729126930237	0.21803199	Yes	
+row_8	NOTCH2	notch receptor 2 [Source:HGNC Symbol;Acc:HGNC:7882]	4746	0.2500084638595581	0.24489184	Yes	
+row_9	MAN1A2	mannosidase alpha class 1A member 2 [Source:HGNC Symbol;Acc:HGNC:6822]	4843	0.2458350509405136	0.27502593	Yes	
+row_10	HSD3B2	hydroxy-delta-5-steroid dehydrogenase, 3 beta- and steroid delta-isomerase 2 [Source:HGNC Symbol;Acc:HGNC:5218]	5175	0.2328888475894928	0.29510885	Yes	
+row_11	GDAP2	ganglioside induced differentiation associated protein 2 [Source:HGNC Symbol;Acc:HGNC:18010]	5517	0.22143732011318207	0.31327778	Yes	
+row_12	GAPDHP27	glyceraldehyde 3 phosphate dehydrogenase pseudogene 27 [Source:HGNC Symbol;Acc:HGNC:37779]	5694	0.214752197265625	0.33635303	Yes	
+row_13	NBPF7P	NBPF member 7, pseudogene [Source:HGNC Symbol;Acc:HGNC:31989]	6353	0.19279219210147858	0.33943892	Yes	
+row_14	ADAM30	ADAM metallopeptidase domain 30 [Source:HGNC Symbol;Acc:HGNC:208]	6731	0.18431447446346283	0.35127687	Yes	
+row_15	WARS2-IT1	WARS2 intronic transcript 1 [Source:HGNC Symbol;Acc:HGNC:41393]	8101	0.14699405431747437	0.32304868	No	
+row_16	GAPDHP32	glyceraldehyde 3 phosphate dehydrogenase pseudogene 32 [Source:HGNC Symbol;Acc:HGNC:37784]	8300	0.1390172839164734	0.33502194	No	
+row_17	VPS25P1	VPS25 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:44250]	9814	0.08582533150911331	0.29337612	No	
+row_18	TENT5C	terminal nucleotidyltransferase 5C [Source:HGNC Symbol;Acc:HGNC:24712]	11061	0.0444113165140152	0.25549793	No	
+row_19	WARS2	tryptophanyl tRNA synthetase 2, mitochondrial [Source:HGNC Symbol;Acc:HGNC:12730]	11840	0.02122456766664982	0.23095982	No	
+row_20	PSMC1P12	proteasome 26S subunit, ATPase 1 pseudogene 12 [Source:HGNC Symbol;Acc:HGNC:39787]	13542	-0.027106286957859993	0.17467897	No	
+row_21	RPS3AP12	RPS3A pseudogene 12 [Source:HGNC Symbol;Acc:HGNC:35527]	14243	-0.04557955637574196	0.15621185	No	
+row_22	REG4	regenerating family member 4 [Source:HGNC Symbol;Acc:HGNC:22977]	14807	-0.062132809311151505	0.14483231	No	
+row_23	PNRC2P1	proline rich nuclear receptor coactivator 2 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:51933]	15441	-0.08035491406917572	0.13346915	No	
+row_24	WDR3	WD repeat domain 3 [Source:HGNC Symbol;Acc:HGNC:12755]	17186	-0.1278502643108368	0.08940834	No	
+row_25	SPAG17	sperm associated antigen 17 [Source:HGNC Symbol;Acc:HGNC:26620]	17867	-0.14661529660224915	0.08542241	No	
+row_26	SEC22B	SEC22 homolog B, vesicle trafficking protein [Source:HGNC Symbol;Acc:HGNC:10700]	19314	-0.1839972287416458	0.059524503	No	
+row_27	GAPDHP23	glyceraldehyde 3 phosphate dehydrogenase pseudogene 23 [Source:HGNC Symbol;Acc:HGNC:37775]	19567	-0.18817706406116486	0.07629657	No	
+row_28	LOC124904631	U1 spliceosomal RNA [Source:RFAM;Acc:RF00003]	20367	-0.20116575062274933	0.07555257	No	
+row_29	NOTCH2P1	notch 2 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:44253]	20979	-0.21817263960838318	0.08375624	No	
+row_30	PHGDH	phosphoglycerate dehydrogenase [Source:HGNC Symbol;Acc:HGNC:8923]	21907	-0.23910920321941376	0.08367249	No	
+row_31	WARS2-AS1	WARS2 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:40612]	26732	-0.44667860865592957	-0.025516633	No	
+row_32	TBX15	T-box transcription factor 15 [Source:HGNC Symbol;Acc:HGNC:11594]	27943	-0.6164230704307556	0.015867013	No	

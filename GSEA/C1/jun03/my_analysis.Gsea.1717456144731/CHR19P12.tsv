@@ -1,0 +1,66 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	RPS27P29	ribosomal protein S27 pseudogene 29 [Source:HGNC Symbol;Acc:HGNC:36516]	2448	0.36998191475868225	-0.064164184	No	
+row_1	LINC01785	long intergenic non-protein coding RNA 1785 [Source:HGNC Symbol;Acc:HGNC:25060]	2778	0.34591910243034363	-0.05497572	No	
+row_2	VN1R82P	vomeronasal 1 receptor 82 pseudogene [Source:HGNC Symbol;Acc:HGNC:37402]	4824	0.2471119910478592	-0.11230303	No	
+row_3	MTDHP3	metadherin pseudogene 3 [Source:HGNC Symbol;Acc:HGNC:52359]	5885	0.20669130980968475	-0.13729104	No	
+row_4	ENSG00000269043	novel transcript	6332	0.19279219210147858	-0.14144099	No	
+row_5	LINC00664	long intergenic non-protein coding RNA 664 [Source:HGNC Symbol;Acc:HGNC:44319]	7179	0.17019303143024445	-0.16106974	No	
+row_6	ZNF723	zinc finger protein 723 [Source:HGNC Symbol;Acc:HGNC:32286]	7887	0.15598979592323303	-0.17664598	No	
+row_7	RPL34P33	ribosomal protein L34 pseudogene 33 [Source:HGNC Symbol;Acc:HGNC:36666]	8349	0.13745827972888947	-0.18465294	No	
+row_8	ZNF98	zinc finger protein 98 [Source:HGNC Symbol;Acc:HGNC:13174]	8621	0.12729807198047638	-0.18656398	No	
+row_9	ZNF99	zinc finger protein 99 [Source:HGNC Symbol;Acc:HGNC:13175]	9463	0.09763588756322861	-0.2103795	No	
+row_10	LINC01859	long intergenic non-protein coding RNA 1859 [Source:HGNC Symbol;Acc:HGNC:52677]	10026	0.07830709218978882	-0.22550878	No	
+row_11	ZNF93	zinc finger protein 93 [Source:HGNC Symbol;Acc:HGNC:13169]	11237	0.038787998259067535	-0.26588866	No	
+row_12	ZNF714	zinc finger protein 714 [Source:HGNC Symbol;Acc:HGNC:27124]	11952	0.018330030143260956	-0.28999025	No	
+row_13	ZNF681	zinc finger protein 681 [Source:HGNC Symbol;Acc:HGNC:26457]	11980	0.0176395196467638	-0.28988257	No	
+row_14	ZNF730	zinc finger protein 730 [Source:HGNC Symbol;Acc:HGNC:32470]	12720	-0.004029442556202412	-0.31572658	No	
+row_15	ZNF209P	zinc finger protein 209, pseudogene [Source:HGNC Symbol;Acc:HGNC:13000]	13550	-0.02753905951976776	-0.3433338	No	
+row_16	LINC01224	long intergenic non-protein coding RNA 1224 [Source:HGNC Symbol;Acc:HGNC:49676]	13864	-0.03591950982809067	-0.35222253	No	
+row_17	ZNF676	zinc finger protein 676 [Source:HGNC Symbol;Acc:HGNC:20429]	14425	-0.05133380740880966	-0.36890328	No	
+row_18	ZNF100	zinc finger protein 100 [Source:HGNC Symbol;Acc:HGNC:12880]	15114	-0.07046724110841751	-0.38895175	No	
+row_19	ZNF729	zinc finger protein 729 [Source:HGNC Symbol;Acc:HGNC:32464]	15926	-0.09361117333173752	-0.41195032	No	
+row_20	ZNF726	zinc finger protein 726 [Source:HGNC Symbol;Acc:HGNC:32462]	16159	-0.09968136996030807	-0.4141454	No	
+row_21	ZNF826P	zinc finger protein 826, pseudogene [Source:HGNC Symbol;Acc:HGNC:33875]	16456	-0.10754995048046112	-0.41812652	No	
+row_22	IPO5P1	importin 5 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:49687]	16713	-0.1147264912724495	-0.42026407	No	
+row_23	RPL34P34	ribosomal protein L34 pseudogene 34 [Source:HGNC Symbol;Acc:HGNC:35848]	17281	-0.1307096928358078	-0.43241858	No	
+row_24	ZNF486	zinc finger protein 486 [Source:HGNC Symbol;Acc:HGNC:20807]	17530	-0.1369614452123642	-0.43293664	No	
+row_25	MTDHP4	metadherin pseudogene 4 [Source:HGNC Symbol;Acc:HGNC:52360]	17909	-0.1479375958442688	-0.43738356	No	
+row_26	ZNF493	zinc finger protein 493 [Source:HGNC Symbol;Acc:HGNC:23708]	18311	-0.1592826247215271	-0.44196013	Yes	
+row_27	VN1R80P	vomeronasal 1 receptor 80 pseudogene [Source:HGNC Symbol;Acc:HGNC:37329]	18419	-0.16248100996017456	-0.4359663	Yes	
+row_28	VN1R84P	vomeronasal 1 receptor 84 pseudogene [Source:HGNC Symbol;Acc:HGNC:37404]	18841	-0.176068976521492	-0.44023943	Yes	
+row_29	GOLGA2P9	GOLGA2 pseudogene 9 [Source:HGNC Symbol;Acc:HGNC:49921]	19117	-0.1824808269739151	-0.43897322	Yes	
+row_30	ZNF675	zinc finger protein 675 [Source:HGNC Symbol;Acc:HGNC:30768]	19381	-0.1861402690410614	-0.43706337	Yes	
+row_31	RPL36AP51	ribosomal protein L36a pseudogene 51 [Source:HGNC Symbol;Acc:HGNC:36632]	19465	-0.18817706406116486	-0.4286771	Yes	
+row_32	BNIP3P25	BCL2 interacting protein 3 pseudogene 25 [Source:HGNC Symbol;Acc:HGNC:49705]	19555	-0.18817706406116486	-0.42050263	Yes	
+row_33	ZNF738	zinc finger protein 738 [Source:HGNC Symbol;Acc:HGNC:32469]	19650	-0.18830576539039612	-0.41249695	Yes	
+row_34	ZNF90	zinc finger protein 90 [Source:HGNC Symbol;Acc:HGNC:13165]	19836	-0.193365216255188	-0.40739924	Yes	
+row_35	ZNF429	zinc finger protein 429 [Source:HGNC Symbol;Acc:HGNC:20817]	20547	-0.20659653842449188	-0.42003813	Yes	
+row_36	LINC03085	novel transcript	20595	-0.2084657847881317	-0.40916103	Yes	
+row_37	ZNF43	zinc finger protein 43 [Source:HGNC Symbol;Acc:HGNC:13109]	21209	-0.2246549278497696	-0.41728988	Yes	
+row_38	ZNF91	zinc finger protein 91 [Source:HGNC Symbol;Acc:HGNC:13166]	22066	-0.2432413101196289	-0.43287885	Yes	
+row_39	BNIP3P37	BCL2 interacting protein 3 pseudogene 37 [Source:HGNC Symbol;Acc:HGNC:49717]	22528	-0.25634297728538513	-0.43373662	Yes	
+row_40	BNIP3P28	BCL2 interacting protein 3 pseudogene 28 [Source:HGNC Symbol;Acc:HGNC:49708]	22644	-0.2596561014652252	-0.42218155	Yes	
+row_41	MTDHP5	metadherin pseudogene 5 [Source:HGNC Symbol;Acc:HGNC:52361]	22937	-0.268511563539505	-0.41634193	Yes	
+row_42	ZNF66	zinc finger protein 66 [Source:HGNC Symbol;Acc:HGNC:13135]	24011	-0.3058130741119385	-0.4358281	Yes	
+row_43	ZNF492	zinc finger protein 492 [Source:HGNC Symbol;Acc:HGNC:23707]	24193	-0.3133310377597809	-0.423375	Yes	
+row_44	LINC01858	long intergenic non-protein coding RNA 1858 [Source:HGNC Symbol;Acc:HGNC:52676]	24263	-0.3158412277698517	-0.4068174	Yes	
+row_45	BNIP3P16	BCL2 interacting protein 3 pseudogene 16 [Source:HGNC Symbol;Acc:HGNC:49696]	24472	-0.3234653174877167	-0.39470798	Yes	
+row_46	ZNF626	zinc finger protein 626 [Source:HGNC Symbol;Acc:HGNC:30461]	24630	-0.3299981355667114	-0.3804054	Yes	
+row_47	SNX6P1	sorting nexin 6 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:41511]	25024	-0.34571540355682373	-0.37348837	Yes	
+row_48	PCGF7P	polycomb group ring finger 7 pseudogene [Source:HGNC Symbol;Acc:HGNC:30341]	25031	-0.3458985686302185	-0.3528994	Yes	
+row_49	KRT18P40	keratin 18 pseudogene 40 [Source:HGNC Symbol;Acc:HGNC:33409]	25111	-0.34917813539505005	-0.33469006	Yes	
+row_50	ZNF431	zinc finger protein 431 [Source:HGNC Symbol;Acc:HGNC:20809]	25176	-0.3520094156265259	-0.315781	Yes	
+row_51	ZNF849P	zinc finger protein 849, pseudogene [Source:HGNC Symbol;Acc:HGNC:34389]	25430	-0.3626870810985565	-0.30290142	Yes	
+row_52	ZNF682	zinc finger protein 682 [Source:HGNC Symbol;Acc:HGNC:28857]	25432	-0.36273375153541565	-0.28112355	Yes	
+row_53	ZNF85	zinc finger protein 85 [Source:HGNC Symbol;Acc:HGNC:13160]	25770	-0.38021981716156006	-0.27015477	Yes	
+row_54	ZNF708	zinc finger protein 708 [Source:HGNC Symbol;Acc:HGNC:12945]	25802	-0.3820563554763794	-0.24827394	Yes	
+row_55	RPSA2	ribosomal protein SA 2 [Source:HGNC Symbol;Acc:HGNC:36809]	26088	-0.3987531363964081	-0.23435509	Yes	
+row_56	ZNF728	zinc finger protein 728 [Source:HGNC Symbol;Acc:HGNC:32463]	26862	-0.4570118188858032	-0.23415901	Yes	
+row_57	CCNYL6	cyclin Y like 6 (pseudogene) [Source:HGNC Symbol;Acc:HGNC:54657]	26921	-0.46129101514816284	-0.20846643	Yes	
+row_58	ZNF208	zinc finger protein 208 [Source:HGNC Symbol;Acc:HGNC:12999]	27098	-0.47828081250190735	-0.18591751	Yes	
+row_59	VN1R83P	vomeronasal 1 receptor 83 pseudogene [Source:HGNC Symbol;Acc:HGNC:37403]	27198	-0.4880005121231079	-0.16006602	Yes	
+row_60	ZNF254	zinc finger protein 254 [Source:HGNC Symbol;Acc:HGNC:13047]	27335	-0.5030987858772278	-0.13461268	Yes	
+row_61	ZNF737	zinc finger protein 737 [Source:HGNC Symbol;Acc:HGNC:32468]	27873	-0.5985705256462097	-0.11757322	Yes	
+row_62	ZNF430	zinc finger protein 430 [Source:HGNC Symbol;Acc:HGNC:20808]	28216	-0.7292099595069885	-0.08579427	Yes	
+row_63	ZNF724	zinc finger protein 724 [Source:HGNC Symbol;Acc:HGNC:32460]	28217	-0.7295840978622437	-0.041920397	Yes	
+row_64	ZNF257	zinc finger protein 257 [Source:HGNC Symbol;Acc:HGNC:13498]	28281	-0.7998275756835938	0.003953733	Yes	

@@ -1,0 +1,17 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	PTTG1	PTTG1 regulator of sister chromatid separation, securin [Source:HGNC Symbol;Acc:HGNC:9690]	1882	0.41886618733406067	0.05505305	No	
+row_1	ANAPC11	anaphase promoting complex subunit 11 [Source:HGNC Symbol;Acc:HGNC:14452]	4935	0.24101164937019348	0.017341267	No	
+row_2	ESPL1	extra spindle pole bodies like 1, separase [Source:HGNC Symbol;Acc:HGNC:16856]	8313	0.13843631744384766	-0.061545607	No	
+row_3	CDC16	cell division cycle 16 [Source:HGNC Symbol;Acc:HGNC:1720]	9086	0.10975022614002228	-0.0569482	No	
+row_4	CDC26	cell division cycle 26 [Source:HGNC Symbol;Acc:HGNC:17839]	9269	0.10464988648891449	-0.033037927	No	
+row_5	ANAPC13	anaphase promoting complex subunit 13 [Source:HGNC Symbol;Acc:HGNC:24540]	10497	0.06298605352640152	-0.0580246	No	
+row_6	CDC27	cell division cycle 27 [Source:HGNC Symbol;Acc:HGNC:1728]	10790	0.052714839577674866	-0.05303944	No	
+row_7	ANAPC2	anaphase promoting complex subunit 2 [Source:HGNC Symbol;Acc:HGNC:19989]	12556	7.047143299132586E-4	-0.1150313	No	
+row_8	ANAPC1	anaphase promoting complex subunit 1 [Source:HGNC Symbol;Acc:HGNC:19988]	16118	-0.09859858453273773	-0.2119456	No	
+row_9	ANAPC10	anaphase promoting complex subunit 10 [Source:HGNC Symbol;Acc:HGNC:24077]	16235	-0.10153190046548843	-0.18661305	No	
+row_10	RAD21	RAD21 cohesin complex component [Source:HGNC Symbol;Acc:HGNC:9811]	23477	-0.28453075885772705	-0.35932893	Yes	
+row_11	ANAPC5	anaphase promoting complex subunit 5 [Source:HGNC Symbol;Acc:HGNC:15713]	23720	-0.29363712668418884	-0.2827714	Yes	
+row_12	CDC20	cell division cycle 20 [Source:HGNC Symbol;Acc:HGNC:1723]	24935	-0.3424839973449707	-0.22631176	Yes	
+row_13	ANAPC4	anaphase promoting complex subunit 4 [Source:HGNC Symbol;Acc:HGNC:19990]	25487	-0.3654310703277588	-0.13983972	Yes	
+row_14	ANAPC7	anaphase promoting complex subunit 7 [Source:HGNC Symbol;Acc:HGNC:17380]	25651	-0.37406349182128906	-0.037193753	Yes	
+row_15	CDC23	cell division cycle 23 [Source:HGNC Symbol;Acc:HGNC:1724]	26926	-0.4616963863372803	0.05169497	Yes	

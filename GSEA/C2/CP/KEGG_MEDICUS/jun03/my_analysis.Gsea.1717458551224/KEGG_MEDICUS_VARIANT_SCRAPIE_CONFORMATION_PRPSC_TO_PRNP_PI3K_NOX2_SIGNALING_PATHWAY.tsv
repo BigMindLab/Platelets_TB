@@ -1,0 +1,16 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	NCF2	neutrophil cytosolic factor 2 [Source:HGNC Symbol;Acc:HGNC:7661]	187	0.8464646935462952	0.13626827	Yes	
+row_1	CYBB	cytochrome b-245 beta chain [Source:HGNC Symbol;Acc:HGNC:2578]	262	0.7858151793479919	0.26628256	Yes	
+row_2	NCF4	neutrophil cytosolic factor 4 [Source:HGNC Symbol;Acc:HGNC:7662]	380	0.7152554988861084	0.3828733	Yes	
+row_3	CAV2	caveolin 2 [Source:HGNC Symbol;Acc:HGNC:1528]	602	0.6365414261817932	0.48251483	Yes	
+row_4	NCF1	neutrophil cytosolic factor 1 [Source:HGNC Symbol;Acc:HGNC:7660]	763	0.5908563733100891	0.57659554	Yes	
+row_5	CAV1	caveolin 1 [Source:HGNC Symbol;Acc:HGNC:1527]	1334	0.4830877184867859	0.6380409	Yes	
+row_6	RAC2	Rac family small GTPase 2 [Source:HGNC Symbol;Acc:HGNC:9802]	1502	0.4596714377403259	0.7097349	Yes	
+row_7	PRNP	prion protein [Source:HGNC Symbol;Acc:HGNC:9449]	4744	0.2500157654285431	0.63772583	No	
+row_8	FYN	FYN proto-oncogene, Src family tyrosine kinase [Source:HGNC Symbol;Acc:HGNC:4037]	4977	0.23956803977489471	0.6699826	No	
+row_9	CYBA	cytochrome b-245 alpha chain [Source:HGNC Symbol;Acc:HGNC:2577]	6557	0.18786217272281647	0.6460483	No	
+row_10	RAC1	Rac family small GTPase 1 [Source:HGNC Symbol;Acc:HGNC:9801]	6969	0.17908506095409393	0.66178995	No	
+row_11	PIK3CB	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta [Source:HGNC Symbol;Acc:HGNC:8976]	8644	0.1260879784822464	0.6240825	No	
+row_12	PRKCD	protein kinase C delta [Source:HGNC Symbol;Acc:HGNC:9399]	11222	0.03930871933698654	0.53991	No	
+row_13	PIK3CD	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta [Source:HGNC Symbol;Acc:HGNC:8977]	15712	-0.08801501989364624	0.39658397	No	
+row_14	PIK3CA	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha [Source:HGNC Symbol;Acc:HGNC:8975]	23813	-0.2975965142250061	0.16138694	No	

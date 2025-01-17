@@ -1,0 +1,102 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	F2RL1	F2R like trypsin receptor 1 [Source:HGNC Symbol;Acc:HGNC:3538]	185	0.8471583127975464	0.025082089	No	
+row_1	HMGB1P35	high mobility group box 1 pseudogene 35 [Source:HGNC Symbol;Acc:HGNC:39175]	1052	0.5304872989654541	0.014274641	No	
+row_2	RN7SL814P	RNA, 7SL, cytoplasmic 814, pseudogene [Source:HGNC Symbol;Acc:HGNC:46830]	1586	0.44948267936706543	0.012213331	No	
+row_3	TNPO1	transportin 1 [Source:HGNC Symbol;Acc:HGNC:6401]	1624	0.44477689266204834	0.02750721	No	
+row_4	CERT1	ceramide transporter 1 [Source:HGNC Symbol;Acc:HGNC:2205]	1691	0.43811002373695374	0.041527256	No	
+row_5	IQGAP2	IQ motif containing GTPase activating protein 2 [Source:HGNC Symbol;Acc:HGNC:6111]	1753	0.431888610124588	0.055491805	No	
+row_6	NAIP	NLR family apoptosis inhibitory protein [Source:HGNC Symbol;Acc:HGNC:7634]	1759	0.4311292767524719	0.0714073	No	
+row_7	SERF1A	small EDRK-rich factor 1A [Source:HGNC Symbol;Acc:HGNC:10755]	2185	0.39282679557800293	0.07104847	No	
+row_8	LINC02219	long intergenic non-protein coding RNA 2219 [Source:HGNC Symbol;Acc:HGNC:53086]	2667	0.35447683930397034	0.06727891	No	
+row_9	POC5	POC5 centriolar protein [Source:HGNC Symbol;Acc:HGNC:26658]	3114	0.32470032572746277	0.06363497	No	
+row_10	FUNDC2P1	FUN14 domain containing 2 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:17253]	4132	0.2766309976577759	0.038015142	No	
+row_11	MARVELD2	MARVEL domain containing 2 [Source:HGNC Symbol;Acc:HGNC:26401]	4214	0.2720091640949249	0.045305185	No	
+row_12	ENC1	ectodermal-neural cortex 1 [Source:HGNC Symbol;Acc:HGNC:3345]	4448	0.2617800831794739	0.046841066	No	
+row_13	SNORA47	small nucleolar RNA, H/ACA box 47 [Source:HGNC Symbol;Acc:HGNC:32640]	4607	0.25597596168518066	0.050811138	No	
+row_14	CRHBP	corticotropin releasing hormone binding protein [Source:HGNC Symbol;Acc:HGNC:2356]	4835	0.24669983983039856	0.051996205	No	
+row_15	S100Z	S100 calcium binding protein Z [Source:HGNC Symbol;Acc:HGNC:30367]	4907	0.24299858510494232	0.05855685	No	
+row_16	CDH12P3	cadherin 12 pseudogene 3 [Source:HGNC Symbol;Acc:HGNC:37699]	5095	0.23634111881256104	0.06076905	No	
+row_17	HMGCR	3-hydroxy-3-methylglutaryl-CoA reductase [Source:HGNC Symbol;Acc:HGNC:5006]	5160	0.23365220427513123	0.06722825	No	
+row_18	PDE8B	phosphodiesterase 8B [Source:HGNC Symbol;Acc:HGNC:8794]	5590	0.21917808055877686	0.06024647	No	
+row_19	RPS2P24	ribosomal protein S2 pseudogene 24 [Source:HGNC Symbol;Acc:HGNC:35887]	5680	0.214752197265625	0.0651166	No	
+row_20	GUSBP3	GUSB pseudogene 3 [Source:HGNC Symbol;Acc:HGNC:37301]	6056	0.20193856954574585	0.059399944	No	
+row_21	CHP1P1	CHP1 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:54895]	6718	0.18431447446346283	0.04291695	No	
+row_22	BTF3-DT	BTF3 divergent transcript [Source:HGNC Symbol;Acc:HGNC:55211]	7007	0.1776139736175537	0.039367326	No	
+row_23	HMGN2P4	high mobility group nucleosomal binding domain 2 pseudogene 4 [Source:HGNC Symbol;Acc:HGNC:33567]	7022	0.17706076800823212	0.045481425	No	
+row_24	HEXB	hexosaminidase subunit beta [Source:HGNC Symbol;Acc:HGNC:4879]	7184	0.17000068724155426	0.04613637	No	
+row_25	LINC02197	long intergenic non-protein coding RNA 2197 [Source:HGNC Symbol;Acc:HGNC:53063]	7198	0.16938751935958862	0.05199941	No	
+row_26	SLC30A5	solute carrier family 30 member 5 [Source:HGNC Symbol;Acc:HGNC:19089]	7203	0.16924114525318146	0.058175083	No	
+row_27	ARPC1AP3	ARPC1A pseudogene 3 [Source:HGNC Symbol;Acc:HGNC:56496]	7357	0.16913241147994995	0.059080377	No	
+row_28	EEF1B2P2	eukaryotic translation elongation factor 1 beta 2 pseudogene 2 [Source:HGNC Symbol;Acc:HGNC:3209]	7619	0.1625809520483017	0.055923935	No	
+row_29	CDH12P2	cadherin 12 pseudogene 2 [Source:HGNC Symbol;Acc:HGNC:1752]	7726	0.1625809520483017	0.05824588	No	
+row_30	NAIPP2	NAIP pseudogene 2 [Source:HGNC Symbol;Acc:HGNC:16042]	7923	0.15448230504989624	0.057084534	No	
+row_31	GUSBP13	GUSB pseudogene 13 [Source:HGNC Symbol;Acc:HGNC:54495]	7971	0.15244954824447632	0.061113637	No	
+row_32	BIN2P2	bridging integrator 2 pseudogene 2 [Source:HGNC Symbol;Acc:HGNC:43661]	8318	0.1382962316274643	0.054046474	No	
+row_33	NAIPP3	NAIP pseudogene 3 [Source:HGNC Symbol;Acc:HGNC:54493]	8535	0.13032199442386627	0.05127644	No	
+row_34	CHCHD2P2	coiled-coil-helix-coiled-coil-helix domain containing 2 pseudogene 2 [Source:HGNC Symbol;Acc:HGNC:39586]	8996	0.112633615732193	0.039222136	No	
+row_35	BTF3	basic transcription factor 3 [Source:HGNC Symbol;Acc:HGNC:1125]	9227	0.10608328133821487	0.035052553	No	
+row_36	TMEM171	transmembrane protein 171 [Source:HGNC Symbol;Acc:HGNC:27031]	9378	0.10044552385807037	0.033500094	No	
+row_37	NSA2	NSA2 ribosome biogenesis factor [Source:HGNC Symbol;Acc:HGNC:30728]	9545	0.09456685185432434	0.031162694	No	
+row_38	ANKRA2	ankyrin repeat family A member 2 [Source:HGNC Symbol;Acc:HGNC:13208]	9945	0.08097358047962189	0.020082666	No	
+row_39	MAP1B	microtubule associated protein 1B [Source:HGNC Symbol;Acc:HGNC:6836]	11096	0.04350144416093826	-0.018939706	No	
+row_40	CCNB1	cyclin B1 [Source:HGNC Symbol;Acc:HGNC:1579]	11169	0.041073739528656006	-0.019951398	No	
+row_41	CDK7	cyclin dependent kinase 7 [Source:HGNC Symbol;Acc:HGNC:1778]	11443	0.03292027488350868	-0.028371653	No	
+row_42	UTP15	UTP15 small subunit processome component [Source:HGNC Symbol;Acc:HGNC:25758]	11697	0.025637943297624588	-0.03635684	No	
+row_43	PTCD2	pentatricopeptide repeat domain 2 [Source:HGNC Symbol;Acc:HGNC:25734]	11884	0.020123185589909554	-0.04217979	No	
+row_44	CCDC125	coiled-coil domain containing 125 [Source:HGNC Symbol;Acc:HGNC:28924]	12054	0.01532488688826561	-0.047580987	No	
+row_45	GTF2H2B	general transcription factor IIH subunit 2B (pseudogene) [Source:HGNC Symbol;Acc:HGNC:31393]	12528	0.001718016341328621	-0.06423478	No	
+row_46	ZNF366	zinc finger protein 366 [Source:HGNC Symbol;Acc:HGNC:18316]	12600	-4.965257248841226E-4	-0.06672569	No	
+row_47	CENPH	centromere protein H [Source:HGNC Symbol;Acc:HGNC:17268]	13738	-0.03257739171385765	-0.105696335	No	
+row_48	AGGF1	angiogenic factor with G-patch and FHA domains 1 [Source:HGNC Symbol;Acc:HGNC:24684]	13980	-0.03929227218031883	-0.11274774	No	
+row_49	ZBED3-AS1	ZBED3 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:44188]	14336	-0.048510730266571045	-0.123484306	No	
+row_50	SMN2	survival of motor neuron 2, centromeric [Source:HGNC Symbol;Acc:HGNC:11118]	14613	-0.05660528317093849	-0.13112654	No	
+row_51	OCLN	occludin [Source:HGNC Symbol;Acc:HGNC:8104]	14662	-0.057912539690732956	-0.13066144	No	
+row_52	GCNT4	glucosaminyl (N-acetyl) transferase 4 [Source:HGNC Symbol;Acc:HGNC:17973]	15175	-0.0724106878042221	-0.14605501	No	
+row_53	LINC02242	long intergenic non-protein coding RNA 2242 [Source:HGNC Symbol;Acc:HGNC:53127]	15986	-0.09517355263233185	-0.17113157	No	
+row_54	FCHO2	FCH and mu domain containing endocytic adaptor 2 [Source:HGNC Symbol;Acc:HGNC:25180]	16018	-0.095914326608181	-0.16864717	No	
+row_55	F2R	coagulation factor II thrombin receptor [Source:HGNC Symbol;Acc:HGNC:3537]	16123	-0.09872935712337494	-0.16863786	No	
+row_56	RPL7P23	ribosomal protein L7 pseudogene 23 [Source:HGNC Symbol;Acc:HGNC:35658]	16322	-0.10375512391328812	-0.17176332	No	
+row_57	MCCC2	methylcrotonyl-CoA carboxylase subunit 2 [Source:HGNC Symbol;Acc:HGNC:6937]	18979	-0.17964352667331696	-0.2589328	No	
+row_58	CTDNEP1P2	CTDNEP1 pseudogene 2 [Source:HGNC Symbol;Acc:HGNC:56482]	19021	-0.18126773834228516	-0.25361598	No	
+row_59	ALDH7A1P1	aldehyde dehydrogenase 7 family member A1 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:878]	19170	-0.1824808269739151	-0.2520357	No	
+row_60	FAM169A	family with sequence similarity 169 member A [Source:HGNC Symbol;Acc:HGNC:29138]	19463	-0.1881578415632248	-0.25533316	No	
+row_61	YBX1P5	Y-box binding protein 1 pseudogene 5 [Source:HGNC Symbol;Acc:HGNC:42426]	19594	-0.18817706406116486	-0.2529041	No	
+row_62	RNU6ATAC36P	RNA, U6atac small nuclear 36, pseudogene [Source:HGNC Symbol;Acc:HGNC:46935]	20018	-0.1953880339860916	-0.26056176	No	
+row_63	RAD17	RAD17 checkpoint clamp loader component [Source:HGNC Symbol;Acc:HGNC:9807]	20322	-0.19976501166820526	-0.26381475	No	
+row_64	GUSBP15	GUSB pseudogene 15 [Source:HGNC Symbol;Acc:HGNC:54497]	20434	-0.20308835804462433	-0.26015756	No	
+row_65	SUMO2P5	SUMO2 pseudogene 5 [Source:HGNC Symbol;Acc:HGNC:39015]	20750	-0.21234279870986938	-0.2633652	No	
+row_66	SUMO2P4	SUMO2 pseudogene 4 [Source:HGNC Symbol;Acc:HGNC:39014]	20987	-0.21817263960838318	-0.26356304	No	
+row_67	ENSG00000249713	novel transcript	21233	-0.22479645907878876	-0.26383173	No	
+row_68	GTF2H2	general transcription factor IIH subunit 2 [Source:HGNC Symbol;Acc:HGNC:4656]	21430	-0.22769315540790558	-0.26226044	No	
+row_69	ZBED3	zinc finger BED-type containing 3 [Source:HGNC Symbol;Acc:HGNC:20711]	21659	-0.23452088236808777	-0.2615653	No	
+row_70	RPL7P22	ribosomal protein L7 pseudogene 22 [Source:HGNC Symbol;Acc:HGNC:35802]	21736	-0.23584827780723572	-0.25544825	No	
+row_71	ANKDD1B	ankyrin repeat and death domain containing 1B [Source:HGNC Symbol;Acc:HGNC:32525]	21869	-0.23766890168190002	-0.25124255	No	
+row_72	RPL27AP5	ribosomal protein L27a pseudogene 5 [Source:HGNC Symbol;Acc:HGNC:36420]	22395	-0.25183284282684326	-0.26039854	No	
+row_73	OCLNP1	OCLN pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:53916]	22971	-0.2689151167869568	-0.27068412	Yes	
+row_74	SV2C	synaptic vesicle glycoprotein 2C [Source:HGNC Symbol;Acc:HGNC:30670]	23149	-0.27420052886009216	-0.26670536	Yes	
+row_75	FCHO2-DT	FCHO2 divergent transcript [Source:HGNC Symbol;Acc:HGNC:55232]	23328	-0.2795936167240143	-0.26256064	Yes	
+row_76	ARHGEF28	Rho guanine nucleotide exchange factor 28 [Source:HGNC Symbol;Acc:HGNC:30322]	23392	-0.28169289231300354	-0.25427294	Yes	
+row_77	FOXD1	forkhead box D1 [Source:HGNC Symbol;Acc:HGNC:3802]	24089	-0.3088393211364746	-0.267345	Yes	
+row_78	GFM2	GTP dependent ribosome recycling factor mitochondrial 2 [Source:HGNC Symbol;Acc:HGNC:29682]	24200	-0.3135303258895874	-0.25953013	Yes	
+row_79	GUSBP16	GUSB pseudogene 16 [Source:HGNC Symbol;Acc:HGNC:54498]	24406	-0.32126155495643616	-0.25478444	Yes	
+row_80	SERF1B	small EDRK-rich factor 1B [Source:HGNC Symbol;Acc:HGNC:10756]	24440	-0.3227003514766693	-0.24390577	Yes	
+row_81	RAP1BL	RAP1B like (pseudogene) [Source:HGNC Symbol;Acc:HGNC:55079]	24686	-0.3325669765472412	-0.24015184	Yes	
+row_82	TAF9	TATA-box binding protein associated factor 9 [Source:HGNC Symbol;Acc:HGNC:11542]	25017	-0.34546539187431335	-0.23892075	Yes	
+row_83	SMN1	survival of motor neuron 1, telomeric [Source:HGNC Symbol;Acc:HGNC:11117]	25186	-0.35235002636909485	-0.23170689	Yes	
+row_84	F2RL2	coagulation factor II thrombin receptor like 2 [Source:HGNC Symbol;Acc:HGNC:3539]	25254	-0.35464975237846375	-0.2208374	Yes	
+row_85	AK6	adenylate kinase 6 [Source:HGNC Symbol;Acc:HGNC:49151]	25594	-0.37120321393013	-0.21896373	Yes	
+row_86	BDP1	B double prime 1, subunit of RNA polymerase III transcription initiation factor IIIB [Source:HGNC Symbol;Acc:HGNC:13652]	26000	-0.3940044641494751	-0.21857172	Yes	
+row_87	CFL1P5	cofilin 1 pseudogene 5 [Source:HGNC Symbol;Acc:HGNC:1877]	26017	-0.3947536051273346	-0.20440276	Yes	
+row_88	POLK	DNA polymerase kappa [Source:HGNC Symbol;Acc:HGNC:9183]	26152	-0.40302029252052307	-0.1940959	Yes	
+row_89	PIK3R1	phosphoinositide-3-kinase regulatory subunit 1 [Source:HGNC Symbol;Acc:HGNC:8979]	26178	-0.4049836993217468	-0.17986318	Yes	
+row_90	TNPO1-DT	TNPO1 divergent transcript [Source:HGNC Symbol;Acc:HGNC:40328]	26301	-0.41284000873565674	-0.16876565	Yes	
+row_91	RNU6-658P	RNA, U6 small nuclear 658, pseudogene [Source:HGNC Symbol;Acc:HGNC:47621]	26337	-0.41539016366004944	-0.15449797	Yes	
+row_92	RNU6-680P	RNA, U6 small nuclear 680, pseudogene [Source:HGNC Symbol;Acc:HGNC:47643]	26555	-0.43249696493148804	-0.14602444	Yes	
+row_93	GUSBP9	GUSB pseudogene 9 [Source:HGNC Symbol;Acc:HGNC:42323]	27327	-0.5014124512672424	-0.1545594	Yes	
+row_94	RN7SL153P	RNA, 7SL, cytoplasmic 153, pseudogene [Source:HGNC Symbol;Acc:HGNC:46169]	27479	-0.522867739200592	-0.14037998	Yes	
+row_95	GTF2H2C	GTF2H2 family member C [Source:HGNC Symbol;Acc:HGNC:31394]	28077	-0.6576463580131531	-0.13693348	Yes	
+row_96	NAIPP4	NAIP pseudogene 4 [Source:HGNC Symbol;Acc:HGNC:54494]	28094	-0.6645548939704895	-0.11269399	Yes	
+row_97	GUSBP14	GUSB pseudogene 14 [Source:HGNC Symbol;Acc:HGNC:54496]	28173	-0.7022073268890381	-0.08924045	Yes	
+row_98	FAM169A-AS1	FAM169A antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:56226]	28201	-0.7195065021514893	-0.06333864	Yes	
+row_99	PMCHL2	pro-melanin concentrating hormone like 2 (pseudogene) [Source:HGNC Symbol;Acc:HGNC:9111]	28205	-0.7212876081466675	-0.036522083	Yes	
+row_100	ANKRD31	ankyrin repeat domain 31 [Source:HGNC Symbol;Acc:HGNC:26853]	28389	-1.1555509567260742	1.4167822E-4	Yes	

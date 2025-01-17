@@ -1,0 +1,21 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	ACR	acrosin [Source:HGNC Symbol;Acc:HGNC:126]	2201	0.39121749997138977	0.0108837485	No	
+row_1	ZP1	zona pellucida glycoprotein 1 [Source:HGNC Symbol;Acc:HGNC:13187]	3096	0.32571932673454285	0.053021576	No	
+row_2	ADAM30	ADAM metallopeptidase domain 30 [Source:HGNC Symbol;Acc:HGNC:208]	6731	0.18431447446346283	-0.033379693	No	
+row_3	CATSPERD	cation channel sperm associated auxiliary subunit delta [Source:HGNC Symbol;Acc:HGNC:28598]	6757	0.18425166606903076	0.0073987516	No	
+row_4	ZP3	zona pellucida glycoprotein 3 [Source:HGNC Symbol;Acc:HGNC:13189]	8154	0.1449107825756073	-0.009036713	No	
+row_5	IZUMO4	IZUMO family member 4 [Source:HGNC Symbol;Acc:HGNC:26950]	12334	0.006584179122000933	-0.15483075	No	
+row_6	B4GALT1	beta-1,4-galactosyltransferase 1 [Source:HGNC Symbol;Acc:HGNC:924]	12596	-3.706404531840235E-4	-0.16394551	No	
+row_7	ADAM21	ADAM metallopeptidase domain 21 [Source:HGNC Symbol;Acc:HGNC:200]	13742	-0.03265003487467766	-0.19691715	No	
+row_8	CATSPER1	cation channel sperm associated 1 [Source:HGNC Symbol;Acc:HGNC:17116]	14176	-0.04389757663011551	-0.2022523	No	
+row_9	IZUMO2	IZUMO family member 2 [Source:HGNC Symbol;Acc:HGNC:28518]	14647	-0.057652488350868225	-0.20578146	No	
+row_10	CATSPER3	cation channel sperm associated 3 [Source:HGNC Symbol;Acc:HGNC:20819]	15703	-0.08773604035377502	-0.22312616	No	
+row_11	OVGP1	oviductal glycoprotein 1 [Source:HGNC Symbol;Acc:HGNC:8524]	18076	-0.15260273218154907	-0.27222016	No	
+row_12	CD9	CD9 molecule [Source:HGNC Symbol;Acc:HGNC:1709]	23230	-0.27676916122436523	-0.39125225	Yes	
+row_13	CATSPERG	cation channel sperm associated auxiliary subunit gamma [Source:HGNC Symbol;Acc:HGNC:25243]	24634	-0.3302192687988281	-0.36603594	Yes	
+row_14	ZP2	zona pellucida glycoprotein 2 [Source:HGNC Symbol;Acc:HGNC:13188]	24882	-0.34015217423439026	-0.29783225	Yes	
+row_15	CATSPERB	cation channel sperm associated auxiliary subunit beta [Source:HGNC Symbol;Acc:HGNC:20500]	25155	-0.350922167301178	-0.22807454	Yes	
+row_16	CATSPER2	cation channel sperm associated 2 [Source:HGNC Symbol;Acc:HGNC:18810]	25161	-0.351240336894989	-0.14883488	Yes	
+row_17	HVCN1	hydrogen voltage gated channel 1 [Source:HGNC Symbol;Acc:HGNC:28240]	25311	-0.35667476058006287	-0.07344156	Yes	
+row_18	ADAM20	ADAM metallopeptidase domain 20 [Source:HGNC Symbol;Acc:HGNC:199]	25939	-0.39061689376831055	-0.00722028	Yes	
+row_19	IZUMO1	izumo sperm-oocyte fusion 1 [Source:HGNC Symbol;Acc:HGNC:28539]	26318	-0.4142955243587494	0.0731304	Yes	

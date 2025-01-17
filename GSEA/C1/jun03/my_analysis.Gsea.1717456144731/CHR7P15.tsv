@@ -1,0 +1,74 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	CREB5	cAMP responsive element binding protein 5 [Source:HGNC Symbol;Acc:HGNC:16844]	418	0.702613890171051	0.022038668	No	
+row_1	HOXA5	homeobox A5 [Source:HGNC Symbol;Acc:HGNC:5106]	1137	0.5139384269714355	0.023602981	No	
+row_2	LINC03007	long intergenic non-protein coding RNA 3007 [Source:HGNC Symbol;Acc:HGNC:56132]	1193	0.5049332976341248	0.04810586	No	
+row_3	DNAH11	dynein axonemal heavy chain 11 [Source:HGNC Symbol;Acc:HGNC:2942]	2498	0.3663173317909241	0.021247443	No	
+row_4	HOXA9	homeobox A9 [Source:HGNC Symbol;Acc:HGNC:5109]	2827	0.3422619700431824	0.027591238	No	
+row_5	PALS2	protein associated with LIN7 2, MAGUK p55 family member [Source:HGNC Symbol;Acc:HGNC:18167]	2851	0.33999407291412354	0.044585645	No	
+row_6	HOXA4	homeobox A4 [Source:HGNC Symbol;Acc:HGNC:5105]	2910	0.33680036664009094	0.06017696	No	
+row_7	SNX10	sorting nexin 10 [Source:HGNC Symbol;Acc:HGNC:14974]	3011	0.330776184797287	0.073969774	No	
+row_8	RPL12P10	ribosomal protein L12 pseudogene 10 [Source:HGNC Symbol;Acc:HGNC:22583]	3565	0.303580105304718	0.07034304	No	
+row_9	STK31	serine/threonine kinase 31 [Source:HGNC Symbol;Acc:HGNC:11407]	3774	0.2927447557449341	0.078330606	No	
+row_10	PSMC1P2	proteasome 26S subunit, ATPase 1 pseudogene 2 [Source:HGNC Symbol;Acc:HGNC:39777]	4567	0.2575828433036804	0.063855894	No	
+row_11	EIF4HP1	eukaryotic translation initiation factor 4H pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:49035]	4832	0.24680514633655548	0.06746013	No	
+row_12	TPM3P4	tropomyosin 3 pseudogene 4 [Source:HGNC Symbol;Acc:HGNC:39167]	5333	0.22832702100276947	0.061763566	No	
+row_13	MALSU1	mitochondrial assembly of ribosomal large subunit 1 [Source:HGNC Symbol;Acc:HGNC:21721]	5585	0.21937711536884308	0.06439034	No	
+row_14	PCMTD1P3	protein-L-isoaspartate (D-aspartate) O-methyltransferase domain containing 1 pseudogene 3 [Source:HGNC Symbol;Acc:HGNC:38806]	6929	0.179652601480484	0.02637865	No	
+row_15	STEAP1B-AS1	STEAP1B antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:56137]	8299	0.1390461027622223	-0.0146777695	No	
+row_16	HOXA10-AS	HOXA10 antisense RNA [Source:HGNC Symbol;Acc:HGNC:40281]	8427	0.134661003947258	-0.012109467	No	
+row_17	TAX1BP1	Tax1 binding protein 1 [Source:HGNC Symbol;Acc:HGNC:11575]	8712	0.12329687923192978	-0.015679928	No	
+row_18	FCF1P1	FCF1 pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:44613]	8896	0.11658536642789841	-0.016035631	No	
+row_19	HOTAIRM1	HOXA transcript antisense RNA, myeloid-specific 1 [Source:HGNC Symbol;Acc:HGNC:37117]	8949	0.11420268565416336	-0.011890582	No	
+row_20	NFE2L3	NFE2 like bZIP transcription factor 3 [Source:HGNC Symbol;Acc:HGNC:7783]	9375	0.1004994586110115	-0.021633651	No	
+row_21	RPL7AP41	ribosomal protein L7a pseudogene 41 [Source:HGNC Symbol;Acc:HGNC:36403]	9543	0.09463077038526535	-0.022574233	No	
+row_22	GPNMB	glycoprotein nmb [Source:HGNC Symbol;Acc:HGNC:4462]	9579	0.09314217418432236	-0.018931923	No	
+row_23	IL6	interleukin 6 [Source:HGNC Symbol;Acc:HGNC:6018]	9832	0.08523844182491302	-0.023365717	No	
+row_24	SKAP2	src kinase associated phosphoprotein 2 [Source:HGNC Symbol;Acc:HGNC:15687]	10602	0.05942694470286369	-0.047406342	No	
+row_25	KLHL7	kelch like family member 7 [Source:HGNC Symbol;Acc:HGNC:15646]	11184	0.040592260658741	-0.06579521	No	
+row_26	GSDME	gasdermin E [Source:HGNC Symbol;Acc:HGNC:2810]	11811	0.0220950897783041	-0.08674177	No	
+row_27	HNRNPA2B1	heterogeneous nuclear ribonucleoprotein A2/B1 [Source:HGNC Symbol;Acc:HGNC:5033]	12726	-0.004179575014859438	-0.11879574	No	
+row_28	SNHG26	small nucleolar RNA host gene 26 [Source:HGNC Symbol;Acc:HGNC:53131]	13859	-0.03573739528656006	-0.1568944	No	
+row_29	C7orf31	chromosome 7 open reading frame 31 [Source:HGNC Symbol;Acc:HGNC:21722]	14045	-0.040929485112428665	-0.16128306	No	
+row_30	JAZF1-AS1	JAZF1 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:41218]	14212	-0.04481206834316254	-0.16479748	No	
+row_31	KLHL7-DT	KLHL7 divergent transcript [Source:HGNC Symbol;Acc:HGNC:43431]	15719	-0.08811911940574646	-0.2133585	No	
+row_32	HOXA3	homeobox A3 [Source:HGNC Symbol;Acc:HGNC:5104]	16020	-0.09593948721885681	-0.21892671	No	
+row_33	SNRPCP19	small nuclear ribonucleoprotein polypeptide C pseudogene 19 [Source:HGNC Symbol;Acc:HGNC:49834]	16207	-0.10091806203126907	-0.22020888	No	
+row_34	LINC02981	long intergenic non-protein coding RNA 2981 [Source:HGNC Symbol;Acc:HGNC:56055]	16306	-0.1032973974943161	-0.21825922	No	
+row_35	KIAA0087	KIAA0087 lncRNA [Source:HGNC Symbol;Acc:HGNC:22191]	16527	-0.1094275414943695	-0.22029625	No	
+row_36	EEF1A1P6	eukaryotic translation elongation factor 1 alpha 1 pseudogene 6 [Source:HGNC Symbol;Acc:HGNC:3201]	16607	-0.11179526150226593	-0.21723063	No	
+row_37	FAM221A	family with sequence similarity 221 member A [Source:HGNC Symbol;Acc:HGNC:27977]	16868	-0.11850590258836746	-0.22020459	No	
+row_38	OSBPL3	oxysterol binding protein like 3 [Source:HGNC Symbol;Acc:HGNC:16370]	16893	-0.11910437047481537	-0.21481416	No	
+row_39	RAPGEF5	Rap guanine nucleotide exchange factor 5 [Source:HGNC Symbol;Acc:HGNC:16862]	17253	-0.1299416571855545	-0.22068483	No	
+row_40	RPS2P32	ribosomal protein S2 pseudogene 32 [Source:HGNC Symbol;Acc:HGNC:30518]	17465	-0.13522957265377045	-0.22105274	No	
+row_41	TOMM7	translocase of outer mitochondrial membrane 7 [Source:HGNC Symbol;Acc:HGNC:21648]	17555	-0.13739050924777985	-0.21699972	No	
+row_42	SNX10-AS1	SNX10 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:55845]	18074	-0.15252770483493805	-0.2273017	No	
+row_43	LINC02860	long intergenic non-protein coding RNA 2860 [Source:HGNC Symbol;Acc:HGNC:22364]	19120	-0.1824808269739151	-0.25464302	No	
+row_44	HYCC1	hyccin PI4KA lipid kinase complex subunit 1 [Source:HGNC Symbol;Acc:HGNC:24587]	19813	-0.1928245723247528	-0.2689784	No	
+row_45	AK3P3	AK3 pseudogene 3 [Source:HGNC Symbol;Acc:HGNC:39062]	20303	-0.19889028370380402	-0.27582824	No	
+row_46	CDCA7L	cell division cycle associated 7 like [Source:HGNC Symbol;Acc:HGNC:30777]	20385	-0.20162642002105713	-0.2681285	No	
+row_47	TPT1P7	TPT1 pseudogene 7 [Source:HGNC Symbol;Acc:HGNC:49300]	20790	-0.21234279870986938	-0.2712725	No	
+row_48	JAZF1	JAZF zinc finger 1 [Source:HGNC Symbol;Acc:HGNC:28917]	20963	-0.21772342920303345	-0.2659429	No	
+row_49	MIR1183	microRNA 1183 [Source:HGNC Symbol;Acc:HGNC:35264]	21249	-0.22479645907878876	-0.2642328	No	
+row_50	HOTTIP	HOXA distal transcript antisense RNA [Source:HGNC Symbol;Acc:HGNC:37461]	21315	-0.22479645907878876	-0.25475466	No	
+row_51	NUP42	nucleoporin 42 [Source:HGNC Symbol;Acc:HGNC:17010]	21672	-0.23491449654102325	-0.25502163	No	
+row_52	HOXA2	homeobox A2 [Source:HGNC Symbol;Acc:HGNC:5103]	22910	-0.26743781566619873	-0.28469294	No	
+row_53	HOXA-AS3	HOXA cluster antisense RNA 3 [Source:HGNC Symbol;Acc:HGNC:43748]	22956	-0.268511563539505	-0.2722191	No	
+row_54	SP4	Sp4 transcription factor [Source:HGNC Symbol;Acc:HGNC:11209]	23069	-0.27157244086265564	-0.26195067	No	
+row_55	HOXA7	homeobox A7 [Source:HGNC Symbol;Acc:HGNC:5108]	24767	-0.3362434208393097	-0.3042608	Yes	
+row_56	CLK2P1	CDC like kinase 2, pseudogene 1 [Source:HGNC Symbol;Acc:HGNC:2070]	24857	-0.33919644355773926	-0.28963858	Yes	
+row_57	CCDC126	coiled-coil domain containing 126 [Source:HGNC Symbol;Acc:HGNC:22398]	25047	-0.34627920389175415	-0.27817637	Yes	
+row_58	IGF2BP3	insulin like growth factor 2 mRNA binding protein 3 [Source:HGNC Symbol;Acc:HGNC:28868]	26084	-0.39860808849334717	-0.29388067	Yes	
+row_59	HOXA6	homeobox A6 [Source:HGNC Symbol;Acc:HGNC:5107]	26098	-0.3992860019207001	-0.27342787	Yes	
+row_60	CYCS	cytochrome c, somatic [Source:HGNC Symbol;Acc:HGNC:19986]	26369	-0.41844063997268677	-0.2610464	Yes	
+row_61	CBX3	chromobox 3 [Source:HGNC Symbol;Acc:HGNC:1553]	26487	-0.4265173375606537	-0.24283962	Yes	
+row_62	TRA2A	transformer 2 alpha homolog [Source:HGNC Symbol;Acc:HGNC:16645]	26494	-0.42712271213531494	-0.22068176	Yes	
+row_63	RNU6-979P	RNA, U6 small nuclear 979, pseudogene [Source:HGNC Symbol;Acc:HGNC:47942]	26792	-0.4510202705860138	-0.20754737	Yes	
+row_64	HOXA10	homeobox A10 [Source:HGNC Symbol;Acc:HGNC:5100]	26959	-0.4649670422077179	-0.18905699	Yes	
+row_65	SNORD93	small nucleolar RNA, C/D box 93 [Source:HGNC Symbol;Acc:HGNC:32755]	27082	-0.477082759141922	-0.16837847	Yes	
+row_66	HOXA-AS2	HOXA cluster antisense RNA 2 [Source:HGNC Symbol;Acc:HGNC:43745]	27117	-0.4807998538017273	-0.14439803	Yes	
+row_67	HIBADH	3-hydroxyisobutyrate dehydrogenase [Source:HGNC Symbol;Acc:HGNC:4907]	27263	-0.49440789222717285	-0.12362426	Yes	
+row_68	HOXA11-AS	HOXA11 antisense RNA [Source:HGNC Symbol;Acc:HGNC:24957]	27296	-0.49721112847328186	-0.098713696	Yes	
+row_69	TAX1BP1-AS1	TAX1BP1 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:40576]	27388	-0.5086185932159424	-0.07528895	Yes	
+row_70	IL6-AS1	IL6 antisense RNA 1 [Source:HGNC Symbol;Acc:HGNC:40301]	27896	-0.6043398380279541	-0.061539736	Yes	
+row_71	HOXA1	homeobox A1 [Source:HGNC Symbol;Acc:HGNC:5099]	28174	-0.702375054359436	-0.034534935	Yes	
+row_72	STEAP1B	STEAP family member 1B [Source:HGNC Symbol;Acc:HGNC:41907]	28287	-0.8063734769821167	0.0037426432	Yes	

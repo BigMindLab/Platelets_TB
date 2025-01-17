@@ -1,0 +1,18 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	MITF	melanocyte inducing transcription factor [Source:HGNC Symbol;Acc:HGNC:7105]	3353	0.31433093547821045	-0.030582285	No	
+row_1	UBE2I	ubiquitin conjugating enzyme E2 I [Source:HGNC Symbol;Acc:HGNC:12485]	8350	0.13743603229522705	-0.16834885	No	
+row_2	PIAS4	protein inhibitor of activated STAT 4 [Source:HGNC Symbol;Acc:HGNC:17002]	11520	0.03077285923063755	-0.27145007	No	
+row_3	SP3	Sp3 transcription factor [Source:HGNC Symbol;Acc:HGNC:11208]	11667	0.02649509161710739	-0.26921317	No	
+row_4	TP53	tumor protein p53 [Source:HGNC Symbol;Acc:HGNC:11998]	14233	-0.045376408845186234	-0.3469608	No	
+row_5	TP53BP1	tumor protein p53 binding protein 1 [Source:HGNC Symbol;Acc:HGNC:11999]	14685	-0.05857176333665848	-0.3465351	No	
+row_6	TFAP2A	transcription factor AP-2 alpha [Source:HGNC Symbol;Acc:HGNC:11742]	15838	-0.09117928147315979	-0.3617276	No	
+row_7	PIAS3	protein inhibitor of activated STAT 3 [Source:HGNC Symbol;Acc:HGNC:16861]	16387	-0.10558458417654037	-0.35162172	No	
+row_8	SUMO1	small ubiquitin like modifier 1 [Source:HGNC Symbol;Acc:HGNC:12502]	16729	-0.11512159556150436	-0.3315641	No	
+row_9	SUMO3	small ubiquitin like modifier 3 [Source:HGNC Symbol;Acc:HGNC:11124]	16904	-0.1196063682436943	-0.3043719	No	
+row_10	MDM2	MDM2 proto-oncogene [Source:HGNC Symbol;Acc:HGNC:6973]	17738	-0.14313460886478424	-0.29384744	No	
+row_11	CDKN2A	cyclin dependent kinase inhibitor 2A [Source:HGNC Symbol;Acc:HGNC:1787]	23476	-0.28448447585105896	-0.41675705	Yes	
+row_12	PIAS2	protein inhibitor of activated STAT 2 [Source:HGNC Symbol;Acc:HGNC:17311]	24514	-0.3254357576370239	-0.36262998	Yes	
+row_13	HIC1	HIC ZBTB transcriptional repressor 1 [Source:HGNC Symbol;Acc:HGNC:4909]	26100	-0.39931100606918335	-0.30723172	Yes	
+row_14	PIAS1	protein inhibitor of activated STAT 1 [Source:HGNC Symbol;Acc:HGNC:2752]	26211	-0.4066829979419708	-0.19780079	Yes	
+row_15	SUMO2	small ubiquitin like modifier 2 [Source:HGNC Symbol;Acc:HGNC:11125]	26847	-0.4555731415748596	-0.09324932	Yes	
+row_16	MTA1	metastasis associated 1 [Source:HGNC Symbol;Acc:HGNC:7410]	27521	-0.5301069617271423	0.030729145	Yes	

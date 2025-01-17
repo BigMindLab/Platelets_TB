@@ -1,0 +1,28 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	RAD51	RAD51 recombinase [Source:HGNC Symbol;Acc:HGNC:9817]	4284	0.2686149477958679	-0.1010437	No	
+row_1	RMI1	RecQ mediated genome instability 1 [Source:HGNC Symbol;Acc:HGNC:25764]	9812	0.08591087907552719	-0.27989873	No	
+row_2	TOP3A	DNA topoisomerase III alpha [Source:HGNC Symbol;Acc:HGNC:11992]	11015	0.04615826532244682	-0.313684	No	
+row_3	BRIP1	BRCA1 interacting helicase 1 [Source:HGNC Symbol;Acc:HGNC:20473]	11055	0.04463591426610947	-0.3067541	No	
+row_4	PALB2	partner and localizer of BRCA2 [Source:HGNC Symbol;Acc:HGNC:26144]	11937	0.01866813562810421	-0.33433807	No	
+row_5	BLM	BLM RecQ like helicase [Source:HGNC Symbol;Acc:HGNC:1058]	12029	0.01599782705307007	-0.33456954	No	
+row_6	XRCC2	X-ray repair cross complementing 2 [Source:HGNC Symbol;Acc:HGNC:12829]	12146	0.012691125273704529	-0.33629757	No	
+row_7	RAD51C	RAD51 paralog C [Source:HGNC Symbol;Acc:HGNC:9820]	12964	-0.010539514012634754	-0.36313772	No	
+row_8	RBBP8	RB binding protein 8, endonuclease [Source:HGNC Symbol;Acc:HGNC:9891]	13178	-0.016424324363470078	-0.36759067	No	
+row_9	BARD1	BRCA1 associated RING domain 1 [Source:HGNC Symbol;Acc:HGNC:952]	13873	-0.03610628843307495	-0.38533798	No	
+row_10	RAD51AP1	RAD51 associated protein 1 [Source:HGNC Symbol;Acc:HGNC:16956]	15122	-0.07067476958036423	-0.41618344	No	
+row_11	KAT5	lysine acetyltransferase 5 [Source:HGNC Symbol;Acc:HGNC:5275]	15465	-0.08114215731620789	-0.4131429	No	
+row_12	RAD51B	RAD51 paralog B [Source:HGNC Symbol;Acc:HGNC:9822]	16571	-0.1107591837644577	-0.43148944	No	
+row_13	NBN	nibrin [Source:HGNC Symbol;Acc:HGNC:7652]	17067	-0.12432944029569626	-0.42580733	No	
+row_14	RTEL1	regulator of telomere elongation helicase 1 [Source:HGNC Symbol;Acc:HGNC:15888]	17445	-0.1347406655550003	-0.41402838	No	
+row_15	EXO1	exonuclease 1 [Source:HGNC Symbol;Acc:HGNC:3511]	17472	-0.13548706471920013	-0.38973704	No	
+row_16	DNA2	DNA replication helicase/nuclease 2 [Source:HGNC Symbol;Acc:HGNC:2939]	18469	-0.16406431794166565	-0.39432347	No	
+row_17	SEM1	SEM1 26S proteasome subunit [Source:HGNC Symbol;Acc:HGNC:10845]	18966	-0.1793002486228943	-0.37844908	No	
+row_18	BRCA2	BRCA2 DNA repair associated [Source:HGNC Symbol;Acc:HGNC:1101]	22004	-0.2410077005624771	-0.4406697	No	
+row_19	ATM	ATM serine/threonine kinase [Source:HGNC Symbol;Acc:HGNC:795]	24446	-0.3229692280292511	-0.4666307	Yes	
+row_20	XRCC3	X-ray repair cross complementing 3 [Source:HGNC Symbol;Acc:HGNC:12830]	24710	-0.33398139476776123	-0.4137635	Yes	
+row_21	BRCA1	BRCA1 DNA repair associated [Source:HGNC Symbol;Acc:HGNC:1100]	24938	-0.3425329029560089	-0.35803616	Yes	
+row_22	MRE11	MRE11 homolog, double strand break repair nuclease [Source:HGNC Symbol;Acc:HGNC:7230]	26379	-0.41900232434272766	-0.33084238	Yes	
+row_23	RAD50	RAD50 double strand break repair protein [Source:HGNC Symbol;Acc:HGNC:9816]	26392	-0.4200751483440399	-0.2531088	Yes	
+row_24	RAD51D	RAD51 paralog D [Source:HGNC Symbol;Acc:HGNC:9823]	27320	-0.5006368160247803	-0.1926422	Yes	
+row_25	RMI2	RecQ mediated genome instability 2 [Source:HGNC Symbol;Acc:HGNC:28349]	27514	-0.5291042923927307	-0.101003975	Yes	
+row_26	WRN	WRN RecQ like helicase [Source:HGNC Symbol;Acc:HGNC:12791]	28181	-0.7092322707176208	0.0074734557	Yes	

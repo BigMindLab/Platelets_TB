@@ -1,0 +1,30 @@
+NAME	SYMBOL	TITLE	RANK IN GENE LIST	RANK METRIC SCORE	RUNNING ES	CORE ENRICHMENT	
+row_0	IFITM3	interferon induced transmembrane protein 3 [Source:HGNC Symbol;Acc:HGNC:5414]	68	1.0211714506149292	0.081092045	No	
+row_1	HLA-C	major histocompatibility complex, class I, C [Source:HGNC Symbol;Acc:HGNC:4933]	1064	0.5269314646720886	0.08909469	No	
+row_2	EPSTI1	epithelial stromal interaction 1 [Source:HGNC Symbol;Acc:HGNC:16465]	1257	0.49445104598999023	0.12275132	No	
+row_3	HLA-H	major histocompatibility complex, class I, H (pseudogene) [Source:HGNC Symbol;Acc:HGNC:4965]	2176	0.39405226707458496	0.12260458	No	
+row_4	TREML1	triggering receptor expressed on myeloid cells like 1 [Source:HGNC Symbol;Acc:HGNC:20434]	2578	0.36126211285591125	0.13800366	No	
+row_5	MYL9	myosin light chain 9 [Source:HGNC Symbol;Acc:HGNC:15754]	2674	0.35397836565971375	0.16359517	No	
+row_6	GP1BB	glycoprotein Ib platelet subunit beta [Source:HGNC Symbol;Acc:HGNC:4440]	3135	0.3234724700450897	0.1738246	No	
+row_7	IFITM1	interferon induced transmembrane protein 1 [Source:HGNC Symbol;Acc:HGNC:5412]	3201	0.32061767578125	0.19774623	No	
+row_8	MYOM2	myomesin 2 [Source:HGNC Symbol;Acc:HGNC:7614]	4125	0.27665507793426514	0.18782502	No	
+row_9	ACRBP	acrosin binding protein [Source:HGNC Symbol;Acc:HGNC:17195]	4572	0.25709325075149536	0.19312096	No	
+row_10	PF4	platelet factor 4 [Source:HGNC Symbol;Acc:HGNC:8861]	7474	0.16788747906684875	0.10457324	No	
+row_11	SH3BGRL2	SH3 domain binding glutamate rich protein like 2 [Source:HGNC Symbol;Acc:HGNC:15567]	10662	0.05757695436477661	-0.00307613	No	
+row_12	CCL5	C-C motif chemokine ligand 5 [Source:HGNC Symbol;Acc:HGNC:10632]	11815	0.021887164562940598	-0.041900102	No	
+row_13	OASL	2'-5'-oligoadenylate synthetase like [Source:HGNC Symbol;Acc:HGNC:8090]	12357	0.006116736680269241	-0.060472805	No	
+row_14	TSPAN33	tetraspanin 33 [Source:HGNC Symbol;Acc:HGNC:28743]	13667	-0.030442241579294205	-0.10413232	No	
+row_15	KLRD1	killer cell lectin like receptor D1 [Source:HGNC Symbol;Acc:HGNC:6378]	15365	-0.07836079597473145	-0.15755291	No	
+row_16	TUBB1	tubulin beta 1 class VI [Source:HGNC Symbol;Acc:HGNC:16257]	15500	-0.0820755660533905	-0.15556668	No	
+row_17	CCL4	C-C motif chemokine ligand 4 [Source:HGNC Symbol;Acc:HGNC:10630]	16564	-0.1105378121137619	-0.18400504	No	
+row_18	GNLY	granulysin [Source:HGNC Symbol;Acc:HGNC:4414]	18362	-0.16083043813705444	-0.23420852	No	
+row_19	TRBC2	T cell receptor beta constant 2 [Source:HGNC Symbol;Acc:HGNC:12157]	18889	-0.17719393968582153	-0.2382654	No	
+row_20	DDX11L10	DEAD/H-box helicase 11 like 10 (pseudogene) [Source:HGNC Symbol;Acc:HGNC:14125]	20609	-0.20894069969654083	-0.2817856	No	
+row_21	MAP3K7CL	MAP3K7 C-terminal like [Source:HGNC Symbol;Acc:HGNC:16457]	27825	-0.5869711637496948	-0.48815852	Yes	
+row_22	MT-ATP8	mitochondrially encoded ATP synthase membrane subunit 8 [Source:HGNC Symbol;Acc:HGNC:7415]	28135	-0.6821903586387634	-0.44327742	Yes	
+row_23	MT-CO3	mitochondrially encoded cytochrome c oxidase III [Source:HGNC Symbol;Acc:HGNC:7422]	28249	-0.7556643486022949	-0.3854793	Yes	
+row_24	MT-CYB	mitochondrially encoded cytochrome b [Source:HGNC Symbol;Acc:HGNC:7427]	28334	-0.8651849031448364	-0.31770453	Yes	
+row_25	MT-ND4L	mitochondrially encoded NADH:ubiquinone oxidoreductase core subunit 4L [Source:HGNC Symbol;Acc:HGNC:7460]	28345	-0.9055829048156738	-0.24401805	Yes	
+row_26	MT-ATP6	mitochondrially encoded ATP synthase membrane subunit 6 [Source:HGNC Symbol;Acc:HGNC:7414]	28363	-0.9600445032119751	-0.16612567	Yes	
+row_27	MT-ND2	mitochondrially encoded NADH:ubiquinone oxidoreductase core subunit 2 [Source:HGNC Symbol;Acc:HGNC:7456]	28364	-0.9606944918632507	-0.08758081	Yes	
+row_28	MT-ND1	mitochondrially encoded NADH:ubiquinone oxidoreductase core subunit 1 [Source:HGNC Symbol;Acc:HGNC:7455]	28385	-1.0832886695861816	2.8206554E-4	Yes	
