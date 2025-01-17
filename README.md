@@ -1,5 +1,17 @@
 # Platelets_TB
-Transcriptomic analysis of platelet-enriched RNA under Mtb infection.
+Scripts for the bioinformatics analysis of platelet-enriched RNA of patients' blood under Mtb infection.
+
+### Authors
+
+- Daniel Guevara
+- Daniel Garbozo
+
+### Mentors
+
+- Daniela Kirwan
+- David Requena
+- Robert H Gilman
+- Jon Friedland
 
 ---
 
