@@ -43,26 +43,19 @@ Create a new branch for your changes. Use a descriptive name for the branch.
 git checkout -b <branch-name>
 ```
 
-### 6. Make Your Changes
-Make your changes to the codebase.
-
-### 7. Commit Your Changes
-Commit your changes with a meaningful commit message.
-
-```bash
-git add .
-git commit -m "Brief description of your changes"
-```
-
-### 8. Push Changes to Your Branch
+### 6. Make, commit and push your changes
 Push your local branch to your forked repository on GitHub.
 
 ```bash
+# After making your changes
+git add .
+git commit -m "Brief description of your changes"
+
 # Replace <branch-name> with your branch name
 git push origin <branch-name>
 ```
 
-### 9. Create a Pull Request
+### 7. Create a Pull Request
 Go to the original repository on GitHub (`BigMindLab/Platelets_TB`).
 1. Click on the **Pull Requests** tab.
 2. Click **New Pull Request**.
