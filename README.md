@@ -6,6 +6,7 @@ Scripts for the bioinformatics analysis of platelet-enriched RNA of patients' bl
 - Daniel Guevara
 - Daniel Garbozo
 - Diego Taquiri
+- Carla Apaza
 
 ### Mentors
 
