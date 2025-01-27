@@ -12,6 +12,7 @@ Scripts for the bioinformatics analysis of platelet-enriched RNA of patients' bl
 
 - Daniela Kirwan
 - David Requena
+- Mirko Zimic
 - Robert H Gilman
 - Jon Friedland
 
