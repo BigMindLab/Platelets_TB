@@ -50,6 +50,7 @@ library("AnnotationDbi", quietly = T)
 library("DOSE", quietly = T)
 #remotes::install_github("danoguevara/OmicsKit", ref = "new-functions", force = T)
 library("OmicsKit")
+library("reshape2")
 ```
 
 ## Set working directory
@@ -70,14 +71,14 @@ counts_dir <- "./Counts_Salmon"
 sampledata <- data.frame(read.xlsx(sample_data))
 
 # Manage numeric variables
-sampledata <- sampledata %>%
-  mutate(
-    bmi = ifelse(is.na(bmi), median(bmi, na.rm = TRUE), bmi),
-    HR = ifelse(is.na(HR), median(HR, na.rm = TRUE), HR),
-    weight = ifelse(is.na(weight), median(weight, na.rm = TRUE), weight),
-    waist = ifelse(is.na(waist), median(waist, na.rm = TRUE), waist),
-    hip_circ = ifelse(is.na(hip_circ), median(hip_circ, na.rm = TRUE), hip_circ)
-  )
+#sampledata <- sampledata %>%
+#  mutate(
+#    bmi = ifelse(is.na(bmi), median(bmi, na.rm = TRUE), bmi),
+#    HR = ifelse(is.na(HR), median(HR, na.rm = TRUE), HR),
+#    weight = ifelse(is.na(weight), median(weight, na.rm = TRUE), weight),
+#    waist = ifelse(is.na(waist), median(waist, na.rm = TRUE), waist),
+#    hip_circ = ifelse(is.na(hip_circ), median(hip_circ, na.rm = TRUE), hip_circ)
+#  )
 
 # Convert factors
 sampledata <- sampledata %>%
@@ -86,12 +87,14 @@ sampledata <- sampledata %>%
     latent_TB = factor(latent_TB, levels = c(0, 1)),
     age_cat = factor(age_cat, ordered = T, levels = c("20s", "30s", "40s", "50s", "60s")),
     group = factor(group, levels = c("Control", "TB")),
-    HR_cat = factor(HR_cat, levels = c("60s", "70s", "80s", "90s", "100s", "110s", "140s")),
-    weight_cat = factor(weight_cat, levels = c("40s", "50s", "60s", "70s", "80s", "90s")),
-    height_cat = factor(height_cat, levels = c(140, 150, 160, 170, 180))
+    #HR_cat = factor(HR_cat, levels = c("60s", "70s", "80s", "90s", "100s", "110s", "140s")),
+    #weight_cat = factor(weight_cat, levels = c("40s", "50s", "60s", "70s", "80s", "90s")),
+    #height_cat = factor(height_cat, levels = c(140, 150, 160, 170, 180))
   )
 
 rownames(sampledata) <- sampledata$id
+sampledata <- sampledata[, c("id", "num", "group", "latent_TB", "sex", "age", "age_cat",
+                             "height","appetite", "depression", "RIN_ours", "RIN_Ed")]
 
 # Normal sample clustered with TB patients
 sampledata <- sampledata[-11, ]
@@ -110,7 +113,7 @@ counts.tx <- counts.tx[rowSums(counts.tx) > 0,]
 sampledata$tx_counts <- colSums(counts.tx)
 
 # Output
-write.xlsx(sampledata, file = "samples_with_counts.xlsx", colNames = T, rowNames = F, append = F)
+# write.xlsx(sampledata, file = "samples_with_counts.xlsx", colNames = T, rowNames = F, append = F)
 ```
 
 ### Counts per sample
@@ -127,13 +130,13 @@ p.counts <- ggplot(data = sampledata, aes(x = id, y = tx_counts, fill = group)) 
 
 p.counts
 
-ggsave("plots/Counts-Transcript_per_Sample.jpg", p.counts, width = 10, height = 8, dpi = 300)
+# ggsave("plots/Counts-Transcript_per_Sample.jpg", p.counts, width = 10, height = 8, dpi = 300)
 ```
 
 ## Transcripts into genes
 
 ```{r}
-tx2gene <- data.frame(read.xlsx("tx2gene_GRCh38v112.xlsx"))
+#tx2gene <- data.frame(read.xlsx("tx2gene_GRCh38v112.xlsx"))
 txi.toGene <- summarizeToGene(txi, tx2gene[, c("transcriptID","geneID")])
 
 # Add gene counts
@@ -141,7 +144,7 @@ counts.gene <- as.data.frame(txi.toGene$counts)
 counts.gene <- counts.gene[rowSums(counts.gene) > 0,]
 sampledata$gene_counts <- colSums(counts.gene)
 
-write.xlsx(sampledata, file = "samples_with_counts.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
+# write.xlsx(sampledata, file = "samples_with_counts.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
 
 # Load geneID annotations
 annotations <- c("symbol", "biotype", "chromosome", "gene_start", "gene_end", "gene_length", "description")
@@ -167,7 +170,51 @@ counts.gene_annotations <- OmicsKit::add_annotations(object = counts.gene_annota
                                                      reference = geneID.details,
                                                      variables = annotations)
 
-write.xlsx(counts.gene_annotations, file = "Raw_Gene_Counts_Annotated.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
+# write.xlsx(counts.gene_annotations, file = "Raw_Gene_Counts_Annotated.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
+```
+
+### [RUN ONCE] Create leukocytes genes blacklist
+
+```{r}
+#library("readxl")
+#blacklist_allLeuko <- data.frame(read_xls("Palmer_2006_Leuko_genes.xls"))
+
+# Remove unknown genes
+#blacklist_allLeuko <- blacklist_allLeuko %>% filter(!grepl("^IMAGE:", symbol))
+
+# Retrieve database version 112
+#mart <- useMart("ENSEMBL_MART_ENSEMBL", dataset = "hsapiens_gene_ensembl", host = "https://may2024.archive.ensembl.org")
+
+# Ensembl IDs from the gene symbols
+#ensembl_data <- getBM(attributes = c("ensembl_gene_id", "external_gene_name"),
+#                      filters = "external_gene_name",
+#                      values = unique(blacklist_allLeuko$symbol),
+#                      mart = mart)
+
+#colnames(ensembl_data) <- c("ensembl", "symbol")
+
+# Remove obsolete ensembl IDs
+#duplicated_ensembl_genes <- ensembl_data[duplicated(ensembl_data$symbol) == T, ]
+#duplicated_ensembl_genes <- ensembl_data[ensembl_data$symbol %in% duplicated_ensembl_genes$symbol, ]
+#duplicated_ensembl_genes <- duplicated_ensembl_genes[order(duplicated_ensembl_genes$symbol, decreasing = F), ]
+#rownames(duplicated_ensembl_genes) <- 1:nrow(duplicated_ensembl_genes)
+#duplicated_ensembl_genes <- duplicated_ensembl_genes[c(1,seq(9,17,2),22,seq(26,36,2),42,50,61,65,77,86,90,93,104,108,
+#                                                       117,129:130,132,137,143:144,147,149,seq(151,157,2),161,163:164,
+#                                                       166,168,177:178,180,seq(183,193,2),201,203,211,seq(213,221,2)), ]
+
+# Final ensembl_data
+#ensembl_data <- rbind(ensembl_data[!(ensembl_data$symbol %in% duplicated_ensembl_genes$symbol), ], duplicated_ensembl_genes)
+
+# Merge Ensembl IDs with the original data
+#blacklist_allLeuko <- blacklist_allLeuko[blacklist_allLeuko$symbol %in% ensembl_data$symbol, ]
+#blacklist_allLeuko <- blacklist_allLeuko %>% left_join(ensembl_data, by = "symbol")
+#blacklist_allLeuko <- blacklist_allLeuko[, c("ensembl", "symbol", "cell_type")]
+
+# Remove ribosomal genes
+#blacklist_allRibo <- data.frame(read.csv("blacklist_all-ribo.tsv", sep = "\t", header = TRUE))
+#blacklist_allLeuko <- blacklist_allLeuko[!(blacklist_allLeuko$ensembl %in% blacklist_allRibo$Gene), ]
+
+#write.table(x = blacklist_allLeuko, file = "blacklist_all-Leuko.tsv", sep = "\t", col.names = T, row.names = F)
 ```
 
 ## Filter out blacklists
@@ -176,19 +223,23 @@ write.xlsx(counts.gene_annotations, file = "Raw_Gene_Counts_Annotated.xlsx", col
 blacklist_nRibo <- data.frame(read.csv("blacklist_nuclear-ribo.tsv", sep = "\t", header = TRUE))
 blacklist_mtRibo <- data.frame(read.csv("blacklist_mito-ribo.tsv", sep = "\t", header = TRUE))
 blacklist_allRibo <- data.frame(read.csv("blacklist_all-ribo.tsv", sep = "\t", header = TRUE))
+blacklist_allLeuko <- data.frame(read.csv("blacklist_all-Leuko.tsv", sep = "\t", header = TRUE))
 
 # Keep the genes in each blacklist
 genecounts.nRibo <- counts.gene[rownames(counts.gene) %in% blacklist_nRibo[,1], ]
 genecounts.mtRibo <- counts.gene[rownames(counts.gene) %in% blacklist_mtRibo[,1], ]
-genecounts.filtered <- counts.gene[!(rownames(counts.gene) %in% blacklist_allRibo[,1]), ]
+genecounts.leuko <- counts.gene[rownames(counts.gene) %in% blacklist_allLeuko[,1], ]
+genecounts.filtered <- counts.gene[!(rownames(counts.gene) %in% c(blacklist_allRibo[,1], blacklist_allLeuko[,1])), ]
 
-sampledata$nRibo <- colSums(genecounts.nRibo)
-sampledata$mtRibo <- colSums(genecounts.mtRibo)
-sampledata$filtered <- colSums(genecounts.filtered)
+sampledata$Counts_nRibo <- colSums(genecounts.nRibo)
+sampledata$Counts_mtRibo <- colSums(genecounts.mtRibo)
+sampledata$Counts_leuko <- colSums(genecounts.leuko)
+sampledata$Counts_filtered <- colSums(genecounts.filtered)
 
-write.xlsx(sampledata, file = "samples_with_counts.xlsx", colNames = T, rowNames = F, append = F)
+# write.xlsx(sampledata, file = "samples_with_counts.xlsx", colNames = T, rowNames = F, append = F)
 
 # Filter the txi object
+#keep <- !(rownames(txi.toGene$counts) %in% c(blacklist_allRibo[,1], blacklist_allLeuko[,1]))
 keep <- !(rownames(txi.toGene$counts) %in% blacklist_allRibo[,1])
 
 txi.toGene$abundance <- txi.toGene$abundance[keep, ]
@@ -199,26 +250,26 @@ txi.toGene$length <- txi.toGene$length[keep, ]
 ### Counts per blacklist
 
 ```{r}
-for (bl in c("nRibo", "mtRibo")) {
-  p.sub <- ggplot(data = sampledata, aes(x = id, y = .data[[bl]], fill = group)) +
+for (bl in c("Counts_nRibo", "Counts_mtRibo", "Counts_leuko")) {
+  p.sub <- ggplot(data = sampledata, aes(x = factor(id, levels = id), y = .data[[bl]], fill = group)) +
     theme_bw() + theme(panel.grid.major.x = element_blank(), panel.grid.minor.y = element_blank()) +
     geom_bar(stat="identity", color="black", linewidth = 0.3) + scale_fill_manual(values = my_colors) +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1), strip.text = element_text(size = 14)) +
     scale_y_continuous(expand = expansion(mult = c(0, .01)), labels = scales::comma) +
-    xlab("Sample ID") + ylab(bl) + theme(axis.title=element_text(size=16))
+    xlab("Sample ID") + ylab(unlist(strsplit(bl, split = "_"))[2]) + theme(axis.title=element_text(size=16))
   
   print(p.sub)
   
-  ggsave(paste0("plots/Counts-Transcript_per_Sample_", bl, ".jpg"),
+  ggsave(paste0("plots/Counts-Transcript_per_Sample_", unlist(strsplit(bl, split = "_"))[2], ".jpg"),
          p.sub, width = 10, height = 8, dpi = 300)
 }
 
 # Filtered
-p.filt <- ggplot(data = sampledata, aes(x = id, y = filtered, fill = group)) +
+p.filt <- ggplot(data = sampledata, aes(x = factor(id, levels = id), y = Counts_filtered, fill = group)) +
   theme_bw() + theme(panel.grid.major.x = element_blank(), panel.grid.minor.y = element_blank()) +
   geom_bar(stat="identity", color="black", linewidth = 0.3) +
   scale_fill_manual(values = my_colors) +
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1), strip.text = element_text(size = 14)) +
   scale_y_continuous(expand = expansion(mult = c(0, .05)), labels = scales::comma, breaks = seq(0,7e+7,by=0.5e+7)) +
   xlab("Sample ID") + ylab("Filtered") + theme(axis.title=element_text(size=16))
 
@@ -234,28 +285,136 @@ ggsave("plots/Counts-Transcript_per_Sample_filtered.jpg", p.filt,
 # Calculate the TPM. The columns will now add 1 million.
 gene.tpm <- tpm(counts.gene, counts.gene_annotations$gene_length)
 gene.tpm <- data.frame(gene.tpm)
-
-#write.xlsx(sampledata, file = "Samples_with_Counts.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
-
 gene.tpm.annotated <- OmicsKit::add_annotations(gene.tpm, geneID.details, variables = annotations)
-
-write.xlsx(gene.tpm.annotated, file = "Gene_Counts_TPM.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
+# write.xlsx(gene.tpm.annotated, file = "Gene_Counts_TPM.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
 
 # Keep the genes in each blacklist
 geneTPM.nRibo <- gene.tpm[rownames(gene.tpm) %in% blacklist_nRibo[,1], ]
 geneTPM.mtRibo <- gene.tpm[rownames(gene.tpm) %in% blacklist_mtRibo[,1], ]
-geneTPM.allRibo <- gene.tpm[rownames(gene.tpm) %in% blacklist_allRibo[,1], ]
+geneTPM.leuko <- gene.tpm[rownames(gene.tpm) %in% unique(blacklist_allLeuko[,1]),]
+geneTPM.filtered <- gene.tpm[!(rownames(gene.tpm) %in% c(blacklist_allRibo[,1], blacklist_allLeuko[,1])), ]
 
 sampledata$TPM_nRibo <- colSums(geneTPM.nRibo[1:(length(geneTPM.nRibo))])
 sampledata$TPM_mtRibo <- colSums(geneTPM.mtRibo[1:(length(geneTPM.nRibo))])
-sampledata$TPM_allRibo <- colSums(geneTPM.allRibo[1:(length(geneTPM.nRibo))])
+sampledata$TPM_leuko <- colSums(geneTPM.leuko[1:(length(geneTPM.nRibo))])
+sampledata$TPM_filtered <- colSums(geneTPM.filtered[1:(length(geneTPM.nRibo))])
 
-write.xlsx(sampledata, file = "samples_with_counts.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
+#write.xlsx(sampledata, file = "samples_with_counts.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
+```
+
+### Plot the TPMs per list
+
+```{r}
+# Plot the TPMs per list STACKED
+subgroups <- c("TPM_nRibo", "TPM_mtRibo", "TPM_leuko", "TPM_filtered")
+sampledata_TPMlong <- reshape(sampledata[, c("id", subgroups)], varying = subgroups, direction = "long", sep = "_")
+#sampledata_TPMlong <- reshape(sampledata[sampledata$group == "Control", c("id", subgroups)],varying = subgroups, direction = "long", sep = "_")
+
+sampledata_TPMlong <- sampledata_TPMlong %>%
+  mutate(group = case_when(id %in% sampledata$id[sampledata$group == "Control"] ~ "Control",
+                           TRUE ~ "TB")) %>%
+  mutate(group = factor(group, levels = c("Control", "TB"), ordered = TRUE))
+
+names(sampledata_TPMlong)[names(sampledata_TPMlong) == "time"] <- "Gene_Type"
+sampledata_TPMlong$Gene_Type <- factor(sampledata_TPMlong$Gene_Type, levels = c("nRibo", "mtRibo", "leuko", "filtered"))
+
+bl.colors <- c("coral1", "gold", "peru", "azure")
+
+p.TPMs <- ggplot(data = sampledata_TPMlong, aes(x = factor(id, levels = sampledata$id), y = TPM, fill = Gene_Type)) +
+  theme(panel.grid.major.x = element_blank(), panel.grid.minor.y = element_blank(), axis.title = element_text(size=15),
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size=7), strip.text = element_text(size = 14)) +
+  geom_bar(position="stack", stat="identity", color="black", linewidth = 0.1) + scale_fill_manual(values = bl.colors) +
+  xlab("Sample ID") + ylab("TPM") +
+  scale_y_continuous(expand = expansion(mult = c(0, .01)), breaks = seq(0, 1e+6, by = 25e+4), labels = scales::comma)
+
+p.TPMs
+
+ggsave("plots/TPMs-Transcript_per_Sample_subgroups.jpg", p.TPMs, width = 10, height = 8, dpi = 300)
+#ggsave("plots/TPMs-Transcript_per_Sample_subgroups_Control.jpg", p.TPMs, width = 8, height = 8, dpi = 300)
+
+# Plot the TPMs per list INDIVIDUALLY
+for (bl in subgroups) {
+  p.sub <- ggplot(data = sampledata, aes(x = factor(id, levels = id), y = .data[[bl]], fill = group)) +
+    theme_bw() + theme(panel.grid.major.x = element_blank(), panel.grid.minor.y = element_blank()) +
+    geom_bar(stat="identity", color="black", linewidth = 0.1) + scale_fill_manual(values = my_colors) +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+          strip.text = element_text(size = 14), axis.title = element_text(size=16)) +
+    scale_y_continuous(expand = expansion(mult = c(0, .01)), labels = scales::comma) +
+    xlab("Sample ID") + ylab(unlist(strsplit(bl, split = "_"))[2])
+  
+  print(p.sub)
+  
+  ggsave(paste0("plots/TPMs-Transcript_per_Sample_", unlist(strsplit(bl, split = "_"))[2], ".jpg"), p.sub, width = 10, height = 8, dpi = 300)
+  #ggsave(paste0("plots/TPMs-Transcript_per_Sample_An_", unlist(strsplit(bl, split = "_"))[2], ".jpg"), p.sub, width = 8, height = 8, dpi = 300)
+}
+```
+
+### Plot the counts per list
+
+```{r, echo=FALSE}
+# Plot the counts per list STACKED
+subgroups <- c("Counts_nRibo", "Counts_mtRibo", "Counts_leuko", "Counts_filtered")
+sampledata_Countslong <- reshape(sampledata[, c("id", subgroups)], varying = subgroups, direction = "long", sep = "_")
+#sampledata_Countslong <- reshape(sampledata[sampledata$group == "Control", c("id", subgroups)], varying = subgroups, direction = "long", sep = "_")
+sampledata_Countslong <- sampledata_Countslong %>%
+  mutate(group = case_when(id %in% sampledata$id[sampledata$group == "Control"] ~ "Control",
+                           TRUE ~ "TB")) %>%
+  mutate(group = factor(group, levels = c("Control", "TB"), ordered = TRUE))
+
+names(sampledata_Countslong)[names(sampledata_Countslong) == "time"] <- "Gene_Type"
+sampledata_Countslong$Gene_Type <- factor(sampledata_Countslong$Gene_Type, levels = c("nRibo", "mtRibo", "leuko", "filtered"))
+
+p.Counts <- ggplot(data = sampledata_Countslong, aes(x = factor(id, levels = sampledata$id), y = Counts, fill = Gene_Type)) +
+  theme_bw() + theme(panel.grid.major.x = element_blank(), panel.grid.minor.y = element_blank(),
+                     strip.text = element_text(size = 14), axis.title = element_text(size = 16),
+                     axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size=7)) +
+  geom_bar(position="stack", stat="identity", color="black", linewidth = 0.1) +
+  scale_fill_manual(values = bl.colors) + xlab("Sample ID") +
+  ylab("Counts") + scale_y_continuous(expand = expansion(mult = c(0, .01)), labels = scales::comma, breaks = seq(0,25e+7,by=1e+7))
+
+p.Counts
+
+ggsave("plots/Counts-Transcript_per_Sample_subgroups.jpg", p.Counts, width = 10, height = 8, dpi = 300)
+#ggsave("plots/Counts-Transcript_per_Sample_subgroups_Control.jpg", p.Counts, width = 8, height = 8, dpi = 300)
+
+# Plot the counts per list INDIVIDUALLY
+for (bl in subgroups) {
+  p.sub <- ggplot(data = sampledata[sampledata$group == "Control", ], aes(x = factor(id, levels = id), y = .data[[bl]], fill = group)) + theme_bw() +
+    theme(panel.grid.major.x = element_blank(), panel.grid.minor.y = element_blank(), strip.text = element_text(size = 14),
+          axis.title = element_text(size=15), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size=7)) +
+    geom_bar(stat="identity", color="black", linewidth = 0.1) + scale_fill_manual(values = my_colors) +
+    scale_y_continuous(expand = expansion(mult = c(0, .01)), labels = scales::comma) +
+    xlab("Sample ID") + ylab(unlist(strsplit(bl, split = "_"))[2])
+  
+  print(p.sub)
+  
+  # ggsave(paste0("plots/Counts-Transcript_per_Sample_", unlist(strsplit(bl, split = "_"))[2], ".jpg"), p.sub, width = 15, height = 8, dpi = 300)
+  ggsave(paste0("plots/Counts-Transcript_per_Sample_Control_", unlist(strsplit(bl, split = "_"))[2], ".jpg"), p.sub, width = 15, height = 8, dpi = 300)
+}
+```
+
+## [RUN ONCE] Create low counts genes blacklist
+
+```{r}
+#blacklist_lowCounts <- as.data.frame(read.xlsx("Normalized_Gene_counts.xlsx"))
+#blacklist_lowCounts <- blacklist_lowCounts[, c("geneID", "symbol", "Mean", "Mean.C", "Mean.TB")]
+#blacklist_lowCounts <- blacklist_lowCounts[blacklist_lowCounts$Mean <= 20, ]
+
+#write.table(blacklist_lowCounts, "blacklist_low-Counts.tsv", sep = "\t", col.names = T, row.names = F)
+#remove(blacklist_low_Counts)
 ```
 
 # 3. Differential Expression Analysis with DESeq2
 
 ```{r}
+# Filter low counts
+blacklist_lowCounts <- data.frame(read.csv("blacklist_low-Counts.tsv", sep = "\t", header = TRUE))
+keep <- !(rownames(txi.toGene$counts) %in% blacklist_lowCounts$geneID[blacklist_lowCounts$Mean <= 10])
+
+txi.toGene$abundance <- txi.toGene$abundance[keep, ]
+txi.toGene$counts <- txi.toGene$counts[keep, ]
+txi.toGene$length <- txi.toGene$length[keep, ]
+
 # Note: Salmon counts are going to be rounded
 ds.deseq <- DESeqDataSetFromTximport(txi.toGene, sampledata, ~group)
 dea_formula <- paste(attr(terms(ds.deseq@design), "term.labels"), collapse = "_")
@@ -277,25 +436,56 @@ C.ids <- sampledata$id[sampledata$group == "Control"]
 
 normalized.counts$Mean.TB <- rowMeans(normalized.counts[, TB.ids])
 normalized.counts$Mean.C <- rowMeans(normalized.counts[, C.ids])
+normalized.counts$Mean <- rowMeans(normalized.counts[, c(TB.ids, C.ids)])
 
 # Adding gene name and description
 normalized.counts.annotated <- OmicsKit::add_annotations(normalized.counts, geneID.details, variables = annotations)
-write.xlsx(normalized.counts.annotated, file = "Normalized_Gene_counts.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
+#write.xlsx(normalized.counts.annotated, file = "Normalized_Gene_counts.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
+#write.xlsx(normalized.counts.annotated, file = "Normalized_Gene_counts_wo_Leuko.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
+#write.xlsx(normalized.counts.annotated, file = "Normalized_Gene_counts_wo_lowCounts.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
 ######################
 
 # Variance Stabilizing Transformation
 transf.data <- varianceStabilizingTransformation(ds.deseq)
 ```
 
+### Explore Negative binomial
+
+```{r}
+normCounts <- normalized.counts.annotated[, c("geneID", "symbol", "Mean")]
+normCounts$category <- ifelse(normCounts$Mean == 0, "= 0",
+                              ifelse(normCounts$Mean <= 1, "<= 1",
+                                     ifelse(normCounts$Mean <= 2, "<= 2",
+                                            ifelse(normCounts$Mean <= 3, "<= 3",
+                                                   ifelse(normCounts$Mean <= 5, "<= 5",
+                                                          ifelse(normCounts$Mean <= 10, "<= 10",
+                                                                 ifelse(normCounts$Mean <= 25, "<= 25", "> 25")))))))
+normCounts$category <- factor(normCounts$category, levels = c("= 0", "<= 1", "<= 2", "<= 3", "<= 5", "<= 10", "<= 25", "> 25"))
+
+ggplot(normCounts[normCounts$Mean <= 50, ], aes(x = Mean, fill = category)) +
+  geom_histogram(binwidth = 1, color = "black", position = "stack") + theme_bw() + xlab("Mean Normalized Counts") +
+  ylab("Frequency") + scale_x_continuous(breaks = seq(0, 50, by = 5)) + scale_y_continuous(breaks = seq(0, 15000, by = 2500)) +
+  scale_fill_manual(values = c("= 0" = "grey70",
+                               "<= 1" = "coral1",
+                               "<= 2" = "gold",
+                               "<= 3" = "mistyrose",
+                               "<= 5" = "violet",
+                               "<= 10" = "peru",
+                               "<= 25" = "azure",
+                               "> 25" = "steelblue"),
+                    name = "Counts") +
+  theme(strip.text = element_text(size = 14), axis.text = element_text(size = 12), axis.title = element_text(size = 16),
+        legend.title = element_text(size = 14), legend.text = element_text(size = 12))
+```
+
+
 ## Explore confounders
 
 ## PCA with Ward.D2 clustering
 
 ```{r}
-confounding_var <- colnames(sampledata)[c(3:4, 6:20)]
-confounding_name <- c("Group", "Latent TB", "Age", "Age", "Heart Rate (BPM)", "Heart Rate (BPM)",
-                      "Weight", "Weight", "Height", "Height", "BMI", "Waist size",
-                      "Hip size", "Appetite", "Depression", "RIN", "RIN")
+confounding_var <- colnames(sampledata)[c(3:4, 6:12)]
+confounding_name <- c("Group", "Latent TB", "Age", "Age", "Height", "Appetite", "Depression", "RIN", "RIN")
 
 
 # Function
@@ -444,9 +634,11 @@ for (i in seq_along(confounding_var)) {
     labels = NULL
   )
   
-  print(pca12_clust)
+  #print(pca12_clust)
   
-  ggsave(filename = paste0("plots/dim_reduction/PCA/PCA12_", confounding_var[i], ".jpg"),
+  #ggsave(filename = paste0("plots/dim_reduction/PCA/PCA12_", confounding_var[i], "_wo_Leuko.jpg"),
+  #       plot = pca12_clust, width = 9, height = 6, dpi = 300)
+  ggsave(filename = paste0("plots/dim_reduction/PCA/PCA12_", confounding_var[i], "_wo_lowCounts.jpg"),
          plot = pca12_clust, width = 9, height = 6, dpi = 300)
 }
 
@@ -904,7 +1096,7 @@ cutoff_fold <- 1 # Cut off fold-change
 res.TB_C <- results(ds.deseq, name = "group_TB_vs_Control",
                     altHypothesis="greaterAbs",
                     alpha = cutoff_alpha,
-                    # independentFiltering = FALSE, # Automatic filtering
+                    #independentFiltering = TRUE, # Automatic filtering
                     pAdjustMethod = "BH") # Benjamini Hochberg = FDR
 
 summary(res.TB_C)
