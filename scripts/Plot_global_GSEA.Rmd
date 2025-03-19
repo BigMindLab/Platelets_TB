@@ -1,0 +1,428 @@
+--- 
+Title: Plot Global GSEA results
+Author: Daniel Garbozo
+Date: 2025-26-02
+---
+
+# Test plot
+```{r}
+# Cargar librerías necesarias
+library(ggplot2)
+library(patchwork)
+library(cowplot)  # Para get_legend()
+
+# Crear DataFrame
+data <- data.frame(
+  Collection = c("Collection 1", "Collection 1", "Collection 1", 
+                 "Collection 2 CGP", "Collection 2 CGP", 
+                 "Collection 2 CP_KEGG", "Collection 2 CP_KEGG"),
+  Geneset = c("Geneset 1", "Geneset 2", "Geneset 3", 
+              "Geneset 4", "Geneset 5", 
+              "Geneset 6", "Geneset 7"),
+  NES = c(1.2, 2.0, 1.8, 1.1, 2.0, 0.8, 0.6),
+  logFDR = c(2.5, 3.0, 4.0, 2.0, 3.5, 1.5, 1.0)
+)
+
+# Ordenar genesets y colecciones
+data$Geneset <- factor(data$Geneset, levels = rev(unique(data$Geneset)))
+data$Collection <- factor(data$Collection, levels = unique(data$Collection))
+
+# Gráfico con la palabra "MSigDB" en el lado izquierdo
+plot_text <- ggplot() + 
+  annotate("text", label = "MSigDB", angle = 90, size = 8, x = 1, y = 0.5) +
+  theme_void()
+
+# Gráfico de etiquetas de Collection (izquierda, sin repeticiones)
+plot_left <- ggplot(data, aes(y = Geneset, x = 1, label = Collection)) +
+  geom_text(aes(label = ifelse(duplicated(Collection), "", Collection)), 
+            hjust = 0, size = 0) +  # Se ajustó el tamaño del texto
+  facet_grid(Collection ~ ., scales = "free_y", space = "free", switch = "y") + 
+  theme_void() + 
+  theme(strip.text.y = element_text(angle = 0, hjust = 1, size = 8))
+
+# Gráfico de barras NES (centro)
+plot_center <- ggplot(data, aes(x = NES, y = Geneset, fill = logFDR)) +
+  geom_col() +
+  scale_fill_gradient(low = "white", high = "red") +
+  scale_y_discrete(position = "right") +  # Mueve los Genesets a la derecha
+  theme_minimal() +
+  labs(x = "NES", y = "") +
+  theme(axis.text.y = element_blank(),  # Oculta texto duplicado
+        axis.ticks.y = element_blank(),
+        strip.text.y = element_blank(),
+        legend.position = "none")
+
+# Gráfico de etiquetas de Genesets (derecha)
+plot_right <- ggplot(data, aes(y = Geneset, x = 1, label = Geneset)) +
+  geom_text(hjust = 1, size = 3) +  # Ajustar tamaño de fuente
+  theme_void() + 
+  theme(axis.text.y = element_blank())
+
+# Gráfico para la leyenda
+plot_legend <- ggplot(data, aes(x = NES, y = Geneset, fill = logFDR)) +
+  geom_tile() + 
+  scale_fill_gradient(low = "white", high = "red", name = "logFDR",
+                      limits = c(0,4), breaks = seq(0,3, by= 1)) +  # Ajustado límite de logFDR
+  theme_minimal() +
+  theme(legend.position = "right")
+
+# Extraer la leyenda
+plot_right_legend <- get_legend(plot_legend)
+
+# Combinar gráficos en una sola figura
+final_plot <- plot_text + plot_left + plot_center + plot_right + plot_right_legend + 
+  plot_layout(ncol = 5, widths = c(0.65, 1, 4, 1, 1))  # Ajuste de anchos
+
+# Mostrar gráfico final
+print(final_plot)
+
+# Guardar el gráfico
+ggsave("C:/Users/dan_1/Documents/PROJECTS/TB/GSEA_v2/2025_22_02-GSEA-posprocessing/Plots/2025-26-02-Global_plot/test_plot.png", 
+       final_plot, width = 10, height = 5, units = "in")
+```
+
+
+# Function plot_global_GSEA
+```{r}
+# Load required libraries
+library(ggplot2)
+library(patchwork)
+library(cowplot)  # For get_legend()
+
+# Function to generate MSigDB plot
+plot_global_GSEA <- function(data, geneset_col, collection_col, nes_col, logfdr_col, output_path_base, width_output, height_ouput) {
+  
+  # Rename columns dynamically
+  data <- data[, c(geneset_col, collection_col, nes_col, logfdr_col)]
+  colnames(data) <- c("Geneset", "Collection", "NES", "logFDR")
+  
+  # Ensure Geneset and Collection are factors with ordered levels
+  data$Geneset <- factor(data$Geneset, levels = rev(unique(data$Geneset)))
+  data$Collection <- factor(data$Collection, levels = unique(data$Collection))
+  
+  # Left-side label: "MSigDB" vertically centered
+  plot_text <- ggplot() + 
+    annotate("text", label = "MSigDB", angle = 90, size = 8, x = 1, y = 0.5) +
+    theme_void()
+
+  # Left panel: Collection labels (without repetition)
+  plot_left <- ggplot(data, aes(y = Geneset, x = 1, label = Collection)) +
+    geom_text(aes(label = ifelse(duplicated(Collection), "", Collection)), 
+              hjust = 0, size = 3) +  
+    facet_grid(Collection ~ ., scales = "free_y", space = "free", switch = "y") + 
+    theme_void() + 
+    theme(strip.text.y = element_text(angle = 0, hjust = 1, size = 8))
+
+  # Center panel: NES bar plot
+  plot_center <- ggplot(data, aes(x = NES, y = Geneset, fill = logFDR)) +
+    geom_col() +
+    scale_fill_gradient(low = "white", high = "red") +
+    scale_y_discrete(position = "right") +  
+    theme_minimal() +
+    labs(x = "NES", y = "") +
+    theme(axis.text.y = element_blank(),  
+          axis.ticks.y = element_blank(),
+          strip.text.y = element_blank(),
+          legend.position = "none")
+
+  # Right panel: Geneset labels
+  plot_right <- ggplot(data, aes(y = Geneset, x = 1, label = Geneset)) +
+    geom_text(hjust = 1, size = 3) +  
+    theme_void() + 
+    theme(axis.text.y = element_blank())
+
+  # Legend panel
+  plot_legend <- ggplot(data, aes(x = NES, y = Geneset, fill = logFDR)) +
+    geom_tile() + 
+    scale_fill_gradient(low = "white", high = "red", name = "logFDR",
+                        limits = c(0, 4), breaks = seq(0, 3, by = 1)) +  
+    theme_minimal() +
+    theme(legend.position = "right")
+
+  # Extract legend
+  plot_right_legend <- get_legend(plot_legend)
+
+  # Combine all plots
+  final_plot <- plot_text + plot_left + plot_center + plot_right + plot_right_legend + 
+    plot_layout(ncol = 5, widths = c(0.65, 1, 4, 1, 1))  
+
+  # Display the plot
+  print(final_plot)
+
+  # Save the plot as JPG and PDF
+  ggsave(paste0(output_path_base, ".jpg"), final_plot, width = width_output, height =  height_ouput, units = "in", dpi = 300)
+  ggsave(paste0(output_path_base, ".pdf"), final_plot, width = width_output, height = height_ouput, units = "in")
+}
+```
+
+## Function v2
+```{r}
+# Load required libraries
+library(ggplot2)
+library(patchwork)
+library(cowplot)  # For get_legend()
+
+# Function to generate MSigDB plot
+plot_global_GSEA <- function(data, geneset_col, collection_col, nes_col, logfdr_col, output_path_base, width_output, height_output, text_size_genesets = 5, text_size_collection = 5) {
+  
+  # Rename columns dynamically
+  data <- data[, c(geneset_col, collection_col, nes_col, logfdr_col)]
+  colnames(data) <- c("Geneset", "Collection", "NES", "logFDR")
+  
+  # Order data by NES value (descending)
+  data <- data[order(data$NES, decreasing = TRUE), ]
+  
+  # Ensure Geneset and Collection are factors with ordered levels
+  data$Geneset <- factor(data$Geneset, levels = rev(unique(data$Geneset)))
+  data$Collection <- factor(data$Collection, levels = unique(data$Collection))
+  
+  # Right-side label: "MSigDB" vertically centered, in bold and italic
+  plot_text_msigdb <- ggplot() + 
+  annotate("text", label = "MSigDB", fontface = "bold.italic", angle = 90, size = 35, x = 0, y = 0.5)+
+  theme_void()
+  
+  # Lef-side label: "Pathways" vertically centered, in bold and italic
+  plot_text_pathways <- ggplot() + 
+  annotate("text", label = "Pathways", fontface = "bold.italic", angle = 90, size = 35, x = 0, y = 0.5)+
+  theme_void()
+  
+  # Right panel: Collection labels (without repetition)
+  plot_right <- ggplot(data, aes(y = Geneset, x = 1.5, label = Collection)) +
+    geom_text(aes(label = ifelse(duplicated(Collection), "", Collection)), 
+              hjust = 0.5, size = 0, fontface = "bold") +  
+    facet_grid(Collection ~ ., scales = "free_y", space = "free", switch = "y") + 
+    theme_void() + 
+    theme(strip.text.y = element_text(angle = 0, hjust = 1, size = text_size_collection),
+          panel.spacing = unit(1, "lines"))
+
+  # Center panel: NES bar plot
+  plot_center <- ggplot(data, aes(x = NES, y = Geneset, fill = logFDR)) +
+    geom_col(color = "black", size = 1) +
+    scale_fill_gradient(low = "white", high = "red", 
+                        limits = c(0,3), breaks = seq(0,3,1)) +
+    scale_y_discrete(position = "right") +  
+    facet_grid(Collection ~ ., scales = "free_y", space = "free_y") +
+    theme_bw() +
+    labs(x = "NES", y = "") +
+    theme(axis.text.y = element_blank(),
+          strip.background = element_rect(fill = "white", color = "black",linewidth = 1 ),
+          axis.ticks.y = element_line(color = "black", size = 1.5),
+          axis.ticks.length = unit(0.3, "cm"),
+          strip.text.y = element_text(size = 1, margin = margin(0, 0, 0, 0)),# element_blank(),
+          legend.position = "none",
+          axis.title.x = element_text(size = 49),
+          axis.text.x = element_text(size = 45),
+          panel.spacing = unit(4, "lines")
+          )
+
+  # Left panel: Pathays labels
+  plot_left <- ggplot(data, aes(y = Geneset, x = 0, label = Geneset)) +
+    geom_text(hjust = 1, size = text_size_genesets) +  
+    theme_void() + 
+    theme(axis.text.y = element_blank(),
+          plot.margin = margin(0, 0, 0, -50))
+
+  # Legend panel
+  plot_legend <- ggplot(data, aes(x = NES, y = Geneset, fill = logFDR)) +
+    geom_tile() + 
+    scale_fill_gradient(low = "white", high = "red",
+                        name = expression(-log[10] ~ FDR),  # log10FDR with subscrip,
+                        limits = c(0,3), breaks = seq(0,3,1),
+                        guide = guide_colorbar(ticks.colour = "black",   # Make ticks black
+                                             ticks.linewidth = 1.5,    # Make ticks thicker
+                                             draw.ulim = TRUE,       # Draw upper limit tick
+                                             draw.llim = TRUE)) +    # Draw lower limit tick  
+    theme_bw() +
+    theme(legend.position = "right",
+        legend.box = "vertical",
+        legend.title = element_text(size = 44, hjust = 0.5, face = "bold"),  # Bigger title
+        legend.text = element_text(size = 30),  # Bigger legend text
+        legend.key.size = unit(1.5, "cm"),  # Bigger color key size
+        legend.key.height = unit(2, "cm"),  # Increase the height of the legend box
+        legend.spacing = unit(3.5, "cm"),  # More space between title and legend
+        legend.box.margin = margin(10, 20, 10, 10))#5, 5, 10, 5))  # Adjust internal spacing
+  
+  plot_legend <- plot_legend + theme(legend.box = "vertical")
+  plot_right_legend <- get_legend(plot_legend)
+
+  # Extract legend
+  #plot_right_legend <- get_legend(plot_legend)
+
+  # Combine all plots
+  final_plot <- plot_text_pathways + plot_left +  plot_center + plot_right + plot_text_msigdb + plot_right_legend + 
+    plot_layout(ncol = 6, widths = c(4, 25, 15, 3, 10, 3))  
+
+  # Display the plot
+  #print(final_plot)
+
+  # Save the plot as JPG and PDF
+  ggsave(paste0(output_path_base, ".jpg"), final_plot, width = width_output, height = height_output, units = "in", dpi = 300)
+  ggsave(paste0(output_path_base, ".pdf"), final_plot, width = width_output, height = height_output, units = "in")
+}
+
+```
+
+
+
+## Function v3
+```{r}
+# Load required libraries
+library(ggplot2)
+library(patchwork)
+library(cowplot)  # For get_legend()
+library(scales)
+
+# Function to generate MSigDB plot
+plot_global_GSEA <- function(data, geneset_col, collection_col, nes_col, logfdr_col, output_path_base, width_output, height_output, text_size_genesets = 5, text_size_collection = 5) {
+  
+  # Rename columns dynamically
+  data <- data[, c(geneset_col, collection_col, nes_col, logfdr_col)]
+  colnames(data) <- c("Geneset", "Collection", "NES", "logFDR")
+  
+  # Order data by NES value (descending)
+  data <- data[order(data$NES, decreasing = TRUE), ]
+  
+  # Ensure Geneset and Collection are factors with ordered levels
+  data$Geneset <- factor(data$Geneset, levels = rev(unique(data$Geneset)))
+  data$Collection <- factor(data$Collection, levels = unique(data$Collection))
+  
+  # Right-side label: "MSigDB" vertically centered, in bold and italic
+  plot_text_msigdb <- ggplot() + 
+  annotate("text", label = "MSigDB", fontface = "bold.italic", angle = 90, size = 35, x = 0, y = 0.5)+
+  theme_void()
+  
+  # Lef-side label: "Pathways" vertically centered, in bold and italic
+  plot_text_pathways <- ggplot() + 
+  annotate("text", label = "Pathways", fontface = "bold.italic", angle = 90, size = 35, x = 0, y = 0.5)+
+  theme_void()
+  
+  # Right panel: Collection labels (without repetition)
+  plot_right <- ggplot(data, aes(y = Geneset, x = 1.5, label = Collection)) +
+    geom_text(aes(label = ifelse(duplicated(Collection), "", Collection)), 
+              hjust = 0.5, size = 0, fontface = "bold") +  
+    facet_grid(Collection ~ ., scales = "free_y", space = "free", switch = "y") + 
+    theme_void() + 
+    theme(strip.text.y = element_text(angle = 0, hjust = 1, size = text_size_collection),
+          panel.spacing = unit(1, "lines"))
+
+  # Center panel: NES bar plot
+  plot_center <- ggplot(data, aes(x = NES, y = Geneset, fill = logFDR)) +
+    geom_col(color = "black", size = 1) +
+    scale_fill_gradientn(
+      colors = c("blue", "white", "red"),
+      values = rescale(c(0, -log10(0.05), 2.4)),
+      limits = c(0,2.4), breaks = seq(0,2.4,1),
+      oob = scales::squish,
+      guide = guide_colorbar(barwidth = 6, barheight = 25)  
+  )+
+    scale_y_discrete(position = "right") +  
+    facet_grid(Collection ~ ., scales = "free_y", space = "free_y") +
+    theme_bw() +
+    labs(x = "NES", y = "") +
+    theme(axis.text.y = element_blank(),
+          strip.background = element_rect(fill = "white", color = "black",linewidth = 1 ),
+          axis.ticks.y = element_line(color = "black", size = 1.5),
+          axis.ticks.length = unit(0.3, "cm"),
+          strip.text.y = element_text(size = 1, margin = margin(0, 0, 0, 0)),# element_blank(),
+          legend.position = "none",
+          axis.title.x = element_text(size = 49),
+          axis.text.x = element_text(size = 45),
+          panel.spacing = unit(4, "lines")
+          )
+
+  # Left panel: Pathays labels
+  plot_left <- ggplot(data, aes(y = Geneset, x = 0, label = Geneset)) +
+    geom_text(hjust = 1, size = text_size_genesets) +  
+    theme_void() + 
+    theme(axis.text.y = element_blank(),
+          plot.margin = margin(0, 0, 0, -50))
+
+  # Legend panel
+  plot_legend <- ggplot(data, aes(x = NES, y = Geneset, fill = logFDR)) +
+    geom_tile() +    
+    scale_fill_gradientn(
+      colors = c("blue", "white", "red"),
+      values = rescale(c(0, -log10(0.05), 2.4)),
+      oob = scales::squish,
+      name = expression(-log[10] ~ FDR),  # log10FDR with subscrip,
+      limits = c(0,2.4), breaks = seq(0,2.5,1),
+      guide = guide_colorbar(ticks.colour = "black",   # Make ticks black
+                             ticks.linewidth = 1.5,    # Make ticks thicker 
+                             draw.ulim = TRUE,         # Draw upper limit tick
+                              draw.llim = TRUE)) +     # Draw lower limit tick 
+    theme_bw() +
+    theme(legend.position = "right",
+        legend.box = "vertical",
+        legend.title = element_text(size = 44, hjust = 0.5, face = "bold"),  # Bigger title
+        legend.text = element_text(size = 30),  # Bigger legend text
+        legend.key.size = unit(1.5, "cm"),  # Bigger color key size
+        legend.key.height = unit(2, "cm"),  # Increase the height of the legend box
+        legend.spacing = unit(3.5, "cm"),  # More space between title and legend
+        legend.box.margin = margin(10, 20, 10, 10))#5, 5, 10, 5))  # Adjust internal spacing
+  
+  plot_legend <- plot_legend + theme(legend.box = "vertical")
+  plot_right_legend <- get_legend(plot_legend)
+
+  # Extract legend
+  #plot_right_legend <- get_legend(plot_legend)
+
+  # Combine all plots
+  final_plot <- plot_text_pathways + plot_left +  plot_center + plot_right + plot_text_msigdb + plot_right_legend + 
+    plot_layout(ncol = 6, widths = c(4, 25, 15, 3, 10, 3))  
+
+  # Display the plot
+  #print(final_plot)
+
+  # Save the plot as JPG and PDF
+  ggsave(paste0(output_path_base, ".jpg"), final_plot, width = width_output, height = height_output, units = "in", dpi = 300)
+  ggsave(paste0(output_path_base, ".pdf"), final_plot, width = width_output, height = height_output, units = "in")
+}
+
+```
+
+
+# Use it into the first data frame based on Stage 1
+```{r}
+main_dir <- "C:/Users/dan_1/Documents/PROJECTS/TB/GSEA_v2/2025_22_02-GSEA-posprocessing/"
+# Load GSEA_FDR_leq_05_with_Leading_edge_genes.tsv
+gsea_data <- read.csv( file = paste0(main_dir, "Updated-03_05-GSEA_FDR_leq_05_with_Leading_edge_genes.tsv"), sep = "\t", header = TRUE)
+
+# Subset gsea only from Stage 1
+gsea_data_stage1 <- gsea_data[gsea_data$Stage == "1",]
+
+# Filter NES < 0
+#gsea_data_stage1 <- gsea_data_stage1[gsea_data_stage1$NES > 0,]
+# Example usage
+plot_global_GSEA(gsea_data_stage1, 
+                     geneset_col = "PLOT_NAME", 
+                     collection_col = "COLLECTION", 
+                     nes_col = "NES", 
+                     logfdr_col = "Log10FDR", 
+                     output_path_base = paste0(main_dir, "Plots/2025-17-03_Global_plot/Stage_1_ST13added"),
+                     width_output = 35,height_output = 30,text_size_genesets = 15, text_size_collection = 45)
+
+```
+
+# Plot Sanity Check
+```{r}
+# Extract all genesets that have the word "platelet" in NAME in the gsea data
+#raw_gseadata <- read.csv(file = paste0(main_dir, "all_GSEA.tsv"), sep = "\t", header = TRUE)
+
+#platelet_gsea <- raw_gseadata[grepl("platel", raw_gseadata$NAME, ignore.case = TRUE),]
+
+# Write the platelet_gsea to a file
+#write.table(platelet_gsea, file = paste0(main_dir, "2025-01-03-Sanity_check_platelet_gsea.tsv"), sep = "\t", row.names = FALSE)
+
+# Load the platelet_gsea data
+platelet_gsea <- read.csv(file = paste0(main_dir, "2025-01-03-Sanity_check_platelet_gsea.tsv"), sep = "\t", header = TRUE)
+
+# Use Global_GSEA_plot
+plot_global_GSEA(platelet_gsea, 
+                     geneset_col = "PLOT_NAME", 
+                     collection_col = "COLLECTION", 
+                     nes_col = "NES", 
+                     logfdr_col = "Log10FDR", 
+                     output_path_base = paste0(main_dir, "Plots/2025-17-03_GLobal_plot/2025-17-03_Sanity_checks/03-01_Platelet_genesets"),
+                     width_output = 35,height_output = 30,text_size_genesets = 15, text_size_collection = 45)
+```
+
