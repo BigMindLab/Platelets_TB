@@ -46,6 +46,8 @@ library("ggbeeswarm", quietly = T)
 library("scales", quietly = T)
 library("clusterProfiler", quietly = T)
 library("org.Hs.eg.db", quietly = T)
+# comando to see version of org.HS.eg.db library
+# BiocManager::install("org.Hs.eg.db")
 library("AnnotationDbi", quietly = T)
 library("DOSE", quietly = T)
 #remotes::install_github("danoguevara/OmicsKit", ref = "new-functions", force = T)
@@ -60,7 +62,7 @@ require(knitr)
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_knit$set(root.dir = "./")
 sample_data <- "sample_data.xlsx"
-counts_dir <- "./Counts_Salmon"
+counts_dir <- "./TB_Counts_Salmon"
 ```
 
 # 2. Pre processing workflow
@@ -70,31 +72,15 @@ counts_dir <- "./Counts_Salmon"
 ```{r}
 sampledata <- data.frame(read.xlsx(sample_data))
 
-# Manage numeric variables
-#sampledata <- sampledata %>%
-#  mutate(
-#    bmi = ifelse(is.na(bmi), median(bmi, na.rm = TRUE), bmi),
-#    HR = ifelse(is.na(HR), median(HR, na.rm = TRUE), HR),
-#    weight = ifelse(is.na(weight), median(weight, na.rm = TRUE), weight),
-#    waist = ifelse(is.na(waist), median(waist, na.rm = TRUE), waist),
-#    hip_circ = ifelse(is.na(hip_circ), median(hip_circ, na.rm = TRUE), hip_circ)
-#  )
-
 # Convert factors
 sampledata <- sampledata %>%
   mutate(
     sex = factor(sex),
-    latent_TB = factor(latent_TB, levels = c(0, 1)),
-    age_cat = factor(age_cat, ordered = T, levels = c("20s", "30s", "40s", "50s", "60s")),
-    group = factor(group, levels = c("Control", "TB")),
-    #HR_cat = factor(HR_cat, levels = c("60s", "70s", "80s", "90s", "100s", "110s", "140s")),
-    #weight_cat = factor(weight_cat, levels = c("40s", "50s", "60s", "70s", "80s", "90s")),
-    #height_cat = factor(height_cat, levels = c(140, 150, 160, 170, 180))
-  )
+    group = factor(group, levels = c("Control", "TB"))
+   )
 
 rownames(sampledata) <- sampledata$id
-sampledata <- sampledata[, c("id", "num", "group", "latent_TB", "sex", "age", "age_cat",
-                             "height","appetite", "depression", "RIN_ours", "RIN_Ed")]
+sampledata <- sampledata[, c("id", "num", "group", "sex", "age", "RIN_ours", "RIN_Ed")]
 
 # Normal sample clustered with TB patients
 sampledata <- sampledata[-11, ]
@@ -136,7 +122,8 @@ p.counts
 ## Transcripts into genes
 
 ```{r}
-#tx2gene <- data.frame(read.xlsx("tx2gene_GRCh38v112.xlsx"))
+tx2gene <- data.frame(read.xlsx("tx2gene_GRCh38v112.xlsx"))
+
 txi.toGene <- summarizeToGene(txi, tx2gene[, c("transcriptID","geneID")])
 
 # Add gene counts
@@ -171,6 +158,14 @@ counts.gene_annotations <- OmicsKit::add_annotations(object = counts.gene_annota
                                                      variables = annotations)
 
 # write.xlsx(counts.gene_annotations, file = "Raw_Gene_Counts_Annotated.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
+```
+
+### [RUN ONCE] Create noisy genes blacklist
+```{r}
+counts.gene_annotations$MEAN <- rowMeans(counts.gene) 
+blacklist_noisy <- counts.gene_annotations[counts.gene_annotations$MEAN <= 25, c("geneID", "symbol", "biotype", "MEAN")]
+nrow(blacklist_noisy)
+write.table(blacklist_noisy, "blacklist_noisy_mean_normalized_leq25.tsv", sep = "\t", col.names = T, row.names = F)
 ```
 
 ### [RUN ONCE] Create leukocytes genes blacklist
@@ -217,6 +212,7 @@ counts.gene_annotations <- OmicsKit::add_annotations(object = counts.gene_annota
 #write.table(x = blacklist_allLeuko, file = "blacklist_all-Leuko.tsv", sep = "\t", col.names = T, row.names = F)
 ```
 
+
 ## Filter out blacklists
 
 ```{r}
@@ -224,23 +220,90 @@ blacklist_nRibo <- data.frame(read.csv("blacklist_nuclear-ribo.tsv", sep = "\t",
 blacklist_mtRibo <- data.frame(read.csv("blacklist_mito-ribo.tsv", sep = "\t", header = TRUE))
 blacklist_allRibo <- data.frame(read.csv("blacklist_all-ribo.tsv", sep = "\t", header = TRUE))
 blacklist_allLeuko <- data.frame(read.csv("blacklist_all-Leuko.tsv", sep = "\t", header = TRUE))
+blacclist_noisy <- data.frame(read.csv("blacklist_noisy_mean_normalized_leq25.tsv", sep = "\t", header = TRUE))
 
-# Keep the genes in each blacklist
+# Keep the genes in each blacklist 
 genecounts.nRibo <- counts.gene[rownames(counts.gene) %in% blacklist_nRibo[,1], ]
 genecounts.mtRibo <- counts.gene[rownames(counts.gene) %in% blacklist_mtRibo[,1], ]
 genecounts.leuko <- counts.gene[rownames(counts.gene) %in% blacklist_allLeuko[,1], ]
-genecounts.filtered <- counts.gene[!(rownames(counts.gene) %in% c(blacklist_allRibo[,1], blacklist_allLeuko[,1])), ]
 
+# Important step to filter noise and leucyte genes
+genecounts.filtered <- counts.gene[!(rownames(counts.gene) %in% c(blacklist_allRibo[,1], blacklist_allLeuko[,1], blacklist_noisy[blacklist_noisy$MEAN <= 2, 1])), ]
+
+length(unique(blacklist_noisy[blacklist_noisy$MEAN <= 2, 1])) ## = 17644
+# Add counts to sampledata
 sampledata$Counts_nRibo <- colSums(genecounts.nRibo)
 sampledata$Counts_mtRibo <- colSums(genecounts.mtRibo)
 sampledata$Counts_leuko <- colSums(genecounts.leuko)
 sampledata$Counts_filtered <- colSums(genecounts.filtered)
+```
 
+## Filter out noise blacklist
+```{r}
+# Step 1: Filter genes with MEAN <= 2
+low_expression_genes_25 <- blacklist_noisy[blacklist_noisy$MEAN <= 25, 1]
+low_expression_genes_25 <- setdiff(low_expression_genes_25, c(blacklist_allRibo[,1], blacklist_allLeuko[,1]))  # Exclude permitted genes
+cat("Number of genes removed (MEAN <= 25):", length(low_expression_genes_25), "\n")
+
+genecounts_MNC_25 <- gene.counts[low_expression_genes_25, ]  # Filter
+
+# Function to progressively filter genes
+filter_genes <- function(previous_genes, cutoff, previous_counts) {
+  current_genes <- blacklist_noisy[blacklist_noisy$MEAN <= cutoff, 1]
+  current_genes <- intersect(current_genes, rownames(previous_counts))  # Only consider remaining genes
+  current_genes <- unique(current_genes)
+  cat("Number of genes removed (MEAN <=", cutoff, "):", length(current_genes), "\n")
+  return(previous_counts[current_genes, ])
+}
+
+# Stepwise filtering using the function
+genecounts_MNC_10   <- filter_genes(low_expression_genes_25, 10, genecounts_MNC_25)
+genecounts_MNC_7    <- filter_genes(low_expression_genes_10, 7, genecounts_MNC_10)
+genecounts_MNC_6    <- filter_genes(low_expression_genes_10, 6, genecounts_MNC_7)
+genecounts_MNC_5    <- filter_genes(low_expression_genes_10, 5, genecounts_MNC_6)
+genecounts_MNC_4    <- filter_genes(low_expression_genes_10, 4, genecounts_MNC_5)
+genecounts_MNC_3    <- filter_genes(low_expression_genes_5, 3, genecounts_MNC_4)
+genecounts_MNC_2    <- filter_genes(low_expression_genes_3, 2, genecounts_MNC_3)
+genecounts_MNC_1_5  <- filter_genes(low_expression_genes_2, 1.5, genecounts_MNC_2)
+genecounts_MNC_1    <- filter_genes(low_expression_genes_1_5, 1, genecounts_MNC_1_5)
+
+
+# Remove the rows where rownames are in exclude
+gene.counts_filtered <- gene.counts[!(rownames(gene.counts) %in% rownames(genecounts_MNC_2)), ]
+gene.counts_filtered <- gene.counts_filtered [!(rownames(gene.counts_filtered) %in% blacklist_allLeuko[,1]), ]
+gene.counts_filtered <- gene.counts_filtered [!(rownames(gene.counts_filtered) %in% blacklist_allRibo[,1]), ]
+
+```
+
+### Add noisy genes into sampledata
+```{r}
+
+length(blacklist_noisy[blacklist_noisy$MEAN<=1, 1])
+sampledata$counts_nRibo <- colSums(genecounts.nRibo[1:(length(genecounts.nRibo))])
+sampledata$counts_mtRibo <- colSums(genecounts.mtRibo[1:(length(genecounts.mtRibo))])
+sampledata$counts_leuko <- colSums(genecounts.leuko[1:(length(genecounts.leuko))])
+
+100*sampledata$counts_leuko/sampledata$gene_counts
+
+#sampledata$counts_noisy <- colSums(genecounts_MNC_25[1:(length(genecounts_MNC_25))])  
+sampledata$counts_MNC_10 <- colSums(genecounts_MNC_10[1:(length(genecounts_MNC_10))])  - sampledata$counts_MNC_7
+sampledata$counts_MNC_7 <- colSums(genecounts_MNC_5[1:(length(genecounts_MNC_5))])  - sampledata$counts_MNC_6
+sampledata$counts_MNC_6 <- colSums(genecounts_MNC_5[1:(length(genecounts_MNC_5))])  - sampledata$counts_MNC_5
+sampledata$counts_MNC_5 <- colSums(genecounts_MNC_5[1:(length(genecounts_MNC_5))])  - sampledata$counts_MNC_3
+sampledata$counts_MNC_3 <- colSums(genecounts_MNC_3[1:(length(genecounts_MNC_3))])  - sampledata$counts_MNC_2
+sampledata$counts_MNC_2 <- colSums(genecounts_MNC_2[1:(length(genecounts_MNC_2))])  - sampledata$counts_MNC_1_5
+sampledata$counts_MNC_1_5 <- colSums(genecounts_MNC_1_5[1:(length(genecounts_MNC_1_5))]) - sampledata$counts_MNC_1
+sampledata$counts_MNC_1 <- colSums(genecounts_MNC_1[1:(length(genecounts_MNC_1))])
+
+sampledata$counts_filtered <- colSums(gene.counts_filtered[1:(length(gene.counts_filtered ))]) - sampledata$counts_MNC_10
+```
+
+```{r}
 # write.xlsx(sampledata, file = "samples_with_counts.xlsx", colNames = T, rowNames = F, append = F)
 
 # Filter the txi object
-#keep <- !(rownames(txi.toGene$counts) %in% c(blacklist_allRibo[,1], blacklist_allLeuko[,1]))
-keep <- !(rownames(txi.toGene$counts) %in% blacklist_allRibo[,1])
+keep <- !(rownames(txi.toGene$counts) %in% c(blacklist_allRibo[,1], blacklist_allLeuko[,1]))
+#keep <- !(rownames(txi.toGene$counts) %in% blacklist_allRibo[,1])
 
 txi.toGene$abundance <- txi.toGene$abundance[keep, ]
 txi.toGene$counts <- txi.toGene$counts[keep, ]
@@ -250,7 +313,46 @@ txi.toGene$length <- txi.toGene$length[keep, ]
 ### Counts per blacklist
 
 ```{r}
-for (bl in c("Counts_nRibo", "Counts_mtRibo", "Counts_leuko")) {
+# CONVERT in long format for plotting the sample data
+sampledata_temp <- sampledata[, c("id", "counts_nRibo", "counts_mtRibo", "counts_leuko", "counts_filtered",
+                                  "counts_MNC_10", "counts_MNC_7", "counts_MNC_6", "counts_MNC_5", "counts_MNC_3",
+                                  "counts_MNC_2", "counts_MNC_1_5", "counts_MNC_1")]
+
+# Convert to long format
+sampledata_long <- sampledata_temp %>%
+  pivot_longer(cols = -id,  # Keep "id" column fixed
+               names_to = "Condition",  # New column for variable names
+               values_to = "Counts")  # New column for values
+
+# Define the correct order for Condition
+condition_order <- c("counts_nRibo", "counts_mtRibo", "counts_leuko", 
+                     "counts_MNC_10", "counts_MNC_7", "counts_MNC_6", "counts_MNC_5",
+                     "counts_MNC_3", "counts_MNC_2", "counts_MNC_1_5", "counts_MNC_1", "counts_filtered")
+
+# Convert Condition to an ordered factor
+sampledata_long$Condition <- factor(sampledata_long$Condition, levels = condition_order)
+
+
+# Plot the counts per list STACKED into a barplot per sample 
+p.counts <- ggplot(data = sampledata_long,
+                   aes(x = factor(id, levels = sampledata$id), y = Counts, fill = Condition)) +
+  theme_bw() + theme(panel.grid.major.x = element_blank(), panel.grid.minor.y = element_blank()) +
+  geom_bar(position="stack", stat="identity", color="black", linewidth = 0.3) +
+  scale_fill_manual(values = my_colors) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        strip.text = element_text(size = 14)) +
+  scale_y_continuous(expand = expansion(mult = c(0, .01)), labels = scales::comma) +
+  xlab("Sample ID") + ylab("Counts") + theme(axis.title=element_text(size=16))
+
+# save 
+ggsave("plots_v1/Counts_with cut-offs_per_Sample.jpg", p.counts, width = 10, height = 8, dpi = 300)
+
+my_colors <- c("#FFDEAD", "#ffb6c1", "darkred", "azure", "peru", "#F67280", "#C06C84", "#355C7D", "#F8B195", "peru", "#F67280"#
+,"azure")
+               
+               
+for (bl in c("counts_nRibo", "counts_mtRibo", "counts_leuko", "counts_MNC_10","counts_MNC_7","counts_MNC_6",
+             "counts_MNC_5","counts_MNC_4","counts_MNC_3","counts_MNC_2","counts_MNC_1_5","counts_MNC_1","counts_filtered")) {
   p.sub <- ggplot(data = sampledata, aes(x = factor(id, levels = id), y = .data[[bl]], fill = group)) +
     theme_bw() + theme(panel.grid.major.x = element_blank(), panel.grid.minor.y = element_blank()) +
     geom_bar(stat="identity", color="black", linewidth = 0.3) + scale_fill_manual(values = my_colors) +
@@ -260,7 +362,7 @@ for (bl in c("Counts_nRibo", "Counts_mtRibo", "Counts_leuko")) {
   
   print(p.sub)
   
-  ggsave(paste0("plots/Counts-Transcript_per_Sample_", unlist(strsplit(bl, split = "_"))[2], ".jpg"),
+  ggsave(paste0("plots_v1/Counts_with_cutoffs_per_Sample_", unlist(strsplit(bl, split = "_"))[2], ".jpg"),
          p.sub, width = 10, height = 8, dpi = 300)
 }
 
@@ -277,6 +379,8 @@ p.filt
 
 ggsave("plots/Counts-Transcript_per_Sample_filtered.jpg", p.filt,
        width = 10, height = 8, dpi = 300)
+
+load("C:/Users/Dan_1/Documents/Projects/TB/Results_v1/02_16_updated_Rdata.RData")
 ```
 
 ## Scaled TPMs
@@ -292,61 +396,150 @@ gene.tpm.annotated <- OmicsKit::add_annotations(gene.tpm, geneID.details, variab
 geneTPM.nRibo <- gene.tpm[rownames(gene.tpm) %in% blacklist_nRibo[,1], ]
 geneTPM.mtRibo <- gene.tpm[rownames(gene.tpm) %in% blacklist_mtRibo[,1], ]
 geneTPM.leuko <- gene.tpm[rownames(gene.tpm) %in% unique(blacklist_allLeuko[,1]),]
-geneTPM.filtered <- gene.tpm[!(rownames(gene.tpm) %in% c(blacklist_allRibo[,1], blacklist_allLeuko[,1])), ]
+```
 
+### [RUN once] TPM of nosy and cleaned genes
+```{r}
+# Step 1: Filter genes with MEAN <= 25
+low_expression_genes_25 <- blacklist_noisy[blacklist_noisy$MEAN <= 25, 1]
+low_expression_genes_25 <- setdiff(low_expression_genes_25, c(blacklist_allRibo[,1], blacklist_allLeuko[,1]))  # Exclude permitted genes
+cat("Number of genes removed (MEAN <= 25):", length(low_expression_genes_25), "\n")
+
+geneTPM_MNC_25 <- gene.tpm[low_expression_genes_25, ]  # Filter
+
+# Function to progressively filter genes
+filter_genes <- function(previous_genes, cutoff, previous_tpm) {
+  current_genes <- blacklist_noisy[blacklist_noisy$MEAN <= cutoff, 1]
+  current_genes <- intersect(current_genes, rownames(previous_tpm))  # Only consider remaining genes
+  current_genes <- unique(current_genes)
+  cat("Number of genes removed (MEAN <=", cutoff, "):", length(current_genes), "\n")
+  return(previous_tpm[current_genes, ])
+}
+
+# Stepwise filtering using the function
+geneTPM_MNC_10   <- filter_genes(low_expression_genes_25, 10, geneTPM_MNC_25)
+geneTPM_MNC_5    <- filter_genes(low_expression_genes_10, 5, geneTPM_MNC_10)
+geneTPM_MNC_3    <- filter_genes(low_expression_genes_5, 3, geneTPM_MNC_5)
+geneTPM_MNC_2    <- filter_genes(low_expression_genes_3, 2, geneTPM_MNC_3)
+geneTPM_MNC_1_5  <- filter_genes(low_expression_genes_2, 1.5, geneTPM_MNC_2)
+geneTPM_MNC_1    <- filter_genes(low_expression_genes_1_5, 1, geneTPM_MNC_1_5)
+
+
+# Remove the rows where rownames are in exclude
+gene.tpm_filtered <- gene.tpm[!(rownames(gene.tpm) %in% rownames(geneTPM_MNC_25)), ]
+gene.tpm_filtered <- gene.tpm_filtered [!(rownames(gene.tpm_filtered) %in% blacklist_allLeuko[,1]), ]
+gene.tpm_filtered <- gene.tpm_filtered [!(rownames(gene.tpm_filtered) %in% blacklist_allRibo[,1]), ]
+
+### Add TPM noisy genes into sampledata
+
+
+length(blacklist_noisy[blacklist_noisy$MEAN<=1, 1])
 sampledata$TPM_nRibo <- colSums(geneTPM.nRibo[1:(length(geneTPM.nRibo))])
-sampledata$TPM_mtRibo <- colSums(geneTPM.mtRibo[1:(length(geneTPM.nRibo))])
-sampledata$TPM_leuko <- colSums(geneTPM.leuko[1:(length(geneTPM.nRibo))])
-sampledata$TPM_filtered <- colSums(geneTPM.filtered[1:(length(geneTPM.nRibo))])
+sampledata$TPM_mtRibo <- colSums(geneTPM.mtRibo[1:(length(geneTPM.mtRibo))])
+sampledata$TPM_leuko <- colSums(geneTPM.leuko[1:(length(geneTPM.leuko))])
 
-#write.xlsx(sampledata, file = "samples_with_counts.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
+sampledata$TPM_noisy <- colSums(geneTPM_MNC_25[1:(length(geneTPM_MNC_25))])  
+sampledata$TPM_MNC_10 <- colSums(geneTPM_MNC_10[1:(length(geneTPM_MNC_10))])  - sampledata$TPM_MNC_5
+sampledata$TPM_MNC_5 <- colSums(geneTPM_MNC_5[1:(length(geneTPM_MNC_5))])  - sampledata$TPM_MNC_3
+sampledata$TPM_MNC_3 <- colSums(geneTPM_MNC_3[1:(length(geneTPM_MNC_3))])  - sampledata$TPM_MNC_2
+sampledata$TPM_MNC_2 <- colSums(geneTPM_MNC_2[1:(length(geneTPM_MNC_2))])  - sampledata$TPM_MNC_1_5
+sampledata$TPM_MNC_1_5 <- colSums(geneTPM_MNC_1_5[1:(length(geneTPM_MNC_1_5))]) - sampledata$TPM_MNC_1
+sampledata$TPM_MNC_1 <- colSums(geneTPM_MNC_1[1:(length(geneTPM_MNC_1))])
+
+sampledata$TPM_filtered <- colSums(gene.tpm_filtered[1:(length(gene.tpm_filtered))]) - sampledata$TPM_noisy
+
+write.xlsx(sampledata, file = "samples_with_TPM.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
 ```
 
 ### Plot the TPMs per list
 
 ```{r}
 # Plot the TPMs per list STACKED
-subgroups <- c("TPM_nRibo", "TPM_mtRibo", "TPM_leuko", "TPM_filtered")
-sampledata_TPMlong <- reshape(sampledata[, c("id", subgroups)], varying = subgroups, direction = "long", sep = "_")
+#subgroups <- c("TPM_nRibo", "TPM_mtRibo", "TPM_leuko","TPM_MNC_1","TPM_MNC_1_5",
+#               "TPM_MNC_2", "TPM_MNC_3", "TPM_MNC_5", "TPM_MNC_10",
+#               "TPM_MNC_25","TPM_filtered")
+subgroups <- c("TPM_nRibo", "TPM_mtRibo", "TPM_leuko","TPM_noisy","TPM_filtered")
+sampledata_temp <- sampledata[, c("id", subgroups)]
+# Convert to long format using pivot_longer
+sampledata_TPMlong <- sampledata_temp %>%
+  pivot_longer(cols = all_of(subgroups),  # Select columns to reshape
+               names_to = "Condition",   # New column for variable names
+               values_to = "TPM")        # New column for values
+
+
+
+#sampledata_TPMlong <- reshape(sampledata[, c("id", subgroups)], varying = subgroups, direction = "long", sep = "_")
 #sampledata_TPMlong <- reshape(sampledata[sampledata$group == "Control", c("id", subgroups)],varying = subgroups, direction = "long", sep = "_")
 
 sampledata_TPMlong <- sampledata_TPMlong %>%
-  mutate(group = case_when(id %in% sampledata$id[sampledata$group == "Control"] ~ "Control",
+  mutate(group = 
+           case_when(id %in% sampledata$id[sampledata$group == "Control"] ~ "Control",
                            TRUE ~ "TB")) %>%
   mutate(group = factor(group, levels = c("Control", "TB"), ordered = TRUE))
 
-names(sampledata_TPMlong)[names(sampledata_TPMlong) == "time"] <- "Gene_Type"
-sampledata_TPMlong$Gene_Type <- factor(sampledata_TPMlong$Gene_Type, levels = c("nRibo", "mtRibo", "leuko", "filtered"))
+names(sampledata_TPMlong)[names(sampledata_TPMlong) == "Condition"] <- "Gene"
 
-bl.colors <- c("coral1", "gold", "peru", "azure")
+#sampledata_TPMlong$Gene_Type <- factor(sampledata_TPMlong$Gene_Type, levels = c("TPM_nRibo","TPM_mtRibo", "TPM_leuko", "TPM_MNC_1", "TPM_MNC_1_5", "TPM_MNC_2", "TPM_MNC_3", "TPM_MNC_5", "TPM_MNC_10","TPM_MNC_25", "TPM_filtered"))
 
-p.TPMs <- ggplot(data = sampledata_TPMlong, aes(x = factor(id, levels = sampledata$id), y = TPM, fill = Gene_Type)) +
-  theme(panel.grid.major.x = element_blank(), panel.grid.minor.y = element_blank(), axis.title = element_text(size=15),
-        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size=7), strip.text = element_text(size = 14)) +
-  geom_bar(position="stack", stat="identity", color="black", linewidth = 0.1) + scale_fill_manual(values = bl.colors) +
+#sampledata_TPMlong$Gene <- factor(sampledata_TPMlong$Gene, levels = c("TPM_nRibo","TPM_mtRibo", "TPM_leuko", "TPM_noisy", "TPM_filtered"))
+
+# Change names of gene column
+sampledata_TPMlong <- sampledata_TPMlong %>%
+  mutate(Gene = case_when(Gene == "TPM_nRibo" ~ "Nuclear Ribosome",
+                          Gene == "TPM_mtRibo" ~ "Mothocondrial Ribosome",
+                          Gene == "TPM_leuko" ~ "Leukocytes",
+                          Gene == "TPM_noisy" ~ "Noise",
+                          Gene == "TPM_filtered" ~ "Cleaned"))
+
+# Factor gene
+sampledata_TPMlong$Gene <- factor(sampledata_TPMlong$Gene, levels = c("Nuclear Ribosome", "Mothocondrial Ribosome", "Leukocytes", "Noise", "Cleaned"))
+
+sampledata_TPMlong[sampledata_TPMlong$id == "114",c("TPM", "Gene")]
+unique(sampledata_TPMlong$Gene)
+
+bl.colors <- c("#FF6F61", "#FFD166","darkred", "#6B5B95", "azure", "peru", "#F67280", "#C06C84", "#355C7D", "#F8B195","azure")# "#A2D5F2")"#88D8B0",
+c("coral1", "gold", "peru", "azure", "blue", "darkblue", "darkgreen", "green", , "red", "#FFDEAD")
+p.TPMs <- ggplot(data = sampledata_TPMlong,
+                 aes(x = factor(id, levels = sampledata$id), y = TPM, fill = Gene)) +
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    axis.title = element_text(size=20),
+    axis.text.y = element_text(size=20),
+    axis.text.x = element_text(angle = 90,
+                               vjust = 0.5,
+                               hjust=1, size=20),
+    # Improve size of the text legend
+    legend.text = element_text(size = 15),
+    legend.title = element_text(size = 20),
+    strip.text = element_text(size = 20)) +
+  geom_bar(position="stack", stat="identity", color="black", linewidth = 0.1) +
+  scale_fill_manual(values = bl.colors) +
   xlab("Sample ID") + ylab("TPM") +
+  # facet by sample group
+  facet_grid(~group, scales = "free_x") +
   scale_y_continuous(expand = expansion(mult = c(0, .01)), breaks = seq(0, 1e+6, by = 25e+4), labels = scales::comma)
 
 p.TPMs
 
-ggsave("plots/TPMs-Transcript_per_Sample_subgroups.jpg", p.TPMs, width = 10, height = 8, dpi = 300)
+ggsave("plots_v1/TPM_oficial/TPMs_per_Sample_subgroups.jpg", p.TPMs, width = 10, height = 8, dpi = 300)
 #ggsave("plots/TPMs-Transcript_per_Sample_subgroups_Control.jpg", p.TPMs, width = 8, height = 8, dpi = 300)
 
 # Plot the TPMs per list INDIVIDUALLY
-for (bl in subgroups) {
-  p.sub <- ggplot(data = sampledata, aes(x = factor(id, levels = id), y = .data[[bl]], fill = group)) +
-    theme_bw() + theme(panel.grid.major.x = element_blank(), panel.grid.minor.y = element_blank()) +
-    geom_bar(stat="identity", color="black", linewidth = 0.1) + scale_fill_manual(values = my_colors) +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
-          strip.text = element_text(size = 14), axis.title = element_text(size=16)) +
-    scale_y_continuous(expand = expansion(mult = c(0, .01)), labels = scales::comma) +
-    xlab("Sample ID") + ylab(unlist(strsplit(bl, split = "_"))[2])
+#for (bl in subgroups) {
+#  p.sub <- ggplot(data = sampledata, aes(x = factor(id, levels = id), y = .data[[bl]], fill = group)) +
+#    theme_bw() + theme(panel.grid.major.x = element_blank(), panel.grid.minor.y = element_blank()) +
+#    geom_bar(stat="identity", color="black", linewidth = 0.1) + scale_fill_manual(values = my_colors) +
+#    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+#          strip.text = element_text(size = 14), axis.title = element_text(size=16)) +
+#    scale_y_continuous(expand = expansion(mult = c(0, .01)), labels = scales::comma) +
+#    xlab("Sample ID") + ylab(unlist(strsplit(bl, split = "_"))[2])
   
-  print(p.sub)
+#  print(p.sub)
   
-  ggsave(paste0("plots/TPMs-Transcript_per_Sample_", unlist(strsplit(bl, split = "_"))[2], ".jpg"), p.sub, width = 10, height = 8, dpi = 300)
+#  ggsave(paste0("plots/TPMs-Transcript_per_Sample_", unlist(strsplit(bl, split = "_"))[2], ".jpg"), p.sub, width = 10, height = 8, dpi = 300)
   #ggsave(paste0("plots/TPMs-Transcript_per_Sample_An_", unlist(strsplit(bl, split = "_"))[2], ".jpg"), p.sub, width = 8, height = 8, dpi = 300)
-}
+#}
 ```
 
 ### Plot the counts per list
@@ -409,7 +602,21 @@ for (bl in subgroups) {
 ```{r}
 # Filter low counts
 blacklist_lowCounts <- data.frame(read.csv("blacklist_low-Counts.tsv", sep = "\t", header = TRUE))
-keep <- !(rownames(txi.toGene$counts) %in% blacklist_lowCounts$geneID[blacklist_lowCounts$Mean <= 10])
+
+low_counts_cutoff <- c(2)
+
+genes.low_counts <- rownames(normalized.counts[normalized.counts$Mean <= low_counts_cutoff,])
+
+# Check if there is genes in lowcount less then the normalized counts df
+length(genes.low_counts)
+nrow(normalized.counts)
+
+# Add porcentage of low counts
+100*length(genes.low_counts) / nrow(normalized.counts)
+txi.toGene <- summarizeToGene(txi, tx2gene[, c("transcriptID","geneID")])
+
+keep <- rownames(txi.toGene$counts) %in% rownames(genecounts.filtered)
+table(keep)
 
 txi.toGene$abundance <- txi.toGene$abundance[keep, ]
 txi.toGene$counts <- txi.toGene$counts[keep, ]
@@ -424,8 +631,13 @@ colData(ds.deseq)$group  <- factor(colData(ds.deseq)$group,
 
 # Note that read quantifications are rounded in DESeq, so Salmon counts < 0.5 are now 0
 nozero <- rowSums(counts(ds.deseq)) > 0
+
 ds.deseq <- ds.deseq[nozero, ] # Remove genes with zero counts
 ds.deseq <- estimateSizeFactors(ds.deseq)
+# Variance Stabilizing Transformation
+transf.data <- varianceStabilizingTransformation(ds.deseq)
+
+
 
 ######################
 # Normalized gene counts
@@ -434,13 +646,15 @@ normalized.counts <- as.data.frame(counts(ds.deseq, normalized = TRUE))
 TB.ids <- sampledata$id[sampledata$group == "TB"]
 C.ids <- sampledata$id[sampledata$group == "Control"]
 
-normalized.counts$Mean.TB <- rowMeans(normalized.counts[, TB.ids])
-normalized.counts$Mean.C <- rowMeans(normalized.counts[, C.ids])
-normalized.counts$Mean <- rowMeans(normalized.counts[, c(TB.ids, C.ids)])
+normalized.counts$Mean <- rowMeans(normalized.counts[,])
 
+normalized.counts$Mean <- rowMeans(normalized.counts[,])
+
+?rowMeans
 # Adding gene name and description
 normalized.counts.annotated <- OmicsKit::add_annotations(normalized.counts, geneID.details, variables = annotations)
-#write.xlsx(normalized.counts.annotated, file = "Normalized_Gene_counts.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
+
+write.xlsx(normalized.counts.annotated, file = "Results_v1/Normalized_counts_cleaned.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
 #write.xlsx(normalized.counts.annotated, file = "Normalized_Gene_counts_wo_Leuko.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
 #write.xlsx(normalized.counts.annotated, file = "Normalized_Gene_counts_wo_lowCounts.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
 ######################
@@ -455,38 +669,90 @@ transf.data <- varianceStabilizingTransformation(ds.deseq)
 normCounts <- normalized.counts.annotated[, c("geneID", "symbol", "Mean")]
 normCounts$category <- ifelse(normCounts$Mean == 0, "= 0",
                               ifelse(normCounts$Mean <= 1, "<= 1",
-                                     ifelse(normCounts$Mean <= 2, "<= 2",
-                                            ifelse(normCounts$Mean <= 3, "<= 3",
-                                                   ifelse(normCounts$Mean <= 5, "<= 5",
-                                                          ifelse(normCounts$Mean <= 10, "<= 10",
-                                                                 ifelse(normCounts$Mean <= 25, "<= 25", "> 25")))))))
-normCounts$category <- factor(normCounts$category, levels = c("= 0", "<= 1", "<= 2", "<= 3", "<= 5", "<= 10", "<= 25", "> 25"))
+                                      ifelse(normCounts$Mean <= 1.5, "<= 1.5",  
+                                             ifelse(normCounts$Mean <= 2, "<= 2",
+                                                    ifelse(normCounts$Mean <= 3, "<= 3",
+                                                           ifelse(normCounts$Mean <= 5, "<= 5",
+                                                                   ifelse(normCounts$Mean <= 6, "<= 6",
+                                                                           ifelse(normCounts$Mean <= 7, "<= 7",
+                                                                                  ifelse(normCounts$Mean <= 10, "<= 10",
+                                                                                         ifelse(normCounts$Mean <= 25, "<= 25", "> 25"))))))))))
 
-ggplot(normCounts[normCounts$Mean <= 50, ], aes(x = Mean, fill = category)) +
-  geom_histogram(binwidth = 1, color = "black", position = "stack") + theme_bw() + xlab("Mean Normalized Counts") +
-  ylab("Frequency") + scale_x_continuous(breaks = seq(0, 50, by = 5)) + scale_y_continuous(breaks = seq(0, 15000, by = 2500)) +
+normCounts$category <- factor(normCounts$category, levels = c("= 0", "<= 1", "<= 1.5", "<= 2", "<= 3", "<= 5","<= 6","<= 7", "<= 10", "<= 25", "> 25"))
+
+# Barplot per sample
+
+p.bar <- ggplot(data = normCounts, aes(x = category, fill = category)) +
+  geom_bar() +
+  theme_bw() +
+  xlab("Mean Normalized Counts") +
+  ylab("Frequency") +
   scale_fill_manual(values = c("= 0" = "grey70",
                                "<= 1" = "coral1",
+                               "<= 1.5" = "#6B8E23",
                                "<= 2" = "gold",
                                "<= 3" = "mistyrose",
                                "<= 5" = "violet",
+                               "<= 6" = "#F67280",
+                               "<= 7" = "#F8B195",
                                "<= 10" = "peru",
                                "<= 25" = "azure",
                                "> 25" = "steelblue"),
                     name = "Counts") +
-  theme(strip.text = element_text(size = 14), axis.text = element_text(size = 12), axis.title = element_text(size = 16),
-        legend.title = element_text(size = 14), legend.text = element_text(size = 12))
+  theme(
+    strip.text = element_text(size = 14), 
+    axis.text = element_text(size = 12, angle = 45, hjust = 1),
+    axis.title = element_text(size = 16),
+    legend.title = element_text(size = 14), 
+    legend.text = element_text(size = 12))
+p.bar
+#save 
+ggsave("plots_v1/Barplot_cut-offs-Normalized_Counts.jpg", p.bar, width = 10, height = 8, dpi = 300)
+
+# Histogram
+histogram_normcount <- ggplot(normCounts[normCounts$Mean <= 30, ],
+                              aes(x = Mean, fill = category)) +
+  geom_histogram(binwidth = 1, color = "black", position = "stack") +
+  theme_bw() +
+  xlab("Mean Normalized Counts") +
+  ylab("Frequency") +
+  scale_x_continuous(breaks = seq(0, 30, by = 5), limits = c(0,30), oob = scales::squish) + #, oob = scales::squish
+  scale_y_continuous(breaks = seq(0, 2500, by = 250), limits = c(0,2500), oob = scales::squish) + #
+  scale_fill_manual(values = c("= 0" = "grey70",
+                               "<= 1" = "coral1",
+                               "<= 1.5" = "#6B8E23",
+                               "<= 2" = "gold",
+                               "<= 3" = "mistyrose",
+                               "<= 5" = "violet",
+                               "<= 6" = "#F67280",
+                               "<= 7" = "#F8B195",
+                               "<= 10" = "peru",
+                               "<= 25" = "azure",
+                               "> 25" = "steelblue"),
+                    name = "Counts") +
+  theme(
+    strip.text = element_text(size = 14), 
+    axis.text = element_text(size = 12),
+    axis.title = element_text(size = 16),
+    legend.title = element_text(size = 14), 
+    legend.text = element_text(size = 12))
+
+# Save
+ggsave("plots_v1/Histogram_Normalized_Counts_v5_zoom.jpg", histogram_normcount, width = 10, height = 9, dpi = 300)
 ```
 
 
 ## Explore confounders
 
-## PCA with Ward.D2 clustering
+### PCA with Ward.D2 clustering
 
 ```{r}
 confounding_var <- colnames(sampledata)[c(3:4, 6:12)]
+
 confounding_name <- c("Group", "Latent TB", "Age", "Age", "Height", "Appetite", "Depression", "RIN", "RIN")
 
+confounding_var <- "group"
+confounding_name <- c("group")
 
 # Function
 PCA_clust <- function(object, PCs = c(1,2), ntop = 200, returnData = FALSE,
@@ -626,7 +892,7 @@ for (i in seq_along(confounding_var)) {
     ntop =  nrow(assay(transf.data)),
     variables = c(confounding_var[i], "sex"),
     legend_names = c(confounding_name[i], "Sex"),
-    colors = c(my_colors, "#87cefa", "#ffa07a", "#ffe4b5", "#98fb98", "#dda0dd"),
+    colors = c("#bbfffeff", "#ffb6c1ff","#ffa07a", "#ffe4b5", "#98fb98", "#dda0dd"), #my_colors,
     shapes = 21:22,
     legend_title = 15,
     legend_elements = 14,
@@ -638,7 +904,7 @@ for (i in seq_along(confounding_var)) {
   
   #ggsave(filename = paste0("plots/dim_reduction/PCA/PCA12_", confounding_var[i], "_wo_Leuko.jpg"),
   #       plot = pca12_clust, width = 9, height = 6, dpi = 300)
-  ggsave(filename = paste0("plots/dim_reduction/PCA/PCA12_", confounding_var[i], "_wo_lowCounts.jpg"),
+  ggsave(filename = paste0("plots_v1/dim_reduction_PCA_", confounding_var[i], "_wo_lowCounts_co_2.jpg"),
          plot = pca12_clust, width = 9, height = 6, dpi = 300)
 }
 
@@ -664,7 +930,7 @@ for (i in seq_along(confounding_var)) {
 #       plot = pca12_clust, width = 9, height = 6, dpi = 300)
 ```
 
-## tSNE with HDBSCAN clustering
+### tSNE with HDBSCAN clustering
 
 ```{r}
 iter <- 10000
@@ -829,7 +1095,7 @@ for (i in seq_along(confounding_var)) {
 #         plot = tSNE_plot, width = 7, height = 6, dpi = 300)
 ```
 
-## UMAP with HDBSCAN clustering
+### UMAP with HDBSCAN clustering
 
 ```{r}
 # Function
@@ -1042,7 +1308,7 @@ htmlwidgets::saveWidget(umap_plot, paste0("plots/dim_reduction/UMAP/Umap_n", nei
                                           comp + 1, "D_", iter / 1000, "k_group", ".html"))
 ```
 
-## Heatmap Samples vs Samples
+### Heatmap Samples vs Samples
 
 ```{r}
 ####################
@@ -1069,7 +1335,7 @@ lapply(heatmap_configs, function(config) {
   # Save Heatmap as SVG and PNG
   #ggsave(paste0("plots/dim_reduction/Heatmaps/", config$filename, ".svg"),
   #       plot = heatmap_samples, width = 7, height = 7, dpi = 300)
-  ggsave(paste0("plots/dim_reduction/Heatmaps/", config$filename, ".jpg"),
+  ggsave(paste0("plots_v1/dim_reduction/Heatmaps/", config$filename, ".jpg"),
          plot = heatmap_samples, width = 7, height = 7, dpi = 300)
 })
 ```
@@ -1079,7 +1345,7 @@ lapply(heatmap_configs, function(config) {
 ```{r}
 # Model matrix
 ds.deseq <- DESeq(ds.deseq, modelMatrixType="standard", betaPrior=FALSE)
-
+?DESeq
 ## DESeq2's dispersion estimates
 plotDispEsts(ds.deseq)
 
@@ -1096,11 +1362,59 @@ cutoff_fold <- 1 # Cut off fold-change
 res.TB_C <- results(ds.deseq, name = "group_TB_vs_Control",
                     altHypothesis="greaterAbs",
                     alpha = cutoff_alpha,
-                    #independentFiltering = TRUE, # Automatic filtering
+                    #independentFilterimeng = TRUE, # Automatic filtering
                     pAdjustMethod = "BH") # Benjamini Hochberg = FDR
 
 summary(res.TB_C)
 head(res.TB_C[(res.TB_C$padj < cutoff_alpha) & !is.na(res.TB_C$padj), ], n = 10)
+?results
+```
+## DEseq2 cut-off screening
+```{r}
+# Load necessary library
+library(ggplot2)
+library(dplyr)
+
+# Create the dataset
+screening_DEseq <- data.frame(
+  cut_off = c("0", "≤1", "≤1.5", "≤2", "≤3", "≤4", "≤5", "≤6", "≤7", "≤10"),  # Treat as categorical
+  LFC_up = c(839, 852, 851, 843, 840, 833, 814, 811, 804, 778),   # LFC > 0
+  LFC_down = c(464, 465, 458, 439, 432, 422, 418, 413, 413, 397)   # LFC < 0 (last value missing)
+)
+
+# Convert cut_off to a factor to ensure discrete x-axis
+screening_DEseq$cut_off <- factor(screening_DEseq$cut_off, levels = screening_DEseq$cut_off)
+
+# Plot
+screening_plot <- ggplot(screening_DEseq, aes(x = cut_off)) +
+  geom_line(aes(y = LFC_up, group = 1, color = "LFC > 0"), size = 1.2) +  
+  geom_line(aes(y = LFC_down, group = 1, color = "LFC < 0"), size = 1.2) +
+  geom_point(aes(y = LFC_up, color = "LFC > 0"), size = 3) +
+  geom_point(aes(y = LFC_down, color = "LFC < 0"), size = 3) +
+  scale_color_manual(values = c("LFC > 0" = "red", "LFC < 0" = "blue")) +
+  labs(
+    x = "Cut-off",
+    y = "Number of Genes",
+    title = "LFC Up and Down across Cut-offs",
+    color = "LFC"
+  ) +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 16),
+        axis.text.y = element_text(size = 16),
+        axis.title = element_text(size = 18, hjust = 0.5),
+        plot.title = element_text(size = 20, hjust = 0.5),
+        legend.title = element_text(size = 16),
+        legend.text = element_text(size = 14)
+        ) + 
+  # Put the little lines inside the plot not outsie 
+  theme() +
+  scale_y_continuous(breaks = seq(300, 1000, by = 100), limits = c(390, 900))
+
+# save
+ggsave(filename = "plots_v1/DEseq2_cut_off_screening.jpg",
+       plot = screening_plot, width = 9, height = 6, dpi = 300)
+
+nrow(normCounts)
 ```
 
 ## Annotate results
@@ -1121,13 +1435,13 @@ add_annotations_mod <- function(object, reference, variables = NULL){
 res.TB_C <- add_annotations_mod(res.TB_C, geneID.details, variables = annotations)
 colnames(res.TB_C)[7] <- "ensembl"
 
-write.xlsx(res.TB_C, file = paste0("results/res_TB_vs_C_", dea_formula, "_all.xlsx"),
+write.xlsx(res.TB_C, file = paste0("results_v1/res_TB_vs_C_", dea_formula, "_all.xlsx"),
            colNames = TRUE, rowNames = FALSE, append = FALSE, overwrite = TRUE)
 
 # Significant
 res.TB_C.sig <- subset(res.TB_C, ((padj < cutoff_alpha) & !is.na(padj)))
 
-write.xlsx(res.TB_C.sig, file = paste0("results/res_TB_vs_C_", dea_formula, "_padj<0.25.xlsx"),
+write.xlsx(res.TB_C.sig, file = paste0("results_v1/res_TB_vs_C_", dea_formula, "_padj_0.25.xlsx"),
            colNames = TRUE, rowNames = FALSE, append = FALSE, overwrite = TRUE)
 ```
 
@@ -1144,11 +1458,11 @@ detect_list$DetectGenes
 
 res.TB_C.det <- res.TB_C.sig[rownames(res.TB_C.sig) %in% detect_list$DetectGenes, ]
 
-write.xlsx(res.TB_C.det, file = paste0("results/res_TB_vs_C_", dea_formula, "padj<0.25_detectable.xlsx"),
+write.xlsx(res.TB_C.det, file = paste0("results_v1/res_TB_vs_C_", dea_formula, "padj_0.25_detectable.xlsx"),
            colNames = TRUE, rowNames = FALSE, append = FALSE, overwrite = TRUE)
-write.xlsx(res.TB_C.det[res.TB_C.det$padj < 0.05, ], file = paste0("results/res_TB_vs_C_", dea_formula, "padj<0.05_detectable.xlsx"),
+write.xlsx(res.TB_C.det[res.TB_C.det$padj < 0.05, ], file = paste0("results_v1/res_TB_vs_C_", dea_formula, "padj_0.05_detectable.xlsx"),
            colNames = TRUE, rowNames = FALSE, append = FALSE, overwrite = TRUE)
-write.xlsx(res.TB_C.det[res.TB_C.det$padj < 0.01, ], file = paste0("results/res_TB_vs_C_", dea_formula, "padj<0.01_detectable.xlsx"),
+write.xlsx(res.TB_C.det[res.TB_C.det$padj < 0.01, ], file = paste0("results_v1/res_TB_vs_C_", dea_formula, "padj_0.01_detectable.xlsx"),
            colNames = TRUE, rowNames = FALSE, append = FALSE, overwrite = TRUE)
 
 ```
@@ -1162,12 +1476,17 @@ write.xlsx(res.TB_C.det[res.TB_C.det$padj < 0.01, ], file = paste0("results/res_
 df.box <- data.frame()
 sig_data <- data.frame()
 
-for (gene in x$ensembl[x$symbol %in% c("VCAN", "SLC11A1", "CTSB")]) {
+res.TB_C <- readxl::read_xlsx("C:/Users/dan_1/Documents/PROJECTS/TB/DEG/Results_v1/res_TB_vs_C_grouppadj_0.05_detectable.xlsx", sheet = 1)
+
+
+common_genes <- c("STAT1","GBP1","IFIT3","IFI6","GCH1","RSAD2","CMPK2", "IFITM3","SERPING1","FCGR1A", "IFI27")
+
+for (gene in x$ensembl[x$symbol %in% common_genes]) {
   gene_counts <- counts(ds.deseq, normalized = TRUE)[gene, ]
   log2_gc <- log2(gene_counts)
   
   df.box <- rbind(df.box,
-                  data.frame(ds.deseq@colData[, c("id", "group", "sex", "age", "age_cat", "num")],
+                  data.frame(ds.deseq@colData[, c("id", "group", "sex", "age", "num")],
                              log2_gc,
                              gene = rep(x[gene, "symbol"], 19)))
   
@@ -1230,16 +1549,22 @@ p.bs <- p.bs + geom_signif(data = sig_data, manual = TRUE, size = 1.7, colour = 
                            aes(xmin = group1, xmax = group2, annotations = label, y_position = 14.2),
                            textsize = 7, vjust = 0, tip_length = 0.02)
 
-ggsave(filename = paste0("plots/BSV_top_hits_facet.jpg"), plot = p.bs, width = 11, height = 7.5, dpi = 300)
+ggsave(filename = paste0("C:/Users/dan_1/Documents/PROJECTS/TB/DEG/Plots_v1/BSV/BSV_top_hits_facet.jpg"), plot = p.bs, width = 11, height = 7.5, dpi = 300)
 ```
 
 ## Volcano plot
 
 ```{r}
+# Load necessary files
+res.TB_C <- readxl::read_xlsx("C:/Users/dan_1/Documents/PROJECTS/TB/DEG/Results_v1/res_TB_vs_C_grouppadj_0.05_detectable.xlsx", sheet = 1)
+
 # Parameters
 ## padj and FC tresholds
 ctf_nice <- 0.01
+cutoff_fold <- 1
 fld_nice <- cutoff_fold * 4
+cutoff_alpha <- 0.05
+cutoff_padj <- 0.05
 
 d.volcano <- data.frame(res.TB_C)
 d.volcano <- d.volcano[!is.na(d.volcano$padj), ]
@@ -1259,6 +1584,8 @@ d.volcano$shapes[d.volcano$padj <= 10**-3] <- "hits"
 # Condition for labeling
 cond <- d.volcano$ensembl %in% detect_list$DetectGenes & d.volcano$padj == 0.001 & abs(d.volcano$log2FoldChange) > fld_nice
 sum(cond)
+
+# Add all data for volcano
 
 p.volcano <- ggplot() + theme_bw() +
   scale_y_continuous(expand = c(0, 0),
@@ -1326,7 +1653,127 @@ p.volcano <- ggplot() + theme_bw() +
 p.volcano
 
 #ggsave("plots/Ap_An_Volcano_detect.pdf", p.volcano, width = 10.5, height = 8, dpi = 300, device = "pdf")
-ggsave(paste0("plots/volcano/TB_Control_volcano_", dea_formula, "_detectable_", "padj<0.001", ".jpg"),
+ggsave(paste0("plots/volcano/TB_Control_volcano_0.05_detectable_", "padj<0.001", ".jpg"),
+       p.volcano, width = 11, height = 8, dpi = 300)
+```
+
+## Volcano plot all and detectable
+```{r}
+# Load necessary files
+res.TB_C <- readxl::read_xlsx("C:/Users/dan_1/Documents/PROJECTS/TB/DEG/Results_v1/res_TB_vs_C_grouppadj_0.05_detectable.xlsx", sheet = 1)
+
+# Parameters
+## padj and FC tresholds
+ctf_nice <- 0.01
+cutoff_fold <- 1
+fld_nice <- cutoff_fold * 4
+cutoff_alpha <- 0.05
+cutoff_padj <- 0.05
+
+d.volcano <- data.frame(res.TB_C)
+d.volcano <- d.volcano[!is.na(d.volcano$padj), ]
+d.volcano$log2FoldChange[d.volcano$log2FoldChange > 8] <- 8
+d.volcano$log2FoldChange[d.volcano$log2FoldChange < -8] <- -8
+d.volcano$padj[d.volcano$padj < 10**-3] <- 10**-3
+d.volcano$padj[d.volcano$padj > 10**8] <- 10**8
+
+d.volcano$colors <- rep("other", nrow(d.volcano))
+d.volcano$colors[(d.volcano$log2FoldChange >= cutoff_fold & d.volcano$padj < cutoff_alpha)] <- "over"
+d.volcano$colors[(d.volcano$log2FoldChange <= -cutoff_fold & d.volcano$padj < cutoff_alpha)] <- "under"
+
+d.volcano$shapes <- rep("nohits", nrow(d.volcano))
+#d.volcano$shapes[(abs(d.volcano$log2FoldChange) >= fld_nice & d.volcano$padj == 10**-3)] <- "hits"
+d.volcano$shapes[d.volcano$padj <= 10**-3] <- "hits"
+
+# Condition for labeling
+cond <- d.volcano$ensembl %in% detect_list$DetectGenes & d.volcano$padj == 0.001 & abs(d.volcano$log2FoldChange) > fld_nice
+sum(cond)
+
+# Add all data for volcano
+all_data <- readxl::read_xlsx("C:/Users/dan_1/Documents/PROJECTS/TB/DEG/Results_v1/res_TB_vs_C_group_all.xlsx", sheet = 1)
+all_data <- all_data[!is.na(all_data$padj), ]
+all_data$log2FoldChange[all_data$log2FoldChange > 8] <- 8
+all_data$log2FoldChange[all_data$log2FoldChange < -8] <- -8
+all_data$padj[all_data$padj < 10**-3] <- 10**-3
+all_data$padj[all_data$padj > 10**8] <- 10**8
+
+# Consider only not genes from d.volcano
+all_data <- all_data[!all_data$ensembl %in% d.volcano$ensembl, ]
+all_data$colors <- rep("other", nrow(all_data))
+
+all_data$shapes <- rep("nohits", nrow(all_data))
+all_data$shapes[all_data$padj <= 10**-3] <- "hits"
+
+# Join rows of all_data and d.volcano into d.volcano
+d.volcano <- rbind(d.volcano, all_data)
+
+p.volcano <- ggplot() + theme_bw() +
+  scale_y_continuous(expand = c(0, 0),
+                     limits = c(0, 3.07),
+                     breaks = seq(1, 5, by = 1),
+                     minor_breaks = seq(0, 5, by = 1)) +
+  scale_x_continuous(expand = c(0,0),
+                     limits = c(-9.5, 9.5),
+                     breaks = seq(-9, 9, by = 3),
+                     minor_breaks = seq(-9, 9, by = 1)) +
+  
+  # Vertical lines and labels:
+  geom_vline(xintercept = c(-cutoff_fold, cutoff_fold), color = "grey20", alpha = 0.8, linetype = 2, linewidth = 1.2) +
+  #geom_text(aes(x = -cutoff_fold - 1.3, y = 2.7, label = paste("x =", -cutoff_fold)), color = "grey20", size = 6.2) +
+  #geom_text(aes(x = cutoff_fold + 1.3, y = 2.7, label = paste("x =", cutoff_fold)), color = "grey20", size = 6.2) +
+  
+  # Horizontal line and label:
+  geom_hline(yintercept = -log10(cutoff_alpha), color = "grey20", alpha = 0.8, linetype = 2, linewidth = 1.2) +
+  geom_text(aes(x = -7.35, y = -log10(cutoff_alpha) + 0.15, label = paste("q =", cutoff_alpha)), color = "grey20", size = 6.2) +
+  
+  # Datapoints, in different colors:
+  geom_point(data = d.volcano,
+             aes(x = log2FoldChange, y = -log10(padj), fill = colors, shape = shapes),
+             size = 5.5, color = "gray10", alpha = 0.4, show.legend = TRUE) +
+  
+  # Color settings
+  scale_fill_manual(name = "Expression",
+                    values = c("over" = "red", "other" = "grey50", "under" = "blue"),
+                    guide = guide_legend(override.aes = aes(shape = 21, size = 5, alpha = 1)),
+                    labels = c( "Others","Up-regulated", "Down-regulated")) +
+  
+  # Change outliers shapes
+  scale_shape_manual(name = "Shape",
+                     values = c("hits" = 24, "nohits" = 21),
+                     guide = guide_legend(override.aes = list(fill = "white", size = 5, alpha = 1)),
+                     labels = c(expression(FDR <= 10^-3), expression(FDR > 10^-3))) +
+  
+  # Labels for detectable genes
+  geom_label_repel(data = d.volcano[cond, ],
+                   aes(x = log2FoldChange, y = -log10(padj), label = symbol),
+                   inherit.aes = FALSE,
+                   parse = FALSE,
+                   max.iter = 5000,
+                   color = "black",
+                   size = 7.2,
+                   segment.alpha = 1.5,
+                   box.padding = unit(0.8, "lines"),
+                   min.segment.length = unit(0.01, "lines")) +
+  
+  # Axis labels:
+  labs(x = expression("log"[2]*"(Fold Change)"),
+       y = expression("-log"[10]*"FDR"),
+       #y = expression("-log(FDR)"),
+       title = "TB over Control") +
+  
+  # Labels size
+  theme(plot.title = element_text(size = 26, hjust = 0.5),
+        axis.text = element_text(size = 22),
+        axis.title = element_text(size = 26),
+        legend.text = element_text(size = 18),
+        legend.title = element_text(size= 19, face = "bold"))
+
+# p.volcano <- p.volcano + theme(element_text(20))
+# p.volcano <- p.volcano + theme(legend.position = "none")
+p.volcano
+
+#ggsave("plots/Ap_An_Volcano_detect.pdf", p.volcano, width = 10.5, height = 8, dpi = 300, device = "pdf")
+ggsave(paste0("C:/Users/dan_1/Documents/PROJECTS/TB/DEG/Plots_v1/volcano/Total-TB_Control_volcano_0.05_detectable_padjless0.001", ".pdf"), #.jpg
        p.volcano, width = 11, height = 8, dpi = 300)
 ```
 
@@ -1339,6 +1786,7 @@ colors_samples = list(Group = c("Control" = "#bbffff",
                                 "TB" = "#ffb6c1"))
 
 genesTB <- res.TB_C.det[res.TB_C.det$padj < 0.01, c("ensembl", "symbol")]
+
 
 # Filter rows by matching Ensembl IDs and reorder them to align with `genescardio`
 varst.data.sig <- varst.data[rownames(varst.data) %in% genesTB$ensembl, ]
@@ -1389,6 +1837,152 @@ ggsave("plots/heatmap/Heatmap_samples_TB_Control_(padj_0.05)_WPGMA.jpg",
 ggsave("plots/heatmap/Heatmap_samples_TB_Control_(padj_0.01)_WPGMA.jpg",
        plot = heatmap_genes, width = 6, height = 6, dpi = 300, units = "in")
 ```
+
+v2
+```{r}
+load("C:/Users/dan_1/Documents/PROJECTS/TB/DEG/Results_v1/02_17_updated_Rdata.RData")
+
+varst.data <- getVarianceStabilizedData(ds.deseq)
+
+colors_samples = list(Group = c("Control" = "#bbffff",
+                                "TB" = "#ffb6c1"))
+# Load necessary files
+res.TB_C <- readxl::read_xlsx("C:/Users/dan_1/Documents/PROJECTS/TB/DEG/Results_v1/res_TB_vs_C_grouppadj_0.05_detectable.xlsx", sheet = 1)
+
+genesTB <- res.TB_C %>%
+  select("ensembl", "symbol")
+
+# Filter rows by matching Ensembl IDs and reorder them to align with `genescardio`
+varst.data.sig <- varst.data[rownames(varst.data) %in% genesTB$ensembl, ]
+varst.data.sig <- varst.data.sig[match(genesTB$ensembl, rownames(varst.data.sig)), ]
+## There is a problem with the rownames, they are not matching, so I will try to fix it later.
+
+# Remove NA rows
+varst.data.sig <- varst.data.sig[complete.cases(varst.data.sig), ]
+
+# Rename the rows to gene symbols, ensuring they align correctly with `genescardio`
+rownames(varst.data.sig) <- genesTB$symbol[match(rownames(varst.data.sig), genesTB$ensembl)]
+
+# Create sample annotation and align sample order between `anot` and `varst.data.sig`
+anot <- data.frame(Group = sampledata$group, row.names = sampledata$id)
+anot$Group <- factor(anot$Group)
+anot <- anot[order(anot$Group, decreasing = FALSE), , drop = FALSE]
+
+# Align columns of `varst.data.sig` with ordered row names of `anot`
+varst.data.sig <- varst.data.sig[, rownames(anot)]
+
+# Set column names of `varst.data.sig` to match sample IDs from `sampledata`
+colnames(varst.data.sig) <- rownames(anot)
+
+#rownames(anot) <- 1:21
+#colnames(varst.data.sig) <- 1:21
+
+heatmap_genes <- pheatmap(varst.data.sig,
+                          cluster_cols = FALSE,
+                          cluster_rows = TRUE,
+                          show_rownames = FALSE,
+                          clustering_method = "mcquitty",
+                          cellwidth = 9.4,
+                          cellheight = 2,
+                          treeheight_col = 15,
+                          treeheight_row = 40,
+                          scale = "row",
+                          annotation = anot,
+                          #annotation_legend = FALSE,
+                          angle_col = 90,
+                          annotation_colors = colors_samples,
+                          kmeans_k = NA,
+                          dpi = 300,
+                          drop_levels = FALSE,
+                          #cutree_rows = 2,
+                          #gaps_col =  c(3, 6, 9),
+                          #fontsize_row = 9.3,
+                          #legend = TRUE,
+                          show_colnames = FALSE)
+
+ggsave("C:/Users/dan_1/Documents/PROJECTS/TB/DEG/Plots_v1/heatmap/Heatmap_samples_TB_Control_(padj_0.05)_WPGMA.pdf",
+       plot = heatmap_genes, width = 6, height = 9, dpi = 300, units = "in")
+#ggsave("plots/heatmap/Heatmap_samples_TB_Control_(padj_0.01)_WPGMA.jpg",
+#       plot = heatmap_genes, width = 6, height = 6, dpi = 300, units = "in")
+```
+
+### 03_17_2025 Heatmaps Samples vsGenes Non-common genes included in datasets
+```{r}
+
+varst.data <- getVarianceStabilizedData(ds.deseq)
+
+colors_samples = list(Group = c("Control" = "#bbffff",
+                                "TB" = "#ffb6c1"))
+
+common_genes <- c("STAT1","GBP1","IFIT3","IFI6","GCH1","RSAD2","CMPK2", "IFITM3","SERPING1","FCGR1A", "IFI27")
+res.TB_C <- readxl::read_xlsx("C:/Users/dan_1/Documents/PROJECTS/TB/DEG/Results_v1/res_TB_vs_C_grouppadj_0.05_detectable.xlsx", sheet = 1)
+
+# Filter common genes
+res.TB_C.noncommon <- res.TB_C[!res.TB_C$symbol %in% common_genes,]
+
+# Consider only log2FoldChange > 2
+res.TB_C.noncommon <- res.TB_C.noncommon[abs(res.TB_C.noncommon$log2FoldChange) > 2,]
+
+nrow(res.TB_C.noncommon)
+
+genesTB <- res.TB_C.noncommon %>%
+  select("ensembl", "symbol")
+
+# Filter rows by matching Ensembl IDs and reorder them to align with `genescardio`
+varst.data.sig <- varst.data[rownames(varst.data) %in% genesTB$ensembl, ]
+varst.data.sig <- varst.data.sig[match(genesTB$ensembl, rownames(varst.data.sig)), ]
+## There is a problem with the rownames, they are not matching, so I will try to fix it later.
+
+# Remove NA rows
+varst.data.sig <- varst.data.sig[complete.cases(varst.data.sig), ]
+
+# Rename the rows to gene symbols, ensuring they align correctly with `genescardio`
+rownames(varst.data.sig) <- genesTB$symbol[match(rownames(varst.data.sig), genesTB$ensembl)]
+
+# Create sample annotation and align sample order between `anot` and `varst.data.sig`
+anot <- data.frame(Group = sampledata$group, row.names = sampledata$id)
+anot$Group <- factor(anot$Group)
+anot <- anot[order(anot$Group, decreasing = FALSE), , drop = FALSE]
+
+# Align columns of `varst.data.sig` with ordered row names of `anot`
+varst.data.sig <- varst.data.sig[, rownames(anot)]
+
+# Set column names of `varst.data.sig` to match sample IDs from `sampledata`
+colnames(varst.data.sig) <- rownames(anot)
+
+#rownames(anot) <- 1:21
+#colnames(varst.data.sig) <- 1:21
+
+heatmap_genes <- pheatmap(varst.data.sig,
+                          cluster_cols = FALSE,
+                          cluster_rows = TRUE,
+                          show_rownames = FALSE,
+                          clustering_method = "mcquitty",
+                          cellwidth = 9.4,
+                          cellheight = 2,
+                          treeheight_col = 15,
+                          treeheight_row = 40,
+                          scale = "row",
+                          annotation = anot,
+                          #annotation_legend = FALSE,
+                          angle_col = 90,
+                          annotation_colors = colors_samples,
+                          kmeans_k = NA,
+                          dpi = 300,
+                          drop_levels = FALSE,
+                          #cutree_rows = 2,
+                          #gaps_col =  c(3, 6, 9),
+                          #fontsize_row = 9.3,
+                          #legend = TRUE,
+                          show_colnames = FALSE)
+
+ggsave("C:/Users/dan_1/Documents/PROJECTS/TB/DEG/Plots_v1/heatmap/Heatmap_samples_TB_Control_noncommon_genes_log2FC_meq_2_(padj_0.05)_WPGMA.pdf",
+       plot = heatmap_genes, width = 6, height = 9, dpi = 300, units = "in")
+
+
+```
+
+
 
 # 6. GSEA
 
@@ -1668,17 +2262,21 @@ There are 3 inputs needed for GSEA:
 - *Phenotype info*: File indicating the amount of classes and which samples correspond to each phenotype.
 - *GMT*: Gene matrices of sets from the MSigDB data base.
 
-### Prepare files
+### Prepare files - GSEA
 
 ```{r}
+# Load Rdata
+load("C:/Users/dan_1/Documents/PROJECTS/TB/Results_v1/02_17_updated_Rdata.RData")
 # Expression data
 expression_data_TB <- normalized.counts.annotated
-expression_data_TB <- expression_data_TB[, c(22, 29, 1:19)]
+class(expression_data_TB)
+ncol(expression_data_TB) 
+expression_data_TB <- expression_data_TB[, c(21, 27, 1:19)]
 colnames(expression_data_TB)[1:2] <- c("NAME", "DESCRIPTION")
 expression_data_TB$DESCRIPTION <- rep(NA, nrow(expression_data_TB))
 
 # Write to a tab-separated file
-write.table(expression_data_TB, file = "GSEA/expression_data_TB.txt",
+write.table(expression_data_TB, file = "Results_v1/GSEA_imput/expression_data_TB.txt",
             sep = "\t", row.names = FALSE, quote = FALSE)
 
 # Phenotype info
@@ -1692,7 +2290,7 @@ cls_labels <- paste(sampledata$group, collapse = " ")
 cls_content <- paste(cls_header, cls_classes, cls_labels, sep = "\n")
 
 ## Write to .cls file
-write(cls_content, file = "GSEA/phenotype_CCC.cls")
+write(cls_content, file = "Results_v1/GSEA_imput/phenotype_TB.cls")
 ```
 
 ### Get GMTs

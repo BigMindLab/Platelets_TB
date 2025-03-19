@@ -1,0 +1,247 @@
+---
+Title: Posprocessing GSEA data
+Author: Daniel Garbozo
+Date: 2025-22-02
+---
+
+# Load data
+```{r}
+main_dir <- "C:/Users/dan_1/Documents/PROJECTS/TB/GSEA_v2/"
+gsea_data_05 <- read.csv(paste0(main_dir, "2025_22_02-GSEA-posprocessing/all_GSEA.tsv"), header = T, sep = "\t")
+
+# Add phenotype and basename columns
+gsea_data_05$phenotype <- "TB"
+gsea_data_05$basename <- "Control"
+
+# Remove all genesets with COLLECTIONS= C5.GO
+nrow(gsea_data_05)
+gsea_data_05 <- gsea_data_05[gsea_data_05$COLLECTION != "C5.GO",]
+
+# Save data
+write.table(gsea_data_05, file = paste0(main_dir, "2025_22_02-GSEA-posprocessing/all_GSEA_no_C5_GO.tsv"), sep = "\t", quote = F, row.names = F)
+
+colnames(gsea_data_05)
+# Analisis of wich types are FDR <= 0.05 and 0.01
+table(gsea_data_05$FDR <= 0.25)
+table(gsea_data_05$FDR <= 0.05)
+table(gsea_data_05$FDR <= 0.01)
+
+# SAve data gsea_data_05$FDR <= 0.05
+gsea_data_05_05 <- gsea_data_05[gsea_data_05$FDR <= 0.05,]
+# Eliminate the NA rows
+gsea_data_05_05 <- gsea_data_05_05[!is.na(gsea_data_05_05$FDR),]
+
+#Save
+write.table(gsea_data_05_05, file = paste0(main_dir, "2025_22_02-GSEA-posprocessing/GSEA_FDR_leq_05.tsv"), sep = "\t", quote = F, row.names = F)
+
+```
+
+[Manual categorize]
+
+# Add genes into GSEA_FDR_leq_05.tsv
+```{r}
+# Load required libraries
+library(dplyr)
+library(readr)
+library(tidyr)
+
+main_dir <- "C:/Users/dan_1/Documents/PROJECTS/TB/GSEA_v2/"
+
+# Read the GMT file and convert it into a dataframe
+gmt_file <- paste0(main_dir, "2025_22_02_curated_gene_sets/2025_26_02-total_geneset.gmt")
+
+# Read the file line by line and process it
+gmt_data <- readLines(gmt_file) %>%
+  strsplit("\t") %>% # Split by tab
+  lapply(function(x) {
+    list(NAME = x[1], DESCRIPTION = x[2], GENES = paste(x[-c(1,2)], collapse = ","))
+  }) %>%
+  bind_rows() # Convert the list into a dataframe
+
+# Read the GSEA file containing genesets of interest
+gsea_file <- paste0(main_dir, "2025_22_02-GSEA-posprocessing/GSEA_FDR_leq_05.tsv")
+
+gsea_data_05_05 <- read_tsv(gsea_file, show_col_types = FALSE)
+
+# Merge data based on the "NAME" column
+gsea_data_05_05 <- gsea_data_05_05 %>%
+  left_join(gmt_data %>% select(NAME, GENES), by = "NAME")
+
+# Save the result into a new file
+output_file <- paste0(main_dir, "2025_22_02-GSEA-posprocessing/GSEA_FDR_leq_05_with_genes.tsv")
+
+write_tsv(gsea_data_05_05, output_file)
+
+# Print success message
+cat("File saved as:", output_file, "\n")
+
+```
+
+# Add Leading Edge genes to GSEA_FDR_leq_05_with_genes.tsv
+```{r}
+# Load required libraries
+library(dplyr)
+library(readr)
+library(stringr)
+
+# File paths
+gsea_file <-  paste0(main_dir,"2025_22_02-GSEA-posprocessing/GSEA_FDR_leq_05_with_genes.tsv")
+
+ranked_genes_file <- paste0(main_dir, "2025_22_02-ranking_lists_TB/ranked_gene_list_TB_versus_Control_1740075551351.tsv")
+
+# Read GSEA file
+gsea_data_05_05 <- read_tsv(gsea_file, show_col_types = FALSE)
+
+# Read ranked gene list
+ranked_geneslist <- read_tsv(ranked_genes_file, show_col_types = FALSE)
+
+# Ensure ranked gene list is a character vector
+ranked_genes_vector <- ranked_geneslist$NAME
+
+# Function to extract top n genes in ranked order
+extract_top_n_genes <- function(genes_str, n) {
+  if (is.na(genes_str) || n <= 0) return(NA)  # Handle NA and zero cases
+  
+  # Split genes by comma
+  gene_list <- unlist(strsplit(genes_str, ",")) 
+  
+  # Order based on ranked gene list
+  gene_list <- gene_list[order(match(gene_list, ranked_genes_vector), na.last = TRUE)]
+  
+  # Select the top n genes
+  top_n_genes <- head(gene_list, n)
+  
+  # Return as a comma-separated string
+  return(paste(top_n_genes, collapse = ","))
+}
+# Add the size of the Leading Edge by each geneset 
+gsea_data_05_05 <- gsea_data_05_05 %>%
+  mutate(
+    L.EDGE_size = ifelse((SIZE * tags) %% 1 <= 0.5, floor(SIZE * tags), ceiling(SIZE * tags))
+    )
+
+# Apply function to create the new column
+gsea_data_05_05 <- gsea_data_05_05 %>%
+  mutate(LEADING_EDGE_GENES = mapply(extract_top_n_genes, GENES, L.EDGE_size))
+
+# Save the updated file
+output_file <- paste0(main_dir, "2025_22_02-GSEA-posprocessing/GSEA_FDR_leq_05_with_Leading_edge_genes.tsv")
+write_tsv(gsea_data_05_05, output_file)
+
+# Print success message
+cat("File saved as:", output_file, "\n")
+```
+
+# Plot Heatmap of leading edge genes by each genesets
+```{r}
+# Load required libraries
+library(dplyr); library(readr); library(tidyr); library(pheatmap); library(readxl)
+
+# Define paths
+main_dir_2 <- "C:/Users/dan_1/Documents/PROJECTS/TB/"
+expression_file <- paste0( main_dir_2, "/Results_v1/GSEA_imput/expression_data_TB.txt")
+metadata_file <- paste0( main_dir_2,"sample_data.xlsx")
+gsea_file <- paste0( main_dir_2,"GSEA_v2/2025_22_02-GSEA-posprocessing/GSEA_FDR_leq_05_with_Leading_edge_genes.tsv")
+output_dir <- paste0( main_dir_2,"GSEA_v2/2025_22_02-GSEA-posprocessing/Plots/2025-26-02_Leading_Edge")
+
+# Read metadata (Sample IDs and Groups: TB or Control)
+metadata <- read_xlsx(metadata_file) %>%
+  select(id, group) %>%
+  rename(Sample = id) %>%
+  as.data.frame()
+rownames(metadata) <- metadata$Sample  # Set row names
+
+# Remove row with rowname = 301
+metadata <- metadata%>%
+  filter(Sample != 301)
+
+# Read expression data (Genes as row names, Samples as columns)
+expression_data <- read.table(expression_file, header = TRUE, sep = "\t") #, row.names = 1
+# Remove duplicated genes based on the NAME column, keeping the first occurrence
+expression_data <- expression_data[!duplicated(expression_data$NAME), ]
+colnames(expression_data) <- sub("^X", "", colnames(expression_data))
+rownames(expression_data) <- expression_data$NAME  # Set row names
+## Check for duplicated genes
+#sum(duplicated(expression_data$NAME))
+
+# Read GSEA results (Gene Sets and Genes)
+gsea_data_05 <- read_tsv(gsea_file, show_col_types = FALSE)
+
+# Ensure output directory exists
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+
+# Process each gene set
+for (i in 1:nrow(gsea_data_05)) {
+  geneset_name <- gsea_data_05$NAME[i]
+  genes <- unlist(strsplit(gsea_data_05$LEADING_EDGE_GENES[i], ","))  # Split genes by comma
+  stage <- gsea_data_05$Stage[i]  # Directory name based on "Stage"
+
+  # Create directory for this Stage if it doesn't exist
+  stage_dir <- file.path(output_dir, stage)
+  if (!dir.exists(stage_dir)) dir.create(stage_dir, recursive = TRUE)
+
+  # Extract expression data for selected genes
+  genes_present <- genes[genes %in% rownames(expression_data)]
+  if (length(genes_present) == 0) next  # Skip if no matching genes
+
+  heatmap_matrix <- expression_data[genes_present, , drop = FALSE]
+
+  # Ensure column names (samples) match metadata
+  common_samples <- intersect(colnames(heatmap_matrix), rownames(metadata))
+  heatmap_matrix <- heatmap_matrix[, common_samples, drop = FALSE]
+  
+  if (length(common_samples) == 0) next  # Skip if no matching samples
+
+  # Create annotation for samples (TB vs Control)
+  annotation_col <- data.frame(Group = metadata[common_samples, "group", drop = TRUE])
+  rownames(annotation_col) <- common_samples
+
+  # Define file paths for PDF and JPG
+  pdf_file <- file.path(stage_dir, paste0(geneset_name, "_heatmap.pdf"))
+  jpg_file <- file.path(stage_dir, paste0(geneset_name, "_heatmap.jpg"))
+
+  # Adjust image size dynamically
+  img_width <- 10
+  img_height <- max(5, nrow(heatmap_matrix) * 0.1 + 2)
+
+  # Generate PDF heatmap
+  pdf(pdf_file, width = img_width, height = img_height)
+  pheatmap(heatmap_matrix,
+           main = geneset_name,
+           color = colorRampPalette(c("blue", "white", "red"))(30),
+           scale = "row",
+           clustering_distance_rows = "euclidean",
+           cluster_cols = FALSE,
+           clustering_method = "complete",
+           fontsize_row = 6,
+           fontsize_col = 7,
+           annotation_col = annotation_col,
+           border_color = NA,
+           cellheight = 5,
+           cellwidth = 8)
+  dev.off()
+
+  # Generate JPG heatmap
+  jpeg(jpg_file, width = img_width * 100, height = img_height * 100, res = 150)
+  pheatmap(heatmap_matrix,
+           main = geneset_name,
+           color = colorRampPalette(c("blue", "white", "red"))(30),
+           scale = "row",
+           clustering_distance_rows = "euclidean",
+           cluster_cols = FALSE,
+           clustering_method = "complete",
+           fontsize_row = 6,
+           fontsize_col = 7,
+           annotation_col = annotation_col,
+           border_color = NA,
+           cellheight = 5,
+           cellwidth = 8)
+  dev.off()
+}
+
+# Completion message
+cat("Heatmaps saved in:", output_dir, "\n")
+```
+
+
+
