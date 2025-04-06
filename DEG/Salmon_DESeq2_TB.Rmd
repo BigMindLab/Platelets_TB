@@ -61,8 +61,8 @@ library("reshape2")
 require(knitr)
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_knit$set(root.dir = "./")
-sample_data <- "sample_data.xlsx"
-counts_dir <- "./TB_Counts_Salmon"
+sample_data <- "../sample_data.xlsx"
+counts_dir <- "../TB_Counts_Salmon"
 ```
 
 # 2. Pre processing workflow
@@ -122,7 +122,7 @@ p.counts
 ## Transcripts into genes
 
 ```{r}
-tx2gene <- data.frame(read.xlsx("tx2gene_GRCh38v112.xlsx"))
+tx2gene <- data.frame(read.xlsx("../tx2gene_GRCh38v112.xlsx"))
 
 txi.toGene <- summarizeToGene(txi, tx2gene[, c("transcriptID","geneID")])
 
@@ -216,11 +216,12 @@ write.table(blacklist_noisy, "blacklist_noisy_mean_normalized_leq25.tsv", sep = 
 ## Filter out blacklists
 
 ```{r}
-blacklist_nRibo <- data.frame(read.csv("blacklist_nuclear-ribo.tsv", sep = "\t", header = TRUE))
-blacklist_mtRibo <- data.frame(read.csv("blacklist_mito-ribo.tsv", sep = "\t", header = TRUE))
-blacklist_allRibo <- data.frame(read.csv("blacklist_all-ribo.tsv", sep = "\t", header = TRUE))
-blacklist_allLeuko <- data.frame(read.csv("blacklist_all-Leuko.tsv", sep = "\t", header = TRUE))
-blacclist_noisy <- data.frame(read.csv("blacklist_noisy_mean_normalized_leq25.tsv", sep = "\t", header = TRUE))
+blacklist_nRibo <- data.frame(read.csv("../DEG/Blacklists/blacklist_nuclear-ribo.tsv", sep = "\t", header = TRUE))
+blacklist_mtRibo <- data.frame(read.csv("../DEG/Blacklists/blacklist_mito-ribo.tsv", sep = "\t", header = TRUE))
+blacklist_allRibo <- data.frame(read.csv("../DEG/Blacklists/blacklist_all-ribo.tsv", sep = "\t", header = TRUE))
+blacklist_allLeuko <- data.frame(read.csv("../DEG/Blacklists/blacklist_all-Leuko.tsv", sep = "\t", header = TRUE))
+blacklist_noisy <- data.frame(read.csv("../DEG/Blacklists/blacklist_noisy_mean_normalized_leq25.tsv", sep = "\t", header = TRUE))
+
 
 # Keep the genes in each blacklist 
 genecounts.nRibo <- counts.gene[rownames(counts.gene) %in% blacklist_nRibo[,1], ]
@@ -230,7 +231,16 @@ genecounts.leuko <- counts.gene[rownames(counts.gene) %in% blacklist_allLeuko[,1
 # Important step to filter noise and leucyte genes
 genecounts.filtered <- counts.gene[!(rownames(counts.gene) %in% c(blacklist_allRibo[,1], blacklist_allLeuko[,1], blacklist_noisy[blacklist_noisy$MEAN <= 2, 1])), ]
 
+
+# Number of genes in noyse blacklist
 length(unique(blacklist_noisy[blacklist_noisy$MEAN <= 2, 1])) ## = 17644
+
+# See percentage of number of genes removed
+100 - 100*nrow(genecounts.filtered) / nrow(counts.gene)
+
+# See percentage of gene counts removed
+100 - 100*sum(genecounts.filtered) / sum(counts.gene)
+
 # Add counts to sampledata
 sampledata$Counts_nRibo <- colSums(genecounts.nRibo)
 sampledata$Counts_mtRibo <- colSums(genecounts.mtRibo)
@@ -600,19 +610,6 @@ for (bl in subgroups) {
 # 3. Differential Expression Analysis with DESeq2
 
 ```{r}
-# Filter low counts
-blacklist_lowCounts <- data.frame(read.csv("blacklist_low-Counts.tsv", sep = "\t", header = TRUE))
-
-low_counts_cutoff <- c(2)
-
-genes.low_counts <- rownames(normalized.counts[normalized.counts$Mean <= low_counts_cutoff,])
-
-# Check if there is genes in lowcount less then the normalized counts df
-length(genes.low_counts)
-nrow(normalized.counts)
-
-# Add porcentage of low counts
-100*length(genes.low_counts) / nrow(normalized.counts)
 txi.toGene <- summarizeToGene(txi, tx2gene[, c("transcriptID","geneID")])
 
 keep <- rownames(txi.toGene$counts) %in% rownames(genecounts.filtered)
@@ -638,7 +635,6 @@ ds.deseq <- estimateSizeFactors(ds.deseq)
 transf.data <- varianceStabilizingTransformation(ds.deseq)
 
 
-
 ######################
 # Normalized gene counts
 normalized.counts <- as.data.frame(counts(ds.deseq, normalized = TRUE))
@@ -654,9 +650,9 @@ normalized.counts$Mean <- rowMeans(normalized.counts[,])
 # Adding gene name and description
 normalized.counts.annotated <- OmicsKit::add_annotations(normalized.counts, geneID.details, variables = annotations)
 
-write.xlsx(normalized.counts.annotated, file = "Results_v1/Normalized_counts_cleaned.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
-#write.xlsx(normalized.counts.annotated, file = "Normalized_Gene_counts_wo_Leuko.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
-#write.xlsx(normalized.counts.annotated, file = "Normalized_Gene_counts_wo_lowCounts.xlsx", colNames = T, rowNames = F, append = F, overwrite = T)
+# Save the normalized counts into a tsv format 
+write.table(normalized.counts.annotated, "../DEG/Results_v2/04_02-normalized_gene_counts_annotated.tsv", sep = "\t", col.names = T, row.names = F)
+
 ######################
 
 # Variance Stabilizing Transformation
@@ -1956,10 +1952,10 @@ colnames(varst.data.sig) <- rownames(anot)
 heatmap_genes <- pheatmap(varst.data.sig,
                           cluster_cols = FALSE,
                           cluster_rows = TRUE,
-                          show_rownames = FALSE,
+                          show_rownames = TRUE,
                           clustering_method = "mcquitty",
                           cellwidth = 9.4,
-                          cellheight = 2,
+                          cellheight = 9,
                           treeheight_col = 15,
                           treeheight_row = 40,
                           scale = "row",
@@ -1976,7 +1972,7 @@ heatmap_genes <- pheatmap(varst.data.sig,
                           #legend = TRUE,
                           show_colnames = FALSE)
 
-ggsave("C:/Users/dan_1/Documents/PROJECTS/TB/DEG/Plots_v1/heatmap/Heatmap_samples_TB_Control_noncommon_genes_log2FC_meq_2_(padj_0.05)_WPGMA.pdf",
+ggsave("C:/Users/dan_1/Documents/PROJECTS/TB/DEG/Plots_v1/heatmap/Heatmap_samples_TB_Control_noncommon_genes_log2FC_meq_2_(padj_0.05)_WPGMA_v2.jpg",
        plot = heatmap_genes, width = 6, height = 9, dpi = 300, units = "in")
 
 
@@ -2268,15 +2264,47 @@ There are 3 inputs needed for GSEA:
 # Load Rdata
 load("C:/Users/dan_1/Documents/PROJECTS/TB/Results_v1/02_17_updated_Rdata.RData")
 # Expression data
-expression_data_TB <- normalized.counts.annotated
+expression_data_TB <- normalized.counts.annotated[, c(20, 21, 27, 1:19)]
 class(expression_data_TB)
 ncol(expression_data_TB) 
-expression_data_TB <- expression_data_TB[, c(21, 27, 1:19)]
-colnames(expression_data_TB)[1:2] <- c("NAME", "DESCRIPTION")
+colnames(expression_data_TB)[2:3] <- c("NAME", "DESCRIPTION")
 expression_data_TB$DESCRIPTION <- rep(NA, nrow(expression_data_TB))
 
-# Write to a tab-separated file
-write.table(expression_data_TB, file = "Results_v1/GSEA_imput/expression_data_TB.txt",
+# See duplicated gene symbols
+table(duplicated(expression_data_TB$NAME)) # There are 36 genes with duplicated symbols
+
+# Make a data frame for all gene with duplications and save it
+dup_names <- expression_data_TB[duplicated(expression_data_TB$NAME),"NAME"]
+dup_names.df <- expression_data_TB[expression_data_TB$NAME %in% dup_names, c(1, 2)]
+nrow(dup_names.df)
+
+# Save into .tsv files
+write.table(dup_names.df, file = "../DEG/Results_v2/GSEA_imput/04_02-duplicated_genes_filtering_mannualy.tsv",
+            sep = "\t", row.names = FALSE, quote = FALSE)
+
+####> filter manualy 
+
+# Open the 04_02-duplicated_genes_filtering_mannualy.tsv file
+curated_dup_names.df <- read.table("../DEG/Results_v2/GSEA_imput/04_02-duplicated_genes_filtering_mannualy.tsv",
+                           header = TRUE, sep = "\t")
+
+geneID_curated_genes <- curated_dup_names.df[curated_dup_names.df$MANTAIN_.GENE_CARDS_CURATED. == "YES", "geneID"]
+geneID_removed_genes <- curated_dup_names.df[curated_dup_names.df$MANTAIN_.GENE_CARDS_CURATED. == "NO", "geneID"]
+
+# Remove geneID_removed_genes appear in geneID column from expression_data_TB
+expression_data_TB <- expression_data_TB[!expression_data_TB$geneID %in% geneID_removed_genes, ]
+
+# Check duplicated gene symbols
+table(duplicated(expression_data_TB$NAME)) # There are 0 gene with duplicated symbols
+
+# Remove geneID column
+expression_data_TB <- expression_data_TB[, -1]
+
+# Write to a tab-separated and txt file
+write.table(expression_data_TB, file = "../DEG/Results_v2/GSEA_imput/04_02-expression_data_TB.txt",
+            sep = "\t", row.names = FALSE, quote = FALSE)
+
+write.table(expression_data_TB, file = "../DEG/Results_v2/GSEA_imput/04_02-expression_data_TB.tsv",
             sep = "\t", row.names = FALSE, quote = FALSE)
 
 # Phenotype info

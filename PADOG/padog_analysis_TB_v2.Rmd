@@ -1,0 +1,138 @@
+--- 
+# Title: PADOG analysis
+# Author: Daniel Garbozo
+# Data: 04/02/2025
+---
+
+```{r}
+library(qusage)
+library(PADOG)
+library(readxl)
+library(dplyr)
+library(stringr)
+library(parallel)
+library(doParallel)
+```
+
+
+```{r}
+# Define paths
+main_dir <- getwd()
+genesets_dir <- paste0(main_dir, "results/GSEA/2025_22_02_curated_gene_sets_all_collections/")
+output_dir <- paste0(main_dir, "results/PADOG/04_02-PADOG_output")
+expression_file <- paste0(main_dir, "results/DEG/04_02-expression_data_TB.tsv")
+metadata_file <- paste0(main_dir, "dta/sample_data.xlsx")
+
+
+  # Uploate genesets files (exclude total_genesets.gmt)
+  genesets.files <- list.files(genesets_dir, pattern = "*.gmt", full.names = TRUE)
+  genesets.files <- genesets.files[!grepl("total_geneset.gmt", genesets.files)]
+
+  # Define comparisons
+  comparisons <- c("TB_C")
+    
+  # Upload metadata and adjust samples names
+  metadata <- read_xlsx(metadata_file)%>%
+    select(id, group) %>%
+    rename(Sample = id) %>%
+    as.data.frame()%>%
+    mutate(gp = ifelse(group == "TB", "TB", "C"))
+  rownames(metadata) <- metadata$Sample
+  
+  # Remove 301 sample from metadata
+  metadata <- metadata[!metadata$Sample %in% c("301"),]
+   
+  # Upload Matrix expression data and stablish gene names as rownames
+  PadMat_full <- read.table(expression_file, sep = "\t", header = TRUE)
+  colnames(PadMat_full) <- gsub("X", "", colnames(PadMat_full))
+  PadMat_full <- PadMat_full[!is.na(PadMat_full$NAME),] #There is 3946 genes without missing NGC names so I remove it.
+  rownames(PadMat_full) <- PadMat_full$NAME
+  # Remove 301 samples from PadMat_full
+  PadMat_full <- PadMat_full[,!colnames(PadMat_full) %in% c("301")] # Already removed in metadata 
+
+  # Crate an empty data frame
+  total_padog_analysis <- data.frame()
+
+# Loop for each genesets files
+for (gs_file in genesets.files) {
+  
+  # Extract the collection name from the file name
+  collection_name <- gs_file %>%
+    basename() %>%
+    str_remove("_TB_.*\\.gmt$") %>%
+    toupper() # UPPER name
+  
+  # Create a directory output for collection if doesn't exist
+  collection_output_dir <- file.path(output_dir, collection_name)
+  if (!dir.exists(collection_output_dir)) {
+    dir.create(collection_output_dir, recursive = TRUE)
+  }
+  
+  # Read gmt file (create MList object) 
+  MList <- qusage::read.gmt(gs_file)
+  
+  # Data frame to store the results for the currently colection
+  padog_by_collection <- data.frame()
+  
+  # Loop for each comparison
+  for (comp in comparisons){
+    # Define disease and control groups
+    parts <- strsplit(comp, "_")[[1]]
+    disease <- parts[1]
+    control <- parts[2]
+    
+    # Select samples for the disease and control groups based on metadata
+    samples_sel <- metadata$Sample[metadata$gp %in% c(control, disease)]
+    # Order samples_ First control, then disease
+    samples_ordered <- samples_sel[order(factor(metadata$gp[samples_sel], levels = c(control, disease)))]
+    #class(samples_ordered)
+    samples_ordered <- as.character(samples_ordered)
+
+    # Extract the subexpression data for the samples
+    PadMat_subset <- as.matrix(PadMat_full[,samples_ordered, drop = FALSE])
+    
+    # Create group vector: "c" for control, "d" for disease
+    group_vector <- ifelse(metadata[samples_ordered, "gp"] == control, "c", "d")
+
+  #------ Run PADOG-----#
+  padog_analysis <-  padog(
+    esetm =  PadMat_subset,
+    group =  group_vector,
+    gslist =  MList,
+    organism =  "hsa",
+    verbose =  TRUE,
+    Nmin =  3,
+    NI =  1000,
+    plots =  FALSE,
+    dseed =  3,
+    parallel = TRUE,
+    ncr = 2
+    )
+  
+  # Adjust p-values using FDR
+  padog_analysis$Adj <-  p.adjust(padog_analysis$Ppadog,method = "fdr")
+  
+  # Add collection and comparison columns to the results.
+  padog_analysis$Collection <- collection_name
+  padog_analysis$Comparison <- comp
+  
+  # Combine the results for the current comparison
+  padog_by_collection <- rbind(padog_by_collection, padog_analysis)
+  }
+  
+  # Save padog_by_collection object into a tsv file
+  output_file <- file.path(collection_output_dir, paste0(collection_name, ".tsv"))
+  write.table(padog_by_collection, output_file, sep = "\t", quote = FALSE, row.names = FALSE)
+  
+  # Add the results for the current collection to the total results
+  total_padog_analysis <- rbind(total_padog_analysis, padog_by_collection)
+}
+
+  
+# Save total_padog_analysis object into a tsv file
+write.table(total_padog_analysis, file.path(output_dir, "total_padog_analysis.tsv"), sep = "\t", quote = FALSE, row.names = FALSE)
+
+
+# See with table how many genesets are adj<0.05 in total_padog_analysis in only Bp_Ap comparison
+table(total_padog_analysis[total_padog_analysis$Adj < 0.05, "Comparison"])
+```

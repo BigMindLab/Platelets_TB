@@ -1,0 +1,130 @@
+---
+# Title: PADOG analysis
+# Author: Daniel Garbozo
+# Data: 04/02/2025
+---
+# Set up
+```{r}
+library(limma)
+library(qusage)
+library(dplyr)
+library(readxl)
+library(stringr)
+library(parallel)
+```
+
+# Define paths
+```{r}
+# Define Paths
+main_dir        <- getwd()
+genesets_dir    <- paste0(main_dir, "results/GSEA/2025_21_02-additional_info/03_04-curated_genesets/")
+output_dir      <- paste0(main_dir,"results/CAMERA/CAMERA/04_02-output")
+expression_file <- paste0(main_dir, "results/DEG/expression_data.txt")
+metadata_file   <- paste0(main_dir, "data/samples_data_new.xlsx")
+```
+
+# Prepare files
+```{r}
+  # List .gmt files (excluding total_genesets.gmt)
+  genesets.files <- list.files(genesets_dir, pattern = "*.gmt$", full.names = TRUE)
+  genesets.files <- genesets.files[!grepl("total_genesets.gmt", genesets.files)]
+  
+  # Comparisons
+  comparisons <- c("TB_C")
+  
+  # Upload metadata
+  metadata <- read_xlsx(metadata_file) %>%
+    select(id, group, gp) %>%
+    rename(Sample = id) %>%
+    as.data.frame()
+  rownames(metadata) <- metadata$Sample
+  
+  # Load expression data
+  PadMat_full <- read.table(expression_file, sep = "\t", header = TRUE, stringsAsFactors = FALSE)
+  PadMat_full <- PadMat_full[!is.na(PadMat_full$NAME), ]   # Se eliminan genes sin nombre
+  rownames(PadMat_full) <- PadMat_full$NAME
+  
+  # Global data frame to store CAMERA results
+  total_camera_analysis <- data.frame()
+```
+
+# Run CAMERA analysis
+```{r}
+# Loop over gene sets
+for (gs_file in genesets.files){
+  
+  # Extract gene set name
+  collection_name <- gs_file %>%
+    basename() %>%
+    str_remove("_gene_sets.gmt")
+  
+  cat("Processing gene set collection: ", collection_name, "\n")
+  
+  # Create output directory
+  collection_output_dir <- file.path(output_dir, collection_name)
+  if (!dir.exists(collection_output_dir)) {
+    dir.create(collection_output_dir, recursive = TRUE)
+  }
+  # Load gene set
+  gmt_list <- qusage::read.gmt(gs_file)
+  
+  # Loop over comparisons
+  for (comp in comparisons) {
+    
+    cat("  Comparison:", comp, "\n")
+    
+    # Separate comp into control and diseasae
+    parts <- strsplit(comp, "_")[[1]]
+    disease <- parts[1]
+    control <- parts[2]
+    
+    # Just to probe
+    disease <- "Bp"
+    control <- "Ap"
+    # Select and order samples based on metadata
+    samples_sel <- metadata$Sample[metadata$gp %in% c(control, disease)]
+    samples_ordered <- samples_sel[order(factor(metadata$gp[samples_sel], levels = c(control, disease)))]
+    
+    # Extract expression submatrix for selected samples
+    PadMat_subset <- as.matrix(PadMat_full[, samples_ordered, drop = FALSE])
+    
+    # Create vector based on "c" and "d" for control and disease groups
+    group_vector <- factor(ifelse(metadata[samples_ordered, "gp"] == control, "c", "d"))
+    
+    # Create design matrix
+    design <- model.matrix(~ group_vector)
+    
+    # Transform data with voom 
+    y <- voom(PadMat_subset, design, plot = T)
+    
+    # Run CAMERA 
+    camera_res <- camera(y, gmt_list, design) 
+    
+    
+    # Add columns 
+    camera_res$Collection <- collection_name
+    camera_res$Comparison <- comp
+    camera_res$GeneSet <- rownames(camera_res)
+    
+    # Save
+    camera_by_collection <- rbind(camera_by_collection, camera_res)
+  }
+  # Save results for each collection
+  output_file <- file.path(collection_output_dir, paste0("CAMERA_", collection_name, ".tsv"))
+  write.table(camera_by_collection, output_file, sep = "\t", quote = FALSE, row.names = FALSE)
+  
+  # Colect total Data 
+  total_camera_analysis <- rbind(total_camera_analysis, camera_by_collection)
+}
+```
+
+# Save total results
+```{r}
+write.table(total_camera_analysis,
+            file = file.path(output_dir, "total_camera_analysis.tsv"),
+            sep = "\t", quote = FALSE, row.names = FALSE)
+
+cat("Análisis de CAMERA completado. Resultados guardados en:", output_dir, "\n")
+
+```
+
